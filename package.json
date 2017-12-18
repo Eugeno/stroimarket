@@ -1,0 +1,17 @@
+{
+  "name": "stroimarket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "2.18.13",
+    "gulp": "3.9.1"
+  }
+}
