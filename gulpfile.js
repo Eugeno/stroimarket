@@ -9,7 +9,7 @@ const minify = require('gulp-csso');
 const rename = require('gulp-rename');
 
 gulp.task('style', function () {
-  return gulp.src(['css/normalize.css', 'css/tiny-slider.css', 'css/**/*.css'])
+  return gulp.src(['css/normalize.css', 'css/**/*.css'])
   .pipe(concatCss('style.css'))
   .pipe(plumber())
   .pipe(gulp.dest('build/css'))

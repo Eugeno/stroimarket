@@ -1,0 +1,50 @@
+.landing-header {
+  background-color: rgba(0,0,0,.5);
+}
+
+.landing-header__container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  padding: 5px;
+  text-transform: uppercase;
+  color: #f89e01;
+}
+
+.landing-header__link {
+  font-size: 16px;
+  line-height: 22px;
+  position: relative;
+  bottom: 1px;
+  text-decoration: none;
+  color: #f8f9fb;
+}
+
+.landing-header__link_phone {
+  margin-right: 100px;
+  white-space: nowrap;
+}
+
+.landing-header__link_login {
+  margin-left: 62px;
+}
+
+.landing-header__link_login::before {
+  position: absolute;
+  top: -4px;
+  left: -32px;
+  width: 2px;
+  height: 32px;
+  content: "";
+  border-radius: 2px;
+  background-color: #f8f9fb;
+}
