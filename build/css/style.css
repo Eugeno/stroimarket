@@ -482,6 +482,16 @@ template {
 [hidden] {
   display: none;
 }
+.page-header {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
 .landing-header {
   position: fixed;
   top: 0;
@@ -504,6 +514,7 @@ template {
   margin-right: auto;
   margin-bottom: 0;
   padding: 5px;
+  text-decoration: none;
   text-transform: uppercase;
   color: #f89e01;
 }
@@ -545,8 +556,12 @@ template {
   border-radius: 2px;
   background-color: #f8f9fb;
 }
+.login {
+  margin-top: 99px;
+}
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  background-color: #f8f9fb;
 }
 
 .container {
@@ -569,8 +584,8 @@ body {
 }
 
 .grid > * {
-  padding-left: 40px;
   box-sizing: border-box;
+  padding-left: 40px;
 }
 
 .grid__column_1-6 {
@@ -583,4 +598,13 @@ body {
 
 .grid__column_3-4 {
   width: 75%;
+}
+
+.grid__column_2-5 {
+  width: 40%;
+}
+
+.grid__column_center {
+  margin-right: auto;
+  margin-left: auto;
 }
