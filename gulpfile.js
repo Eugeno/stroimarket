@@ -20,7 +20,10 @@ gulp.task('style', function () {
 });
 
 gulp.task('copy-html', function () {
-  return gulp.src('*.{html,ico}')
+  return gulp.src([
+    '*.{html,ico}',
+    'pages/**/*.html'
+  ])
   .pipe(gulp.dest('build'))
   .pipe(server.stream());
 });
@@ -51,7 +54,7 @@ gulp.task('serve', ['assemble'], function () {
     ui: false
   });
 
-  gulp.watch('*.html').on('change', function (e) {
+  gulp.watch(['*.html', 'pages/**/*.html']).on('change', function (e) {
     if (e.type !== 'deleted') {
       gulp.start('copy-html');
     }
