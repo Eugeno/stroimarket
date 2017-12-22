@@ -1,0 +1,106 @@
+.form > *:first-child {
+  margin-top: 0;
+}
+
+/* Input
+   ========================================================================== */
+.form__input {
+  font: 400 14px / 19px "Open Sans", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 5px;
+  padding: 15px 20px 16px;
+  color: #455056;
+  border: solid 1px #eaeeef;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.form__input::-webkit-input-placeholder {
+  opacity: .6;
+}
+
+/* Checkbox
+   ========================================================================== */
+.form__checkbox {
+  display: none;
+}
+
+.form__checkbox + label {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+  position: relative;
+  display: block;
+  min-height: 34px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 6px;
+  color: #4a4a4a;
+}
+
+.form__checkbox + label::before,
+.form__checkbox + label::after {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  border-radius: 17px;
+}
+
+.form__checkbox + label::before {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  top: 0;
+  box-sizing: border-box;
+  width: 74px;
+  height: 34px;
+  padding: 8px 10px;
+  content: "нет";
+  text-align: right;
+  text-transform: uppercase;
+  color: #7e8890;
+  background-color: #d9e2e7;
+}
+
+.form__checkbox:checked + label::before {
+  content: "да";
+  text-align: left;
+  color: #fff;
+  background-color: #f89e01;
+}
+
+.form__checkbox + label::after {
+  top: 3px;
+  width: 28px;
+  height: 28px;
+  content: "";
+  transition: transform .1s ease-in-out;
+  transform: translateX(-43px);
+  background: #fff;
+}
+
+.form__checkbox:checked + label::after {
+  transform: translateX(-3px);
+}
+
+/* Button
+   ========================================================================== */
+.form__button {
+  font: 600 14px / 19px "Open Sans", Helvetica, Arial, sans-serif;
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  padding: 15px 20px 16px;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  background: #f89e01;
+}
+
+/* Link
+   ========================================================================== */
+.form__link {
+  font-size: 14px;
+  line-height: 20px;
+}
