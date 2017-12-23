@@ -18,6 +18,18 @@ body {
   color: #f89e01;
 }
 
+.button {
+  font: 600 14px / 19px "Open Sans", Helvetica, Arial, sans-serif;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 20px 16px;
+  text-align: center;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  background: #f89e01;
+}
 
 /* ==========================================================================
    Headings

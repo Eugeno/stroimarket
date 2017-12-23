@@ -87,15 +87,7 @@
 /* Button
    ========================================================================== */
 .form__button {
-  font: 600 14px / 19px "Open Sans", Helvetica, Arial, sans-serif;
-  display: block;
-  width: 100%;
   margin-top: 30px;
-  padding: 15px 20px 16px;
-  color: #fff;
-  border: 0;
-  border-radius: 10px;
-  background: #f89e01;
 }
 
 /* Link
