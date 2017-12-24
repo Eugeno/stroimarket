@@ -398,9 +398,9 @@ body {
 }
 
 .link {
+  cursor: pointer;
   text-decoration: none;
   color: #f89e01;
-  cursor: pointer;
 }
 
 .button {
