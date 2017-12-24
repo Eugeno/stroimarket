@@ -2,6 +2,10 @@
   margin-top: 39px;
 }
 
+.registration__form {
+  margin-top: 30px;
+}
+
 .registration__heading {
   display: block;
   margin-bottom: 50px;
@@ -48,6 +52,15 @@
   color: #7e8890;
 }
 
+.registration__caption {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: #b1b6bb;
+}
+
 .registration__button {
   margin-top: auto;
 }
@@ -67,27 +80,27 @@
 }
 
 .registration__phone-country {
-  text-align: center;
   width: 23.1%;
+  text-align: center;
 }
 
 .registration__phone-code {
-  text-align: center;
   width: 30.4%;
+  text-align: center;
 }
 
 .registration__phone-number {
-  text-align: center;
   width: 46.5%;
+  text-align: center;
 }
 
 .registration__register-conditions {
+  font-size: 10px;
+  line-height: 14px;
   margin-top: 34px;
   margin-bottom: 4px;
-  line-height: 14px;
-  font-size: 10px;
-  color: #7e8890;
   text-align: right;
+  color: #7e8890;
 }
 
 .registration__register-conditions .link {

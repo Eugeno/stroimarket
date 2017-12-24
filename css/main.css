@@ -14,7 +14,6 @@ body {
 }
 
 .link {
-  cursor: pointer;
   text-decoration: none;
   color: #f89e01;
 }
@@ -82,6 +81,10 @@ body {
 
 .grid__column_2-5 {
   width: 40%;
+}
+
+.grid__column_3-5 {
+  width: 60%;
 }
 
 .grid__column_1-6 {

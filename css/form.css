@@ -80,6 +80,7 @@
   line-height: 20px;
   position: relative;
   display: block;
+  box-sizing: border-box;
   min-height: 34px;
   margin-top: 15px;
   margin-bottom: 15px;
