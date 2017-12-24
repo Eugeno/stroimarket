@@ -35,7 +35,74 @@
           </section>
         </div>
         <div class="grid__column_7-12">
-
+          <div class="registration">
+            <h2 class="h2">Общая информация</h2>
+            <form class="form">
+              <div class="grid form__row">
+                <div class="grid__column_3-7">
+                  <label class="form__label" for="registration_name">
+                    Название фирмы:
+                  </label>
+                </div>
+                <div class="grid__column_4-7">
+                  <input class="form__input" id="registration_name"
+                         type="text" placeholder="Не юр. лица, а название фирмы">
+                </div>
+              </div>
+              <div class="grid form__row form__row_top">
+                <div class="grid__column_3-7">
+                  <p class="form__label">
+                    Логотип:
+                  </p>
+                  <p class="form__label-caption">
+                    Какие-нибудь требования к фотографии типа размера файла или максимальной длинне одной из сторон.
+                  </p>
+                </div>
+                <div class="grid__column_4-7">
+                  <div class="grid grid_small">
+                    <div class="grid__column_1-2 registration__logo">
+                      <input class="form__input" id="registration_logo"
+                             type="file" placeholder="Не юр. лица, а название фирмы">
+                      <label class="form__input" for="registration_logo">
+                        <span>Нет логотипа</span>
+                      </label>
+                    </div>
+                    <div class="grid__column_1-2">
+                      <label class="form__input registration__action-btn" for="registration_logo">
+                        Загрузить
+                      </label>
+                      <button class="form__input registration__action-btn registration__action-btn_secondary">
+                        <span>Удалить</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid form__row">
+                <div class="grid__column_3-7">
+                  <label class="form__label" for="registration_info">
+                    Информация об организации:
+                  </label>
+                </div>
+                <div class="grid__column_4-7">
+                  <input class="form__input" id="registration_info"
+                         type="text" placeholder="Текст">
+                </div>
+              </div>
+              <div class="grid form__row">
+                <div class="grid__column_3-7">
+                  <label class="form__label" for="registration_site">
+                    Веб-сайт:
+                  </label>
+                </div>
+                <div class="grid__column_4-7">
+                  <input class="form__input" id="registration_site"
+                         type="url" placeholder="Текст">
+                </div>
+              </div>
+              <hr class="hr">
+            </form>
+          </div>
         </div>
       </div>
     </div>

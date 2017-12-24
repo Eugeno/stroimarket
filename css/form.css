@@ -6,6 +6,10 @@
   align-items: baseline;
 }
 
+.form__row_top {
+  align-items: flex-start;
+}
+
 .form__row + .form__row {
   margin-top: 15px;
 }
@@ -14,6 +18,7 @@
    ========================================================================== */
 .form__input {
   font: 400 14px / 19px "Open Sans", Helvetica, Arial, sans-serif;
+  display: block;
   box-sizing: border-box;
   width: 100%;
   margin-top: 5px;
@@ -42,7 +47,23 @@
   font-size: 18px;
   font-weight: 300;
   line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
   color: #4a4a4a;
+}
+
+.form__row_top .form__label {
+  margin-top: 14px;
+}
+
+/* Caption for label
+   ========================================================================== */
+.form__label-caption {
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: #7e8890;
 }
 
 /* Input-row

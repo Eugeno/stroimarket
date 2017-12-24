@@ -417,6 +417,14 @@ body {
   background: #f89e01;
 }
 
+.hr {
+  border: 0;
+  height: 1px;
+  background-color: #d5d5d5;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 /* ==========================================================================
    Headings
    ========================================================================== */
@@ -439,9 +447,17 @@ body {
   margin-left: -40px;
 }
 
+.grid_small {
+  margin-left: -20px;
+}
+
 .grid > * {
   box-sizing: border-box;
   padding-left: 40px;
+}
+
+.grid_small > * {
+  padding-left: 20px;
 }
 
 .grid__column_1-2 {
@@ -480,6 +496,14 @@ body {
   width: 83.333%;
 }
 
+.grid__column_3-7 {
+  width: 42.857%;
+}
+
+.grid__column_4-7 {
+  width: 57.143%;
+}
+
 .grid__column_1-12 {
   width: 8.333%;
 }
@@ -508,6 +532,10 @@ body {
   align-items: baseline;
 }
 
+.form__row_top {
+  align-items: flex-start;
+}
+
 .form__row + .form__row {
   margin-top: 15px;
 }
@@ -517,6 +545,7 @@ body {
 
 .form__input {
   font: 400 14px / 19px "Open Sans", Helvetica, Arial, sans-serif;
+  display: block;
   box-sizing: border-box;
   width: 100%;
   margin-top: 5px;
@@ -546,7 +575,24 @@ body {
   font-size: 18px;
   font-weight: 300;
   line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
   color: #4a4a4a;
+}
+
+.form__row_top .form__label {
+  margin-top: 14px;
+}
+
+/* Caption for label
+   ========================================================================== */
+
+.form__label-caption {
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: #7e8890;
 }
 
 /* Input-row
@@ -960,4 +1006,45 @@ body {
 
 .registration__checkbox input[type="checkbox"]:checked + label::after {
   background: #f89e01 url("../img/registration-progress_checkbox-checked.svg") no-repeat center / 13px auto;
+}
+
+.registration__action-btn {
+  font-weight: 600;
+  text-align: center;
+  color: #f89e01;
+}
+
+.form__row .registration__action-btn:not(:first-child) {
+  margin-top: 5px;
+}
+
+.registration__action-btn_secondary {
+  color: #7e8890;
+}
+
+.registration__action-btn_secondary span {
+  opacity: .6;
+}
+
+.registration__logo input[type="file"] {
+  display: none;
+}
+
+.registration__logo input[type="file"] + label {
+  position: relative;
+  margin-top: 0;
+  padding: 0 0 100%;
+}
+
+.registration__logo input[type="file"] + label span {
+  font-size: 14px;
+  line-height: 19px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  opacity: .6;
+  color: #455056;
 }

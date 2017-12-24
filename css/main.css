@@ -33,6 +33,14 @@ body {
   background: #f89e01;
 }
 
+.hr {
+  height: 1px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 0;
+  background-color: #d5d5d5;
+}
+
 /* ==========================================================================
    Headings
    ========================================================================== */
@@ -54,9 +62,17 @@ body {
   margin-left: -40px;
 }
 
+.grid_small {
+  margin-left: -20px;
+}
+
 .grid > * {
   box-sizing: border-box;
   padding-left: 40px;
+}
+
+.grid_small > * {
+  padding-left: 20px;
 }
 
 .grid__column_1-2 {
@@ -93,6 +109,14 @@ body {
 
 .grid__column_5-6 {
   width: 83.333%;
+}
+
+.grid__column_3-7 {
+  width: 42.857%;
+}
+
+.grid__column_4-7 {
+  width: 57.143%;
 }
 
 .grid__column_1-12 {

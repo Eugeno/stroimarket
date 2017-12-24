@@ -13,6 +13,7 @@ gulp.task('style', function () {
     'css/normalize.css',
     'css/fonts.css',
     'css/main.css',
+    'css/form.css',
     'css/**/*.css'
   ])
   .pipe(concatCss('style.css'))
