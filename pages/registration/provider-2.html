@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Строймаркет</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="container page-header__container">
+      <a class="logo" href="/">Строймаркет</a>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="registration">
+        <div class="grid">
+          <div class="grid__column_1-2 grid__column_center">
+            <div class="registration__step">
+              <h2 class="h2">
+                Регистрация в качестве поставщика
+              </h2>
+              <form class="form">
+                <p class="">
+                  <input class="form__checkbox" id="registration_is-producer" type="checkbox">
+                  <label for="registration_is-producer">Вы являетесь производителем:</label>
+                </p>
+                <div class="grid">
+                  <div class="grid__column_1-3">
+                    <select class="form__select">
+                      <option value="" selected>ООО</option>
+                      <option value="">ОАО</option>
+                    </select>
+                  </div>
+                  <div class="grid__column_2-3">
+                    <input class="form__input" type="text" placeholder="Название юридического лица">
+                  </div>
+                </div>
+                <b class="registration__subheading">
+                  Администратор аккаунта
+                </b>
+                <p class="registration__clarification">
+                  Эти данные будут видны только администрации «Строймаркета» и будут использоваться в качестве вашего
+                  логина для входа. Убедительная просьба не указывать здесь контакты, предназначенные для ваших клиентов
+                  или контрагентов, такие контакты вы сможете указать далее.
+                </p>
+                <div class="grid form__row">
+                  <div class="grid__column_1-2">
+                    <label class="form__label" for="registration_name">ФИО:</label>
+                  </div>
+                  <div class="grid__column_1-2">
+                    <input class="form__input" id="registration_name" type="text" placeholder="Текст">
+                  </div>
+                </div>
+                <div class="grid form__row">
+                  <div class="grid__column_1-2">
+                    <label class="form__label" for="registration_email">Электронная почта:</label>
+                  </div>
+                  <div class="grid__column_1-2">
+                    <input class="form__input" id="registration_email" type="email" placeholder="Текст">
+                  </div>
+                </div>
+                <div class="grid form__row">
+                  <div class="grid__column_1-2">
+                    <label class="form__label" for="registration_phone-code">Телефон:</label>
+                  </div>
+                  <div class="grid__column_1-2">
+                    <p class="form__input-row">
+                      <input class="form__input registration__phone-country"
+                             id="registration_phone-country"
+                             type="text"
+                             placeholder=""
+                             value="+7">
+                      <input class="form__input registration__phone-code"
+                             id="registration_phone-code"
+                             type="text"
+                             placeholder="Код">
+                      <input class="form__input registration__phone-number"
+                             id="registration_phone-number"
+                             type="text"
+                             placeholder="Номер">
+                    </p>
+                  </div>
+                </div>
+                <div class="grid">
+                  <div class="grid__column_1-2">
+                    <p class="registration__register-conditions">
+                      Нажимая «Зарегистрировать компанию», вы подтверждаете, что ознакомлены и полностью согласны с
+                      <a class="link">условиями пользования сайта</a>.
+                    </p>
+                  </div>
+                  <div class="grid__column_1-2">
+                    <button class="button form__button" type="submit">
+                      Зарегистрировать компанию
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

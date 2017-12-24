@@ -2,6 +2,14 @@
   margin-top: 0;
 }
 
+.form__row {
+  align-items: baseline;
+}
+
+.form__row + .form__row {
+  margin-top: 15px;
+}
+
 /* Input
    ========================================================================== */
 .form__input {
@@ -16,8 +24,48 @@
   background-color: #fff;
 }
 
+.form__row .form__input {
+  margin-top: 15px;
+}
+
+.form__input:first-child {
+  margin-top: 0;
+}
+
 .form__input::-webkit-input-placeholder {
   opacity: .6;
+}
+
+/* Label
+   ========================================================================== */
+.form__label {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+  color: #4a4a4a;
+}
+
+/* Input-row
+   ========================================================================== */
+.form__input-row {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.form__input-row .form__input {
+  margin-top: 0;
+}
+
+.form__input-row .form__input:not(:last-of-type) {
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form__input-row .form__input:not(:first-of-type) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 /* Checkbox
@@ -77,11 +125,31 @@
   content: "";
   transition: transform .1s ease-in-out;
   transform: translateX(-43px);
-  background: #fff;
+  background: #7e8890 url(/img/form_checkbox.svg) no-repeat center / 12px auto;
 }
 
 .form__checkbox:checked + label::after {
   transform: translateX(-3px);
+  background: #fff url(/img/form_checkbox-checked.svg) no-repeat center / 14px auto;
+}
+
+/* Select
+   ========================================================================== */
+.form__select {
+  font: 400 14px / 19px "Open Sans", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 5px;
+  padding: 15px 36px 16px 20px;
+  text-align: center;
+  color: #455056;
+  border: solid 1px #eaeeef;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.form__select:first-child {
+  margin-top: 0;
 }
 
 /* Button
