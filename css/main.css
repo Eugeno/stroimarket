@@ -95,6 +95,22 @@ body {
   width: 83.333%;
 }
 
+.grid__column_1-12 {
+  width: 8.333%;
+}
+
+.grid__column_5-12 {
+  width: 41.666%;
+}
+
+.grid__column_7-12 {
+  width: 58.333%;
+}
+
+.grid__column_11-12 {
+  width: 91.666%;
+}
+
 .grid__column_center {
   margin-right: auto;
   margin-left: auto;

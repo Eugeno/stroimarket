@@ -106,3 +106,81 @@
 .registration__register-conditions .link {
   font-weight: 600;
 }
+
+.registration__panel {
+  position: relative;
+  padding-top: 39px;
+  padding-right: 60px;
+  background: #fff;
+}
+
+.registration__panel::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  content: "";
+  background: #fff;
+}
+
+.registration__name {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33px;
+  display: block;
+  margin-bottom: 5px;
+  color: #455056;
+}
+
+.registration__text {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 27px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #4a4a4a;
+}
+
+.registration__progress {
+  margin-top: 40px;
+}
+
+.registration__checkbox {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.registration__checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.registration__checkbox input[type="checkbox"] + label {
+  font-size: 14px;
+  line-height: 19px;
+  position: relative;
+  display: block;
+  min-height: 21px;
+  color: #7e8890;
+}
+
+.registration__checkbox_current input[type="checkbox"] + label {
+  font-weight: 600;
+  color: #565f64;
+}
+
+.registration__checkbox input[type="checkbox"] + label::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 21px;
+  height: 21px;
+  content: "";
+  border-radius: 8px;
+  background-color: #d9e2e7;
+}
+
+.registration__checkbox input[type="checkbox"]:checked + label::after {
+  background: #f89e01 url(../img/registration-progress_checkbox-checked.svg) no-repeat center / 13px auto;
+}
