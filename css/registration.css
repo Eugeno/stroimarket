@@ -109,6 +109,7 @@
 
 .registration__panel {
   position: relative;
+  height: 100%;
   padding-top: 39px;
   padding-right: 60px;
   background: #fff;
@@ -119,8 +120,8 @@
   z-index: -1;
   top: 0;
   right: 0;
+  bottom: 0;
   width: 50vw;
-  height: 100vh;
   content: "";
   background: #fff;
 }
@@ -224,4 +225,13 @@
   text-align: center;
   opacity: .6;
   color: #455056;
+}
+
+.registration__hint {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #7e8890;
 }

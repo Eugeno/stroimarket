@@ -59,7 +59,7 @@
                   </p>
                 </div>
                 <div class="grid__column_4-7">
-                  <div class="grid grid_small">
+                  <div class="grid grid_medium">
                     <div class="grid__column_1-2 registration__logo">
                       <input class="form__input" id="registration_logo"
                              type="file" placeholder="Не юр. лица, а название фирмы">
@@ -101,6 +101,102 @@
                 </div>
               </div>
               <hr class="hr">
+              <div class="grid form__row">
+                <div class="grid__column_6-7">
+                  <p class="registration__hint">
+                    Если у вас сеть магазинов — добавить другие магазины сети вы сможете по окончании регистрации
+                    в личном кабинете
+                  </p>
+                </div>
+              </div>
+              <div class="grid form__row form__row_top">
+                <div class="grid__column_3-7">
+                  <p class="form__label">
+                    Расположение фирмы:
+                  </p>
+                  <p class="form__label-caption">
+                    Внимание! Проверьте адрес внимательно, так как после завершения регистрации вы сможете изменить
+                    адрес, только обратившись в администрацию Строймаркета
+                  </p>
+                </div>
+                <div class="grid__column_4-7">
+                  <div class="grid grid_small">
+                    <div class="grid__column_1-1">
+                      <button class="form__input registration__action-btn" type="button">
+                        Выберите город
+                      </button>
+                    </div>
+                  </div>
+                  <div class="grid grid_small">
+                    <div class="grid__column_1-2">
+                      <input class="form__input" type="text" placeholder="Улица">
+                    </div>
+                    <div class="grid__column_1-2">
+                      <input class="form__input" type="text" placeholder="Дом">
+                    </div>
+                  </div>
+                  <div class="grid grid_small">
+                    <div class="grid__column_1-2">
+                      <select class="form__select">
+                        <option selected>Помещение</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <div class="grid__column_1-2">
+                      <input class="form__input" type="text" placeholder="Номер">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <input class="form__checkbox" id="registration_only-online" type="checkbox">
+              <label for="registration_only-online">
+                Нет фактического адреса — только интернет магазин:
+              </label>
+              <div class="grid form__row">
+                <div class="grid__column_3-7">
+                  <label class="form__label" for="registration_phone">
+                    Контактный телефон:
+                  </label>
+                </div>
+                <div class="grid__column_4-7">
+                  <input class="form__input" id="registration_phone"
+                         type="tel" placeholder="" value="(383) 256-33-11">
+                </div>
+              </div>
+              <div class="grid form__row">
+                <div class="grid__column_3-7">
+                  <label class="form__label" for="registration_email">
+                    Контактный email:
+                  </label>
+                </div>
+                <div class="grid__column_4-7">
+                  <input class="form__input" id="registration_email"
+                         type="email" placeholder="" value="info@shtukaturkin.ru">
+                </div>
+              </div>
+              <input class="form__checkbox" id="registration_has-delivery" type="checkbox">
+              <label for="registration_has-delivery">
+                Имеется доставка:
+              </label>
+              <div class="grid form__row">
+                <div class="grid__column_3-7">
+                  <p class="form__label">
+                    Время работы:
+                  </p>
+                </div>
+                <div class="grid__column_4-7">
+                  <button class="form__input registration__action-btn" type="button">
+                    Выберите город
+                  </button>
+                </div>
+              </div>
+              <div class="grid">
+                <div class="grid__column_3-7 grid__column_right">
+                  <button class="button form__button" type="submit" disabled>
+                    Продолжить
+                  </button>
+                </div>
+              </div>
             </form>
           </div>
         </div>
