@@ -7,11 +7,7 @@ const plumber = require('gulp-plumber');
 const server = require('browser-sync').create();
 const minify = require('gulp-csso');
 const rename = require('gulp-rename');
-
-const rollup = require('gulp-better-rollup');
-const resolve = require('rollup-plugin-node-resolve');
-const commonjs = require('rollup-plugin-commonjs');
-const babel = require('rollup-plugin-babel');
+const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 
 gulp.task('style', function () {
@@ -34,27 +30,15 @@ gulp.task('style', function () {
 gulp.task('scripts', function () {
   return gulp.src('js/main.js')
     .pipe(plumber())
-    .pipe(rollup({
-      plugins: [
-        resolve({browser: true}),
-        commonjs(),
-        babel({
-          babelrc: false,
-          exclude: 'node_modules/**',
-          presets: [
-            ['env', {
-              'targets': {
-                'browsers': ['last 2 versions', 'safari >= 9']
-              },
-              modules: false
-            }]
-          ],
-          plugins: [
-            'external-helpers',
-          ]
-        })
+    .pipe(babel({
+      presets: [
+        ['env', {
+          'targets': {
+            'browsers': ['last 2 versions', 'safari >= 9']
+          }
+        }]
       ]
-    }, 'iife'))
+    }))
     .pipe(gulp.dest('build/js'))
     .pipe(uglify())
     .pipe(rename('main.min.js'))

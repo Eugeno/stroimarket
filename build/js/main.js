@@ -1,4 +1,3 @@
-(function () {
 'use strict';
 
 var showFilePreview = function showFilePreview(input) {
@@ -19,11 +18,6 @@ var removeFilePreview = function removeFilePreview(id) {
   input.nextElementSibling.style.backgroundImage = 'none';
 };
 
-window.showFilePreview = showFilePreview;
-window.removeFilePreview = removeFilePreview;
-
 var ready = function ready() {};
 
 document.addEventListener('DOMContentLoaded', ready);
-
-}());
