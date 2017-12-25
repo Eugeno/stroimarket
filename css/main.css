@@ -64,8 +64,8 @@ body {
    ========================================================================== */
 .grid {
   display: flex;
-  margin-left: -40px;
   flex-wrap: wrap;
+  margin-left: -40px;
 }
 
 .grid_medium {

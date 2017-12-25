@@ -62,7 +62,8 @@
                   <div class="grid grid_medium">
                     <div class="grid__column_1-2 registration__logo">
                       <input class="form__input" id="registration_logo"
-                             type="file" placeholder="Не юр. лица, а название фирмы">
+                             type="file" placeholder="Не юр. лица, а название фирмы"
+                             onchange="showFilePreview(this)">
                       <label class="form__input" for="registration_logo">
                         <span>Нет логотипа</span>
                       </label>
@@ -71,7 +72,9 @@
                       <label class="form__input registration__action-btn" for="registration_logo">
                         Загрузить
                       </label>
-                      <button class="form__input registration__action-btn registration__action-btn_secondary">
+                      <button class="form__input registration__action-btn registration__action-btn_secondary"
+                              type="button"
+                              onclick="removeFilePreview('registration_logo')">
                         <span>Удалить</span>
                       </button>
                     </div>
@@ -203,5 +206,6 @@
       </div>
     </div>
   </main>
+  <script src="/js/main.min.js"></script>
 </body>
 </html>

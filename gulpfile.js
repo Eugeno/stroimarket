@@ -8,6 +8,12 @@ const server = require('browser-sync').create();
 const minify = require('gulp-csso');
 const rename = require('gulp-rename');
 
+const rollup = require('gulp-better-rollup');
+const resolve = require('rollup-plugin-node-resolve');
+const commonjs = require('rollup-plugin-commonjs');
+const babel = require('rollup-plugin-babel');
+const uglify = require('gulp-uglify');
+
 gulp.task('style', function () {
   return gulp.src([
     'css/normalize.css',
@@ -25,6 +31,36 @@ gulp.task('style', function () {
   .pipe(gulp.dest('build/css'));
 });
 
+gulp.task('scripts', function () {
+  return gulp.src('js/main.js')
+    .pipe(plumber())
+    .pipe(rollup({
+      plugins: [
+        resolve({browser: true}),
+        commonjs(),
+        babel({
+          babelrc: false,
+          exclude: 'node_modules/**',
+          presets: [
+            ['env', {
+              'targets': {
+                'browsers': ['last 2 versions', 'safari >= 9']
+              },
+              modules: false
+            }]
+          ],
+          plugins: [
+            'external-helpers',
+          ]
+        })
+      ]
+    }, 'iife'))
+    .pipe(gulp.dest('build/js'))
+    .pipe(uglify())
+    .pipe(rename('main.min.js'))
+    .pipe(gulp.dest('build/js'));
+});
+
 gulp.task('copy-html', function () {
   return gulp.src([
     '*.{html,ico}',
@@ -34,7 +70,7 @@ gulp.task('copy-html', function () {
   .pipe(server.stream());
 });
 
-gulp.task('copy', ['copy-html', 'style'], function () {
+gulp.task('copy', ['copy-html', 'scripts', 'style'], function () {
   return gulp.src([
     'fonts/**/*.{woff,woff2}',
     'img/*.*'
@@ -44,6 +80,11 @@ gulp.task('copy', ['copy-html', 'style'], function () {
 
 gulp.task('clean', function () {
   return del('build');
+});
+
+gulp.task('js-watch', ['scripts'], function (done) {
+  server.reload();
+  done();
 });
 
 gulp.task('css-watch', ['style'], function (done) {

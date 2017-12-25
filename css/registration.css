@@ -212,6 +212,7 @@
   position: relative;
   margin-top: 0;
   padding: 0 0 100%;
+  background: no-repeat center / cover;
 }
 
 .registration__logo input[type="file"] + label span {
@@ -225,6 +226,10 @@
   text-align: center;
   opacity: .6;
   color: #455056;
+}
+
+.registration__logo input[type="file"]._is-chosen + label span {
+  display: none;
 }
 
 .registration__hint {
