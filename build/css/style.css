@@ -1065,7 +1065,7 @@ body {
   position: relative;
   margin-top: 0;
   padding: 0 0 100%;
-  background: no-repeat center / cover;
+  background: #fff no-repeat center / cover;
 }
 
 .registration__logo input[type="file"] + label span {
