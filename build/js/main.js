@@ -1,5 +1,9 @@
 'use strict';
 
+var ready = function ready() {};
+
+document.addEventListener('DOMContentLoaded', ready);
+
 var filePreview = {
   show: function show(event) {
     var input = event.target;
@@ -19,6 +23,21 @@ var filePreview = {
   }
 };
 
-var ready = function ready() {};
-
-document.addEventListener('DOMContentLoaded', ready);
+var modal = {
+  open: function open(selector) {
+    var modalWindow = document.querySelector(selector);
+    modalWindow.classList.add('_is-active');
+    var modalOverlay = modalWindow.querySelector('.modal__overlay');
+    var modalClose = modalWindow.querySelector('.modal__close');
+    modalOverlay.onclick = modalClose.onclick = modal.close;
+    document.body.classList.add('_is-fixed');
+  },
+  close: function close(event) {
+    var modalWindow = event.target.parentNode;
+    while (!modalWindow.classList.contains('modal')) {
+      modalWindow = modalWindow.parentNode;
+    }
+    modalWindow.classList.remove('_is-active');
+    document.body.classList.remove('_is-fixed');
+  }
+};

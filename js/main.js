@@ -1,3 +1,9 @@
+const ready = () => {
+
+}
+
+document.addEventListener('DOMContentLoaded', ready)
+
 const filePreview = {
   show (event) {
     const input = event.target
@@ -18,9 +24,22 @@ const filePreview = {
   }
 }
 
-const ready = () => {
+const modal = {
+  open (selector) {
+    const modalWindow = document.querySelector(selector)
+    modalWindow.classList.add(`_is-active`)
+    const modalOverlay = modalWindow.querySelector(`.modal__overlay`)
+    const modalClose = modalWindow.querySelector(`.modal__close`)
+    modalOverlay.onclick = modalClose.onclick = modal.close
+    document.body.classList.add(`_is-fixed`)
+  },
 
+  close (event) {
+    let modalWindow = event.target.parentNode
+    while (!modalWindow.classList.contains(`modal`)) {
+      modalWindow = modalWindow.parentNode
+    }
+    modalWindow.classList.remove(`_is-active`)
+    document.body.classList.remove(`_is-fixed`)
+  }
 }
-
-document.addEventListener('DOMContentLoaded', ready)
-
