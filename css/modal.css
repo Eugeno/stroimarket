@@ -50,10 +50,31 @@
   height: 28px;
   padding: 0;
   transform: translate(50%,-50%);
+  opacity: .8;
   border: 0;
   border-radius: 50%;
   background: #44444e;
   -webkit-appearance: none;
+}
+
+.modal__close::before,
+.modal__close::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 16px;
+  content: "";
+  border-radius: 1px;
+  background: #fff;
+}
+
+.modal__close::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.modal__close::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
 }
 
 .modal__heading {
@@ -69,5 +90,6 @@
 .modal__body {
   position: relative;
   z-index: 2;
+  padding: 15px 60px 30px;
   background: #fff;
 }

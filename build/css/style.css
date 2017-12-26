@@ -584,7 +584,7 @@ body._is-fixed {
   box-sizing: border-box;
   width: 100%;
   margin-top: 5px;
-  padding: 15px 20px 16px;
+  padding: 14px 19px 15px;
   color: #455056;
   border: solid 1px #eaeeef;
   border-radius: 10px;
@@ -908,10 +908,31 @@ body._is-fixed {
   height: 28px;
   padding: 0;
   transform: translate(50%,-50%);
+  opacity: .8;
   border: 0;
   border-radius: 50%;
   background: #44444e;
   -webkit-appearance: none;
+}
+
+.modal__close::before,
+.modal__close::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 16px;
+  content: "";
+  border-radius: 1px;
+  background: #fff;
+}
+
+.modal__close::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.modal__close::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
 }
 
 .modal__heading {
@@ -927,6 +948,7 @@ body._is-fixed {
 .modal__body {
   position: relative;
   z-index: 2;
+  padding: 15px 60px 30px;
   background: #fff;
 }
 .registration {
@@ -1170,4 +1192,38 @@ body._is-fixed {
   margin-top: 0;
   margin-bottom: 0;
   color: #7e8890;
+}
+
+.registration__time-input {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.registration__time-input li:not(:first-child) {
+  margin-top: 15px;
+}
+
+.registration__time-input b {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 10px;
+  color: #4a4a4a;
+}
+
+.registration__time-input p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.registration__time-input input {
+  text-align: center;
 }

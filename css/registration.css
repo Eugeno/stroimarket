@@ -240,3 +240,37 @@
   margin-bottom: 0;
   color: #7e8890;
 }
+
+.registration__time-input {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.registration__time-input li:not(:first-child) {
+  margin-top: 15px;
+}
+
+.registration__time-input b {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 10px;
+  color: #4a4a4a;
+}
+
+.registration__time-input p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.registration__time-input input {
+  text-align: center;
+}
