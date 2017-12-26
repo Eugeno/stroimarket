@@ -1227,3 +1227,13 @@ body._is-fixed {
 .registration__time-input input {
   text-align: center;
 }
+
+.registration__edit-time {
+  padding: 0;
+  background: none;
+  color: #7e8890;
+  text-align: left;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+}
