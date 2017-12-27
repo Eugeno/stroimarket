@@ -321,12 +321,14 @@
   background-color: #c86478;
 }
 
-.registration__operating-time td:empty {
+.registration__operating-time td._is-empty {
   position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-.registration__operating-time td:empty::before,
-.registration__operating-time td:empty::after {
+.registration__operating-time td._is-empty::before,
+.registration__operating-time td._is-empty::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -337,11 +339,11 @@
   background: #d9e2e7;
 }
 
-.registration__operating-time td:empty::before {
+.registration__operating-time td._is-empty::before {
   transform: translate(-50%,-50%) rotate(45deg);
 }
 
-.registration__operating-time td:empty::after {
+.registration__operating-time td._is-empty::after {
   transform: translate(-50%,-50%) rotate(-45deg);
 }
 
