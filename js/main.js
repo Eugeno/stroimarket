@@ -95,3 +95,25 @@ const operatingTime = {
     modal.close(null, `#operating-time`)
   }
 }
+
+const registrationDelivery = {
+  toggle () {
+    const registrationDeliveryWrapper = document.querySelector(`.registration-delivery-wrapper`)
+    if (registrationDeliveryWrapper.hasChildNodes()) {
+      registrationDelivery.clear(registrationDeliveryWrapper)
+    } else {
+      registrationDelivery.add(registrationDeliveryWrapper)
+    }
+  },
+
+  clear (wrapper) {
+    wrapper.innerHTML = ``
+  },
+
+  add (wrapper) {
+    const registrationDeliveryTemplate = document.getElementById(`registration-delivery-template`)
+    const registrationDeliveryToClone = registrationDeliveryTemplate.content.querySelector(`div`)
+    const registrationDelivery = registrationDeliveryToClone.cloneNode(true)
+    wrapper.appendChild(registrationDelivery)
+  }
+}

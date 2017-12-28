@@ -95,3 +95,23 @@ var operatingTime = {
     modal.close(null, '#operating-time');
   }
 };
+
+var registrationDelivery = {
+  toggle: function toggle() {
+    var registrationDeliveryWrapper = document.querySelector('.registration-delivery-wrapper');
+    if (registrationDeliveryWrapper.hasChildNodes()) {
+      registrationDelivery.clear(registrationDeliveryWrapper);
+    } else {
+      registrationDelivery.add(registrationDeliveryWrapper);
+    }
+  },
+  clear: function clear(wrapper) {
+    wrapper.innerHTML = '';
+  },
+  add: function add(wrapper) {
+    var registrationDeliveryTemplate = document.getElementById('registration-delivery-template');
+    var registrationDeliveryToClone = registrationDeliveryTemplate.content.querySelector('div');
+    var registrationDelivery = registrationDeliveryToClone.cloneNode(true);
+    wrapper.appendChild(registrationDelivery);
+  }
+};

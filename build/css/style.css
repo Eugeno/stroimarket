@@ -1348,3 +1348,32 @@ body._is-fixed {
   color: #7e8890;
   background: none;
 }
+
+.registration__add-delivery {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  margin-top: 10px;
+  padding: 0 0 0 15px;
+  text-align: left;
+  color: #7e8890;
+  background: none;
+}
+
+.registration__add-delivery::before,
+.registration__add-delivery::after {
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  content: "";
+  background: #7e8890;
+}
+
+.registration__add-delivery::after {
+  transform: rotate(90deg);
+}

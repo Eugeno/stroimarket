@@ -151,10 +151,12 @@
                   </div>
                 </div>
               </div>
-              <input class="form__checkbox" id="registration_only-online" type="checkbox">
-              <label for="registration_only-online">
-                Нет фактического адреса — только интернет магазин:
-              </label>
+              <div class="form__row">
+                <input class="form__checkbox" id="registration_only-online" type="checkbox">
+                <label for="registration_only-online">
+                  Нет фактического адреса — только интернет магазин:
+                </label>
+              </div>
               <div class="grid form__row">
                 <div class="grid__column_3-7">
                   <label class="form__label" for="registration_phone">
@@ -177,10 +179,15 @@
                          type="email" placeholder="" value="info@shtukaturkin.ru">
                 </div>
               </div>
-              <input class="form__checkbox" id="registration_has-delivery" type="checkbox">
-              <label for="registration_has-delivery">
-                Имеется доставка:
-              </label>
+              <div class="form__row">
+                <input class="form__checkbox" id="registration_has-delivery"
+                       type="checkbox"
+                       onchange="registrationDelivery.toggle()">
+                <label for="registration_has-delivery">
+                  Имеется доставка:
+                </label>
+              </div>
+              <div class="form__row registration-delivery-wrapper"></div>
               <div class="grid form__row">
                 <div class="grid__column_3-7">
                   <p class="form__label">
@@ -194,180 +201,8 @@
                     Установить время работы
                   </button>
                   <div class="operating-time-wrapper"></div>
-                  <template id="operating-time-template">
-                    <table class="registration__operating-time">
-                      <thead>
-                      <tr>
-                        <th>пн</th>
-                        <th>вт</th>
-                        <th>ср</th>
-                        <th>чт</th>
-                        <th>пт</th>
-                        <th>сб</th>
-                        <th>вс</th>
-                      </tr>
-                      </thead>
-                      <tbody>
-                      <tr>
-                        <td>
-                          <span data-id="work-start-1"></span>
-                          <span data-id="work-end-1"></span>
-                        </td>
-                        <td>
-                          <span data-id="work-start-2"></span>
-                          <span data-id="work-end-2"></span>
-                        </td>
-                        <td>
-                          <span data-id="work-start-3"></span>
-                          <span data-id="work-end-3"></span>
-                        </td>
-                        <td>
-                          <span data-id="work-start-4"></span>
-                          <span data-id="work-end-4"></span>
-                        </td>
-                        <td>
-                          <span data-id="work-start-5"></span>
-                          <span data-id="work-end-5"></span>
-                        </td>
-                        <td>
-                          <span data-id="work-start-6"></span>
-                          <span data-id="work-end-6"></span>
-                        </td>
-                        <td>
-                          <span data-id="work-start-7"></span>
-                          <span data-id="work-end-7"></span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td colspan="7">
-                          <span>обед</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <span data-id="lunch-start-1"></span>
-                          <span data-id="lunch-end-1"></span>
-                        </td>
-                        <td>
-                          <span data-id="lunch-start-2"></span>
-                          <span data-id="lunch-end-2"></span>
-                        </td>
-                        <td>
-                          <span data-id="lunch-start-3"></span>
-                          <span data-id="lunch-end-3"></span>
-                        </td>
-                        <td>
-                          <span data-id="lunch-start-4"></span>
-                          <span data-id="lunch-end-4"></span>
-                        </td>
-                        <td>
-                          <span data-id="lunch-start-5"></span>
-                          <span data-id="lunch-end-5"></span>
-                        </td>
-                        <td>
-                          <span data-id="lunch-start-6"></span>
-                          <span data-id="lunch-end-6"></span>
-                        </td>
-                        <td>
-                          <span data-id="lunch-start-7"></span>
-                          <span data-id="lunch-end-7"></span>
-                        </td>
-                      </tr>
-                      </tbody>
-                    </table>
-                  </template>
-                  <template id="edit-operating-time">
-                    <button class="button registration__edit-time"
-                            type="button" onclick="modal.open('#operating-time')">
-                      Редактировать
-                    </button>
-                  </template>
                 </div>
               </div>
-              <!--<div class="grid form__row">
-                <div class="grid__column_3-7">
-                  <p class="form__label">
-                    Время работы:
-                  </p>
-                </div>
-                <div class="grid__column_4-7">
-                  <table class="registration__operating-time">
-                    <thead>
-                    <tr>
-                      <th>пн</th>
-                      <th>вт</th>
-                      <th>ср</th>
-                      <th>чт</th>
-                      <th>пт</th>
-                      <th>сб</th>
-                      <th class="day-off">вс</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                      <td>
-                        <span data-id="work-start-1">10:00</span>
-                        <span data-id="work-end-1">22:00</span>
-                      </td>
-                      <td>
-                        <span data-id="work-start-2">10:00</span>
-                        <span data-id="work-end-2">22:00</span>
-                      </td>
-                      <td>
-                        <span data-id="work-start-3">10:00</span>
-                        <span data-id="work-end-3">22:00</span>
-                      </td>
-                      <td>
-                        <span data-id="work-start-4">10:00</span>
-                        <span data-id="work-end-4">22:00</span>
-                      </td>
-                      <td>
-                        <span data-id="work-start-5">10:00</span>
-                        <span data-id="work-end-5">22:00</span>
-                      </td>
-                      <td>
-                        <span data-id="work-start-6">10:00</span>
-                        <span data-id="work-end-6">18:00</span>
-                      </td>
-                      <td class="_is-empty"></td>
-                    </tr>
-                    <tr>
-                      <td colspan="7">
-                        <span>обед</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span data-id="lunch-start-1">14:00</span>
-                        <span data-id="lunch-end-1">15:00</span>
-                      </td>
-                      <td>
-                        <span data-id="lunch-start-2">14:00</span>
-                        <span data-id="lunch-end-2">15:00</span>
-                      </td>
-                      <td>
-                        <span data-id="lunch-start-3">14:00</span>
-                        <span data-id="lunch-end-3">15:00</span>
-                      </td>
-                      <td>
-                        <span data-id="lunch-start-4">14:00</span>
-                        <span data-id="lunch-end-4">15:00</span>
-                      </td>
-                      <td>
-                        <span data-id="lunch-start-5">14:00</span>
-                        <span data-id="lunch-end-5">15:00</span>
-                      </td>
-                      <td class="_is-empty"></td>
-                      <td class="_is-empty"></td>
-                    </tr>
-                    </tbody>
-                  </table>
-                  <button class="button registration__edit-time"
-                          type="button" onclick="operatingTime.edit()">
-                    Редактировать
-                  </button>
-                </div>
-              </div>-->
               <div class="grid">
                 <div class="grid__column_3-7 grid__column_right">
                   <button class="button form__button" type="submit" disabled>
@@ -593,6 +428,121 @@
       </div>
     </div>
   </div>
+
+  <template id="operating-time-template">
+    <table class="registration__operating-time">
+      <thead>
+      <tr>
+        <th>пн</th>
+        <th>вт</th>
+        <th>ср</th>
+        <th>чт</th>
+        <th>пт</th>
+        <th>сб</th>
+        <th>вс</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>
+          <span data-id="work-start-1"></span>
+          <span data-id="work-end-1"></span>
+        </td>
+        <td>
+          <span data-id="work-start-2"></span>
+          <span data-id="work-end-2"></span>
+        </td>
+        <td>
+          <span data-id="work-start-3"></span>
+          <span data-id="work-end-3"></span>
+        </td>
+        <td>
+          <span data-id="work-start-4"></span>
+          <span data-id="work-end-4"></span>
+        </td>
+        <td>
+          <span data-id="work-start-5"></span>
+          <span data-id="work-end-5"></span>
+        </td>
+        <td>
+          <span data-id="work-start-6"></span>
+          <span data-id="work-end-6"></span>
+        </td>
+        <td>
+          <span data-id="work-start-7"></span>
+          <span data-id="work-end-7"></span>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="7">
+          <span>обед</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span data-id="lunch-start-1"></span>
+          <span data-id="lunch-end-1"></span>
+        </td>
+        <td>
+          <span data-id="lunch-start-2"></span>
+          <span data-id="lunch-end-2"></span>
+        </td>
+        <td>
+          <span data-id="lunch-start-3"></span>
+          <span data-id="lunch-end-3"></span>
+        </td>
+        <td>
+          <span data-id="lunch-start-4"></span>
+          <span data-id="lunch-end-4"></span>
+        </td>
+        <td>
+          <span data-id="lunch-start-5"></span>
+          <span data-id="lunch-end-5"></span>
+        </td>
+        <td>
+          <span data-id="lunch-start-6"></span>
+          <span data-id="lunch-end-6"></span>
+        </td>
+        <td>
+          <span data-id="lunch-start-7"></span>
+          <span data-id="lunch-end-7"></span>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </template>
+  <template id="edit-operating-time">
+    <button class="button registration__edit-time"
+            type="button" onclick="modal.open('#operating-time')">
+      Редактировать
+    </button>
+  </template>
+
+  <template id="registration-delivery-template">
+    <div class="grid form__row">
+      <div class="grid__column_3-7">
+        <p class="form__label">
+          Доставка
+        </p>
+      </div>
+      <div class="grid__column_4-7">
+        <div class="registration-delivery-item">
+          <button class="form__input registration__action-btn" id=""
+                  type="button" onclick="">
+            Населенный пункт
+          </button>
+          <select class="form__select">
+            <option selected>Доставка по городу и самовывоз</option>
+            <option>...</option>
+          </select>
+          <button class="button registration__add-delivery"
+                  type="button" onclick="">
+            Добавить еще
+          </button>
+        </div>
+      </div>
+    </div>
+  </template>
   <script src="/js/main.min.js"></script>
 </body>
 </html>
