@@ -102,7 +102,7 @@ const registrationDelivery = {
     if (registrationDeliveryWrapper.hasChildNodes()) {
       registrationDelivery.clear(registrationDeliveryWrapper)
     } else {
-      registrationDelivery.add(registrationDeliveryWrapper)
+      registrationDelivery.enable(registrationDeliveryWrapper)
     }
   },
 
@@ -110,10 +110,20 @@ const registrationDelivery = {
     wrapper.innerHTML = ``
   },
 
-  add (wrapper) {
+  enable (wrapper) {
     const registrationDeliveryTemplate = document.getElementById(`registration-delivery-template`)
     const registrationDeliveryToClone = registrationDeliveryTemplate.content.querySelector(`div`)
     const registrationDelivery = registrationDeliveryToClone.cloneNode(true)
     wrapper.appendChild(registrationDelivery)
+    this.addItem()
+  },
+
+  addItem () {
+    const registrationDeliveryWrapper = document.querySelector(`.registration-delivery-wrapper`)
+    const deliveryItemTemplate = document.getElementById(`delivery-item-template`)
+    const deliveryItemToClone = deliveryItemTemplate.content.querySelector(`div`)
+    const deliveryItem = deliveryItemToClone.cloneNode(true)
+    const addButton = registrationDeliveryWrapper.querySelector(`.registration__add-delivery`)
+    addButton.parentNode.insertBefore(deliveryItem, addButton)
   }
 }

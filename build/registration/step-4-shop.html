@@ -526,21 +526,23 @@
         </p>
       </div>
       <div class="grid__column_4-7">
-        <div class="registration-delivery-item">
-          <button class="form__input registration__action-btn" id=""
-                  type="button" onclick="">
-            Населенный пункт
-          </button>
-          <select class="form__select">
-            <option selected>Доставка по городу и самовывоз</option>
-            <option>...</option>
-          </select>
-          <button class="button registration__add-delivery"
-                  type="button" onclick="">
-            Добавить еще
-          </button>
-        </div>
+        <button class="button registration__add-delivery"
+                type="button" onclick="registrationDelivery.addItem()">
+          Добавить еще
+        </button>
       </div>
+    </div>
+  </template>
+  <template id="delivery-item-template">
+    <div class="registration-delivery-item">
+      <button class="form__input registration__action-btn" id=""
+              type="button" onclick="">
+        Населенный пункт
+      </button>
+      <select class="form__select">
+        <option selected>Доставка по городу и самовывоз</option>
+        <option>...</option>
+      </select>
     </div>
   </template>
   <script src="/js/main.min.js"></script>

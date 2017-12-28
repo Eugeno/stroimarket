@@ -102,16 +102,25 @@ var registrationDelivery = {
     if (registrationDeliveryWrapper.hasChildNodes()) {
       registrationDelivery.clear(registrationDeliveryWrapper);
     } else {
-      registrationDelivery.add(registrationDeliveryWrapper);
+      registrationDelivery.enable(registrationDeliveryWrapper);
     }
   },
   clear: function clear(wrapper) {
     wrapper.innerHTML = '';
   },
-  add: function add(wrapper) {
+  enable: function enable(wrapper) {
     var registrationDeliveryTemplate = document.getElementById('registration-delivery-template');
     var registrationDeliveryToClone = registrationDeliveryTemplate.content.querySelector('div');
     var registrationDelivery = registrationDeliveryToClone.cloneNode(true);
     wrapper.appendChild(registrationDelivery);
+    this.addItem();
+  },
+  addItem: function addItem() {
+    var registrationDeliveryWrapper = document.querySelector('.registration-delivery-wrapper');
+    var deliveryItemTemplate = document.getElementById('delivery-item-template');
+    var deliveryItemToClone = deliveryItemTemplate.content.querySelector('div');
+    var deliveryItem = deliveryItemToClone.cloneNode(true);
+    var addButton = registrationDeliveryWrapper.querySelector('.registration__add-delivery');
+    addButton.parentNode.insertBefore(deliveryItem, addButton);
   }
 };

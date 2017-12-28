@@ -425,3 +425,6 @@
   transform: rotate(90deg);
 }
 
+.registration-delivery-item:not(:first-child) {
+  margin-top: 10px;
+}
