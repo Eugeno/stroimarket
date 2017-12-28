@@ -589,6 +589,7 @@ body._is-fixed {
   border: solid 1px #eaeeef;
   border-radius: 10px;
   background-color: #fff;
+  resize: vertical;
 }
 
 .form__row .form__input {
@@ -953,6 +954,10 @@ body._is-fixed {
 }
 .registration {
   margin-top: 39px;
+}
+
+.registration__h2 {
+  margin-bottom: 20px;
 }
 
 .registration__form {

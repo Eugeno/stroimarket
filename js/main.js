@@ -1,5 +1,7 @@
 const ready = () => {
-
+  if (autosize) {
+    autosize(document.querySelectorAll(`textarea`))
+  }
 }
 
 document.addEventListener('DOMContentLoaded', ready)

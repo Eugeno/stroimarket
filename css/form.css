@@ -27,6 +27,7 @@
   border: solid 1px #eaeeef;
   border-radius: 10px;
   background-color: #fff;
+  resize: vertical;
 }
 
 .form__row .form__input {

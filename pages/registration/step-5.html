@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Строймаркет</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="container page-header__container">
+      <a class="logo" href="/">Строймаркет</a>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__column_1-3">
+          <section class="registration__panel">
+            <b class="registration__name">
+              ООО "Пластик Сибири"
+            </b>
+            <p class="registration__text">
+              Продолжение регистрации
+            </p>
+            <div class="registration__progress">
+              <p class="registration__checkbox">
+                <input id="progress_info" type="checkbox" checked disabled>
+                <label for="progress_info">Общая информация</label>
+              </p>
+              <p class="registration__checkbox registration__checkbox_current">
+                <input id="progress_requisites" type="checkbox" disabled>
+                <label for="progress_requisites">Реквизиты</label>
+              </p>
+            </div>
+          </section>
+        </div>
+        <div class="grid__column_7-12">
+          <div class="registration">
+            <h2 class="h2 registration__h2">Реквизиты</h2>
+            <div class="grid">
+              <div class="grid__column_6-7">
+                <p class="registration__hint">
+                  Для того, чтобы другие пользователи видели, что вы реальная фирма, вам необходимо указать реквизиты
+                  и подтвердить их в далее в настройках, в личном кабинете
+                </p>
+              </div>
+            </div>
+
+            <form class="form registration__form" onchange="">
+              <div class="grid form__row">
+                <div class="grid__column_3-7">
+                  <label class="form__label" for="registration_s5-f1">
+                    ИНН:
+                  </label>
+                </div>
+                <div class="grid__column_4-7">
+                  <input class="form__input" id="registration_s5-f1"
+                         type="text" placeholder="" value="5403003213">
+                </div>
+              </div>
+              <div class="grid form__row">
+                <div class="grid__column_3-7">
+                  <label class="form__label" for="registration_s5-f2">
+                    ОГРН:
+                  </label>
+                </div>
+                <div class="grid__column_4-7">
+                  <input class="form__input" id="registration_s5-f2"
+                         type="text" placeholder="" value="115547600108">
+                </div>
+              </div>
+              <div class="grid form__row">
+                <div class="grid__column_3-7">
+                  <label class="form__label" for="registration_s5-f3">
+                    КПП:
+                  </label>
+                </div>
+                <div class="grid__column_4-7">
+                  <input class="form__input" id="registration_s5-f3"
+                         type="text" placeholder="" value="540301542">
+                </div>
+              </div>
+              <div class="grid form__row">
+                <div class="grid__column_3-7">
+                  <label class="form__label" for="registration_s5-f4">
+                    ОКПО:
+                  </label>
+                </div>
+                <div class="grid__column_4-7">
+                  <input class="form__input" id="registration_s5-f4"
+                         type="text" placeholder="" value="49732758">
+                </div>
+              </div>
+              <div class="grid form__row">
+                <div class="grid__column_3-7">
+                  <label class="form__label" for="registration_s5-f5">
+                    Расчетный счет:
+                  </label>
+                </div>
+                <div class="grid__column_4-7">
+                  <input class="form__input" id="registration_s5-f5"
+                         type="text" placeholder="" value="756845674385694639">
+                </div>
+              </div>
+              <div class="grid form__row">
+                <div class="grid__column_3-7">
+                  <label class="form__label" for="registration_s5-f6">
+                    БИК:
+                  </label>
+                </div>
+                <div class="grid__column_4-7">
+                  <input class="form__input" id="registration_s5-f6"
+                         type="text" placeholder="" value="789546987">
+                </div>
+              </div>
+              <div class="grid form__row">
+                <div class="grid__column_3-7">
+                  <label class="form__label" for="registration_s5-f7">
+                    Банк:
+                  </label>
+                </div>
+                <div class="grid__column_4-7">
+                  <input class="form__input" id="registration_s5-f7"
+                         type="text" placeholder="" value="Сбербанк">
+                </div>
+              </div>
+              <div class="grid form__row">
+                <div class="grid__column_3-7">
+                  <label class="form__label" for="registration_s5-f8">
+                    Корр. счет:
+                  </label>
+                </div>
+                <div class="grid__column_4-7">
+                  <input class="form__input" id="registration_s5-f8"
+                         type="text" placeholder="" value="565656775474577456">
+                </div>
+              </div>
+              <div class="grid form__row">
+                <div class="grid__column_3-7">
+                  <label class="form__label" for="registration_s5-f9">
+                    Корр. счет:
+                  </label>
+                </div>
+                <div class="grid__column_4-7">
+                  <textarea class="form__input" id="registration_s5-f9" rows="1"
+                            placeholder="">121248, Россия, г. Москва, Кутузовский просп., 12с2</textarea>
+                </div>
+              </div>
+              <div class="grid form__row">
+                <div class="grid__column_3-7">
+                  <label class="form__label" for="registration_s5-f10">
+                    Почтовый адрес:
+                  </label>
+                </div>
+                <div class="grid__column_4-7">
+                  <textarea class="form__input" id="registration_s5-f10" rows="1"
+                            placeholder="">121248, Россия, г. Москва, Кутузовский просп., 12с2</textarea>
+                </div>
+              </div>
+              <div class="grid">
+                <div class="grid__column_3-7 grid__column_right">
+                  <button class="button form__button" type="submit">
+                    Завершить регистрацию
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/js/lib/autosize.min.js"></script>
+  <script src="/js/main.min.js"></script>
+</body>
+</html>
