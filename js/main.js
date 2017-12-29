@@ -1,5 +1,5 @@
 const ready = () => {
-  if (autosize) {
+  if (typeof autosize !== 'undefined') {
     autosize(document.querySelectorAll(`textarea`))
   }
 }
