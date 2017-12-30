@@ -73,6 +73,10 @@ body._is-fixed {
   margin-left: -40px;
 }
 
+.grid_large {
+  margin-left: -60px;
+}
+
 .grid_medium {
   margin-left: -20px;
 }
@@ -88,6 +92,10 @@ body._is-fixed {
 .grid > * {
   box-sizing: border-box;
   padding-left: 40px;
+}
+
+.grid_large > * {
+  padding-left: 60px;
 }
 
 .grid_medium > * {

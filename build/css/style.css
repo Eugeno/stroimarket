@@ -458,6 +458,10 @@ body._is-fixed {
   margin-left: -40px;
 }
 
+.grid_large {
+  margin-left: -60px;
+}
+
 .grid_medium {
   margin-left: -20px;
 }
@@ -473,6 +477,10 @@ body._is-fixed {
 .grid > * {
   box-sizing: border-box;
   padding-left: 40px;
+}
+
+.grid_large > * {
+  padding-left: 60px;
 }
 
 .grid_medium > * {
@@ -1014,6 +1022,11 @@ body._is-fixed {
   margin-top: 39px;
 }
 
+.registration_finish {
+  margin-top: 79px;
+  margin-bottom: 80px;
+}
+
 .registration__h2 {
   margin-bottom: 20px;
 }
@@ -1039,14 +1052,22 @@ body._is-fixed {
   background: #fff;
 }
 
-.registration__type {
+.registration__block_finish {
+  padding: 40px 60px 50px;
+}
+
+.registration__type,
+.registration__next-step {
   font-size: 20px;
   font-weight: 400;
   line-height: 27px;
-  min-height: 54px;
   margin-top: 0;
   margin-bottom: 20px;
   color: #4a4a4a;
+}
+
+.registration__type {
+  min-height: 54px;
 }
 
 .registration__subheading {
@@ -1079,6 +1100,10 @@ body._is-fixed {
 
 .registration__button {
   margin-top: auto;
+}
+
+.registration__button_finish {
+  margin-top: 10px;
 }
 
 .registration__has-account {
@@ -1443,4 +1468,25 @@ body._is-fixed {
 
 .registration-delivery-item:not(:first-child) {
   margin-top: 10px;
+}
+
+.registration__what-next {
+  margin-top: -14px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 27px;
+  position: relative;
+}
+
+.registration__what-next::before {
+  height: 1px;
+  background-color: #f89e01;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  content: '';
+  position: absolute;
 }
