@@ -54,8 +54,14 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_s5-f1"
-                         type="text" placeholder="" value="5403003213">
+                  <p class="form__field">
+                    <input class="form__input" id="registration_s5-f1"
+                           type="text" placeholder="" value="5403003213">
+                    <span class="form__error">
+                      <b>Ошибка ввода</b>
+                      Текст ошибки…текст ошибки…текст ошибки
+                    </span>
+                  </p>
                 </div>
               </div>
               <div class="grid form__row">
@@ -65,8 +71,14 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_s5-f2"
+                  <p class="form__field">
+                    <input class="form__input" id="registration_s5-f2"
                          type="text" placeholder="" value="115547600108">
+                    <span class="form__error">
+                      <b>Ошибка ввода</b>
+                      Текст ошибки…текст ошибки…текст ошибки
+                    </span>
+                  </p>
                 </div>
               </div>
               <div class="grid form__row">
@@ -76,8 +88,14 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_s5-f3"
+                  <p class="form__field">
+                    <input class="form__input" id="registration_s5-f3"
                          type="text" placeholder="" value="540301542">
+                    <span class="form__error">
+                      <b>Ошибка ввода</b>
+                      Текст ошибки…текст ошибки…текст ошибки
+                    </span>
+                  </p>
                 </div>
               </div>
               <div class="grid form__row">
@@ -132,13 +150,13 @@
                 </div>
                 <div class="grid__column_4-7">
                   <input class="form__input" id="registration_s5-f8"
-                         type="text" placeholder="" value="565656775474577456">
+                         type="text" placeholder="" value="30156567754734577987">
                 </div>
               </div>
               <div class="grid form__row">
                 <div class="grid__column_3-7">
                   <label class="form__label" for="registration_s5-f9">
-                    Корр. счет:
+                    Юридический адрес:
                   </label>
                 </div>
                 <div class="grid__column_4-7">
@@ -170,7 +188,143 @@
       </div>
     </div>
   </main>
+
   <script src="/js/lib/autosize.min.js"></script>
+  <script src="/js/lib/imask.min.js"></script>
   <script src="/js/main.min.js"></script>
+
+  <script>
+    var f1 = document.getElementById('registration_s5-f1');
+    var mask1 = new IMask(f1, { mask: '000000000000' });
+    f1.onblur = function () {
+      var l = f1.value.length
+      if (l !== 10 && l !== 12) {
+        f1.classList.add('form__input_error')
+      } else {
+        f1.classList.remove('form__input_error')
+      }
+    }
+    f1.onfocus = function () {
+      f1.classList.remove('form__input_error')
+    }
+
+    var f2 = document.getElementById('registration_s5-f2');
+    var mask2 = new IMask(f2, { mask: '000000000000000' });
+    f2.onblur = function () {
+      var l = f2.value.length
+      if (l !== 13 && l !== 15) {
+        f2.classList.add('form__input_error')
+      } else {
+        f2.classList.remove('form__input_error')
+      }
+    }
+    f2.onfocus = function () {
+      f2.classList.remove('form__input_error')
+    }
+
+    var f3 = document.getElementById('registration_s5-f3');
+    var mask3 = new IMask(f3, { mask: '000000000' });
+    f3.onblur = function () {
+      var l = f3.value.length
+      if (l !== 9) {
+        f3.classList.add('form__input_error')
+      } else {
+        f3.classList.remove('form__input_error')
+      }
+    }
+    f3.onfocus = function () {
+      f3.classList.remove('form__input_error')
+    }
+
+    var f4 = document.getElementById('registration_s5-f4');
+    var mask4 = new IMask(f4, { mask: '0000000000' });
+    f1.onblur = function () {
+      var l = f4.value.length
+      if (l !== 8 && l !== 10) {
+        f4.classList.add('form__input_error')
+      } else {
+        f4.classList.remove('form__input_error')
+      }
+    }
+    f4.onfocus = function () {
+      f4.classList.remove('form__input_error')
+    }
+
+    var f5 = document.getElementById('registration_s5-f5');
+    var mask5 = new IMask(f5, { mask: '000000000' });
+    f5.onblur = function () {
+      var l = f5.value.length
+      if (l !== 9) {
+        f5.classList.add('form__input_error')
+      } else {
+        f5.classList.remove('form__input_error')
+      }
+    }
+    f5.onfocus = function () {
+      f5.classList.remove('form__input_error')
+    }
+
+    var f8 = document.getElementById('registration_s5-f8');
+    var mask8 = new IMask(f8, { mask: '3\\0100000000000000000' });
+    f8.onblur = function () {
+      var l = f8.value.length
+      if (l !== 20) {
+        f8.classList.add('form__input_error')
+      } else {
+        f8.classList.remove('form__input_error')
+      }
+    }
+    f8.onfocus = function () {
+      f8.classList.remove('form__input_error')
+    }
+
+    var f6 = document.getElementById('registration_s5-f6');
+    f6.onblur = function () {
+      if (!f6.value.trim()) {
+        f6.classList.add('form__input_error')
+      } else {
+        f6.classList.remove('form__input_error')
+      }
+    }
+    f6.onfocus = function () {
+      f6.classList.remove('form__input_error')
+    }
+
+    var f7 = document.getElementById('registration_s5-f7');
+    f7.onblur = function () {
+      if (!f7.value.trim()) {
+        f7.classList.add('form__input_error')
+      } else {
+        f7.classList.remove('form__input_error')
+      }
+    }
+    f7.onfocus = function () {
+      f7.classList.remove('form__input_error')
+    }
+
+    var f9 = document.getElementById('registration_s5-f9');
+    f9.onblur = function () {
+      if (!f9.value.trim()) {
+        f9.classList.add('form__input_error')
+      } else {
+        f9.classList.remove('form__input_error')
+      }
+    }
+    f9.onfocus = function () {
+      f9.classList.remove('form__input_error')
+    }
+
+    var f10 = document.getElementById('registration_s5-f10');
+    f10.onblur = function () {
+      if (!f10.value.trim()) {
+        f10.classList.add('form__input_error')
+      } else {
+        f10.classList.remove('form__input_error')
+      }
+    }
+    f10.onfocus = function () {
+      f10.classList.remove('form__input_error')
+    }
+  </script>
 </body>
 </html>

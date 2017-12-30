@@ -585,11 +585,11 @@ body._is-fixed {
   width: 100%;
   margin-top: 5px;
   padding: 14px 19px 15px;
+  resize: vertical;
   color: #455056;
   border: solid 1px #eaeeef;
   border-radius: 10px;
   background-color: #fff;
-  resize: vertical;
 }
 
 .form__row .form__input {
@@ -602,6 +602,10 @@ body._is-fixed {
 
 .form__input::-webkit-input-placeholder {
   opacity: .6;
+}
+
+.form__input_error {
+  border-color: #c86478;
 }
 
 /* Label
@@ -629,6 +633,60 @@ body._is-fixed {
   margin-top: 10px;
   margin-bottom: 0;
   color: #7e8890;
+}
+
+/* Field
+   ========================================================================== */
+
+.form__field {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Error
+   ========================================================================== */
+
+.form__error {
+  font-size: 13px;
+  line-height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  box-sizing: border-box;
+  width: 252px;
+  padding: 9.5px;
+  transform: translate(28px, -50%);
+  color: #c86478;
+  border: solid .5px #c86478;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+.form__error::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 11px;
+  height: 11px;
+  content: "";
+  transform: translate(-50%,-50%) translateX(-.5px) rotate(45deg);
+  border: solid .5px #c86478;
+  border-top: 0;
+  border-right: 0;
+  background: #fff;
+}
+
+.form__error b {
+  font-weight: 400;
+  display: block;
+  text-transform: uppercase;
+}
+
+.form__input_error + .form__error {
+  display: block;
 }
 
 /* Input-row
