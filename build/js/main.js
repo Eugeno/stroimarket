@@ -128,3 +128,20 @@ var registrationDelivery = {
     addButton.parentNode.insertBefore(deliveryItem, addButton);
   }
 };
+
+var checkForm = function checkForm(form) {
+  var requiredFields = [].concat(_toConsumableArray(form.querySelectorAll('[required]')));
+  var allFieldsValid = true;
+  requiredFields.forEach(function (field) {
+    if (!field.checkValidity()) {
+      allFieldsValid = false;
+    }
+  });
+
+  var noErrorFields = !form.querySelector('.form__error');
+
+  var submitBtn = form.querySelector('[type="submit"]');
+  submitBtn.disabled = !allFieldsValid || !noErrorFields;
+  console.log(submitBtn);
+  console.log(!allFieldsValid || !noErrorFields);
+};

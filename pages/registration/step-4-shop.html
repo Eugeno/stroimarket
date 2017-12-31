@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Строймаркет</title>
@@ -37,7 +37,7 @@
         <div class="grid__column_7-12">
           <div class="registration">
             <h2 class="h2 registration__h2">Общая информация</h2>
-            <form class="form registration__form">
+            <form class="form registration__form" onchange="checkForm(this)">
               <div class="grid form__row">
                 <div class="grid__column_3-7">
                   <label class="form__label" for="registration_name">
@@ -46,7 +46,7 @@
                 </div>
                 <div class="grid__column_4-7">
                   <input class="form__input" id="registration_name"
-                         type="text" placeholder="Не юр. лица, а название фирмы">
+                         type="text" placeholder="Не юр. лица, а название фирмы" required>
                 </div>
               </div>
               <div class="grid form__row form__row_top">
@@ -132,10 +132,10 @@
                   </div>
                   <div class="grid grid_small">
                     <div class="grid__column_1-2">
-                      <input class="form__input" type="text" placeholder="Улица">
+                      <input class="form__input" type="text" placeholder="Улица" required>
                     </div>
                     <div class="grid__column_1-2">
-                      <input class="form__input" type="text" placeholder="Дом">
+                      <input class="form__input" type="text" placeholder="Дом" required>
                     </div>
                   </div>
                   <div class="grid grid_small">
@@ -146,7 +146,7 @@
                       </select>
                     </div>
                     <div class="grid__column_1-2">
-                      <input class="form__input" type="text" placeholder="Номер">
+                      <input class="form__input" type="text" placeholder="Номер" required>
                     </div>
                   </div>
                 </div>
@@ -165,7 +165,7 @@
                 </div>
                 <div class="grid__column_4-7">
                   <input class="form__input" id="registration_phone"
-                         type="tel" placeholder="" value="(383) 256-33-11">
+                         type="tel" placeholder="" value="(383) 256-33-11" required>
                 </div>
               </div>
               <div class="grid form__row">
@@ -176,7 +176,7 @@
                 </div>
                 <div class="grid__column_4-7">
                   <input class="form__input" id="registration_email"
-                         type="email" placeholder="" value="info@shtukaturkin.ru">
+                         type="email" placeholder="" value="info@shtukaturkin.ru" required>
                 </div>
               </div>
               <div class="form__row">

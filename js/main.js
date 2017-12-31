@@ -129,3 +129,20 @@ const registrationDelivery = {
     addButton.parentNode.insertBefore(deliveryItem, addButton)
   }
 }
+
+const checkForm = (form) => {
+  const requiredFields = [...form.querySelectorAll(`[required]`)]
+  let allFieldsValid = true
+  requiredFields.forEach((field) => {
+    if (!field.checkValidity()) {
+      allFieldsValid = false
+    }
+  })
+
+  let noErrorFields = !form.querySelector(`.form__error`)
+
+  const submitBtn = form.querySelector(`[type="submit"]`)
+  submitBtn.disabled = !allFieldsValid || !noErrorFields
+  console.log(submitBtn)
+  console.log(!allFieldsValid || !noErrorFields)
+}
