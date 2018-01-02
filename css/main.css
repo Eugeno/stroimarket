@@ -59,9 +59,19 @@ body._is-fixed {
 .h2 {
   font-size: 24px;
   font-weight: 400;
+  line-height: 33px;
   margin-top: 0;
   margin-bottom: 30px;
   color: #455056;
+}
+
+.h3 {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 27px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #4a4a4a;
 }
 
 

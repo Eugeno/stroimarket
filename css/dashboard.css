@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
 .menu-btn-wrapper {
   position: relative;
 }
@@ -16,6 +19,10 @@
   background: none;
 }
 
+
+/* ==========================================================================
+   Left panel
+   ========================================================================== */
 .side-panel {
   position: relative;
   height: 100%;
@@ -59,3 +66,56 @@
 .side-panel > li > ul > li a:not([href]) {
   color: #f3f3f3;
 }
+
+
+/* ==========================================================================
+   Dashboard
+   ========================================================================== */
+.dashboard__header {
+  /*background: #fff;*/
+  position: relative;
+  padding-top: 40px;
+}
+
+.dashboard__header::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: -60px;
+  bottom: 0;
+  left: -100px;
+  content: "";
+  background: #fff;
+  box-shadow: 0 1px #eaeeef;
+}
+
+.dashboard__h2 {
+  margin-bottom: 10px;
+}
+
+.dashboard__tabs-titles {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -15px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.dashboard__tabs-titles > li {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  cursor: pointer;
+  color: #b1b6bb;
+}
+
+.dashboard__tabs-titles > li._is-active {
+  cursor: auto;
+  color: #f89e01;
+  box-shadow: 0 1px 0 #f89e01;
+}
+
