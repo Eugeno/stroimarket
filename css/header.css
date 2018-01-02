@@ -27,6 +27,14 @@
   color: #f89e01;
 }
 
+.logo_panel {
+  background-color: #f89e01;
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: 18px;
+}
+
 .user-actions {
   display: flex;
   justify-content: flex-end;

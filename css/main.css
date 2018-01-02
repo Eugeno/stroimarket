@@ -183,3 +183,7 @@ body._is-fixed {
 .grid__column_right {
   margin-left: auto;
 }
+
+.grid__column_shift {
+  transform: translateX(-60px);
+}
