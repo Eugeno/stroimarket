@@ -183,7 +183,7 @@
   width: 74px;
   height: 34px;
   padding: 8px 10px;
-  content: "нет";
+  content: attr(data-not-checked);
   text-align: right;
   text-transform: uppercase;
   color: #7e8890;
@@ -191,7 +191,7 @@
 }
 
 .form__checkbox:checked + label::before {
-  content: "да";
+  content: attr(data-checked);
   text-align: left;
   color: #fff;
   background-color: #f89e01;
