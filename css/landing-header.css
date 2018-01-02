@@ -12,19 +12,6 @@
   height: 60px;
 }
 
-.logo {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24px;
-  margin-top: 0;
-  margin-right: auto;
-  margin-bottom: 0;
-  padding: 5px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #f89e01;
-}
-
 .landing-header__link {
   font-size: 16px;
   line-height: 22px;
@@ -39,26 +26,3 @@
   white-space: nowrap;
 }
 
-.user-actions {
-  display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-.user-actions__item_login {
-  position: relative;
-  margin-left: 62px;
-}
-
-.user-actions__item_login::before {
-  position: absolute;
-  top: -4px;
-  left: -32px;
-  width: 2px;
-  height: 32px;
-  content: "";
-  border-radius: 2px;
-  background-color: #f8f9fb;
-}

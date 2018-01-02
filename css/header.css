@@ -1,10 +1,97 @@
 .page-header {
-  background-color: #fff;
   border-bottom: 1px solid rgba(0,0,0,.1);
+  background-color: #fff;
 }
 
 .page-header__container {
-  display: flex;
-  align-items: center;
+  /*display: flex;
+  align-items: center;*/
   height: 60px;
+}
+
+.page-header__grid {
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  padding: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f89e01;
+}
+
+.user-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -30px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.user-actions__link {
+  font-size: 16px;
+  line-height: 22px;
+  color: #7e8890;
+}
+
+.user-actions__item {
+  margin-left: 30px;
+}
+
+.user-actions__item_profile .link {
+  position: relative;
+  display: block;
+  padding-right: 54px;
+}
+
+.user-actions__item_profile .link::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  content: "";
+  transform: translateY(-50%);
+  border: solid .5px #d9e2e7;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.user-actions__item_login,
+.user-actions__item_logout {
+  position: relative;
+  margin-left: 62px;
+}
+
+.user-actions__item_logout {
+  font-weight: 600;
+}
+
+.user-actions__item_login::before,
+.user-actions__item_logout::before {
+  position: absolute;
+  top: -4px;
+  left: -32px;
+  width: 2px;
+  height: 32px;
+  content: "";
+  border-radius: 2px;
+}
+
+.user-actions__item_login::before {
+  background-color: #f8f9fb;
+}
+
+.user-actions__item_logout::before {
+  background-color: #d9e2e7;
 }
