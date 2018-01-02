@@ -1,6 +1,7 @@
 .page-header {
-  border-bottom: 1px solid rgba(0,0,0,.1);
   background-color: #fff;
+  /*border-bottom: 1px solid rgba(0,0,0,.1);*/
+  box-shadow: 0 1px 0 rgba(0,0,0,.1);
 }
 
 .page-header__container {
@@ -28,11 +29,11 @@
 }
 
 .logo_panel {
-  background-color: #f89e01;
-  color: #fff;
   display: block;
-  text-align: center;
   padding: 18px;
+  text-align: center;
+  color: #fff;
+  background-color: #f89e01;
 }
 
 .user-actions {

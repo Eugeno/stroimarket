@@ -843,9 +843,54 @@ body._is-fixed {
   border: 0;
   background: none;
 }
+
+.side-panel {
+  position: relative;
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  background-color: #3b4458;
+}
+
+.side-panel > li {
+  font-size: 16px;
+  line-height: 22px;
+  padding: 15px 58px 13px;
+  color: #f8f8fb;
+}
+
+.accordion-title {
+  cursor: pointer;
+}
+
+.side-panel > li > ul {
+  margin: 13px -58px -13px;
+  padding-left: 0;
+  list-style: none;
+  background-color: rgba(255,255,255,.05);
+}
+
+.side-panel > li > ul > li {
+  padding: 15px 30px 16px;
+}
+
+.side-panel > li > ul > li a {
+  font-size: 14px;
+  line-height: 19px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #b1b6bb;
+}
+
+.side-panel > li > ul > li a:not([href]) {
+  color: #f3f3f3;
+}
 .page-header {
-  border-bottom: 1px solid rgba(0,0,0,.1);
   background-color: #fff;
+  /*border-bottom: 1px solid rgba(0,0,0,.1);*/
+  box-shadow: 0 1px 0 rgba(0,0,0,.1);
 }
 
 .page-header__container {
@@ -873,11 +918,11 @@ body._is-fixed {
 }
 
 .logo_panel {
-  background-color: #f89e01;
-  color: #fff;
   display: block;
-  text-align: center;
   padding: 18px;
+  text-align: center;
+  color: #fff;
+  background-color: #f89e01;
 }
 
 .user-actions {
@@ -976,7 +1021,7 @@ body._is-fixed {
   white-space: nowrap;
 }
 .login {
-  margin-top: 99px;
+  margin-top: 100px;
 }
 
 .login__form {
@@ -1230,7 +1275,7 @@ body._is-fixed {
 .registration__panel {
   position: relative;
   height: 100%;
-  padding-top: 39px;
+  padding-top: 40px;
   padding-right: 60px;
   background: #fff;
 }

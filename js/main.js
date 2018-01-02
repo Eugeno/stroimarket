@@ -2,9 +2,29 @@ const ready = () => {
   if (typeof autosize !== 'undefined') {
     autosize(document.querySelectorAll(`textarea`))
   }
+
+  const sidePanel = document.querySelector(`.side-panel`)
+  if (sidePanel) {
+    accordion.init(sidePanel)
+  }
 }
 
 document.addEventListener('DOMContentLoaded', ready)
+
+const accordion = {
+  init (container = document.body) {
+    const items = [...container.querySelectorAll(`[data-accordion]`)]
+    items.forEach(item => {
+      const title = item.querySelector(`.accordion-title`)
+      title.addEventListener('click', () => accordion.toggle(item))
+    })
+  },
+
+  toggle (item) {
+    const content = item.querySelector(`.accordion-content`)
+    content.hidden = !content.hidden
+  }
+}
 
 const filePreview = {
   show (event) {

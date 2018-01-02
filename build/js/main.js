@@ -6,9 +6,32 @@ var ready = function ready() {
   if (typeof autosize !== 'undefined') {
     autosize(document.querySelectorAll('textarea'));
   }
+
+  var sidePanel = document.querySelector('.side-panel');
+  if (sidePanel) {
+    accordion.init(sidePanel);
+  }
 };
 
 document.addEventListener('DOMContentLoaded', ready);
+
+var accordion = {
+  init: function init() {
+    var container = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.body;
+
+    var items = [].concat(_toConsumableArray(container.querySelectorAll('[data-accordion]')));
+    items.forEach(function (item) {
+      var title = item.querySelector('.accordion-title');
+      title.addEventListener('click', function () {
+        return accordion.toggle(item);
+      });
+    });
+  },
+  toggle: function toggle(item) {
+    var content = item.querySelector('.accordion-content');
+    content.hidden = !content.hidden;
+  }
+};
 
 var filePreview = {
   show: function show(event) {
