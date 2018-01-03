@@ -11,7 +11,8 @@ body._is-fixed {
 .container {
   position: relative;
   box-sizing: border-box;
-  max-width: 1280px;
+  width: 100%;
+  min-width: 1280px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 60px;

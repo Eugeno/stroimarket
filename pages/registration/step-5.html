@@ -238,7 +238,7 @@
 
     var f4 = document.getElementById('registration_s5-f4');
     var mask4 = new IMask(f4, { mask: '0000000000' });
-    f1.onblur = function () {
+    f4.onblur = function () {
       var l = f4.value.length
       if (l !== 8 && l !== 10) {
         f4.classList.add('form__input_error')

@@ -395,7 +395,8 @@ body._is-fixed {
 .container {
   position: relative;
   box-sizing: border-box;
-  max-width: 1280px;
+  width: 100%;
+  min-width: 1280px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 60px;
@@ -966,13 +967,14 @@ body._is-fixed {
 }
 
 .page-header__container {
-  /*display: flex;
-  align-items: center;*/
+  display: flex;
+  align-items: center;
   height: 60px;
 }
 
 .page-header__grid {
   align-items: center;
+  width: calc(100% + 60px);
   height: 100%;
 }
 
@@ -1358,7 +1360,7 @@ body._is-fixed {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 50vw;
+  left: -60px;
   content: "";
   background: #fff;
 }
