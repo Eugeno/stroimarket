@@ -21,6 +21,7 @@ const accordion = {
   },
 
   toggle (item) {
+    item.classList.toggle(`_is-open`)
     const content = item.querySelector(`.accordion-content`)
     content.hidden = !content.hidden
   }

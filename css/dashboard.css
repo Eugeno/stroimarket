@@ -35,29 +35,62 @@
   background-color: #3b4458;
 }
 
-.side-panel > li {
+.side-panel__item {
   font-size: 16px;
   line-height: 22px;
-  padding: 15px 58px 13px;
+  padding: 15px 29px 13px;
   color: #f8f8fb;
 }
 
-.accordion-title {
+.side-panel__item > * {
   cursor: pointer;
+  padding-left: 29px;
 }
 
-.side-panel > li > ul {
-  margin: 13px -58px -13px;
+.side-panel__item_company {
+  background: url(/img/side-panel_company.svg) no-repeat 29px 16px / 20px 18px;
+}
+
+.side-panel__item_catalog {
+  background: url(/img/side-panel_catalog.svg) no-repeat 31px 15px / 16px 20px;
+}
+
+.side-panel__item_settings {
+  background: url(/img/side-panel_settings.svg) no-repeat 29px 17px / 20px 20px;
+}
+
+.accordion-title {
+  display: block;
+  position: relative;
+}
+
+.accordion-title::after {
+  position: absolute;
+  width: 18px;
+  height: 10px;
+  background: url(/img/side-panel_arrow.svg) no-repeat center / contain;
+  content: '';
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+[data-accordion]._is-open .accordion-title::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.side-panel__item > ul {
+  margin: 13px -29px -13px;
   padding-left: 0;
   list-style: none;
   background-color: rgba(255,255,255,.05);
 }
 
-.side-panel > li > ul > li {
+.side-panel__item > ul > li {
   padding: 15px 30px 16px;
 }
 
-.side-panel > li > ul > li a {
+.side-panel__item > ul > li a {
   font-size: 14px;
   line-height: 19px;
   text-decoration: none;
@@ -65,7 +98,7 @@
   color: #b1b6bb;
 }
 
-.side-panel > li > ul > li a:not([href]) {
+.side-panel__item > ul > li a:not([href]) {
   color: #f3f3f3;
 }
 

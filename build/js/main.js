@@ -28,6 +28,7 @@ var accordion = {
     });
   },
   toggle: function toggle(item) {
+    item.classList.toggle('_is-open');
     var content = item.querySelector('.accordion-content');
     content.hidden = !content.hidden;
   }
