@@ -13,10 +13,12 @@
   right: -60px;
   width: 60px;
   height: 60px;
+  padding: 0;
+  cursor: pointer;
   text-align: center;
   color: red;
   border: 0;
-  background: none;
+  background: url(/img/menu-btn.svg) no-repeat center / 16px auto;
 }
 
 

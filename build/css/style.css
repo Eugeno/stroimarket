@@ -856,7 +856,9 @@ body._is-fixed {
   text-align: center;
   color: red;
   border: 0;
-  background: none;
+  padding: 0;
+  background: url("../../img/menu-btn.svg") no-repeat center / 16px auto;
+  cursor: pointer;
 }
 
 /* ==========================================================================
@@ -1001,6 +1003,7 @@ body._is-fixed {
 
 .user-actions {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   margin-top: 0;
   margin-bottom: 0;
@@ -1017,6 +1020,22 @@ body._is-fixed {
 
 .user-actions__item {
   margin-left: 30px;
+}
+
+.user-actions__item_notifications .user-actions__link {
+  font-size: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("../../img/user-actions_notifications.svg") no-repeat center / contain;
+}
+
+.user-actions__item_messages .user-actions__link {
+  font-size: 0;
+  display: block;
+  width: 24px;
+  height: 18px;
+  background: url("../../img/user-actions_messages.svg") no-repeat center / contain;
 }
 
 .user-actions__item_profile .link {
