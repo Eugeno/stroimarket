@@ -543,6 +543,10 @@ body._is-fixed {
 }
 
 .grid__column_3-7 {
+  width: 14.285%;
+}
+
+.grid__column_3-7 {
   width: 42.857%;
 }
 
