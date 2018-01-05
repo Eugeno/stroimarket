@@ -7,6 +7,9 @@ const ready = () => {
   if (sidePanel) {
     accordion.init(sidePanel)
   }
+
+  const tabs = [...document.querySelectorAll(`[data-tabs-title]`)]
+  tabs.forEach(tab => tabControl.init(tab))
 }
 
 document.addEventListener('DOMContentLoaded', ready)
@@ -24,6 +27,28 @@ const accordion = {
     item.classList.toggle(`_is-open`)
     const content = item.querySelector(`.accordion-content`)
     content.hidden = !content.hidden
+  }
+}
+
+const tabControl = {
+  init (tab) {
+    const tabSwitchers = [...tab.querySelectorAll(`[data-tab]`)]
+    tabSwitchers.forEach(tabSwitcher => {
+      tabSwitcher.addEventListener(`click`, () => tabControl.switch(tabSwitcher, tab))
+    })
+  },
+
+  switch (tabSwitcher, tab) {
+    const activeClass = `_is-active`
+    if (!tabSwitcher.classList.contains(activeClass)) {
+      const name = tab.dataset.tabsTitle
+      const tabsContent = document.querySelector(`[data-tabs-content=${name}]`)
+      const activeTabSwitcher = tab.querySelector(`.${activeClass}`)
+      activeTabSwitcher.classList.remove(activeClass)
+      tabSwitcher.classList.add(activeClass)
+      tabsContent.querySelector(`[data-tab="${activeTabSwitcher.dataset.tab}"]`).hidden = true
+      tabsContent.querySelector(`[data-tab="${tabSwitcher.dataset.tab}"]`).hidden = false
+    }
   }
 }
 

@@ -11,6 +11,11 @@ var ready = function ready() {
   if (sidePanel) {
     accordion.init(sidePanel);
   }
+
+  var tabs = [].concat(_toConsumableArray(document.querySelectorAll('[data-tabs-title]')));
+  tabs.forEach(function (tab) {
+    return tabControl.init(tab);
+  });
 };
 
 document.addEventListener('DOMContentLoaded', ready);
@@ -31,6 +36,29 @@ var accordion = {
     item.classList.toggle('_is-open');
     var content = item.querySelector('.accordion-content');
     content.hidden = !content.hidden;
+  }
+};
+
+var tabControl = {
+  init: function init(tab) {
+    var tabSwitchers = [].concat(_toConsumableArray(tab.querySelectorAll('[data-tab]')));
+    tabSwitchers.forEach(function (tabSwitcher) {
+      tabSwitcher.addEventListener('click', function () {
+        return tabControl.switch(tabSwitcher, tab);
+      });
+    });
+  },
+  switch: function _switch(tabSwitcher, tab) {
+    var activeClass = '_is-active';
+    if (!tabSwitcher.classList.contains(activeClass)) {
+      var name = tab.dataset.tabsTitle;
+      var tabsContent = document.querySelector('[data-tabs-content=' + name + ']');
+      var activeTabSwitcher = tab.querySelector('.' + activeClass);
+      activeTabSwitcher.classList.remove(activeClass);
+      tabSwitcher.classList.add(activeClass);
+      tabsContent.querySelector('[data-tab="' + activeTabSwitcher.dataset.tab + '"]').hidden = true;
+      tabsContent.querySelector('[data-tab="' + tabSwitcher.dataset.tab + '"]').hidden = false;
+    }
   }
 };
 
