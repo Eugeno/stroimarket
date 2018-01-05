@@ -43,8 +43,8 @@
 }
 
 .side-panel__item > * {
-  cursor: pointer;
   padding-left: 29px;
+  cursor: pointer;
 }
 
 .side-panel__item_company {
@@ -60,19 +60,19 @@
 }
 
 .accordion-title {
-  display: block;
   position: relative;
+  display: block;
 }
 
 .accordion-title::after {
   position: absolute;
-  width: 18px;
-  height: 10px;
-  background: url(/img/side-panel_arrow.svg) no-repeat center / contain;
-  content: '';
   top: 50%;
   right: 0;
+  width: 18px;
+  height: 10px;
+  content: "";
   transform: translateY(-50%);
+  background: url(/img/side-panel_arrow.svg) no-repeat center / contain;
 }
 
 [data-accordion]._is-open .accordion-title::after {
@@ -113,8 +113,8 @@
 .dashboard__header {
   /*background: #fff;*/
   position: relative;
-  padding-top: 40px;
   margin-bottom: 20px;
+  padding-top: 40px;
 }
 
 .dashboard__header::before {
@@ -162,30 +162,36 @@
 /* Company card
    ========================================================================== */
 .company-card {
-  background: #fff;
-  border: solid 1px #eaeeef;
-  border-radius: 8px;
   overflow: hidden;
   padding-top: 30px;
+  border: solid 1px #eaeeef;
+  border-radius: 8px;
+  background: #fff;
 }
 
 .company-card__info {
+  display: flex;
   padding-right: 60px;
   padding-left: 60px;
-  display: flex;
+}
+
+.company-card__info > * {
+  width: 100%;
 }
 
 .company-card__logo {
-  box-sizing: border-box;
-  padding: 8px;
-  width: 140px;
-  height: 140px;
-  border: 1px solid #eaeeef;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   justify-content: center;
-  border-radius: 50%;
+  box-sizing: border-box;
+  width: 140px;
+  height: 140px;
   margin-right: 60px;
+  margin-bottom: 30px;
+  padding: 8px;
+  border: 1px solid #eaeeef;
+  border-radius: 50%;
 }
 
 .company-card__logo img {
@@ -194,40 +200,40 @@
 }
 
 .company-chooser {
-  width: 400px;
-  box-sizing: border-box;
-  border-radius: 10px;
-  border: solid 1px #eaeeef;
-  padding: 10px 20px 11px;
   position: relative;
+  box-sizing: border-box;
+  width: 400px;
+  padding: 10px 20px 11px;
+  border: solid 1px #eaeeef;
+  border-radius: 10px;
 }
 
 .company-chooser::after {
   position: absolute;
-  content: '';
-  right: 20px;
   top: 50%;
+  right: 20px;
   width: 13px;
   height: 8px;
+  content: "";
   transform: translateY(-50%);
   background: url(/img/company-choser_arrow.svg) no-repeat center / 13px 8px;
 }
 
 .company-chooser b {
-  font-weight: 400;
   font-size: 20px;
-  color: #4a4a4a;
-  margin-right: 6px;
+  font-weight: 400;
   line-height: 27px;
+  margin-right: 6px;
+  color: #4a4a4a;
 }
 
 .company-chooser p {
-  text-transform: uppercase;
   font-size: 14px;
-  color: #868d95;
   line-height: 19px;
   margin-top: 1px;
   margin-bottom: 0;
+  text-transform: uppercase;
+  color: #868d95;
 }
 
 .rating {
@@ -244,31 +250,89 @@
   background-image: url(/img/rating-star_fill.svg);
 }
 
+.company-card__name b {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #4a4a4a;
+}
+
+.company-card__name p {
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 1px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: #868d95;
+}
+
 .company-card__data {
+  font-size: 14px;
+  line-height: 19px;
   margin-top: 10px;
   margin-bottom: 0;
-  line-height: 19px;
-  font-size: 14px;
   color: #7e8890;
 }
 
 .company-card__description {
+  margin-top: 10px;
   padding-right: 60px;
   padding-left: 60px;
-  margin-top: 10px;
 }
 
 .company-card__description p {
-  margin-top: 0;
-  margin-bottom: 0;
   font-size: 14px;
   line-height: 19px;
+  margin-top: 0;
+  margin-bottom: 0;
   color: #7e8890;
 }
 
 .company-card__map {
   height: 200px;
   margin-top: 20px;
+}
+
+.company-card__hr {
+  margin-top: 15px;
+  margin-bottom: 13px;
+}
+
+.company-card__assessment {
+  display: flex;
+}
+
+.company-card__points {
+  width: 140px;
+  margin-right: 60px;
+}
+
+.company-card__points b {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 10px;
+  color: #455056;
+}
+
+.company-card__claims b {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 5px;
+  color: #455056;
+}
+
+.company-card__claims p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #455056;
 }
 
 /* Assortment
@@ -284,27 +348,27 @@
 
 .assortment__heading h2 {
   font-size: 16px;
+  font-weight: 600;
   line-height: 22px;
+  margin-top: 0;
   margin-bottom: 15px;
   text-transform: uppercase;
-  font-weight: 600;
-  margin-top: 0;
   color: #455056;
 }
 
 .assortment__heading .link {
-  margin-left: 10px;
   font-size: 14px;
   line-height: 16px;
+  margin-left: 10px;
 }
 
 .assortment__product {
-  background: #fff;
-  text-align: center;
-  padding: 15px 20px;
-  border-radius: 5px;
-  border: solid 1px #eaeeef;
   box-sizing: border-box;
+  padding: 15px 20px;
+  text-align: center;
+  border: solid 1px #eaeeef;
+  border-radius: 5px;
+  background: #fff;
 }
 
 .assortment__product img {
@@ -313,21 +377,19 @@
 }
 
 .assortment__name {
-  margin-top: 14px;
-  margin-bottom: 0;
-  line-height: 19px;
   font-size: 14px;
   font-weight: 400;
+  line-height: 19px;
+  margin-top: 14px;
+  margin-bottom: 0;
   color: #4a4a4a;
 }
 
 .assortment__category {
-  text-transform: uppercase;
-  color: #868d95;
-  line-height: 17px;
   font-size: 12px;
+  line-height: 17px;
   margin-top: 0;
   margin-bottom: 0;
+  text-transform: uppercase;
+  color: #868d95;
 }
-
-
