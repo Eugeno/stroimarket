@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Строймаркет</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="container page-header__container">
+      <div class="grid page-header__grid">
+        <div class="grid__column_side-panel menu-btn-wrapper">
+          <a class="logo logo_panel" href="/">Строймаркет</a>
+          <a class="logo logo_panel logo_small" href="/">СМ</a>
+          <button class="menu-btn" type="button" onclick="sidePanel.toggle()"></button>
+        </div>
+
+        <div class="grid__column">
+          <ul class="user-actions">
+            <li class="user-actions__item user-actions__item_notifications">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Уведомления
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_messages">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Сообщения
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_profile">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Пластик Сибири
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_logout">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Выйти
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__column_side-panel">
+          <ul class="side-panel">
+            <li class="side-panel__item side-panel__item_company _is-open" data-accordion>
+              <span class="accordion-title">Моя компания</span>
+              <ul class="accordion-content">
+                <li><a href="javascript:void(0)">Рабочий стол</a></li>
+                <li><a href="javascript:void(0)">Ассортимент</a></li>
+                <li><a href="javascript:void(0)">Претензии</a></li>
+                <li><a href="javascript:void(0)">Полученные заказы</a></li>
+                <li><a>Полученные отзывы</a></li>
+              </ul>
+            </li>
+            <li class="side-panel__item side-panel__item_catalog" data-accordion>
+              <span class="accordion-title">Каталог</span>
+            </li>
+            <li class="side-panel__item side-panel__item_purchases" data-accordion>
+              <span class="accordion-title">Закупки</span>
+            </li>
+            <li class="side-panel__item side-panel__item_settings" data-accordion>
+              <span class="accordion-title">Настройки</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid__column">
+          <div class="dashboard">
+            <h2 class="h2 dashboard__h2">Моя компания</h2>
+            <h3 class="h3 h3-selector">
+              <span>Отзывы</span>
+              <select name="" id="place">
+                <option value="">Магазин, Москва, Морской проспект, 10</option>
+                <option value="" selected>Магазин, Санкт–Петербург, Менделеевская, 76</option>
+                <option value="">Магазин, Новосибирск, Сибиряков–Гвардейцев, 49а</option>
+              </select>
+            </h3>
+
+            <div class="reviews">
+              <div class="reviews__sort">
+                <span>Сортировать:</span>
+                <a class="link reviews__link" href="javascript:void(0)">по дате</a>
+                <a class="link reviews__link">по оценке</a>
+              </div>
+
+              <div class="review">
+                <header class="review__header">
+                  <div class="review__rating">
+                    <span class="rating" data-value="5" data-max="5"><span></span></span>
+                  </div>
+                  <p class="review__order-number">Номер заказа: 999999999999</p>
+                  <a class="link review__link" onclick="modal.open('#inspect')">Провести проверку</a>
+                  <time class="review__date" datetime="2017-10-30">30 октября 2017</time>
+                </header>
+
+                <p class="review__author">Роман Аркадьевич</p>
+
+                <div class="review__block">
+                  <b>Достоинства:</b>
+                  <p>Быстрота обработки. Утром заказал, вечером этого же дня забрал.</p>
+                </div>
+                <div class="review__block">
+                  <b>Недостатки:</b>
+                  <p>Оплата только наличными.</p>
+                </div>
+                <div class="review__block">
+                  <b>Комментарий:</b>
+                  <p>Уже второй раз заказываю в этом магазине. Все в норме. Цена ниж чем в других магазинах, качество
+                    товара тоже самое.</p>
+                </div>
+
+                <form class="form review__form">
+                  <input class="form__input" type="text" placeholder="Ваш ответ на отзыв">
+                  <button class="button review__button" type="submit">Ответить</button>
+                </form>
+              </div>
+
+              <div class="review">
+                <header class="review__header">
+                  <div class="review__rating">
+                    <span class="rating" data-value="5" data-max="5"><span></span></span>
+                  </div>
+                  <p class="review__order-number">Номер заказа: 999999999999</p>
+                  <a class="link review__link" onclick="modal.open('#inspect')">Провести проверку</a>
+                  <time class="review__date" datetime="2017-10-30">30 октября 2017</time>
+                </header>
+
+                <p class="review__author">Роман Аркадьевич</p>
+
+                <div class="review__block">
+                  <b>Достоинства:</b>
+                  <p>Быстрота обработки. Утром заказал, вечером этого же дня забрал.</p>
+                </div>
+                <div class="review__block">
+                  <b>Недостатки:</b>
+                  <p>Оплата только наличными.</p>
+                </div>
+                <div class="review__block">
+                  <b>Комментарий:</b>
+                  <p>Уже второй раз заказываю в этом магазине. Все в норме. Цена ниж чем в других магазинах, качество
+                    товара тоже самое.</p>
+                </div>
+
+                <ul class="review__responses">
+                  <li>
+                    <p class="review__commentator">
+                      ПС
+                    </p>
+                    <div class="review__comment">
+                      Ответ на отзыв Ответ на отзыв Ответ на отзыв Ответ на отзыв Ответ на отзыв Ответ на отзыв Ответ на
+                      отзыв Ответ на отзыв Ответ на отзыв
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="review">
+                <header class="review__header">
+                  <div class="review__rating">
+                    <span class="rating" data-value="5" data-max="5"><span></span></span>
+                  </div>
+                  <p class="review__order-number">Номер заказа: 999999999999</p>
+                  <a class="link review__link" onclick="modal.open('#inspect')">Провести проверку</a>
+                  <time class="review__date" datetime="2017-10-30">30 октября 2017</time>
+                </header>
+
+                <p class="review__author">Роман Аркадьевич</p>
+
+                <div class="review__block">
+                  <b>Достоинства:</b>
+                  <p>Быстрота обработки. Утром заказал, вечером этого же дня забрал.</p>
+                </div>
+                <div class="review__block">
+                  <b>Недостатки:</b>
+                  <p>Оплата только наличными.</p>
+                </div>
+                <div class="review__block">
+                  <b>Комментарий:</b>
+                  <p>Уже второй раз заказываю в этом магазине. Все в норме. Цена ниж чем в других магазинах, качество
+                    товара тоже самое.</p>
+                </div>
+
+                <ul class="review__responses" id="r3">
+                  <li>
+                    <p class="review__commentator">
+                      ПС
+                    </p>
+                    <div class="review__comment">
+                      Ответ на отзыв Ответ на отзыв Ответ на отзыв Ответ на отзыв Ответ на отзыв Ответ на отзыв Ответ на
+                      отзыв Ответ на отзыв Ответ на отзыв
+                    </div>
+                  </li>
+                  <li>
+                    <p class="review__commentator">
+                      РА
+                    </p>
+                    <div class="review__comment">
+                      Ответ на ответ Ответ на ответ Ответ на ответ Ответ на ответ Ответ на ответ Ответ на ответ Ответ
+                      на ответ Ответ на ответ Ответ на ответ Ответ на ответ Ответ на ответ Ответ на ответ
+                    </div>
+                  </li>
+                  <li>
+                    <p class="review__commentator">
+                      ПС
+                    </p>
+                    <div class="review__comment">
+                      Ответ на отзыв Ответ на отзыв Ответ на отзыв Ответ на отзыв Ответ на отзыв Ответ на отзыв Ответ на
+                      отзыв Ответ на отзыв Ответ на отзыв
+                    </div>
+                  </li>
+                </ul>
+
+                <button class="reviews__show-more" type="button"
+                        data-show-more="Показать ещё 2 ответа" data-show-less="Свернуть"
+                        onclick="showMore.toggle('#r3')">
+                  Показать ещё 2 ответа
+                </button>
+              </div>
+
+              <div class="review">
+                <header class="review__header">
+                  <div class="review__rating">
+                    <span class="rating" data-value="5" data-max="5"><span></span></span>
+                  </div>
+                  <p class="review__order-number">Номер заказа: 999999999999</p>
+                  <a class="link review__link" onclick="modal.open('#inspect')">Провести проверку</a>
+                  <time class="review__date" datetime="2017-10-30">30 октября 2017</time>
+                </header>
+
+                <p class="review__author">Роман Аркадьевич</p>
+
+                <div class="review__block">
+                  <b>Достоинства:</b>
+                  <p>Быстрота обработки. Утром заказал, вечером этого же дня забрал.</p>
+                </div>
+                <div class="review__block">
+                  <b>Недостатки:</b>
+                  <p>Оплата только наличными.</p>
+                </div>
+                <div class="review__block">
+                  <b>Комментарий:</b>
+                  <p>Уже второй раз заказываю в этом магазине. Все в норме. Цена ниж чем в других магазинах, качество
+                    товара тоже самое.</p>
+                </div>
+
+                <ul class="review__responses _is-expanded" id="r4">
+                  <li>
+                    <p class="review__commentator">
+                      ПС
+                    </p>
+                    <div class="review__comment">
+                      Ответ на отзыв Ответ на отзыв Ответ на отзыв Ответ на отзыв Ответ на отзыв Ответ на отзыв Ответ на
+                      отзыв Ответ на отзыв Ответ на отзыв
+                    </div>
+                  </li>
+                  <li>
+                    <p class="review__commentator">
+                      РА
+                    </p>
+                    <div class="review__comment">
+                      Ответ на ответ Ответ на ответ Ответ на ответ Ответ на ответ Ответ на ответ Ответ на ответ Ответ
+                      на ответ Ответ на ответ Ответ на ответ Ответ на ответ Ответ на ответ Ответ на ответ
+                    </div>
+                  </li>
+                  <li>
+                    <form class="form review__form">
+                      <input class="form__input" type="text" placeholder="Ваш ответ на отзыв">
+                      <button class="button review__button" type="submit">Ответить</button>
+                    </form>
+                  </li>
+                </ul>
+
+                <button class="reviews__show-more" type="button"
+                        data-show-more="Показать ещё 1 ответ" data-show-less="Свернуть"
+                        onclick="showMore.toggle('#r4')">
+                  Свернуть
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal modal_middle" id="inspect">
+    <div class="container modal__container">
+      <div class="grid">
+        <div class="grid__column_1-2 grid__column_center">
+          <div class="modal__overlay"></div>
+          <header class="modal__header">
+            <button class="modal__close" type="button">Закрыть</button>
+            <h3 class="modal__heading">
+              провести проверку отзыва
+            </h3>
+          </header>
+          <div class="modal__body">
+            <p>
+              Если вы считаете, что отзыв должен быть удален (например вы считаете, что его написал человек, который
+              у вас ничего не заказывал / не покупал)— напишите на reviews@stroymarket.ru письмо с указанным в отзыве
+              номером заказа и описанием причины, по которой вы считаете отзыв должен быть удален.
+            </p>
+            <div class="grid grid_small">
+              <div class="grid__column_5-9 grid__column_center">
+                <button class="button" type="button" onclick="modal.close('#inspect')">
+                  Закрыть
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/lib/dropkick.js"></script>
+  <script src="/js/main.min.js"></script>
+  <script>
+    var placeSelect = new Dropkick('#place', { });
+  </script>
+</body>
+</html>

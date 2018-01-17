@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Строймаркет</title>
+  <link rel="stylesheet" href="/css/style.min.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="container page-header__container">
+      <a class="logo" href="/">Строймаркет</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__column_5-6 grid__column_center">
+          <div class="dashboard">
+            <h2 class="h2 dashboard__h2">ООО "Пластик Сибири"</h2>
+            <h3 class="h3 dashboard__h3">Создать магазин</h3>
+
+            <form class="form dashboard__form" onchange="checkForm(this)">
+              <div class="grid form__row form__row_top">
+                <div class="grid__column_3-5">
+                  <p class="form__label">
+                    Расположение фирмы:
+                  </p>
+                  <p class="form__label-caption">
+                    Внимание! Проверьте адрес внимательно, так как после завершения процедуры добавления магазина вы
+                    сможете изменить адрес, только обратившись в администрацию Строймаркета
+                  </p>
+                </div>
+                <div class="grid__column_2-5">
+                  <div class="grid grid_small">
+                    <div class="grid__column_1-1">
+                      <button class="button button_action" type="button">
+                        Выберите город
+                      </button>
+                    </div>
+                  </div>
+                  <div class="grid grid_small">
+                    <div class="grid__column_1-2">
+                      <input class="form__input" type="text" placeholder="Улица" required>
+                    </div>
+                    <div class="grid__column_1-2">
+                      <input class="form__input" type="text" placeholder="Дом" required>
+                    </div>
+                  </div>
+                  <div class="grid grid_small">
+                    <div class="grid__column_1-2">
+                      <select class="select form__select">
+                        <option selected>Помещение</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <div class="grid__column_1-2">
+                      <input class="form__input" type="text" placeholder="Номер" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form__row">
+                <input class="form__switcher" id="registration_only-online" type="checkbox">
+                <label for="registration_only-online" data-checked="да" data-not-checked="нет">
+                  Нет фактического адреса — только интернет магазин:
+                </label>
+              </div>
+
+              <div class="grid form__row">
+                <div class="grid__column_3-5">
+                  <label class="form__label" for="profile_phone">
+                    Контактный телефон:
+                  </label>
+                </div>
+                <div class="grid__column_2-5">
+                  <input class="form__input" id="profile_phone" type="tel" value="(383) 256-33-11">
+                </div>
+              </div>
+
+              <div class="grid form__row">
+                <div class="grid__column_3-5">
+                  <label class="form__label" for="profile_email">
+                    Контактный email:
+                  </label>
+                </div>
+                <div class="grid__column_2-5">
+                  <input class="form__input" id="profile_email" type="email" value="info@shtukaturkin.ru">
+                </div>
+              </div>
+
+              <div class="form__row">
+                <input class="form__switcher" id="registration_has-delivery"
+                       type="checkbox" checked
+                       onchange="registrationDelivery.toggle()">
+                <label for="registration_has-delivery" data-checked="да" data-not-checked="нет">
+                  Имеется доставка:
+                </label>
+              </div>
+              <div class="form__row registration-delivery-wrapper">
+                <div class="grid form__row">
+                  <div class="grid__column_3-5">
+                    <p class="form__label">
+                      Доставка
+                    </p>
+                  </div>
+                  <div class="grid__column_2-5">
+                    <div class="registration-delivery-item">
+                      <button class="button button_action" type="button"
+                              onclick="">
+                        Населенный пункт
+                      </button>
+                      <select class="select form__select">
+                        <option selected>Доставка по городу и самовывоз</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <button class="button registration__add-delivery"
+                            type="button" onclick="registrationDelivery.addItem()">
+                      Добавить еще
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid form__row">
+                <div class="grid__column_3-5">
+                  <p class="form__label">
+                    Время работы:
+                  </p>
+                </div>
+                <div class="grid__column_2-5">
+                  <div class="operating-time-wrapper">
+                    <table class="registration__operating-time">
+                      <thead>
+                      <tr>
+                        <th>пн</th>
+                        <th>вт</th>
+                        <th>ср</th>
+                        <th>чт</th>
+                        <th>пт</th>
+                        <th>сб</th>
+                        <th class="day-off">вс</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td>
+                          <span data-id="work-start-1">10:00</span>
+                          <span data-id="work-end-1">22:00</span>
+                        </td>
+                        <td>
+                          <span data-id="work-start-2">10:00</span>
+                          <span data-id="work-end-2">22:00</span>
+                        </td>
+                        <td>
+                          <span data-id="work-start-3">10:00</span>
+                          <span data-id="work-end-3">22:00</span>
+                        </td>
+                        <td>
+                          <span data-id="work-start-4">10:00</span>
+                          <span data-id="work-end-4">22:00</span>
+                        </td>
+                        <td>
+                          <span data-id="work-start-5">10:00</span>
+                          <span data-id="work-end-5">22:00</span>
+                        </td>
+                        <td>
+                          <span data-id="work-start-6">10:00</span>
+                          <span data-id="work-end-6">18:00</span>
+                        </td>
+                        <td class="_is-empty">
+                          <span data-id="work-start-7"></span>
+                          <span data-id="work-end-7"></span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="7">
+                          <span>обед</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span data-id="lunch-start-1">14:00</span>
+                          <span data-id="lunch-end-1">15:00</span>
+                        </td>
+                        <td>
+                          <span data-id="lunch-start-2">14:00</span>
+                          <span data-id="lunch-end-2">15:00</span>
+                        </td>
+                        <td>
+                          <span data-id="lunch-start-3">14:00</span>
+                          <span data-id="lunch-end-3">15:00</span>
+                        </td>
+                        <td>
+                          <span data-id="lunch-start-4">14:00</span>
+                          <span data-id="lunch-end-4">15:00</span>
+                        </td>
+                        <td>
+                          <span data-id="lunch-start-5">14:00</span>
+                          <span data-id="lunch-end-5">15:00</span>
+                        </td>
+                        <td class="_is-empty">
+                          <span data-id="lunch-start-6"></span>
+                          <span data-id="lunch-end-6"></span>
+                        </td>
+                        <td class="_is-empty">
+                          <span data-id="lunch-start-7"></span>
+                          <span data-id="lunch-end-7"></span>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                    <button class="button registration__edit-time" type="button"
+                            onclick="modal.open('#operating-time')">
+                      Редактировать
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid">
+                <div class="grid__column_1-3 grid__column_right">
+                  <div class="grid grid_small">
+                    <div class="grid__column_2-5">
+                      <button class="button button_secondary form__button" type="button">
+                        Отменить
+                      </button>
+                    </div>
+                    <div class="grid__column_3-5">
+                      <button class="button form__button" type="submit" disabled>
+                        Подтвердить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal" id="operating-time">
+    <div class="container modal__container">
+      <div class="grid">
+        <div class="grid__column_1-2 grid__column_center">
+          <div class="modal__overlay"></div>
+          <header class="modal__header">
+            <button class="modal__close" type="button">Закрыть</button>
+            <h3 class="modal__heading">
+              Время работы
+            </h3>
+          </header>
+          <div class="modal__body">
+            <ul class="registration__time-input">
+              <li>
+                <b>Понедельник</b>
+                <div class="grid grid_medium">
+                  <div class="grid__column_1-2">
+                    <p>Рабочие часы:</p>
+                    <div class="grid grid_small">
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="work-start-1"
+                               placeholder="От" value="10:00">
+                      </div>
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="work-end-1"
+                               placeholder="До" value="22:00">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__column_1-2">
+                    <p>Обеденные часы:</p>
+                    <div class="grid grid_small">
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="lunch-start-1"
+                               placeholder="От" value="14:00">
+                      </div>
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="lunch-end-1"
+                               placeholder="До" value="15:00">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <b>Вторник</b>
+                <div class="grid grid_medium">
+                  <div class="grid__column_1-2">
+                    <p>Рабочие часы:</p>
+                    <div class="grid grid_small">
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="work-start-2"
+                               placeholder="От" value="10:00">
+                      </div>
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="work-end-2"
+                               placeholder="До" value="22:00">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__column_1-2">
+                    <p>Обеденные часы:</p>
+                    <div class="grid grid_small">
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="lunch-start-2"
+                               placeholder="От" value="14:00">
+                      </div>
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="lunch-end-2"
+                               placeholder="До" value="15:00">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <b>Среда</b>
+                <div class="grid grid_medium">
+                  <div class="grid__column_1-2">
+                    <p>Рабочие часы:</p>
+                    <div class="grid grid_small">
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="work-start-3"
+                               placeholder="От" value="10:00">
+                      </div>
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="work-end-3"
+                               placeholder="До" value="22:00">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__column_1-2">
+                    <p>Обеденные часы:</p>
+                    <div class="grid grid_small">
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="lunch-start-3"
+                               placeholder="От" value="14:00">
+                      </div>
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="lunch-end-3"
+                               placeholder="До" value="15:00">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <b>Четверг</b>
+                <div class="grid grid_medium">
+                  <div class="grid__column_1-2">
+                    <p>Рабочие часы:</p>
+                    <div class="grid grid_small">
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="work-start-4"
+                               placeholder="От" value="10:00">
+                      </div>
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="work-end-4"
+                               placeholder="До" value="22:00">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__column_1-2">
+                    <p>Обеденные часы:</p>
+                    <div class="grid grid_small">
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text"data-id="lunch-start-4"
+                               placeholder="От" value="14:00">
+                      </div>
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="lunch-end-4"
+                               placeholder="До" value="15:00">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <b>Пятница</b>
+                <div class="grid grid_medium">
+                  <div class="grid__column_1-2">
+                    <p>Рабочие часы:</p>
+                    <div class="grid grid_small">
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="work-start-5"
+                               placeholder="От" value="10:00">
+                      </div>
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="work-end-5"
+                               placeholder="До" value="22:00">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__column_1-2">
+                    <p>Обеденные часы:</p>
+                    <div class="grid grid_small">
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="lunch-start-5"
+                               placeholder="От" value="14:00">
+                      </div>
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="lunch-end-5"
+                               placeholder="До" value="15:00">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <b>Суббота</b>
+                <div class="grid grid_medium">
+                  <div class="grid__column_1-2">
+                    <p>Рабочие часы:</p>
+                    <div class="grid grid_small">
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="work-start-6"
+                               placeholder="От" value="10:00">
+                      </div>
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="work-end-6"
+                               placeholder="До" value="18:00">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__column_1-2">
+                    <p>Обеденные часы:</p>
+                    <div class="grid grid_small">
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="lunch-start-6"
+                               placeholder="От" value="">
+                      </div>
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="lunch-end-6"
+                               placeholder="До" value="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <b>Воскресенье</b>
+                <div class="grid grid_medium">
+                  <div class="grid__column_1-2">
+                    <p>Рабочие часы:</p>
+                    <div class="grid grid_small">
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="work-start-7"
+                               placeholder="От" value="">
+                      </div>
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="work-end-7"
+                               placeholder="До" value="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__column_1-2">
+                    <p>Обеденные часы:</p>
+                    <div class="grid grid_small">
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="lunch-start-7"
+                               placeholder="От" value="">
+                      </div>
+                      <div class="grid__column_1-2">
+                        <input class="form__input" type="text" data-id="lunch-end-7"
+                               placeholder="До" value="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <button class="button" type="button" onclick="operatingTime.save()">
+              Сохранить и закрыть
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <template id="operating-time-template">
+    <table class="registration__operating-time">
+      <thead>
+      <tr>
+        <th>пн</th>
+        <th>вт</th>
+        <th>ср</th>
+        <th>чт</th>
+        <th>пт</th>
+        <th>сб</th>
+        <th>вс</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>
+          <span data-id="work-start-1"></span>
+          <span data-id="work-end-1"></span>
+        </td>
+        <td>
+          <span data-id="work-start-2"></span>
+          <span data-id="work-end-2"></span>
+        </td>
+        <td>
+          <span data-id="work-start-3"></span>
+          <span data-id="work-end-3"></span>
+        </td>
+        <td>
+          <span data-id="work-start-4"></span>
+          <span data-id="work-end-4"></span>
+        </td>
+        <td>
+          <span data-id="work-start-5"></span>
+          <span data-id="work-end-5"></span>
+        </td>
+        <td>
+          <span data-id="work-start-6"></span>
+          <span data-id="work-end-6"></span>
+        </td>
+        <td>
+          <span data-id="work-start-7"></span>
+          <span data-id="work-end-7"></span>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="7">
+          <span>обед</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span data-id="lunch-start-1"></span>
+          <span data-id="lunch-end-1"></span>
+        </td>
+        <td>
+          <span data-id="lunch-start-2"></span>
+          <span data-id="lunch-end-2"></span>
+        </td>
+        <td>
+          <span data-id="lunch-start-3"></span>
+          <span data-id="lunch-end-3"></span>
+        </td>
+        <td>
+          <span data-id="lunch-start-4"></span>
+          <span data-id="lunch-end-4"></span>
+        </td>
+        <td>
+          <span data-id="lunch-start-5"></span>
+          <span data-id="lunch-end-5"></span>
+        </td>
+        <td>
+          <span data-id="lunch-start-6"></span>
+          <span data-id="lunch-end-6"></span>
+        </td>
+        <td>
+          <span data-id="lunch-start-7"></span>
+          <span data-id="lunch-end-7"></span>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </template>
+  <template id="edit-operating-time">
+    <button class="button registration__edit-time"
+            type="button" onclick="modal.open('#operating-time')">
+      Редактировать
+    </button>
+  </template>
+
+  <template id="registration-delivery-template">
+    <div class="grid form__row">
+      <div class="grid__column_3-5">
+        <p class="form__label">
+          Доставка
+        </p>
+      </div>
+      <div class="grid__column_2-5">
+        <button class="button registration__add-delivery"
+                type="button" onclick="registrationDelivery.addItem()">
+          Добавить еще
+        </button>
+      </div>
+    </div>
+  </template>
+  <template id="delivery-item-template">
+    <div class="registration-delivery-item">
+      <button class="button button_action" type="button"
+              onclick="">
+        Населенный пункт
+      </button>
+      <select class="select form__select">
+        <option selected>Доставка по городу и самовывоз</option>
+        <option>...</option>
+      </select>
+    </div>
+  </template>
+  <script src="/js/main.min.js"></script>
+</body>
+</html>

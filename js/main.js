@@ -2,10 +2,10 @@ const ready = () => {
   if (typeof autosize !== 'undefined') {
     autosize(document.querySelectorAll(`textarea`))
   }
+  paintRating()
 
-  const sidePanel = document.querySelector(`.side-panel`)
-  if (sidePanel) {
-    accordion.init(sidePanel)
+  if (document.querySelector(`[data-accordion]`)) {
+    accordion.init()
   }
 
   const tabs = [...document.querySelectorAll(`[data-tabs-title]`)]
@@ -15,8 +15,8 @@ const ready = () => {
 document.addEventListener('DOMContentLoaded', ready)
 
 const accordion = {
-  init (container = document.body) {
-    const items = [...container.querySelectorAll(`[data-accordion]`)]
+  init () {
+    const items = [...document.querySelectorAll(`[data-accordion]`)]
     items.forEach(item => {
       const title = item.querySelector(`.accordion-title`)
       title.addEventListener('click', () => accordion.toggle(item))
@@ -27,7 +27,21 @@ const accordion = {
     item.classList.toggle(`_is-open`)
     const content = item.querySelector(`.accordion-content`)
     content.hidden = !content.hidden
+  },
+
+  close (item) {
+    item.classList.remove(`_is-open`)
+    item.querySelector(`.accordion-content`).hidden = true
   }
+}
+
+const paintRating = () => {
+  const ratings = [...document.querySelectorAll(`.rating[data-value]`)]
+  const starWidth = 15
+  ratings.forEach(rating => {
+    rating.style.width = `${rating.dataset.max * starWidth}px`
+    rating.childNodes[0].style.width = `${rating.dataset.value / rating.dataset.max * 100}%`
+  })
 }
 
 const tabControl = {
@@ -74,24 +88,17 @@ const filePreview = {
 
 const modal = {
   open (selector) {
+    event.preventDefault()
     const modalWindow = document.querySelector(selector)
     modalWindow.classList.add(`_is-active`)
     const modalOverlay = modalWindow.querySelector(`.modal__overlay`)
     const modalClose = modalWindow.querySelector(`.modal__close`)
-    modalOverlay.onclick = modalClose.onclick = modal.close
+    modalOverlay.onclick = modalClose.onclick = () => modal.close(selector)
     document.body.classList.add(`_is-fixed`)
   },
 
-  close (event, selector) {
-    let modalWindow
-    if (selector) {
-      modalWindow = document.querySelector(selector)
-    } else {
-      modalWindow = event.target.parentNode
-      while (!modalWindow.classList.contains(`modal`)) {
-        modalWindow = modalWindow.parentNode
-      }
-    }
+  close (selector) {
+    const modalWindow = document.querySelector(selector)
     modalWindow.classList.remove(`_is-active`)
     document.body.classList.remove(`_is-fixed`)
   }
@@ -140,7 +147,7 @@ const operatingTime = {
       operatingTimeWrapper.appendChild(editBtn)
     }
 
-    modal.close(null, `#operating-time`)
+    modal.close(`#operating-time`)
   }
 }
 
@@ -189,6 +196,41 @@ const checkForm = (form) => {
 
   const submitBtn = form.querySelector(`[type="submit"]`)
   submitBtn.disabled = !allFieldsValid || !noErrorFields
-  console.log(submitBtn)
-  console.log(!allFieldsValid || !noErrorFields)
+}
+
+const sidePanel = {
+  toggle () {
+    const sidePanels = [...document.querySelectorAll(`.grid__column_side-panel`)]
+    sidePanels.forEach(sidePanel => {
+      sidePanel.classList.toggle(`_is-minimized`)
+    })
+    if (sidePanels[0].classList.contains(`_is-minimized`)) {
+      sidePanel.closeAccordion()
+    }
+  },
+
+  closeAccordion () {
+    const openedItem = document.querySelector(`.side-panel__item._is-open`)
+    if (openedItem) {
+      accordion.close(openedItem)
+    }
+  }
+}
+
+const categories = {
+  open (selector) {
+    event.currentTarget.disabled = true
+    document.querySelector(selector).classList.add(`categories__list_full`)
+  }
+}
+
+const showMore = {
+  toggle (selector) {
+    const list = document.querySelector(selector)
+    const button = event.currentTarget
+    button.innerHTML = list.classList.contains(`_is-expanded`) ?
+      button.dataset.showMore :
+      button.dataset.showLess
+    list.classList.toggle(`_is-expanded`)
+  }
 }

@@ -207,36 +207,22 @@
   background: #f89e01 url(../img/registration-progress_checkbox-checked.svg) no-repeat center / 13px auto;
 }
 
-.registration__action-btn {
-  font-weight: 600;
-  text-align: center;
-  color: #f89e01;
+.registration__logo {
+  width: 170px;
 }
 
-.form__row .registration__action-btn:not(:first-child) {
-  margin-top: 5px;
+.registration__logo + [class*=grid__column] {
+  width: calc(100% - 170px);
 }
 
-.registration__action-btn_secondary {
-  color: #7e8890;
-}
-
-.registration__action-btn_secondary span {
-  opacity: .6;
-}
-
-.registration__logo input[type="file"] {
-  display: none;
-}
-
-.registration__logo input[type="file"] + label {
+.registration__logo .form__input[type="file"] + label {
   position: relative;
   margin-top: 0;
   padding: 0 0 100%;
   background: #fff no-repeat center / cover;
 }
 
-.registration__logo input[type="file"] + label span {
+.registration__logo .form__input[type="file"] + label span {
   font-size: 14px;
   line-height: 19px;
   position: absolute;
@@ -249,7 +235,7 @@
   color: #455056;
 }
 
-.registration__logo input[type="file"]._is-chosen + label span {
+.registration__logo .form__input[type="file"]._is-chosen + label span {
   display: none;
 }
 
@@ -294,6 +280,10 @@
 
 .registration__time-input input {
   text-align: center;
+}
+
+.operating-time-wrapper {
+  max-width: 360px;
 }
 
 .registration__operating-time {

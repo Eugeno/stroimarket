@@ -9,11 +9,13 @@
   <header class="page-header">
     <div class="container page-header__container">
       <div class="grid page-header__grid">
-        <div class="grid__column_1-4 grid__column_shift menu-btn-wrapper">
+        <div class="grid__column_side-panel menu-btn-wrapper">
           <a class="logo logo_panel" href="/">Строймаркет</a>
-          <button class="menu-btn" type="button"></button>
+          <a class="logo logo_panel logo_small" href="/">СМ</a>
+          <button class="menu-btn" type="button" onclick="sidePanel.toggle()"></button>
         </div>
-        <div class="grid__column_3-4">
+
+        <div class="grid__column">
           <ul class="user-actions">
             <li class="user-actions__item user-actions__item_notifications">
               <a class="link user-actions__link" href="javascript:void(0)">
@@ -40,10 +42,11 @@
       </div>
     </div>
   </header>
+
   <main>
     <div class="container">
       <div class="grid">
-        <div class="grid__column_1-4 grid__column_shift">
+        <div class="grid__column_side-panel">
           <ul class="side-panel">
             <li class="side-panel__item side-panel__item_company _is-open" data-accordion>
               <span class="accordion-title">Моя компания</span>
@@ -53,19 +56,19 @@
                 <li><a href="javascript:void(0)">Претензии</a></li>
               </ul>
             </li>
-            <li class="side-panel__item side-panel__item_catalog">
-              <span>Каталог</span>
+            <li class="side-panel__item side-panel__item_catalog" data-accordion>
+              <span class="accordion-title">Каталог</span>
             </li>
-            <li class="side-panel__item side-panel__item_purchases">
-              <span>Закупки</span>
+            <li class="side-panel__item side-panel__item_purchases" data-accordion>
+              <span class="accordion-title">Закупки</span>
             </li>
-            <li class="side-panel__item side-panel__item_settings">
-              <span>Настройки</span>
+            <li class="side-panel__item side-panel__item_settings" data-accordion>
+              <span class="accordion-title">Настройки</span>
             </li>
           </ul>
         </div>
 
-        <div class="grid__column_3-4">
+        <div class="grid__column">
           <div class="dashboard">
             <header class="dashboard__header">
               <h2 class="h2 dashboard__h2">Моя компания</h2>
@@ -84,17 +87,21 @@
                     <div class="company-card__logo">
                       <img src="http://placehold.it/124x44" alt="" width="124">
                     </div>
-                    <div>
-                      <div class="company-chooser">
+                    <div data-accordion>
+                      <div class="company-card__chooser accordion-title">
                         <b>Пластик Сибири</b>
-                        <span class="rating">
-                          <span class="rating__star rating__star_fill"></span>
-                          <span class="rating__star rating__star_fill"></span>
-                          <span class="rating__star rating__star_fill"></span>
-                          <span class="rating__star rating__star_fill"></span>
-                          <span class="rating__star rating__star_fill"></span>
-                        </span>
+                        <span class="rating" data-value="5" data-max="5"><span></span></span>
                         <p>Оптовая компания, производитель</p>
+                        <ul class="company-card__places accordion-content" hidden>
+                          <li>
+                            <p>Магазин</p>
+                            <span>Санкт–Петербург, Менделеевская, 76</span>
+                          </li>
+                          <li>
+                            <p>Магазин</p>
+                            <span>Новосибирск, Сибиряков–Гвардейцев, 49а</span>
+                          </li>
+                        </ul>
                       </div>
                       <p class="company-card__data">
                         Название юр. лица:  ООО «Пластик Сибири»<br>
@@ -112,7 +119,7 @@
                     </p>
                   </section>
                   <section class="company-card__map">
-                    <a href="https://yandex.ru/maps/?um=constructor%3Affda758a7831c46b272d3e3447f27af59f377f3df616567fcb8d4e166c023577&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Affda758a7831c46b272d3e3447f27af59f377f3df616567fcb8d4e166c023577&amp;width=600&amp;height=200&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2c5ac9e0a669919c51a1dba27790bf0331882f0a5ceb808a3420d1eef6abfa01&amp;source=constructor" width="100%" height="240" frameborder="0"></iframe>
                   </section>
                 </article>
 
@@ -162,13 +169,7 @@
                       <div class="company-card__assessment">
                         <div class="company-card__points">
                           <b>Итоговый балл</b>
-                          <span class="rating">
-                            <span class="rating__star rating__star_fill"></span>
-                            <span class="rating__star rating__star_fill"></span>
-                            <span class="rating__star rating__star_fill"></span>
-                            <span class="rating__star rating__star_fill"></span>
-                            <span class="rating__star rating__star_fill"></span>
-                          </span>
+                          <span class="rating" data-value="5" data-max="5"><span></span></span>
                         </div>
                         <div class="company-card__claims">
                           <b>Сумма претензий к компании</b>
@@ -178,10 +179,135 @@
                     </div>
                   </section>
                 </article>
+
+                <article class="points">
+                  <h3 class="points__heading">Баллы</h3>
+                  <table class="points__table">
+                    <thead>
+                    <tr>
+                      <th>Начисленные баллы</th>
+                      <th>Критерий начисления</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>
+                        <span>1 балл</span>
+                      </td>
+                      <td>
+                        <b>Данные фирмы в «Строймаркете» совпадают с настоящими данными фирмы</b>
+                        <p>Определяется по платёжным банковским документам (при оплате с р/с организации,
+                          зарегистрированной в «Строймаркете»).<br>
+                          Для физических лиц и ИП, не имеющих р/с, балл начисляется по нотариально заверенному Согласию
+                          на обработку персональных данных.<br>
+                          Максимальный балл по этому критерию: 1</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>0.5 Балла</span>
+                        <p>Дата регистрации на «Строймаркете» 29.06.2012</p>
+                      </td>
+                      <td>
+                        <b>За давность регистрации в «Строймаркете»</b>
+                        <p>Балл начисляется только при наличии балла за "Данные фирмы". Начисляется по 0.1 балла за
+                          каждые 180 дней с момента регистрации Участника в «Строймаркете».<br>
+                          Максимальный балл по этому критерию: 0.5</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>1 Балл</span>
+                        <p>Дата регистрации юридического лица 13.01.2015</p>
+                      </td>
+                      <td>
+                        <b>За время существования юридического лица или индивидуального предпринимателя</b>
+                        <p>Рассчитывается только для юридических лиц и ИП резидентов РФ. Балл начисляется только при
+                          наличии балла за "Данные фирмы". Начисляется по 0.1 балла за каждые 120 дней с момента
+                          регистрации юридического лица (по данным ЕГРЮЛ, ЕГРИП). Максимальный балл по этому критерию:
+                          1.0</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>0.5 Балла</span>
+                        <p>Последняя дата платежа 22.08.2017</p>
+                      </td>
+                      <td>
+                        <b>Свидетельство ведения фирмой текущей хозяйственной деятельности</b>
+                        <p>Определяется по давности последней оплаты «Строймаркета» с р/с организации,
+                          зарегистрированной в системе. Балл начисляется только при наличии балла за "Данные фирмы...".
+                          Для ИП минимальный: 0.25.<br>
+                          Максимальный балл по этому критерию: 0,5<br>
+                          Правила расчёта: давность платежа не позже 190 дней от текущей даты - 0.5 балла, не позже 380
+                          дней - 0.25 балла.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>2 Балла</span>
+                        <p>Сумма претензий: 0 руб.</p>
+                      </td>
+                      <td>
+                        <b>За профессиональную деятельность на рынке</b>
+                        <p>Вычисляется на основе длительности хозяйственной деятельности и наличия Претензий.<br>
+                          Максимальный балл по этому критерию: 2</p>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </article>
               </div>
 
               <div data-tab="requisites" hidden>
-                Реквизиты
+                <table class="requisites">
+                  <tbody>
+                  <tr>
+                    <td>Название юр. лица</td>
+                    <td>ООО «Шкет»</td>
+                  </tr>
+                  <tr>
+                    <td>ИНН</td>
+                    <td>5403003213</td>
+                  </tr>
+                  <tr>
+                    <td>ОГРН</td>
+                    <td>115547600108</td>
+                  </tr>
+                  <tr>
+                    <td>КПП</td>
+                    <td>540301542</td>
+                  </tr>
+                  <tr>
+                    <td>ОКПО</td>
+                    <td>49732758</td>
+                  </tr>
+                  <tr>
+                    <td>Расчетный счет</td>
+                    <td>756845674385694639</td>
+                  </tr>
+                  <tr>
+                    <td>БИК</td>
+                    <td>789546987</td>
+                  </tr>
+                  <tr>
+                    <td>Банк</td>
+                    <td>Сбербанк</td>
+                  </tr>
+                  <tr>
+                    <td>Корр. счет</td>
+                    <td>565656775474577456</td>
+                  </tr>
+                  <tr>
+                    <td>Юр. адрес</td>
+                    <td>121248, Россия, г. Москва, Кутузовский просп., 12с2</td>
+                  </tr>
+                  <tr>
+                    <td>Почтовый адрес</td>
+                    <td>121248, Россия, г. Москва, Кутузовский просп., 12с2</td>
+                  </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>

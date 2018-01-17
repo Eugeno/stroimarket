@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Строймаркет</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="container page-header__container">
+      <div class="grid page-header__grid">
+        <div class="grid__column_side-panel menu-btn-wrapper">
+          <a class="logo logo_panel" href="/">Строймаркет</a>
+          <a class="logo logo_panel logo_small" href="/">СМ</a>
+          <button class="menu-btn" type="button" onclick="sidePanel.toggle()"></button>
+        </div>
+
+        <div class="grid__column">
+          <ul class="user-actions">
+            <li class="user-actions__item user-actions__item_notifications">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Уведомления
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_messages">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Сообщения
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_profile">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Пластик Сибири
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_logout">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Выйти
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__column_side-panel">
+          <ul class="side-panel">
+            <li class="side-panel__item side-panel__item_company _is-open" data-accordion>
+              <span class="accordion-title">Моя компания</span>
+              <ul class="accordion-content">
+                <li><a>Рабочий стол</a></li>
+                <li><a href="javascript:void(0)">Ассортимент</a></li>
+                <li><a href="javascript:void(0)">Претензии</a></li>
+              </ul>
+            </li>
+            <li class="side-panel__item side-panel__item_catalog" data-accordion>
+              <span class="accordion-title">Каталог</span>
+            </li>
+            <li class="side-panel__item side-panel__item_purchases" data-accordion>
+              <span class="accordion-title">Закупки</span>
+            </li>
+            <li class="side-panel__item side-panel__item_settings" data-accordion>
+              <span class="accordion-title">Настройки</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid__column">
+          <div class="dashboard">
+            <header class="dashboard__header">
+              <h2 class="h2 dashboard__h2">Моя компания</h2>
+              <h3 class="h3">Рабочий стол</h3>
+              <ul class="dashboard__tabs-titles" data-tabs-title="company">
+                <li class="_is-active" data-tab="info">Общая информация</li>
+                <li data-tab="passport">Паспорт</li>
+              </ul>
+            </header>
+
+            <div data-tabs-content="company">
+              <div data-tab="info">
+                <article class="company-card">
+                  <section class="company-card__info">
+                    <div class="company-card__logo">
+                      <img src="http://placehold.it/124x44" alt="" width="124">
+                    </div>
+                    <div>
+                      <div class="company-card__name">
+                        <b>Петров Петр Петрович</b>
+                        <span class="rating" data-value="5" data-max="5"><span></span></span>
+                        <p>Застройщик физ.лицо</p>
+                      </div>
+                      <p class="company-card__data">
+                        Город: Москва<br>
+                        Телефон: 8-800-555-35-35<br>
+                        Электронная почта: sales@plasticsibiri.ru
+                      </p>
+                    </div>
+                  </section>
+                </article>
+              </div>
+
+              <div data-tab="passport" hidden>
+                <article class="company-card">
+                  <section class="company-card__info">
+                    <div class="company-card__logo">
+                      <img src="http://placehold.it/124x44" alt="" width="124">
+                    </div>
+                    <div>
+                      <div class="company-card__name">
+                        <b>Пластик Сибири</b>
+                        <p>Оптовая компания, производитель</p>
+                      </div>
+                      <hr class="hr company-card__hr">
+                      <div class="company-card__assessment">
+                        <div class="company-card__points">
+                          <b>Итоговый балл</b>
+                          <span class="rating" data-value="5" data-max="5"><span></span></span>
+                        </div>
+                        <div class="company-card__claims">
+                          <b>Сумма претензий к компании</b>
+                          <p>0 рублей</p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </article>
+
+                <article class="points">
+                  <h3 class="points__heading">Баллы</h3>
+                  <table class="points__table">
+                    <thead>
+                    <tr>
+                      <th>Начисленные баллы</th>
+                      <th>Критерий начисления</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>
+                        <span>1 балл</span>
+                      </td>
+                      <td>
+                        <b>Данные фирмы в «Строймаркете» совпадают с настоящими данными фирмы</b>
+                        <p>Определяется по платёжным банковским документам (при оплате с р/с организации,
+                          зарегистрированной в «Строймаркете»).<br>
+                          Для физических лиц и ИП, не имеющих р/с, балл начисляется по нотариально заверенному Согласию
+                          на обработку персональных данных.<br>
+                          Максимальный балл по этому критерию: 1</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>0.5 Балла</span>
+                        <p>Дата регистрации на «Строймаркете» 29.06.2012</p>
+                      </td>
+                      <td>
+                        <b>За давность регистрации в «Строймаркете»</b>
+                        <p>Балл начисляется только при наличии балла за "Данные фирмы". Начисляется по 0.1 балла за
+                          каждые 180 дней с момента регистрации Участника в «Строймаркете».<br>
+                          Максимальный балл по этому критерию: 0.5</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>1 Балл</span>
+                        <p>Дата регистрации юридического лица 13.01.2015</p>
+                      </td>
+                      <td>
+                        <b>За время существования юридического лица или индивидуального предпринимателя</b>
+                        <p>Рассчитывается только для юридических лиц и ИП резидентов РФ. Балл начисляется только при
+                          наличии балла за "Данные фирмы". Начисляется по 0.1 балла за каждые 120 дней с момента
+                          регистрации юридического лица (по данным ЕГРЮЛ, ЕГРИП). Максимальный балл по этому критерию:
+                          1.0</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>0.5 Балла</span>
+                        <p>Последняя дата платежа 22.08.2017</p>
+                      </td>
+                      <td>
+                        <b>Свидетельство ведения фирмой текущей хозяйственной деятельности</b>
+                        <p>Определяется по давности последней оплаты «Строймаркета» с р/с организации,
+                          зарегистрированной в системе. Балл начисляется только при наличии балла за "Данные фирмы...".
+                          Для ИП минимальный: 0.25.<br>
+                          Максимальный балл по этому критерию: 0,5<br>
+                          Правила расчёта: давность платежа не позже 190 дней от текущей даты - 0.5 балла, не позже 380
+                          дней - 0.25 балла.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>2 Балла</span>
+                        <p>Сумма претензий: 0 руб.</p>
+                      </td>
+                      <td>
+                        <b>За профессиональную деятельность на рынке</b>
+                        <p>Вычисляется на основе длительности хозяйственной деятельности и наличия Претензий.<br>
+                          Максимальный балл по этому критерию: 2</p>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/main.min.js"></script>
+</body>
+</html>

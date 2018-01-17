@@ -1,5 +1,6 @@
 .modal {
   position: fixed;
+  z-index: 9;
   top: 0;
   right: 0;
   bottom: 0;
@@ -17,6 +18,11 @@
   display: block;
 }
 
+.modal_middle._is-active {
+  display: flex;
+  align-items: center;
+}
+
 .modal__overlay {
   position: fixed;
   top: 0;
@@ -28,8 +34,8 @@
 }
 
 .modal__container {
-  width: 100vw;
-  max-width: 1160px;
+  width: 100%;
+  min-width: 1160px;
   padding-right: 0;
   padding-left: 0;
 }
@@ -37,6 +43,8 @@
 .modal__header {
   position: relative;
   padding: 30px 60px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background: #d9e2e7;
 }
 
@@ -91,5 +99,29 @@
   position: relative;
   z-index: 2;
   padding: 15px 60px 30px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   background: #fff;
 }
+
+.modal__body_contrast {
+  background: #f8f9fb;
+}
+
+.modal__body_categories {
+  padding: 0 40px 20px;
+}
+
+/* deprecated */
+/*.modal__body p {
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #7e8890;
+}
+
+.modal__body p:last-child {
+  margin-bottom: 0;
+}*/
+/* deprecated */
