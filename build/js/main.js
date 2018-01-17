@@ -6,10 +6,10 @@ var ready = function ready() {
   if (typeof autosize !== 'undefined') {
     autosize(document.querySelectorAll('textarea'));
   }
+  paintRating();
 
-  var sidePanel = document.querySelector('.side-panel');
-  if (sidePanel) {
-    accordion.init(sidePanel);
+  if (document.querySelector('[data-accordion]')) {
+    accordion.init();
   }
 
   var tabs = [].concat(_toConsumableArray(document.querySelectorAll('[data-tabs-title]')));
@@ -22,9 +22,7 @@ document.addEventListener('DOMContentLoaded', ready);
 
 var accordion = {
   init: function init() {
-    var container = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.body;
-
-    var items = [].concat(_toConsumableArray(container.querySelectorAll('[data-accordion]')));
+    var items = [].concat(_toConsumableArray(document.querySelectorAll('[data-accordion]')));
     items.forEach(function (item) {
       var title = item.querySelector('.accordion-title');
       title.addEventListener('click', function () {
@@ -36,7 +34,20 @@ var accordion = {
     item.classList.toggle('_is-open');
     var content = item.querySelector('.accordion-content');
     content.hidden = !content.hidden;
+  },
+  close: function close(item) {
+    item.classList.remove('_is-open');
+    item.querySelector('.accordion-content').hidden = true;
   }
+};
+
+var paintRating = function paintRating() {
+  var ratings = [].concat(_toConsumableArray(document.querySelectorAll('.rating[data-value]')));
+  var starWidth = 15;
+  ratings.forEach(function (rating) {
+    rating.style.width = rating.dataset.max * starWidth + 'px';
+    rating.childNodes[0].style.width = rating.dataset.value / rating.dataset.max * 100 + '%';
+  });
 };
 
 var tabControl = {
@@ -83,23 +94,18 @@ var filePreview = {
 
 var modal = {
   open: function open(selector) {
+    event.preventDefault();
     var modalWindow = document.querySelector(selector);
     modalWindow.classList.add('_is-active');
     var modalOverlay = modalWindow.querySelector('.modal__overlay');
     var modalClose = modalWindow.querySelector('.modal__close');
-    modalOverlay.onclick = modalClose.onclick = modal.close;
+    modalOverlay.onclick = modalClose.onclick = function () {
+      return modal.close(selector);
+    };
     document.body.classList.add('_is-fixed');
   },
-  close: function close(event, selector) {
-    var modalWindow = void 0;
-    if (selector) {
-      modalWindow = document.querySelector(selector);
-    } else {
-      modalWindow = event.target.parentNode;
-      while (!modalWindow.classList.contains('modal')) {
-        modalWindow = modalWindow.parentNode;
-      }
-    }
+  close: function close(selector) {
+    var modalWindow = document.querySelector(selector);
     modalWindow.classList.remove('_is-active');
     document.body.classList.remove('_is-fixed');
   }
@@ -148,7 +154,7 @@ var operatingTime = {
       operatingTimeWrapper.appendChild(editBtn);
     }
 
-    modal.close(null, '#operating-time');
+    modal.close('#operating-time');
   }
 };
 
@@ -194,6 +200,38 @@ var checkForm = function checkForm(form) {
 
   var submitBtn = form.querySelector('[type="submit"]');
   submitBtn.disabled = !allFieldsValid || !noErrorFields;
-  console.log(submitBtn);
-  console.log(!allFieldsValid || !noErrorFields);
+};
+
+var sidePanel = {
+  toggle: function toggle() {
+    var sidePanels = [].concat(_toConsumableArray(document.querySelectorAll('.grid__column_side-panel')));
+    sidePanels.forEach(function (sidePanel) {
+      sidePanel.classList.toggle('_is-minimized');
+    });
+    if (sidePanels[0].classList.contains('_is-minimized')) {
+      sidePanel.closeAccordion();
+    }
+  },
+  closeAccordion: function closeAccordion() {
+    var openedItem = document.querySelector('.side-panel__item._is-open');
+    if (openedItem) {
+      accordion.close(openedItem);
+    }
+  }
+};
+
+var categories = {
+  open: function open(selector) {
+    event.currentTarget.disabled = true;
+    document.querySelector(selector).classList.add('categories__list_full');
+  }
+};
+
+var showMore = {
+  toggle: function toggle(selector) {
+    var list = document.querySelector(selector);
+    var button = event.currentTarget;
+    button.innerHTML = list.classList.contains('_is-expanded') ? button.dataset.showMore : button.dataset.showLess;
+    list.classList.toggle('_is-expanded');
+  }
 };

@@ -1,0 +1,989 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Строймаркет</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="container page-header__container">
+      <div class="grid page-header__grid">
+        <div class="grid__column_side-panel menu-btn-wrapper">
+          <a class="logo logo_panel" href="/">Строймаркет</a>
+          <a class="logo logo_panel logo_small" href="/">СМ</a>
+          <button class="menu-btn" type="button" onclick="sidePanel.toggle()"></button>
+        </div>
+
+        <div class="grid__column">
+          <ul class="user-actions">
+            <li class="user-actions__item user-actions__item_notifications">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Уведомления
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_messages">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Сообщения
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_profile">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Пластик Сибири
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_logout">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Выйти
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__column_side-panel">
+          <ul class="side-panel">
+            <li class="side-panel__item side-panel__item_company _is-open" data-accordion>
+              <span class="accordion-title">Моя компания</span>
+              <ul class="accordion-content">
+                <li><a href="javascript:void(0)">Рабочий стол</a></li>
+                <li><a href="javascript:void(0)">Ассортимент</a></li>
+                <li><a href="javascript:void(0)">Претензии</a></li>
+                <li><a>Полученные заказы</a></li>
+                <li><a href="javascript:void(0)">Полученные отзывы</a></li>
+              </ul>
+            </li>
+            <li class="side-panel__item side-panel__item_catalog" data-accordion>
+              <span class="accordion-title">Каталог</span>
+            </li>
+            <li class="side-panel__item side-panel__item_purchases" data-accordion>
+              <span class="accordion-title">Закупки</span>
+            </li>
+            <li class="side-panel__item side-panel__item_settings" data-accordion>
+              <span class="accordion-title">Настройки</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid__column">
+          <div class="dashboard">
+            <header class="dashboard__header">
+              <h2 class="h2 dashboard__h2">Моя компания</h2>
+              <h3 class="h3 h3-selector">
+                <span>Полученные заказы</span>
+                <select name="" id="place">
+                  <option value="">Магазин, Москва, Морской проспект, 10</option>
+                  <option value="" selected>Магазин, Санкт–Петербург, Менделеевская, 76</option>
+                  <option value="">Магазин, Новосибирск, Сибиряков–Гвардейцев, 49а</option>
+                </select>
+              </h3>
+              <ul class="dashboard__tabs-titles" data-tabs-title="orders">
+                <li class="_is-active" data-tab="new">Новые (99)</li>
+                <li data-tab="received">Принятые</li>
+                <li data-tab="completed">Завершенные</li>
+                <li data-tab="canceled">Отмененные покупателями</li>
+                <li data-tab="deleted">Удаленные</li>
+              </ul>
+            </header>
+
+            <div data-tabs-content="orders">
+              <div data-tab="new">
+                <div class="order">
+                  <div class="order__main">
+                    <header class="order__header">
+                      <p class="order__status">Новый</p>
+                      <p class="order__number">№ 2456987899</p>
+                      <p class="order__date">Дата заказа: <time datetime="2017-07-20 17:37">20.07.17, 17:37</time></p>
+                    </header>
+                    <ul class="order__products" id="o2456987899">
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="order__data">
+                      <p>
+                        <span>Данные покупателя:</span><br>
+                        Гурченко мария Петровна<br>
+                        +7 (999) 246-35-35<br>
+                        roman@mail.com<br>
+                      </p>
+                      <p>
+                        Способ получения: <span>Самовывоз</span><br>
+                        Способ оплаты: <span>При получении</span>
+                      </p>
+                    </div>
+                  </div>
+                  <section class="order__actions">
+                    <button class="button order__button" type="button">
+                      Завершить
+                    </button>
+                    <button class="button button_secondary order__button order__button_secondary" type="button">
+                      Удалить
+                    </button>
+                  </section>
+                  <button class="order__show-more" type="button"
+                          data-show-more="Показать ещё 2 товара" data-show-less="Свернуть"
+                          onclick="showMore.toggle('#o2456987899')">
+                    Показать ещё 2 товара
+                  </button>
+                </div>
+
+                <div class="order">
+                  <div class="order__main">
+                    <header class="order__header">
+                      <p class="order__status">Новый</p>
+                      <p class="order__number">№ 2456987898</p>
+                      <p class="order__date">Дата заказа: <time datetime="2017-07-20 17:37">20.07.17, 17:37</time></p>
+                    </header>
+                    <ul class="order__products _is-expanded" id="o2456987898">
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="order__data">
+                      <p>
+                        <span>Данные покупателя:</span><br>
+                        Гурченко мария Петровна<br>
+                        +7 (999) 246-35-35<br>
+                        roman@mail.com<br>
+                      </p>
+                      <p>
+                        Способ получения: <span>Самовывоз</span><br>
+                        Способ оплаты: <span>При получении</span>
+                      </p>
+                    </div>
+                  </div>
+                  <section class="order__actions">
+                    <button class="button order__button" type="button">
+                      Завершить
+                    </button>
+                    <button class="button button_secondary order__button order__button_secondary" type="button">
+                      Удалить
+                    </button>
+                  </section>
+                  <button class="order__show-more" type="button"
+                          data-show-more="Показать ещё 1 товар" data-show-less="Свернуть"
+                          onclick="showMore.toggle('#o2456987898')">
+                    Свернуть
+                  </button>
+                </div>
+              </div>
+
+              <div data-tab="received" hidden>
+                <div class="order">
+                  <div class="order__main">
+                    <header class="order__header">
+                      <p class="order__status">Новый</p>
+                      <p class="order__number">№ 2456987897</p>
+                      <p class="order__date">Дата заказа: <time datetime="2017-07-20 17:37">20.07.17, 17:37</time></p>
+                    </header>
+                    <ul class="order__products" id="o2456987897">
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="order__data">
+                      <p>
+                        <span>Данные покупателя:</span><br>
+                        Гурченко мария Петровна<br>
+                        +7 (999) 246-35-35<br>
+                        roman@mail.com<br>
+                      </p>
+                      <p>
+                        Способ получения: <span>Самовывоз</span><br>
+                        Способ оплаты: <span>При получении</span>
+                      </p>
+                    </div>
+                  </div>
+                  <section class="order__actions">
+                    <button class="button order__button" type="button">
+                      Завершить
+                    </button>
+                    <button class="button button_secondary order__button order__button_secondary" type="button">
+                      Удалить
+                    </button>
+                  </section>
+                  <button class="order__show-more" type="button"
+                          data-show-more="Показать ещё 2 товара" data-show-less="Свернуть"
+                          onclick="showMore.toggle('#o2456987897')">
+                    Показать ещё 2 товара
+                  </button>
+                </div>
+
+                <div class="order">
+                  <div class="order__main">
+                    <header class="order__header">
+                      <p class="order__status">Новый</p>
+                      <p class="order__number">№ 2456987896</p>
+                      <p class="order__date">Дата заказа: <time datetime="2017-07-20 17:37">20.07.17, 17:37</time></p>
+                    </header>
+                    <ul class="order__products _is-expanded" id="o2456987896">
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="order__data">
+                      <p>
+                        <span>Данные покупателя:</span><br>
+                        Гурченко мария Петровна<br>
+                        +7 (999) 246-35-35<br>
+                        roman@mail.com<br>
+                      </p>
+                      <p>
+                        Способ получения: <span>Самовывоз</span><br>
+                        Способ оплаты: <span>При получении</span>
+                      </p>
+                    </div>
+                  </div>
+                  <section class="order__actions">
+                    <button class="button order__button" type="button">
+                      Завершить
+                    </button>
+                    <button class="button button_secondary order__button order__button_secondary" type="button">
+                      Удалить
+                    </button>
+                  </section>
+                  <button class="order__show-more" type="button"
+                          data-show-more="Показать ещё 1 товар" data-show-less="Свернуть"
+                          onclick="showMore.toggle('#o2456987896')">
+                    Свернуть
+                  </button>
+                </div>
+              </div>
+
+              <div data-tab="completed" hidden>
+                <div class="order">
+                  <div class="order__main">
+                    <header class="order__header">
+                      <p class="order__status order__status_muted">Завершенный</p>
+                      <p class="order__number">№ 2456987895</p>
+                      <p class="order__date">Дата заказа: <time datetime="2017-07-20 17:37">20.07.17, 17:37</time></p>
+                    </header>
+                    <ul class="order__products" id="o2456987895">
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="order__data">
+                      <p>
+                        <span>Данные покупателя:</span><br>
+                        Гурченко мария Петровна<br>
+                        +7 (999) 246-35-35<br>
+                        roman@mail.com<br>
+                      </p>
+                      <p>
+                        Способ получения: <span>Самовывоз</span><br>
+                        Способ оплаты: <span>При получении</span>
+                      </p>
+                    </div>
+                  </div>
+                  <section class="order__actions">
+                    <button class="button order__button" type="button" disabled>
+                      Завершить
+                    </button>
+                    <button class="button button_secondary order__button order__button_secondary" type="button">
+                      Удалить
+                    </button>
+                  </section>
+                  <button class="order__show-more" type="button"
+                          data-show-more="Показать ещё 2 товара" data-show-less="Свернуть"
+                          onclick="showMore.toggle('#o2456987895')">
+                    Показать ещё 2 товара
+                  </button>
+                </div>
+
+                <div class="order">
+                  <div class="order__main">
+                    <header class="order__header">
+                      <p class="order__status order__status_muted">Завершенный</p>
+                      <p class="order__number">№ 2456987894</p>
+                      <p class="order__date">Дата заказа: <time datetime="2017-07-20 17:37">20.07.17, 17:37</time></p>
+                    </header>
+                    <ul class="order__products _is-expanded" id="o2456987894">
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="order__data">
+                      <p>
+                        <span>Данные покупателя:</span><br>
+                        Гурченко мария Петровна<br>
+                        +7 (999) 246-35-35<br>
+                        roman@mail.com<br>
+                      </p>
+                      <p>
+                        Способ получения: <span>Самовывоз</span><br>
+                        Способ оплаты: <span>При получении</span>
+                      </p>
+                    </div>
+                  </div>
+                  <section class="order__actions">
+                    <button class="button order__button" type="button" disabled>
+                      Завершить
+                    </button>
+                    <button class="button button_secondary order__button order__button_secondary" type="button">
+                      Удалить
+                    </button>
+                  </section>
+                  <button class="order__show-more" type="button"
+                          data-show-more="Показать ещё 1 товар" data-show-less="Свернуть"
+                          onclick="showMore.toggle('#o2456987894')">
+                    Свернуть
+                  </button>
+                </div>
+              </div>
+
+              <div data-tab="canceled" hidden>
+                <div class="order">
+                  <div class="order__main">
+                    <header class="order__header">
+                      <p class="order__status order__status_muted">Отмененный</p>
+                      <p class="order__number">№ 2456987893</p>
+                      <p class="order__date">Дата заказа: <time datetime="2017-07-20 17:37">20.07.17, 17:37</time></p>
+                    </header>
+                    <ul class="order__products" id="o2456987893">
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="order__data">
+                      <p>
+                        <span>Данные покупателя:</span><br>
+                        Гурченко мария Петровна<br>
+                        +7 (999) 246-35-35<br>
+                        roman@mail.com<br>
+                      </p>
+                      <p>
+                        Способ получения: <span>Самовывоз</span><br>
+                        Способ оплаты: <span>При получении</span>
+                      </p>
+                    </div>
+                  </div>
+                  <section class="order__actions">
+                    <button class="button order__button" type="button" disabled>
+                      Завершить
+                    </button>
+                    <button class="button button_secondary order__button order__button_secondary" type="button">
+                      Удалить
+                    </button>
+                  </section>
+                  <button class="order__show-more" type="button"
+                          data-show-more="Показать ещё 2 товара" data-show-less="Свернуть"
+                          onclick="showMore.toggle('#o2456987893')">
+                    Показать ещё 2 товара
+                  </button>
+                </div>
+
+                <div class="order">
+                  <div class="order__main">
+                    <header class="order__header">
+                      <p class="order__status order__status_muted">Отмененный</p>
+                      <p class="order__number">№ 2456987892</p>
+                      <p class="order__date">Дата заказа: <time datetime="2017-07-20 17:37">20.07.17, 17:37</time></p>
+                    </header>
+                    <ul class="order__products _is-expanded" id="o2456987892">
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="order__data">
+                      <p>
+                        <span>Данные покупателя:</span><br>
+                        Гурченко мария Петровна<br>
+                        +7 (999) 246-35-35<br>
+                        roman@mail.com<br>
+                      </p>
+                      <p>
+                        Способ получения: <span>Самовывоз</span><br>
+                        Способ оплаты: <span>При получении</span>
+                      </p>
+                    </div>
+                  </div>
+                  <section class="order__actions">
+                    <button class="button order__button" type="button" disabled>
+                      Завершить
+                    </button>
+                    <button class="button button_secondary order__button order__button_secondary" type="button">
+                      Удалить
+                    </button>
+                  </section>
+                  <button class="order__show-more" type="button"
+                          data-show-more="Показать ещё 1 товар" data-show-less="Свернуть"
+                          onclick="showMore.toggle('#o2456987892')">
+                    Свернуть
+                  </button>
+                </div>
+              </div>
+
+              <div data-tab="deleted" hidden>
+                <div class="order">
+                  <div class="order__main">
+                    <header class="order__header">
+                      <p class="order__status order__status_muted">Удаленный</p>
+                      <p class="order__number">№ 2456987891</p>
+                      <p class="order__date">Дата заказа: <time datetime="2017-07-20 17:37">20.07.17, 17:37</time></p>
+                    </header>
+                    <ul class="order__products" id="o2456987891">
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="order__data">
+                      <p>
+                        <span>Данные покупателя:</span><br>
+                        Гурченко мария Петровна<br>
+                        +7 (999) 246-35-35<br>
+                        roman@mail.com<br>
+                      </p>
+                      <p>
+                        Способ получения: <span>Самовывоз</span><br>
+                        Способ оплаты: <span>При получении</span>
+                      </p>
+                    </div>
+                  </div>
+                  <section class="order__actions">
+                    <button class="button order__button" type="button" disabled>
+                      Завершить
+                    </button>
+                    <button class="button button_secondary order__button order__button_secondary"
+                            type="button" disabled>
+                      Удалить
+                    </button>
+                  </section>
+                  <button class="order__show-more" type="button"
+                          data-show-more="Показать ещё 2 товара" data-show-less="Свернуть"
+                          onclick="showMore.toggle('#o2456987891')">
+                    Показать ещё 2 товара
+                  </button>
+                </div>
+
+                <div class="order">
+                  <div class="order__main">
+                    <header class="order__header">
+                      <p class="order__status order__status_muted">Удаленный</p>
+                      <p class="order__number">№ 2456987890</p>
+                      <p class="order__date">Дата заказа: <time datetime="2017-07-20 17:37">20.07.17, 17:37</time></p>
+                    </header>
+                    <ul class="order__products _is-expanded" id="o2456987890">
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <div class="product__img">
+                          <img src="http://placehold.it/80x120" alt="">
+                        </div>
+                        <div class="product__info">
+                          <p class="product__name">
+                            KNAUF Ротбанд, 30 кг
+                          </p>
+                          <p class="product__description">
+                            Выравнивающая, гипсовая основа
+                          </p>
+                          <p class="product__characteristics">
+                            Цена: <span>270,00 р.</span><br>
+                            Количество: <span>2</span>
+                          </p>
+                          <p class="product__summary">
+                            Итого: 540,00 р.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="order__data">
+                      <p>
+                        <span>Данные покупателя:</span><br>
+                        Гурченко мария Петровна<br>
+                        +7 (999) 246-35-35<br>
+                        roman@mail.com<br>
+                      </p>
+                      <p>
+                        Способ получения: <span>Самовывоз</span><br>
+                        Способ оплаты: <span>При получении</span>
+                      </p>
+                    </div>
+                  </div>
+                  <section class="order__actions">
+                    <button class="button order__button" type="button" disabled>
+                      Завершить
+                    </button>
+                    <button class="button button_secondary order__button order__button_secondary"
+                            type="button" disabled>
+                      Удалить
+                    </button>
+                  </section>
+                  <button class="order__show-more" type="button"
+                          data-show-more="Показать ещё 1 товар" data-show-less="Свернуть"
+                          onclick="showMore.toggle('#o2456987890')">
+                    Свернуть
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/lib/dropkick.js"></script>
+  <script src="/js/main.min.js"></script>
+  <script>
+    var placeSelect = new Dropkick('#place', { });
+  </script>
+</body>
+</html>

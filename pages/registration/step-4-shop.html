@@ -69,11 +69,10 @@
                       </label>
                     </div>
                     <div class="grid__column_1-2">
-                      <label class="form__input registration__action-btn" for="registration_logo">
+                      <label class="button button_action" for="registration_logo">
                         Загрузить
                       </label>
-                      <button class="form__input registration__action-btn registration__action-btn_secondary"
-                              type="button"
+                      <button class="button button_action_secondary" type="button"
                               onclick="filePreview.remove('registration_logo')">
                         <span>Удалить</span>
                       </button>
@@ -125,7 +124,7 @@
                 <div class="grid__column_4-7">
                   <div class="grid grid_small">
                     <div class="grid__column_1-1">
-                      <button class="form__input registration__action-btn" type="button">
+                      <button class="button button_action" type="button">
                         Выберите город
                       </button>
                     </div>
@@ -140,7 +139,7 @@
                   </div>
                   <div class="grid grid_small">
                     <div class="grid__column_1-2">
-                      <select class="form__select">
+                      <select class="select form__select">
                         <option selected>Помещение</option>
                         <option>...</option>
                       </select>
@@ -152,7 +151,7 @@
                 </div>
               </div>
               <div class="form__row">
-                <input class="form__checkbox" id="registration_only-online" type="checkbox">
+                <input class="form__switcher" id="registration_only-online" type="checkbox">
                 <label for="registration_only-online" data-checked="да" data-not-checked="нет">
                   Нет фактического адреса — только интернет магазин:
                 </label>
@@ -180,7 +179,7 @@
                 </div>
               </div>
               <div class="form__row">
-                <input class="form__checkbox" id="registration_has-delivery"
+                <input class="form__switcher" id="registration_has-delivery"
                        type="checkbox"
                        onchange="registrationDelivery.toggle()">
                 <label for="registration_has-delivery" data-checked="да" data-not-checked="нет">
@@ -195,7 +194,7 @@
                   </p>
                 </div>
                 <div class="grid__column_4-7">
-                  <button class="form__input registration__action-btn"
+                  <button class="button button_action"
                           id="set-operating-time"
                           type="button" onclick="modal.open('#operating-time')">
                     Установить время работы
@@ -278,7 +277,7 @@
                         <input class="form__input" data-id="lunch-start-2" type="text" placeholder="От">
                       </div>
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="lunch-end-1" type="text" placeholder="До">
+                        <input class="form__input" data-id="lunch-end-2" type="text" placeholder="До">
                       </div>
                     </div>
                   </div>
@@ -535,11 +534,11 @@
   </template>
   <template id="delivery-item-template">
     <div class="registration-delivery-item">
-      <button class="form__input registration__action-btn" id=""
-              type="button" onclick="">
+      <button class="button button_action" type="button"
+              onclick="">
         Населенный пункт
       </button>
-      <select class="form__select">
+      <select class="select form__select">
         <option selected>Доставка по городу и самовывоз</option>
         <option>...</option>
       </select>

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Строймаркет</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="container page-header__container">
+      <div class="grid page-header__grid">
+        <div class="grid__column_side-panel menu-btn-wrapper">
+          <a class="logo logo_panel" href="/">Строймаркет</a>
+          <a class="logo logo_panel logo_small" href="/">СМ</a>
+          <button class="menu-btn" type="button" onclick="sidePanel.toggle()"></button>
+        </div>
+
+        <div class="grid__column">
+          <ul class="user-actions">
+            <li class="user-actions__item user-actions__item_notifications">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Уведомления
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_messages">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Сообщения
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_profile">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Пластик Сибири
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_logout">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Выйти
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__column_side-panel">
+          <ul class="side-panel">
+            <li class="side-panel__item side-panel__item_company" data-accordion>
+              <span class="accordion-title">Моя компания</span>
+              <ul class="accordion-content" hidden>
+                <li><a href="javascript:void(0)">Рабочий стол</a></li>
+                <li><a href="javascript:void(0)">Ассортимент</a></li>
+                <li><a href="javascript:void(0)">Претензии</a></li>
+              </ul>
+            </li>
+            <li class="side-panel__item side-panel__item_catalog" data-accordion>
+              <span class="accordion-title">Каталог</span>
+            </li>
+            <li class="side-panel__item side-panel__item_purchases" data-accordion>
+              <span class="accordion-title">Закупки</span>
+            </li>
+            <li class="side-panel__item side-panel__item_settings _is-open" data-accordion>
+              <span class="accordion-title">Настройки</span>
+              <ul class="accordion-content">
+                <li><a>Аккаунт</a></li>
+                <li><a href="javascript:void(0)">Профиль компании</a></li>
+                <li><a href="javascript:void(0)">Контактные лица</a></li>
+                <li><a href="javascript:void(0)">Уведомления</a></li>
+                <li><a href="javascript:void(0)">Оплата</a></li>
+                <li><a href="javascript:void(0)">Реквизиты</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid__column">
+          <div class="dashboard">
+            <h2 class="h2 dashboard__h2">Настройки</h2>
+            <h3 class="h33">Аккаунт</h3>
+
+            <form class="form dashboard__form">
+              <fieldset>
+                <legend>Администратор аккаунта</legend>
+                <div class="grid form__row">
+                  <div class="grid__column_5-9">
+                    <label class="form__label" for="account_name">
+                      ФИО администратора:
+                    </label>
+                  </div>
+                  <div class="grid__column_4-9">
+                    <input class="form__input" id="account_name" type="text">
+                  </div>
+                </div>
+                <div class="grid form__row">
+                  <div class="grid__column_5-9">
+                    <label class="form__label" for="account_phone">
+                      Контактный телефон администратора:
+                    </label>
+                  </div>
+                  <div class="grid__column_4-9">
+                    <input class="form__input" id="account_phone" type="tel" value="(383) 256-33-11">
+                  </div>
+                </div>
+                <div class="grid form__row">
+                  <div class="grid__column_5-9">
+                    <label class="form__label" for="account_email">
+                      Электронная почта администратора:
+                    </label>
+                  </div>
+                  <div class="grid__column_4-9">
+                    <input class="form__input" id="account_email" type="email" value="info@shtukaturkin.ru">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Подтверждение данных фирмы</legend>
+                <div class="grid form__row form__row_top">
+                  <div class="grid__column_5-9">
+                    <p class="form__label">
+                      Документально:
+                    </p>
+                    <p class="form__label-caption">
+                      Данные фирмы подтверждены
+                    </p>
+                  </div>
+                </div>
+                <div class="grid form__row form__row_top">
+                  <div class="grid__column_5-9">
+                    <p class="form__label">
+                      Оплатой:
+                    </p>
+                    <p class="form__label-caption">
+                      Данные фирмы подтверждены
+                    </p>
+                  </div>
+                </div>
+                <div class="grid">
+                  <div class="grid__column_4-9 grid__column_right">
+                    <div class="grid grid_small">
+                      <div class="grid__column_2-3">
+                        <button class="button form__button" type="submit">
+                          Сохранить изменения
+                        </button>
+                      </div>
+                      <div class="grid__column_1-3">
+                        <button class="button button_secondary form__button" type="button">
+                          Отменить
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/main.min.js"></script>
+</body>
+</html>

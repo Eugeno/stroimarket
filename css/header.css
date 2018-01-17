@@ -2,7 +2,6 @@
   position: relative;
   z-index: 2;
   background-color: #fff;
-  /*border-bottom: 1px solid rgba(0,0,0,.1);*/
   box-shadow: 0 1px 0 rgba(0,0,0,.1);
 }
 
@@ -39,6 +38,18 @@
   background-color: #f89e01;
 }
 
+.logo_small {
+  display: none;
+}
+
+._is-minimized .logo_panel {
+  display: none;
+}
+
+._is-minimized .logo_small {
+  display: block;
+}
+
 .user-actions {
   display: flex;
   align-items: center;
@@ -65,7 +76,7 @@
   display: block;
   width: 20px;
   height: 20px;
-  background: url(/img/user-actions_notifications.svg) no-repeat center / contain;
+  background: url(../img/user-actions_notifications.svg) no-repeat center / contain;
 }
 
 .user-actions__item_messages .user-actions__link {
@@ -73,7 +84,7 @@
   display: block;
   width: 24px;
   height: 18px;
-  background: url(/img/user-actions_messages.svg) no-repeat center / contain;
+  background: url(../img/user-actions_messages.svg) no-repeat center / contain;
 }
 
 .user-actions__item_profile .link {
