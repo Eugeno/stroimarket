@@ -169,12 +169,20 @@ body._is-fixed {
   width: 85.714%;
 }
 
+.grid__column_2-9 {
+  width: 22.222%;
+}
+
 .grid__column_4-9 {
   width: 44.444%;
 }
 
 .grid__column_5-9 {
   width: 55.555%;
+}
+
+.grid__column_7-9 {
+  width: 77.777%;
 }
 
 .grid__column_1-12 {

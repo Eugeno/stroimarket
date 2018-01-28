@@ -45,7 +45,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_name"
+                  <input class="input" id="registration_name"
                          type="text" placeholder="Не юр. лица, а название фирмы" required>
                 </div>
               </div>
@@ -61,10 +61,9 @@
                 <div class="grid__column_4-7">
                   <div class="grid grid_medium">
                     <div class="grid__column_1-2 registration__logo">
-                      <input class="form__input" id="registration_logo"
-                             type="file" placeholder="Не юр. лица, а название фирмы"
+                      <input class="input" id="registration_logo" type="file"
                              onchange="filePreview.show(event)">
-                      <label class="form__input" for="registration_logo">
+                      <label class="input" for="registration_logo">
                         <span>Нет логотипа</span>
                       </label>
                     </div>
@@ -87,7 +86,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_info"
+                  <input class="input" id="registration_info"
                          type="text" placeholder="Текст">
                 </div>
               </div>
@@ -98,7 +97,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_site"
+                  <input class="input" id="registration_site"
                          type="url" placeholder="Текст">
                 </div>
               </div>
@@ -116,28 +115,29 @@
                 <div class="grid__column_4-7">
                   <div class="grid grid_small">
                     <div class="grid__column_1-1">
-                      <button class="button button_action" type="button">
+                      <button class="button button_action" type="button"
+                              onclick="modal.open('#choose-city')">
                         Выберите город
                       </button>
                     </div>
                   </div>
                   <div class="grid grid_small">
                     <div class="grid__column_1-2">
-                      <input class="form__input" type="text" placeholder="Улица" required>
+                      <input class="input" type="text" placeholder="Улица" required>
                     </div>
                     <div class="grid__column_1-2">
-                      <input class="form__input" type="text" placeholder="Дом" required>
+                      <input class="input" type="text" placeholder="Дом" required>
                     </div>
                   </div>
                   <div class="grid grid_small">
                     <div class="grid__column_1-2">
-                      <select class="select form__select">
+                      <select class="select form__select" id="building">
                         <option selected>Помещение</option>
                         <option>...</option>
                       </select>
                     </div>
                     <div class="grid__column_1-2">
-                      <input class="form__input" type="text" placeholder="Номер" required>
+                      <input class="input" type="text" placeholder="Номер" required>
                     </div>
                   </div>
                 </div>
@@ -149,8 +149,8 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_phone"
-                         type="tel" placeholder="" value="(383) 256-33-11" required>
+                  <input class="input" id="registration_phone" type="tel"
+                         placeholder="" value="(383) 256-33-11" required>
                 </div>
               </div>
               <div class="grid form__row">
@@ -160,8 +160,8 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_email"
-                         type="email" placeholder="" value="info@shtukaturkin.ru" required>
+                  <input class="input" id="registration_email" type="email"
+                         placeholder="" value="info@shtukaturkin.ru" required>
                 </div>
               </div>
               <div class="grid">
@@ -177,6 +177,42 @@
       </div>
     </div>
   </main>
+
+  <div class="modal modal_middle" id="choose-city">
+    <div class="container modal__container">
+      <div class="grid">
+        <div class="grid__column_3-7 grid__column_center">
+          <div class="modal__overlay"></div>
+          <header class="modal__header modal__header_compact">
+            <button class="modal__close" type="button">Закрыть</button>
+            <h3 class="modal__heading">
+              Выберите город
+            </h3>
+          </header>
+          <div class="modal__body modal__body_compact">
+            <div class="choose-city">
+              <p class="choose-city__clarification">
+                Какой-то текст, говорящий, что можно выбрать один или несколько городов, исходя из нужд пользователя.
+              </p>
+              <input class="input choose-city__search" type="search" placeholder="Поиск">
+              <ul class="choose-city__list">
+                <li>Название города</li>
+                <li>Название города</li>
+                <li>Название города</li>
+                <li>Название города</li>
+                <li>Название города</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/lib/dropkick.js"></script>
   <script src="/js/main.min.js"></script>
+  <script>
+    var buildingSelect = new Dropkick('#building', { });
+  </script>
 </body>
 </html>

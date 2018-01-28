@@ -34,10 +34,18 @@ var accordion = {
     item.classList.toggle('_is-open');
     var content = item.querySelector('.accordion-content');
     content.hidden = !content.hidden;
+    var button = item.querySelector('.accordion-title');
+    if (button.dataset.show) {
+      button.innerHTML = item.classList.contains('_is-open') ? button.dataset.hide : button.dataset.show;
+    }
   },
   close: function close(item) {
     item.classList.remove('_is-open');
     item.querySelector('.accordion-content').hidden = true;
+    var button = item.querySelector('.accordion-title');
+    if (button.dataset.show) {
+      button.innerHTML = button.dataset.hide;
+    }
   }
 };
 
@@ -114,47 +122,49 @@ var modal = {
 var operatingTime = {
   save: function save() {
     var operatingTimeWrapper = document.querySelector('.operating-time-wrapper');
-    var operatingTimeTable = void 0;
-    if (operatingTimeWrapper.hasChildNodes()) {
-      operatingTimeTable = operatingTimeWrapper.querySelector('.registration__operating-time');
-    } else {
-      var operatingTimeTemplate = document.getElementById('operating-time-template');
-      var operatingTimeToClone = operatingTimeTemplate.content.querySelector('.registration__operating-time');
-      operatingTimeTable = operatingTimeToClone.cloneNode(true);
-    }
-
-    var operatingTimeInputTable = document.getElementById('operating-time');
-    var inputs = [].concat(_toConsumableArray(operatingTimeInputTable.querySelectorAll('input')));
-    var th = [].concat(_toConsumableArray(operatingTimeTable.querySelectorAll('th')));
-    inputs.forEach(function (input) {
-      var span = operatingTimeTable.querySelector('[data-id="' + input.dataset.id + '"]');
-      var value = input.value.trim();
-      span.innerHTML = value;
-      var number = input.dataset.id.substr(input.dataset.id.length - 1);
-      if (!value) {
-        span.parentNode.classList.add('_is-empty');
-        if (input.dataset.id.includes('work')) {
-          th[number - 1].classList.add('day-off');
-        }
+    if (operatingTimeWrapper) {
+      var operatingTimeTable = void 0;
+      if (operatingTimeWrapper.hasChildNodes()) {
+        operatingTimeTable = operatingTimeWrapper.querySelector('.registration__operating-time');
       } else {
-        span.parentNode.classList.remove('_is-empty');
-        th[number - 1].classList.remove('day-off');
+        var operatingTimeTemplate = document.getElementById('operating-time-template');
+        var operatingTimeToClone = operatingTimeTemplate.content.querySelector('.registration__operating-time');
+        operatingTimeTable = operatingTimeToClone.cloneNode(true);
       }
-    });
 
-    if (!operatingTimeWrapper.hasChildNodes()) {
-      operatingTimeWrapper.appendChild(operatingTimeTable);
+      var operatingTimeInputTable = document.getElementById('operating-time');
+      var inputs = [].concat(_toConsumableArray(operatingTimeInputTable.querySelectorAll('input')));
+      var th = [].concat(_toConsumableArray(operatingTimeTable.querySelectorAll('th')));
+      inputs.forEach(function (input) {
+        var span = operatingTimeTable.querySelector('[data-id="' + input.dataset.id + '"]');
+        var value = input.value.trim();
+        span.innerHTML = value;
+        var number = input.dataset.id.substr(input.dataset.id.length - 1);
+        if (!value) {
+          span.parentNode.classList.add('_is-empty');
+          if (input.dataset.id.includes('work')) {
+            th[number - 1].classList.add('day-off');
+          }
+        } else {
+          span.parentNode.classList.remove('_is-empty');
+          th[number - 1].classList.remove('day-off');
+        }
+      });
 
-      var setBtn = document.getElementById('set-operating-time');
-      setBtn.remove();
+      if (!operatingTimeWrapper.hasChildNodes()) {
+        operatingTimeWrapper.appendChild(operatingTimeTable);
 
-      var editBtnTemplate = document.getElementById('edit-operating-time');
-      var editBtnToClone = editBtnTemplate.content.querySelector('button');
-      var editBtn = editBtnToClone.cloneNode(true);
-      operatingTimeWrapper.appendChild(editBtn);
+        var setBtn = document.getElementById('set-operating-time');
+        setBtn.remove();
+
+        var editBtnTemplate = document.getElementById('edit-operating-time');
+        var editBtnToClone = editBtnTemplate.content.querySelector('button');
+        var editBtn = editBtnToClone.cloneNode(true);
+        operatingTimeWrapper.appendChild(editBtn);
+      }
+
+      modal.close('#operating-time');
     }
-
-    modal.close('#operating-time');
   }
 };
 

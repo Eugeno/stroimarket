@@ -111,7 +111,7 @@
   background: url(../img/side-panel_arrow.svg) no-repeat center / contain;
 }
 
-[data-accordion]._is-open .accordion-title::after {
+[data-accordion]._is-open > .accordion-title::after {
   transform: translateY(-50%) rotate(180deg);
 }
 
@@ -152,7 +152,6 @@
 }
 
 .dashboard__header {
-  /*background: #fff;*/
   position: relative;
   margin-bottom: 20px;
 }
@@ -179,6 +178,34 @@
   margin-bottom: 20px;
 }
 
+.dashboard__p-h3 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.dashboard__p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: #565f64;
+}
+
+.dashboard__ul {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 20px;
+  list-style: none;
+  color: #7e8890;
+}
+
+.dashboard__ul li {
+  margin-top: 5px;
+}
 
 .dashboard__tabs-titles {
   display: flex;
@@ -450,16 +477,16 @@
 
 /* Assortment
    ========================================================================== */
-.assortment {
+.products {
   margin-top: 30px;
 }
 
-.assortment__heading {
+.products__heading {
   display: flex;
   align-items: baseline;
 }
 
-.assortment__heading h2 {
+.products__heading h2 {
   font-size: 16px;
   font-weight: 600;
   line-height: 22px;
@@ -469,13 +496,14 @@
   color: #455056;
 }
 
-.assortment__heading .link {
+.products__heading .link {
   font-size: 14px;
   line-height: 16px;
   margin-left: 10px;
 }
 
-.assortment__product {
+.product-card {
+  line-height: 0;
   box-sizing: border-box;
   padding: 15px 20px;
   text-align: center;
@@ -484,12 +512,12 @@
   background: #fff;
 }
 
-.assortment__product img {
+.product-card img {
   max-width: 120px;
   max-height: 120px;
 }
 
-.assortment__name {
+.product-card__name {
   font-size: 14px;
   font-weight: 400;
   line-height: 19px;
@@ -498,7 +526,7 @@
   color: #4a4a4a;
 }
 
-.assortment__category {
+.product-card__category {
   font-size: 12px;
   line-height: 17px;
   margin-top: 0;
@@ -683,24 +711,23 @@
   color: #4a4a4a;
 }
 
-.h3-selector span {
+.h3-selector > span {
   margin-right: 10px;
 }
 
-.dk-select,
-.dk-select * {
+.text-select,
+.text-select * {
   box-sizing: border-box;
 }
 
-.dk-select,
-.dk-select-multi {
+.text-select {
   position: relative;
   display: inline-block;
   cursor: pointer;
   vertical-align: middle;
 }
 
-.dk-selected {
+.text-select .dk-selected {
   font-size: 20px;
   font-weight: 600;
   line-height: 27px;
@@ -712,37 +739,31 @@
   outline: none;
 }
 
-.dk-select .dk-select-options {
+.text-select .dk-select-options {
   position: absolute;
+  z-index: 100;
   left: 50%;
   display: none;
   width: 290px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   border-radius: 10px;
+  background-color: #fff;
   box-shadow: 0 0 20px rgba(0,0,0,.1);
 }
 
-.dk-select-open-up .dk-select-options {
+.text-select.dk-select-open-up .dk-select-options {
   bottom: 100%;
   transform: translate(-50%,-12px);
 }
 
-.dk-select-open-down .dk-select-options {
+.text-select.dk-select-open-down .dk-select-options {
   top: 100%;
   transform: translate(-50%,12px);
 }
 
-.dk-select-options {
-  z-index: 100;
-  width: auto;
-  margin: 0;
-  /*overflow-x: hidden;*/
-  /*overflow-y: auto;*/
-  padding: 0;
-  list-style: none;
-  background-color: #fff;
-}
-
-.dk-select-options::before {
+.text-select .dk-select-options::before {
   position: absolute;
   top: 0;
   left: 50%;
@@ -753,11 +774,11 @@
   background: #fff;
 }
 
-.dk-option-selected {
+.text-select .dk-option-selected {
   opacity: .6;
 }
 
-.dk-option {
+.text-select .dk-option {
   font-size: 12px;
   line-height: 17px;
   position: relative;
@@ -766,36 +787,22 @@
   color: #7e8890;
 }
 
-.dk-option:not(:last-child) {
+.text-select .dk-option:not(:last-child) {
   border-bottom: solid 1px #eaeeef;
 }
 
-/*.dk-option em {
-  font-style: normal;
-  text-transform: uppercase;
-  font-size: 14px;
-  color: #868d95;
-  line-height: 19px;
-  display: block;
-}*/
-
-.dk-select-options .dk-option-hidden {
+.text-select .dk-select-options .dk-option-hidden {
   display: none;
 }
 
-.dk-select-open-up .dk-selected,
-.dk-select-open-down .dk-selected {
+.text-select.dk-select-open-up .dk-selected,
+.text-select.dk-select-open-down .dk-selected {
   color: #f89e01;
 }
 
-.dk-select-open-up .dk-select-options,
-.dk-select-open-down .dk-select-options {
+.text-select.dk-select-open-up .dk-select-options,
+.text-select.dk-select-open-down .dk-select-options {
   display: block;
-}
-
-.dk-select-multi:hover,
-.dk-select-multi:focus {
-  outline: none;
 }
 
 select[data-dkcacheid] {
@@ -815,162 +822,6 @@ select[data-dkcacheid] {
   display: inline-block;
   cursor: pointer;
   text-decoration: underline;
-}
-
-
-/* ==========================================================================
-   Category block
-   ========================================================================== */
-.categories {
-  box-sizing: border-box;
-  margin-top: 20px;
-  border: solid 1px #eaeeef;
-  border-radius: 5px;
-  background-color: #fff;
-}
-
-.categories__img {
-  margin: 40px;
-  padding-bottom: calc((100% - 80px) * 2 / 3);
-  background: no-repeat center / contain;
-}
-
-.categories__heading {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 19px;
-  margin: 0 20px 9px;
-  text-transform: uppercase;
-}
-
-.categories__list {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-.categories__list li {
-  font-size: 14px;
-  line-height: 16px;
-  position: relative;
-  color: #455056;
-}
-
-.categories__list li::before {
-  position: absolute;
-  right: 5px;
-  bottom: 0;
-  left: 5px;
-  height: 1px;
-  content: "";
-  background-color: #eaeeef;
-}
-
-.categories__list li._is-open::before,
-.categories__list li:nth-child(-n + 5):last-child::before {
-  display: none;
-}
-
-.categories__list:not(.categories__list_full) li:nth-child(n + 6) {
-  display: none;
-}
-
-.categories__list span {
-  display: block;
-  padding: 8px 60px 9px 20px;
-}
-
-.categories__list span.accordion-title {
-  position: relative;
-  cursor: pointer;
-}
-
-.categories__list span.accordion-title::after {
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  width: 12px;
-  height: 8px;
-  content: "";
-  transform: translateY(-50%);
-  background: url(../img/category_arrow.svg) no-repeat center / contain;
-}
-
-.categories__list._is-open span.accordion-title::after {
-  transform: rotate(180deg) translateY(-50%);
-}
-
-.categories__list ul {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-.categories__list ul li::before {
-  left: 23px;
-}
-
-.categories__list input[type="checkbox"] {
-  display: none;
-}
-
-.categories__list input[type="checkbox"] + label {
-  position: relative;
-  display: block;
-  margin-right: 60px;
-  margin-left: 30px;
-  padding-top: 5px;
-  padding-bottom: 6px;
-}
-
-.categories__list input[type="checkbox"]:checked + label {
-  color: #f89e01;
-}
-
-.categories__list input[type="checkbox"] + label::before,
-.categories__list input[type="checkbox"] + label::after {
-  position: absolute;
-  content: "";
-  background-color: #f89e01;
-}
-
-.categories__list input[type="checkbox"] + label::before {
-  top: calc(50% - 5px);
-  right: -41px;
-  width: 2px;
-  height: 10px;
-}
-
-.categories__list input[type="checkbox"]:checked + label::before {
-  top: 1px;
-  right: auto;
-  bottom: 2px;
-  left: -15px;
-  width: 3px;
-  height: auto;
-}
-
-.categories__list input[type="checkbox"] + label::after {
-  top: calc(50% - 1px);
-  right: -45px;
-  width: 10px;
-  height: 2px;
-}
-
-.categories__show-more {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 22px;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 8px 0 10px;
-  cursor: pointer;
-  color: #f89e01;
-  border: 0;
-  background: none;
 }
 
 
@@ -1030,9 +881,9 @@ select[data-dkcacheid] {
    Invoicing
    ========================================================================== */
 .invoicing__checkbox + label {
+  display: block;
   margin-top: 6px;
   margin-bottom: 6px;
-  display: block;
 }
 
 .invoicing__caption {
@@ -1040,11 +891,11 @@ select[data-dkcacheid] {
 }
 
 .invoicing__link {
-  margin-top: 3px;
-  margin-bottom: 0;
   font-size: 14px;
   font-weight: 600;
   line-height: 19px;
+  margin-top: 3px;
+  margin-bottom: 0;
 }
 
 .invoicing__link:first-child {

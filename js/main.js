@@ -27,11 +27,21 @@ const accordion = {
     item.classList.toggle(`_is-open`)
     const content = item.querySelector(`.accordion-content`)
     content.hidden = !content.hidden
+    const button = item.querySelector(`.accordion-title`)
+    if (button.dataset.show) {
+      button.innerHTML = item.classList.contains(`_is-open`) ?
+        button.dataset.hide :
+        button.dataset.show
+    }
   },
 
   close (item) {
     item.classList.remove(`_is-open`)
     item.querySelector(`.accordion-content`).hidden = true
+    const button = item.querySelector(`.accordion-title`)
+    if (button.dataset.show) {
+      button.innerHTML = button.dataset.hide
+    }
   }
 }
 
@@ -107,47 +117,49 @@ const modal = {
 const operatingTime = {
   save () {
     const operatingTimeWrapper = document.querySelector(`.operating-time-wrapper`)
-    let operatingTimeTable
-    if (operatingTimeWrapper.hasChildNodes()) {
-      operatingTimeTable = operatingTimeWrapper.querySelector(`.registration__operating-time`)
-    } else {
-      const operatingTimeTemplate = document.getElementById(`operating-time-template`)
-      const operatingTimeToClone = operatingTimeTemplate.content.querySelector(`.registration__operating-time`)
-      operatingTimeTable = operatingTimeToClone.cloneNode(true)
-    }
-
-    const operatingTimeInputTable = document.getElementById(`operating-time`)
-    const inputs = [...operatingTimeInputTable.querySelectorAll(`input`)]
-    const th = [...operatingTimeTable.querySelectorAll(`th`)]
-    inputs.forEach((input) => {
-      const span = operatingTimeTable.querySelector(`[data-id="${input.dataset.id}"]`)
-      const value = input.value.trim()
-      span.innerHTML = value
-      const number = input.dataset.id.substr(input.dataset.id.length - 1)
-      if (!value) {
-        span.parentNode.classList.add(`_is-empty`)
-        if (input.dataset.id.includes(`work`)) {
-          th[number - 1].classList.add(`day-off`)
-        }
+    if (operatingTimeWrapper) {
+      let operatingTimeTable
+      if (operatingTimeWrapper.hasChildNodes()) {
+        operatingTimeTable = operatingTimeWrapper.querySelector(`.registration__operating-time`)
       } else {
-        span.parentNode.classList.remove(`_is-empty`)
-        th[number - 1].classList.remove(`day-off`)
+        const operatingTimeTemplate = document.getElementById(`operating-time-template`)
+        const operatingTimeToClone = operatingTimeTemplate.content.querySelector(`.registration__operating-time`)
+        operatingTimeTable = operatingTimeToClone.cloneNode(true)
       }
-    })
 
-    if (!operatingTimeWrapper.hasChildNodes()) {
-      operatingTimeWrapper.appendChild(operatingTimeTable)
+      const operatingTimeInputTable = document.getElementById(`operating-time`)
+      const inputs = [...operatingTimeInputTable.querySelectorAll(`input`)]
+      const th = [...operatingTimeTable.querySelectorAll(`th`)]
+      inputs.forEach(input => {
+        const span = operatingTimeTable.querySelector(`[data-id="${input.dataset.id}"]`)
+        const value = input.value.trim()
+        span.innerHTML = value
+        const number = input.dataset.id.substr(input.dataset.id.length - 1)
+        if (!value) {
+          span.parentNode.classList.add(`_is-empty`)
+          if (input.dataset.id.includes(`work`)) {
+            th[number - 1].classList.add(`day-off`)
+          }
+        } else {
+          span.parentNode.classList.remove(`_is-empty`)
+          th[number - 1].classList.remove(`day-off`)
+        }
+      })
 
-      const setBtn = document.getElementById(`set-operating-time`)
-      setBtn.remove()
+      if (!operatingTimeWrapper.hasChildNodes()) {
+        operatingTimeWrapper.appendChild(operatingTimeTable)
 
-      const editBtnTemplate = document.getElementById(`edit-operating-time`)
-      const editBtnToClone = editBtnTemplate.content.querySelector(`button`)
-      const editBtn = editBtnToClone.cloneNode(true)
-      operatingTimeWrapper.appendChild(editBtn)
+        const setBtn = document.getElementById(`set-operating-time`)
+        setBtn.remove()
+
+        const editBtnTemplate = document.getElementById(`edit-operating-time`)
+        const editBtnToClone = editBtnTemplate.content.querySelector(`button`)
+        const editBtn = editBtnToClone.cloneNode(true)
+        operatingTimeWrapper.appendChild(editBtn)
+      }
+
+      modal.close(`#operating-time`)
     }
-
-    modal.close(`#operating-time`)
   }
 }
 
@@ -186,7 +198,7 @@ const registrationDelivery = {
 const checkForm = (form) => {
   const requiredFields = [...form.querySelectorAll(`[required]`)]
   let allFieldsValid = true
-  requiredFields.forEach((field) => {
+  requiredFields.forEach(field => {
     if (!field.checkValidity()) {
       allFieldsValid = false
     }

@@ -45,7 +45,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_name"
+                  <input class="input" id="registration_name"
                          type="text" placeholder="Не юр. лица, а название фирмы" required>
                 </div>
               </div>
@@ -61,10 +61,9 @@
                 <div class="grid__column_4-7">
                   <div class="grid grid_medium">
                     <div class="grid__column_1-2 registration__logo">
-                      <input class="form__input" id="registration_logo"
-                             type="file" placeholder="Не юр. лица, а название фирмы"
+                      <input class="input" id="registration_logo" type="file"
                              onchange="filePreview.show(event)">
-                      <label class="form__input" for="registration_logo">
+                      <label class="input" for="registration_logo">
                         <span>Нет логотипа</span>
                       </label>
                     </div>
@@ -87,7 +86,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_info"
+                  <input class="input" id="registration_info"
                          type="text" placeholder="Текст">
                 </div>
               </div>
@@ -98,7 +97,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_site"
+                  <input class="input" id="registration_site"
                          type="url" placeholder="Текст">
                 </div>
               </div>
@@ -131,21 +130,21 @@
                   </div>
                   <div class="grid grid_small">
                     <div class="grid__column_1-2">
-                      <input class="form__input" type="text" placeholder="Улица" required>
+                      <input class="input" type="text" placeholder="Улица" required>
                     </div>
                     <div class="grid__column_1-2">
-                      <input class="form__input" type="text" placeholder="Дом" required>
+                      <input class="input" type="text" placeholder="Дом" required>
                     </div>
                   </div>
                   <div class="grid grid_small">
                     <div class="grid__column_1-2">
-                      <select class="select form__select">
+                      <select class="select form__select" id="building">
                         <option selected>Помещение</option>
                         <option>...</option>
                       </select>
                     </div>
                     <div class="grid__column_1-2">
-                      <input class="form__input" type="text" placeholder="Номер" required>
+                      <input class="input" type="text" placeholder="Номер" required>
                     </div>
                   </div>
                 </div>
@@ -163,8 +162,8 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_phone"
-                         type="tel" placeholder="" value="(383) 256-33-11" required>
+                  <input class="input" id="registration_phone" type="tel"
+                         placeholder="" value="(383) 256-33-11" required>
                 </div>
               </div>
               <div class="grid form__row">
@@ -174,13 +173,12 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_email"
-                         type="email" placeholder="" value="info@shtukaturkin.ru" required>
+                  <input class="input" id="registration_email" type="email"
+                         placeholder="" value="info@shtukaturkin.ru" required>
                 </div>
               </div>
               <div class="form__row">
-                <input class="form__switcher" id="registration_has-delivery"
-                       type="checkbox"
+                <input class="form__switcher" id="registration_has-delivery" type="checkbox"
                        onchange="registrationDelivery.toggle()">
                 <label for="registration_has-delivery" data-checked="да" data-not-checked="нет">
                   Имеется доставка:
@@ -194,9 +192,8 @@
                   </p>
                 </div>
                 <div class="grid__column_4-7">
-                  <button class="button button_action"
-                          id="set-operating-time"
-                          type="button" onclick="modal.open('#operating-time')">
+                  <button class="button button_action" id="set-operating-time" type="button"
+                          onclick="modal.open('#operating-time')">
                     Установить время работы
                   </button>
                   <div class="operating-time-wrapper"></div>
@@ -236,10 +233,10 @@
                     <p>Рабочие часы:</p>
                     <div class="grid grid_small">
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="work-start-1" type="text" placeholder="От">
+                        <input class="input" data-id="work-start-1" type="text" placeholder="От">
                       </div>
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="work-end-1" type="text" placeholder="До">
+                        <input class="input" data-id="work-end-1" type="text" placeholder="До">
                       </div>
                     </div>
                   </div>
@@ -247,10 +244,10 @@
                     <p>Обеденные часы:</p>
                     <div class="grid grid_small">
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="lunch-start-1" type="text" placeholder="От">
+                        <input class="input" data-id="lunch-start-1" type="text" placeholder="От">
                       </div>
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="lunch-end-1" type="text" placeholder="До">
+                        <input class="input" data-id="lunch-end-1" type="text" placeholder="До">
                       </div>
                     </div>
                   </div>
@@ -263,10 +260,10 @@
                     <p>Рабочие часы:</p>
                     <div class="grid grid_small">
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="work-start-2" type="text" placeholder="От">
+                        <input class="input" data-id="work-start-2" type="text" placeholder="От">
                       </div>
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="work-end-2" type="text" placeholder="До">
+                        <input class="input" data-id="work-end-2" type="text" placeholder="До">
                       </div>
                     </div>
                   </div>
@@ -274,10 +271,10 @@
                     <p>Обеденные часы:</p>
                     <div class="grid grid_small">
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="lunch-start-2" type="text" placeholder="От">
+                        <input class="input" data-id="lunch-start-2" type="text" placeholder="От">
                       </div>
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="lunch-end-2" type="text" placeholder="До">
+                        <input class="input" data-id="lunch-end-2" type="text" placeholder="До">
                       </div>
                     </div>
                   </div>
@@ -290,10 +287,10 @@
                     <p>Рабочие часы:</p>
                     <div class="grid grid_small">
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="work-start-3" type="text" placeholder="От">
+                        <input class="input" data-id="work-start-3" type="text" placeholder="От">
                       </div>
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="work-end-3" type="text" placeholder="До">
+                        <input class="input" data-id="work-end-3" type="text" placeholder="До">
                       </div>
                     </div>
                   </div>
@@ -301,10 +298,10 @@
                     <p>Обеденные часы:</p>
                     <div class="grid grid_small">
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="lunch-start-3" type="text" placeholder="От">
+                        <input class="input" data-id="lunch-start-3" type="text" placeholder="От">
                       </div>
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="lunch-end-3" type="text" placeholder="До">
+                        <input class="input" data-id="lunch-end-3" type="text" placeholder="До">
                       </div>
                     </div>
                   </div>
@@ -317,10 +314,10 @@
                     <p>Рабочие часы:</p>
                     <div class="grid grid_small">
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="work-start-4" type="text" placeholder="От">
+                        <input class="input" data-id="work-start-4" type="text" placeholder="От">
                       </div>
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="work-end-4" type="text" placeholder="До">
+                        <input class="input" data-id="work-end-4" type="text" placeholder="До">
                       </div>
                     </div>
                   </div>
@@ -328,10 +325,10 @@
                     <p>Обеденные часы:</p>
                     <div class="grid grid_small">
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="lunch-start-4" type="text" placeholder="От">
+                        <input class="input" data-id="lunch-start-4" type="text" placeholder="От">
                       </div>
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="lunch-end-4" type="text" placeholder="До">
+                        <input class="input" data-id="lunch-end-4" type="text" placeholder="До">
                       </div>
                     </div>
                   </div>
@@ -344,10 +341,10 @@
                     <p>Рабочие часы:</p>
                     <div class="grid grid_small">
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="work-start-5" type="text" placeholder="От">
+                        <input class="input" data-id="work-start-5" type="text" placeholder="От">
                       </div>
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="work-end-5" type="text" placeholder="До">
+                        <input class="input" data-id="work-end-5" type="text" placeholder="До">
                       </div>
                     </div>
                   </div>
@@ -355,10 +352,10 @@
                     <p>Обеденные часы:</p>
                     <div class="grid grid_small">
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="lunch-start-5" type="text" placeholder="От">
+                        <input class="input" data-id="lunch-start-5" type="text" placeholder="От">
                       </div>
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="lunch-end-5" type="text" placeholder="До">
+                        <input class="input" data-id="lunch-end-5" type="text" placeholder="До">
                       </div>
                     </div>
                   </div>
@@ -371,10 +368,10 @@
                     <p>Рабочие часы:</p>
                     <div class="grid grid_small">
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="work-start-6" type="text" placeholder="От">
+                        <input class="input" data-id="work-start-6" type="text" placeholder="От">
                       </div>
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="work-end-6" type="text" placeholder="До">
+                        <input class="input" data-id="work-end-6" type="text" placeholder="До">
                       </div>
                     </div>
                   </div>
@@ -382,10 +379,10 @@
                     <p>Обеденные часы:</p>
                     <div class="grid grid_small">
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="lunch-start-6" type="text" placeholder="От">
+                        <input class="input" data-id="lunch-start-6" type="text" placeholder="От">
                       </div>
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="lunch-end-6" type="text" placeholder="До">
+                        <input class="input" data-id="lunch-end-6" type="text" placeholder="До">
                       </div>
                     </div>
                   </div>
@@ -398,10 +395,10 @@
                     <p>Рабочие часы:</p>
                     <div class="grid grid_small">
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="work-start-7" type="text" placeholder="От">
+                        <input class="input" data-id="work-start-7" type="text" placeholder="От">
                       </div>
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="work-end-7" type="text" placeholder="До">
+                        <input class="input" data-id="work-end-7" type="text" placeholder="До">
                       </div>
                     </div>
                   </div>
@@ -409,10 +406,10 @@
                     <p>Обеденные часы:</p>
                     <div class="grid grid_small">
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="lunch-start-7" type="text" placeholder="От">
+                        <input class="input" data-id="lunch-start-7" type="text" placeholder="От">
                       </div>
                       <div class="grid__column_1-2">
-                        <input class="form__input" data-id="lunch-end-7" type="text" placeholder="До">
+                        <input class="input" data-id="lunch-end-7" type="text" placeholder="До">
                       </div>
                     </div>
                   </div>
@@ -544,6 +541,11 @@
       </select>
     </div>
   </template>
+
+  <script src="/js/lib/dropkick.js"></script>
   <script src="/js/main.min.js"></script>
+  <script>
+    var buildingSelect = new Dropkick('#building', { });
+  </script>
 </body>
 </html>

@@ -93,7 +93,7 @@
   padding-right: 54px;
 }
 
-.user-actions__item_profile .link::after {
+.user-actions__avatar {
   position: absolute;
   top: 50%;
   right: 0;
@@ -102,9 +102,9 @@
   height: 44px;
   content: "";
   transform: translateY(-50%);
-  border: solid .5px #d9e2e7;
   border-radius: 50%;
-  background-color: #fff;
+  background: #fff no-repeat center / contain;
+  box-shadow: 0 0 0 .5px #d9e2e7;
 }
 
 .user-actions__item_login,

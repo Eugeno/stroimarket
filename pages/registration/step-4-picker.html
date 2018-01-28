@@ -41,8 +41,8 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_name"
-                         type="text" placeholder="Текст" value="" required>
+                  <input class="input" id="registration_name" type="text"
+                         placeholder="Текст" value="" required>
                 </div>
               </div>
               <div class="grid form__row">
@@ -52,8 +52,8 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_email"
-                         type="email" placeholder="Текст" value="" required>
+                  <input class="input" id="registration_email" type="email"
+                         placeholder="Текст" value="" required>
                 </div>
               </div>
               <div class="grid form__row">
@@ -63,8 +63,8 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_phone"
-                         type="tel" placeholder="Текст" value="" required>
+                  <input class="input" id="registration_phone" type="tel"
+                         placeholder="Текст" value="" required>
                 </div>
               </div>
               <div class="grid form__row">
@@ -93,10 +93,9 @@
                 <div class="grid__column_4-7">
                   <div class="grid grid_medium">
                     <div class="grid__column_1-2 registration__logo">
-                      <input class="form__input" id="registration_logo"
-                             type="file" placeholder="Не юр. лица, а название фирмы"
+                      <input class="input" id="registration_logo" type="file"
                              onchange="filePreview.show(event)">
-                      <label class="form__input" for="registration_logo">
+                      <label class="input" for="registration_logo">
                         <span>Нет логотипа</span>
                       </label>
                     </div>
@@ -104,8 +103,7 @@
                       <label class="button button_action" for="registration_logo">
                         Загрузить
                       </label>
-                      <button class="button button_action_secondary"
-                              type="button"
+                      <button class="button button_action_secondary" type="button"
                               onclick="filePreview.remove('registration_logo')">
                         <span>Удалить</span>
                       </button>
