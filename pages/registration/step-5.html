@@ -55,7 +55,7 @@
                 </div>
                 <div class="grid__column_4-7">
                   <p class="form__field">
-                    <input class="form__input" id="registration_s5-f1"
+                    <input class="input" id="registration_s5-f1"
                            type="text" placeholder="" value="5403003213">
                     <span class="form__error">
                       <b>Ошибка ввода</b>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="grid__column_4-7">
                   <p class="form__field">
-                    <input class="form__input" id="registration_s5-f2"
+                    <input class="input" id="registration_s5-f2"
                          type="text" placeholder="" value="115547600108">
                     <span class="form__error">
                       <b>Ошибка ввода</b>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="grid__column_4-7">
                   <p class="form__field">
-                    <input class="form__input" id="registration_s5-f3"
+                    <input class="input" id="registration_s5-f3"
                          type="text" placeholder="" value="540301542">
                     <span class="form__error">
                       <b>Ошибка ввода</b>
@@ -105,7 +105,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_s5-f4"
+                  <input class="input" id="registration_s5-f4"
                          type="text" placeholder="" value="49732758">
                 </div>
               </div>
@@ -116,7 +116,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_s5-f5"
+                  <input class="input" id="registration_s5-f5"
                          type="text" placeholder="" value="756845674385694639">
                 </div>
               </div>
@@ -127,7 +127,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_s5-f6"
+                  <input class="input" id="registration_s5-f6"
                          type="text" placeholder="" value="789546987">
                 </div>
               </div>
@@ -138,7 +138,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_s5-f7"
+                  <input class="input" id="registration_s5-f7"
                          type="text" placeholder="" value="Сбербанк">
                 </div>
               </div>
@@ -149,7 +149,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <input class="form__input" id="registration_s5-f8"
+                  <input class="input" id="registration_s5-f8"
                          type="text" placeholder="" value="30156567754734577987">
                 </div>
               </div>
@@ -160,7 +160,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <textarea class="form__input" id="registration_s5-f9" rows="1"
+                  <textarea class="input" id="registration_s5-f9" rows="2"
                             placeholder="">121248, Россия, г. Москва, Кутузовский просп., 12с2</textarea>
                 </div>
               </div>
@@ -171,7 +171,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-7">
-                  <textarea class="form__input" id="registration_s5-f10" rows="1"
+                  <textarea class="input" id="registration_s5-f10" rows="2"
                             placeholder="">121248, Россия, г. Москва, Кутузовский просп., 12с2</textarea>
                 </div>
               </div>
@@ -199,13 +199,13 @@
     f1.onblur = function () {
       var l = f1.value.length
       if (l !== 10 && l !== 12) {
-        f1.classList.add('form__input_error')
+        f1.classList.add('input_error')
       } else {
-        f1.classList.remove('form__input_error')
+        f1.classList.remove('input_error')
       }
     }
     f1.onfocus = function () {
-      f1.classList.remove('form__input_error')
+      f1.classList.remove('input_error')
     }
 
     var f2 = document.getElementById('registration_s5-f2');
@@ -213,13 +213,13 @@
     f2.onblur = function () {
       var l = f2.value.length
       if (l !== 13 && l !== 15) {
-        f2.classList.add('form__input_error')
+        f2.classList.add('input_error')
       } else {
-        f2.classList.remove('form__input_error')
+        f2.classList.remove('input_error')
       }
     }
     f2.onfocus = function () {
-      f2.classList.remove('form__input_error')
+      f2.classList.remove('input_error')
     }
 
     var f3 = document.getElementById('registration_s5-f3');
@@ -227,13 +227,13 @@
     f3.onblur = function () {
       var l = f3.value.length
       if (l !== 9) {
-        f3.classList.add('form__input_error')
+        f3.classList.add('input_error')
       } else {
-        f3.classList.remove('form__input_error')
+        f3.classList.remove('input_error')
       }
     }
     f3.onfocus = function () {
-      f3.classList.remove('form__input_error')
+      f3.classList.remove('input_error')
     }
 
     var f4 = document.getElementById('registration_s5-f4');
@@ -241,13 +241,13 @@
     f4.onblur = function () {
       var l = f4.value.length
       if (l !== 8 && l !== 10) {
-        f4.classList.add('form__input_error')
+        f4.classList.add('input_error')
       } else {
-        f4.classList.remove('form__input_error')
+        f4.classList.remove('input_error')
       }
     }
     f4.onfocus = function () {
-      f4.classList.remove('form__input_error')
+      f4.classList.remove('input_error')
     }
 
     var f5 = document.getElementById('registration_s5-f5');
@@ -255,13 +255,13 @@
     f5.onblur = function () {
       var l = f5.value.length
       if (l !== 9) {
-        f5.classList.add('form__input_error')
+        f5.classList.add('input_error')
       } else {
-        f5.classList.remove('form__input_error')
+        f5.classList.remove('input_error')
       }
     }
     f5.onfocus = function () {
-      f5.classList.remove('form__input_error')
+      f5.classList.remove('input_error')
     }
 
     var f8 = document.getElementById('registration_s5-f8');
@@ -269,61 +269,61 @@
     f8.onblur = function () {
       var l = f8.value.length
       if (l !== 20) {
-        f8.classList.add('form__input_error')
+        f8.classList.add('input_error')
       } else {
-        f8.classList.remove('form__input_error')
+        f8.classList.remove('input_error')
       }
     }
     f8.onfocus = function () {
-      f8.classList.remove('form__input_error')
+      f8.classList.remove('input_error')
     }
 
     var f6 = document.getElementById('registration_s5-f6');
     f6.onblur = function () {
       if (!f6.value.trim()) {
-        f6.classList.add('form__input_error')
+        f6.classList.add('input_error')
       } else {
-        f6.classList.remove('form__input_error')
+        f6.classList.remove('input_error')
       }
     }
     f6.onfocus = function () {
-      f6.classList.remove('form__input_error')
+      f6.classList.remove('input_error')
     }
 
     var f7 = document.getElementById('registration_s5-f7');
     f7.onblur = function () {
       if (!f7.value.trim()) {
-        f7.classList.add('form__input_error')
+        f7.classList.add('input_error')
       } else {
-        f7.classList.remove('form__input_error')
+        f7.classList.remove('input_error')
       }
     }
     f7.onfocus = function () {
-      f7.classList.remove('form__input_error')
+      f7.classList.remove('input_error')
     }
 
     var f9 = document.getElementById('registration_s5-f9');
     f9.onblur = function () {
       if (!f9.value.trim()) {
-        f9.classList.add('form__input_error')
+        f9.classList.add('input_error')
       } else {
-        f9.classList.remove('form__input_error')
+        f9.classList.remove('input_error')
       }
     }
     f9.onfocus = function () {
-      f9.classList.remove('form__input_error')
+      f9.classList.remove('input_error')
     }
 
     var f10 = document.getElementById('registration_s5-f10');
     f10.onblur = function () {
       if (!f10.value.trim()) {
-        f10.classList.add('form__input_error')
+        f10.classList.add('input_error')
       } else {
-        f10.classList.remove('form__input_error')
+        f10.classList.remove('input_error')
       }
     }
     f10.onfocus = function () {
-      f10.classList.remove('form__input_error')
+      f10.classList.remove('input_error')
     }
   </script>
 </body>

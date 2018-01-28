@@ -215,14 +215,14 @@
   width: calc(100% - 170px);
 }
 
-.registration__logo .form__input[type="file"] + label {
+.registration__logo .input[type="file"] + label {
   position: relative;
   margin-top: 0;
   padding: 0 0 100%;
   background: #fff no-repeat center / cover;
 }
 
-.registration__logo .form__input[type="file"] + label span {
+.registration__logo .input[type="file"] + label span {
   font-size: 14px;
   line-height: 19px;
   position: absolute;
@@ -235,7 +235,7 @@
   color: #455056;
 }
 
-.registration__logo .form__input[type="file"]._is-chosen + label span {
+.registration__logo .input[type="file"]._is-chosen + label span {
   display: none;
 }
 

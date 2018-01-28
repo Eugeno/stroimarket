@@ -47,7 +47,7 @@ gulp.task('scripts', function () {
 
 gulp.task('copy-html', function () {
   return gulp.src([
-    '*.{html,ico}',
+    '*.html',
     'pages/**/*.html'
   ])
   .pipe(gulp.dest('build'))

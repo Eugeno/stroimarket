@@ -30,6 +30,8 @@
             <li class="user-actions__item user-actions__item_profile">
               <a class="link user-actions__link" href="javascript:void(0)">
                 Пластик Сибири
+                <span class="user-actions__avatar"
+                      style="background-image: url('//placehold.it/124x44');"></span>
               </a>
             </li>
             <li class="user-actions__item user-actions__item_logout">
@@ -99,7 +101,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-9">
-                  <input class="form__input form__input_text" id="profile_name" type="text"
+                  <input class="input input_text" id="profile_name" type="text"
                          value="Пластик Сибири" readonly>
                 </div>
               </div>
@@ -115,10 +117,9 @@
                 <div class="grid__column_4-9">
                   <div class="grid grid_medium">
                     <div class="grid__column_1-2 registration__logo">
-                      <input class="form__input" id="profile_logo"
-                             type="file" placeholder="Не юр. лица, а название фирмы"
+                      <input class="input" id="profile_logo" type="file"
                              onchange="filePreview.show(event)">
-                      <label class="form__input" for="profile_logo">
+                      <label class="input" for="profile_logo">
                         <span>Нет логотипа</span>
                       </label>
                     </div>
@@ -141,7 +142,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-9">
-                  <input class="form__input" id="profile_info" type="text" placeholder="Текст">
+                  <input class="input" id="profile_info" type="text" placeholder="Текст">
                 </div>
               </div>
               <div class="grid form__row">
@@ -151,7 +152,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-9">
-                  <input class="form__input" id="profile_website" type="url" placeholder="Текст">
+                  <input class="input" id="profile_website" type="url" placeholder="Текст">
                 </div>
               </div>
 
@@ -159,7 +160,7 @@
 
               <div class="form__row text-selector">
                 <span>Параметры для:</span>
-                <select name="" id="place">
+                <select class="text-select" id="place">
                   <option value="" selected>Поставщик, Санкт–Петербург, Менделеевская, 76</option>
                   <option value="">Магазин, Москва, Морской проспект, 10</option>
                   <option value="">Магазин, Новосибирск, Сибиряков–Гвардейцев, 49а</option>
@@ -185,25 +186,25 @@
                   </div>
                   <div class="grid grid_small">
                     <div class="grid__column_1-2">
-                      <input class="form__input" type="text"
+                      <input class="input" type="text"
                              placeholder="Улица" value="Менделеевская"
                              readonly required>
                     </div>
                     <div class="grid__column_1-2">
-                      <input class="form__input" type="text"
+                      <input class="input" type="text"
                              placeholder="Дом" value="76"
                              readonly required>
                     </div>
                   </div>
                   <div class="grid grid_small">
                     <div class="grid__column_1-2">
-                      <select class="select form__select" disabled>
+                      <select class="select form__select" id="building" disabled>
                         <option selected>Корпус</option>
                         <option>...</option>
                       </select>
                     </div>
                     <div class="grid__column_1-2">
-                      <input class="form__input" type="text"
+                      <input class="input" type="text"
                              placeholder="Номер" value="3"
                              readonly required>
                     </div>
@@ -217,7 +218,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-9">
-                  <input class="form__input" id="profile_phone" type="tel" value="(383) 256-33-11">
+                  <input class="input" id="profile_phone" type="tel" value="(383) 256-33-11">
                 </div>
               </div>
               <div class="grid form__row">
@@ -227,7 +228,7 @@
                   </label>
                 </div>
                 <div class="grid__column_4-9">
-                  <input class="form__input" id="profile_email" type="email" value="info@shtukaturkin.ru">
+                  <input class="input" id="profile_email" type="email" value="info@shtukaturkin.ru">
                 </div>
               </div>
 
@@ -315,9 +316,7 @@
   <script src="/js/main.min.js"></script>
   <script>
     var placeSelect = new Dropkick('#place', { });
-    /*placeSelect.options.forEach(function (option) {
-      option.innerHTML = '<em>' + option.innerHTML.replace(',', '</em>');
-    })*/
+    var buildingSelect = new Dropkick('#building', { });
   </script>
 </body>
 </html>

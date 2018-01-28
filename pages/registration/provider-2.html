@@ -29,13 +29,13 @@
                 </p>
                 <div class="grid">
                   <div class="grid__column_1-3">
-                    <select class="select form__select">
+                    <select class="select form__select" id="entity-type">
                       <option value="" selected>ООО</option>
                       <option value="">ОАО</option>
                     </select>
                   </div>
                   <div class="grid__column_2-3">
-                    <input class="form__input" type="text" placeholder="Название юридического лица">
+                    <input class="input" type="text" placeholder="Название юридического лица">
                   </div>
                 </div>
                 <b class="registration__subheading">
@@ -51,7 +51,7 @@
                     <label class="form__label" for="registration_name">ФИО:</label>
                   </div>
                   <div class="grid__column_1-2">
-                    <input class="form__input" id="registration_name" type="text" placeholder="Текст">
+                    <input class="input" id="registration_name" type="text" placeholder="Текст">
                   </div>
                 </div>
                 <div class="grid form__row">
@@ -59,7 +59,7 @@
                     <label class="form__label" for="registration_email">Электронная почта:</label>
                   </div>
                   <div class="grid__column_1-2">
-                    <input class="form__input" id="registration_email" type="email" placeholder="Текст">
+                    <input class="input" id="registration_email" type="email" placeholder="Текст">
                   </div>
                 </div>
                 <div class="grid form__row">
@@ -67,17 +67,17 @@
                     <label class="form__label" for="registration_phone-code">Телефон:</label>
                   </div>
                   <div class="grid__column_1-2">
-                    <p class="form__input-row">
-                      <input class="form__input registration__phone-country"
+                    <p class="input-row">
+                      <input class="input registration__phone-country"
                              id="registration_phone-country"
                              type="text"
                              placeholder=""
                              value="+7">
-                      <input class="form__input registration__phone-code"
+                      <input class="input registration__phone-code"
                              id="registration_phone-code"
                              type="text"
                              placeholder="Код">
-                      <input class="form__input registration__phone-number"
+                      <input class="input registration__phone-number"
                              id="registration_phone-number"
                              type="text"
                              placeholder="Номер">
@@ -104,5 +104,10 @@
       </div>
     </div>
   </main>
+
+  <script src="/js/lib/dropkick.js"></script>
+  <script>
+    var entityTypeSelect = new Dropkick('#entity-type', { });
+  </script>
 </body>
 </html>

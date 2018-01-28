@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Строймаркет</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="container page-header__container">
+      <div class="grid page-header__grid">
+        <div class="grid__column_side-panel menu-btn-wrapper">
+          <a class="logo logo_panel" href="/">Строймаркет</a>
+          <a class="logo logo_panel logo_small" href="/">СМ</a>
+          <button class="menu-btn" type="button" onclick="sidePanel.toggle()"></button>
+        </div>
+
+        <div class="grid__column">
+          <ul class="user-actions">
+            <li class="user-actions__item user-actions__item_notifications">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Уведомления
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_messages">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Сообщения
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_profile">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Пластик Сибири
+                <span class="user-actions__avatar"
+                      style="background-image: url('//placehold.it/124x44');"></span>
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_logout">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Выйти
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__column_side-panel">
+          <ul class="side-panel">
+            <li class="side-panel__item side-panel__item_company _is-open" data-accordion>
+              <span class="accordion-title">Моя компания</span>
+              <ul class="accordion-content">
+                <li><a href="javascript:void(0)">Рабочий стол</a></li>
+                <li><a>Ассортимент</a></li>
+                <li><a href="javascript:void(0)">Претензии</a></li>
+              </ul>
+            </li>
+            <li class="side-panel__item side-panel__item_catalog" data-accordion>
+              <span class="accordion-title">Каталог</span>
+            </li>
+            <li class="side-panel__item side-panel__item_purchases" data-accordion>
+              <span class="accordion-title">Закупки</span>
+            </li>
+            <li class="side-panel__item side-panel__item_settings" data-accordion>
+              <span class="accordion-title">Настройки</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid__column">
+          <div class="dashboard">
+            <h2 class="h2 dashboard__h2">Моя компания</h2>
+            <h3 class="h3 h3-selector">
+              <span>Ассортимент</span>
+              <select class="text-select" id="place">
+                <option value="" selected>Поставщик</option>
+                <option value="">...</option>
+                <option value="">...</option>
+              </select>
+              <span class="breadcrumbs">
+                <span>Стройматериалы</span>
+                <span>Сухие смеси, грунтовки</span>
+              </span>
+            </h3>
+
+            <div class="assortment">
+              <p class="assortment__update-date">
+                Обновлен 24.12.17
+              </p>
+
+              <div class="grid">
+                <div class="grid__column_7-9">
+                  <section class="assortment__interactions">
+                    <select class="select assortment__select" id="mode">
+                      <option value="" selected>Режим "Каталог"</option>
+                      <option value="">...</option>
+                    </select>
+                    <input class="input" type="search" placeholder="Поиск">
+                  </section>
+
+                  <div class="assortment__view">
+                    <span>Сортировать:</span>
+                    <a class="link assortment__sort-link" href="javascript:void(0)">по названию</a>
+                    <a class="link assortment__sort-link">по количеству поставщиков</a>
+                    <div class="assortment__layout">
+                      <a class="assortment__layout-type assortment__layout-type_list">
+                        список
+                      </a>
+                      <a class="assortment__layout-type assortment__layout-type_grid" href="javascript:void(0)">
+                        плитка
+                      </a>
+                    </div>
+                  </div>
+
+                  <ul class="assortment__products">
+                    <li class="category-item">
+                      <div class="category-item__img">
+                        <img src="http://placehold.it/160x160" alt="">
+                      </div>
+                      <div class="category-item__info">
+                        <p class="category-item__name">
+                          KNAUF Ротбанд, 30 кг
+                        </p>
+                        <p class="category-item__vendor-code">
+                          АРТИКУЛ СМ: 754973
+                        </p>
+                        <p class="category-item__breadcrumbs">
+                          Стройматериалы / Сухие смеси, грунтовки / Штукатурки
+                        </p>
+                      </div>
+                      <div class="category-item__aside">
+                        <p class="category-item__data">
+                          Ваш артикул: 24585745<br>
+                          Кратность: 50 шт.
+                        </p>
+                        <p class="category-item__promo">
+                          Акция: 1000 руб/шт
+                        </p>
+                      </div>
+                    </li>
+                    <li class="category-item">
+                      <div class="category-item__img">
+                        <img src="http://placehold.it/160x160" alt="">
+                      </div>
+                      <div class="category-item__info">
+                        <p class="category-item__name">
+                          ilmax 6800, 25 кг
+                        </p>
+                        <p class="category-item__vendor-code">
+                          АРТИКУЛ СМ: 754973
+                        </p>
+                        <p class="category-item__breadcrumbs">
+                          Стройматериалы / Сухие смеси, грунтовки / Штукатурки
+                        </p>
+                      </div>
+                      <div class="category-item__aside">
+                        <p class="category-item__data">
+                          Ваш артикул: 24585745<br>
+                          Кратность: 50 шт.
+                        </p>
+                        <p class="category-item__promo">
+                          Акция: 1000 руб/шт
+                        </p>
+                      </div>
+                    </li>
+                    <li class="category-item">
+                      <div class="category-item__img">
+                        <img src="http://placehold.it/160x160" alt="">
+                      </div>
+                      <div class="category-item__info">
+                        <p class="category-item__name">
+                          KNAUF Ротбанд, 30 кг
+                        </p>
+                        <p class="category-item__vendor-code">
+                          АРТИКУЛ СМ: 754973
+                        </p>
+                        <p class="category-item__breadcrumbs">
+                          Стройматериалы / Сухие смеси, грунтовки / Штукатурки
+                        </p>
+                      </div>
+                      <div class="category-item__aside">
+                        <p class="category-item__data">
+                          Ваш артикул: 24585745<br>
+                          Кратность: 50 шт.
+                        </p>
+                        <p class="category-item__promo">
+                          Акция: 1000 руб/шт
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="grid__column_2-9">
+                  <div class="aside-filter">
+                    <p class="aside-filter__caption">
+                      Сухие смеси, грунтовки
+                    </p>
+                    <ul class="aside-filter__list">
+                      <li><span>Штукатурки</span></li>
+                      <li><span>Подкатегория</span></li>
+                      <li><span>Подкатегория</span></li>
+                      <li><span>Подкатегория</span></li>
+                      <li><span>Подкатегория</span></li>
+                    </ul>
+                    <p class="aside-filter__caption">
+                      Акция
+                    </p>
+                    <input class="input form__checkbox" id="assortment-promo" type="checkbox">
+                    <label for="assortment-promo">Наличие акции</label>
+                    <a class="aside-filter__discard" href="javascript:void(0)">
+                      <span>Сбросить фильтры</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/lib/dropkick.js"></script>
+  <script src="/js/main.min.js"></script>
+  <script>
+    var placeSelect = new Dropkick('#place', { });
+    var modeSelect = new Dropkick('#mode', { });
+  </script>
+</body>
+</html>
