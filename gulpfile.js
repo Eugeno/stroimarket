@@ -15,6 +15,7 @@ gulp.task('style', function () {
     'css/normalize.css',
     'css/fonts.css',
     'css/main.css',
+    'css/form-elements/*.css',
     'css/form.css',
     'css/**/*.css'
   ])

@@ -103,7 +103,7 @@
   content: "";
   transform: translateY(-50%);
   border-radius: 50%;
-  background: #fff no-repeat center / contain;
+  background: #fff no-repeat center / cover;
   box-shadow: 0 0 0 .5px #d9e2e7;
 }
 

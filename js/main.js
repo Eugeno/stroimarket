@@ -8,6 +8,10 @@ const ready = () => {
     accordion.init()
   }
 
+  if (document.querySelector(`[data-message]`)) {
+    message.init()
+  }
+
   const tabs = [...document.querySelectorAll(`[data-tabs-title]`)]
   tabs.forEach(tab => tabControl.init(tab))
 }
@@ -43,6 +47,39 @@ const accordion = {
       button.innerHTML = button.dataset.hide
     }
   }
+}
+
+const message = {
+  init () {
+    const items = [...document.querySelectorAll(`[data-message]`)]
+    items.forEach(item => {
+      item.addEventListener('click', () => message.toggle(item))
+    })
+  },
+
+  toggle (item) {
+    item.classList.toggle(`_is-minimized`)
+    const timeElement = item.querySelector(`time`)
+    const datetime = timeElement.dateTime
+    const dt = datetime.split(/[- :]/).map(i => parseInt(i, 10))
+    const jsDate = new Date(dt[0], dt[1] - 1, dt[2], dt[3], dt[4])
+    const longOptions = {
+      weekday: 'long',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    }
+    const shortOptions = {
+      month: 'short',
+      day: 'numeric'
+    }
+    if (item.classList.contains(`_is-minimized`)) {
+      timeElement.innerHTML = jsDate.toLocaleString('ru-RU', shortOptions)
+    } else {
+      timeElement.innerHTML = jsDate.toLocaleString('ru-RU', longOptions)
+    }
+  },
 }
 
 const paintRating = () => {
@@ -244,5 +281,15 @@ const showMore = {
       button.dataset.showMore :
       button.dataset.showLess
     list.classList.toggle(`_is-expanded`)
+  }
+}
+
+const layoutView = {
+  toggle (selector) {
+    if (!event.currentTarget.classList.contains(`_is-active`)) {
+      document.querySelector(`.layout-view__layout-type_list`).classList.toggle(`_is-active`)
+      document.querySelector(`.layout-view__layout-type_grid`).classList.toggle(`_is-active`)
+      document.querySelector(selector).classList.toggle(`_list-view`)
+    }
   }
 }

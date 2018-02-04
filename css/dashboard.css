@@ -178,6 +178,25 @@
   margin-bottom: 20px;
 }
 
+.dashboard__divided-h3 {
+  display: flex;
+}
+
+.dashboard__divided-h3 span + span {
+  position: relative;
+  margin-left: 22px;
+}
+
+.dashboard__divided-h3 span + span::before {
+  position: absolute;
+  top: 2px;
+  left: -12px;
+  width: 2px;
+  height: 28px;
+  content: "";
+  background-color: #f89e01;
+}
+
 .dashboard__p-h3 {
   margin-top: 20px;
   margin-bottom: 15px;
@@ -372,17 +391,6 @@
   font-size: 12px;
   line-height: 17px;
   color: #7e8890;
-}
-
-.rating,
-.rating > span {
-  display: inline-flex;
-  height: 14px;
-  background: url(../img/rating-star.svg) repeat-x left center;
-}
-
-.rating > span {
-  background-image: url(../img/rating-star_fill.svg);
 }
 
 .company-card__name b {

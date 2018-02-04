@@ -12,6 +12,10 @@ var ready = function ready() {
     accordion.init();
   }
 
+  if (document.querySelector('[data-message]')) {
+    message.init();
+  }
+
   var tabs = [].concat(_toConsumableArray(document.querySelectorAll('[data-tabs-title]')));
   tabs.forEach(function (tab) {
     return tabControl.init(tab);
@@ -45,6 +49,42 @@ var accordion = {
     var button = item.querySelector('.accordion-title');
     if (button.dataset.show) {
       button.innerHTML = button.dataset.hide;
+    }
+  }
+};
+
+var message = {
+  init: function init() {
+    var items = [].concat(_toConsumableArray(document.querySelectorAll('[data-message]')));
+    items.forEach(function (item) {
+      item.addEventListener('click', function () {
+        return message.toggle(item);
+      });
+    });
+  },
+  toggle: function toggle(item) {
+    item.classList.toggle('_is-minimized');
+    var timeElement = item.querySelector('time');
+    var datetime = timeElement.dateTime;
+    var dt = datetime.split(/[- :]/).map(function (i) {
+      return parseInt(i, 10);
+    });
+    var jsDate = new Date(dt[0], dt[1] - 1, dt[2], dt[3], dt[4]);
+    var longOptions = {
+      weekday: 'long',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    };
+    var shortOptions = {
+      month: 'short',
+      day: 'numeric'
+    };
+    if (item.classList.contains('_is-minimized')) {
+      timeElement.innerHTML = jsDate.toLocaleString('ru-RU', shortOptions);
+    } else {
+      timeElement.innerHTML = jsDate.toLocaleString('ru-RU', longOptions);
     }
   }
 };
@@ -243,5 +283,15 @@ var showMore = {
     var button = event.currentTarget;
     button.innerHTML = list.classList.contains('_is-expanded') ? button.dataset.showMore : button.dataset.showLess;
     list.classList.toggle('_is-expanded');
+  }
+};
+
+var layoutView = {
+  toggle: function toggle(selector) {
+    if (!event.currentTarget.classList.contains('_is-active')) {
+      document.querySelector('.layout-view__layout-type_list').classList.toggle('_is-active');
+      document.querySelector('.layout-view__layout-type_grid').classList.toggle('_is-active');
+      document.querySelector(selector).classList.toggle('_list-view');
+    }
   }
 };

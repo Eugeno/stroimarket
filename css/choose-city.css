@@ -1,8 +1,8 @@
 .choose-city__clarification {
-  margin-top: 0;
-  margin-bottom: 0;
   font-size: 10px;
   line-height: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
   color: #7e8890;
 }
 
@@ -11,9 +11,58 @@
 }
 
 .choose-city__list {
+  margin-top: 10px;
   margin-bottom: 0;
   padding-left: 0;
-  margin-top: 10px;
   list-style: none;
+}
+
+.choose-city__list {
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.choose-city__list li {
+  border-bottom: 1px solid #eaeeef;
+}
+
+.choose-city__list input {
+  display: none;
+}
+
+.choose-city__list input + label {
+  font-weight: 600;
+  line-height: 24px;
+  position: relative;
+  display: block;
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #7e8890;
+}
+
+.choose-city__list input + label::before,
+.choose-city__list input + label::after {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  width: 12px;
+  height: 2px;
+  content: "";
+  background-color: #7e8890;
+}
+
+.choose-city__list input:not(:checked) + label::before {
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}
+
+.choose-city__list input:checked + label {
+  color: #f89e01;
+}
+
+.choose-city__list input:checked + label::after {
+  background-color: #f89e01;
 }
 

@@ -2,8 +2,6 @@
   margin-top: 0;
 }
 
-/* Row
-   ========================================================================== */
 .form__row {
   align-items: baseline;
 }
@@ -34,17 +32,11 @@
   margin-top: 0;
 }
 
-/* Link
-   ========================================================================== */
 .form__link {
   font-size: 14px;
   line-height: 20px;
 }
 
-
-/* ==========================================================================
-   Fieldset, legend
-   ========================================================================== */
 .form fieldset {
   margin: 20px 0 0;
   padding: 0;
@@ -60,10 +52,6 @@
   color: #7e8890;
 }
 
-
-/* ==========================================================================
-   Input-row
-   ========================================================================== */
 .input-row {
   display: flex;
   margin-top: 0;
@@ -81,84 +69,16 @@
   border-bottom-left-radius: 0;
 }
 
-
-/* ==========================================================================
-   Field
-   ========================================================================== */
 .form__field {
   position: relative;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-
-/* ==========================================================================
-   Input
-   ========================================================================== */
-.input {
-  font: 400 14px / 19px "Open Sans", Helvetica, Arial, sans-serif;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 15px 20px 16px;
-  resize: vertical;
-  color: #455056;
-  border: 0;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: inset 0 0 0 1px #eaeeef;
-}
-
-.input::-webkit-input-placeholder {
-  opacity: .6;
-}
-
-.input[readonly] {
-  opacity: .6;
-}
-
-.input_text[readonly] {
-  padding-right: 0;
-  padding-left: 0;
-  opacity: 1;
-  background: none;
-  box-shadow: none;
-}
-
-.input_inline[readonly] {
-  font-size: inherit;
-  display: inline;
-  width: auto;
-  padding: 0;
-  opacity: 1;
-  border-radius: 0;
-  background: none;
-  box-shadow: none;
-}
-
-.input[type="search"] {
-  padding-left: 30px;
-  background: #fff url(../img/input_search.svg) no-repeat 13px 20px / 11px 11px;
-}
-
-.input[type="file"] {
-  display: none;
-}
-
-.input_error {
-  border-color: #c86478;
-}
-
-/* In form
-   ========================================================================== */
 .form__input {
   margin-top: 5px;
 }
 
-
-/* ==========================================================================
-   Label
-   ========================================================================== */
 .form__label {
   font-size: 18px;
   font-weight: 300;
@@ -172,8 +92,6 @@
   margin-top: 14px;
 }
 
-/* Caption for label
-   ========================================================================== */
 .form__label-caption {
   font-size: 14px;
   line-height: 19px;
@@ -182,10 +100,6 @@
   color: #7e8890;
 }
 
-
-/* ==========================================================================
-   Error
-   ========================================================================== */
 .form__error {
   font-size: 13px;
   line-height: 18px;
@@ -229,43 +143,6 @@
   display: block;
 }
 
-
-/* ==========================================================================
-   Checkbox
-   ========================================================================== */
-.form__checkbox {
-  display: none;
-}
-
-.form__checkbox + label {
-  font-size: 14px;
-  line-height: 19px;
-  position: relative;
-  padding-left: 25px;
-  color: #455056;
-}
-
-.form__checkbox + label::before {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  box-sizing: border-box;
-  width: 15px;
-  height: 15px;
-  content: "";
-  border: solid 1px #455056;
-  border-radius: 3px;
-}
-
-.form__checkbox:checked + label::before {
-  border: 0;
-  background: #f89e01 url(../img/form_checkbox-checked.svg) no-repeat center / 15px auto;
-}
-
-
-/* ==========================================================================
-   Switcher
-   ========================================================================== */
 .switcher {
   display: none;
 }
@@ -379,215 +256,10 @@ legend + * > .form__switcher + label {
   background: #fff url(../img/form_switcher-checked.svg) no-repeat center / 14px auto;
 }
 
-
-/* ==========================================================================
-   Switcher
-   ========================================================================== */
-/* deprecated */
-.select {
-  font: 400 14px / 19px "Open Sans", Helvetica, Arial, sans-serif;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 14px 35px 15px 19px;
-  text-align: center;
-  color: #455056;
-  /*border: solid 1px #eaeeef;*/
-  border-radius: 10px;
-  /*background: #fff url(../img/form_select.svg) no-repeat calc(100% - 20px) center / 13px 8px;*/
-  -webkit-appearance: none;
-}
-/* deprecated */
-
-.select,
-.select * {
-  box-sizing: border-box;
-}
-
-.select {
-  position: relative;
-  display: block;
-  padding: 15px 36px 16px 20px;
-  cursor: pointer;
-  vertical-align: middle;
-  border: 0;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: inset 0 0 0 1px #eaeeef;
-}
-
-.select .dk-selected {
-  font: 400 14px / 19px "Open Sans", Helvetica, Arial, sans-serif;
-  position: relative;
-  z-index: 102;
-  overflow: visible;
-  width: 100%;
-  text-align: center;
-  white-space: nowrap;
-  color: #455056;
-  outline: none;
-}
-
-.select .dk-selected::after {
-  position: absolute;
-  top: 0;
-  right: -16px;
-  bottom: 0;
-  width: 13px;
-  content: "";
-  background: url(../img/form_select.svg) no-repeat right center / 13px 8px;
-}
-
-.select .dk-select-options {
-  position: absolute;
-  z-index: 100;
-  left: 0;
-  display: none;
-  min-width: calc(100% + 10px);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: inset 0 0 0 1px #eaeeef, 0 0 20px rgba(0,0,0,.1);
-}
-
-.select.dk-select-open-up .dk-select-options {
-  bottom: 100%;
-  transform: translateY(1px);
-  border-bottom-left-radius: 0;
-}
-
-.select.dk-select-open-down .dk-select-options {
-  top: 100%;
-  transform: translateY(-1px);
-  border-top-left-radius: 0;
-}
-
-.select.dk-select-open-down {
-  position: relative;
-}
-
-.select.dk-select-open-down::before {
-  position: absolute;
-  z-index: 101;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: "";
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  background-color: #fff;
-  box-shadow: inset 0 0 0 1px #eaeeef;
-}
-
-.select .dk-option-selected {
-  opacity: .6;
-}
-
-.select .dk-option {
-  font-size: 14px;
-  line-height: 19px;
-  position: relative;
-  padding: 15px 20px 16px;
-  text-align: center;
-  color: #455056;
-}
-
-.select .dk-option:not(:last-child) {
-  border-bottom: solid 1px #eaeeef;
-}
-
-.select .dk-select-options .dk-option-hidden {
-  display: none;
-}
-
-.select.dk-select-open-up .dk-selected::after,
-.select.dk-select-open-down .dk-selected::after {
-  transform: rotate(180deg);
-}
-
-.select.dk-select-open-up .dk-select-options,
-.select.dk-select-open-down .dk-select-options {
-  display: block;
-}
-
-select[data-dkcacheid] {
-  display: none;
-}
-
-.select.dk-select-disabled {
-  opacity: .6;
-}
-
-/* In form
-   ========================================================================== */
 .form__select:not(:first-child) {
   margin-top: 5px;
 }
 
-
-/* ==========================================================================
-   Button
-   ========================================================================== */
-.button {
-  font: 600 14px / 19px "Open Sans", Helvetica, Arial, sans-serif;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 15px 20px 16px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  border: 0;
-  border-radius: 10px;
-  background-color: #f89e01;
-}
-
-.button + .button {
-  margin-top: 5px;
-}
-
-.button_secondary {
-  color: #7e8890;
-  background-color: #eaeeef;
-}
-
-.button_action {
-  color: #f89e01;
-  background-color: #fff;
-  box-shadow: inset 0 0 0 1px #eaeeef;
-}
-
-.button_action_secondary {
-  color: #7e8890;
-  background-color: #fff;
-  box-shadow: inset 0 0 0 1px #eaeeef;
-}
-
-.button_action_secondary span {
-  opacity: .6;
-}
-
-.button:disabled {
-  cursor: auto;
-  color: #b1b6bb;
-  background-color: #d9e2e7;
-}
-
-.button_action:disabled {
-  color: #d9e2e7;
-  border-color: #d9e2e7;
-  background-color: transparent;
-}
-
-.button_action[readonly] {
-  opacity: .6;
-}
-
-/* In form
-   ========================================================================== */
 .form__button {
   margin-top: 30px;
 }

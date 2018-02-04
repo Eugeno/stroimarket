@@ -2,33 +2,6 @@
   margin-top: 20px;
 }
 
-/* Sort
-   ========================================================================== */
-.reviews__sort {
-  font-size: 14px;
-  line-height: 19px;
-  display: flex;
-  margin-bottom: 20px;
-  color: #455056;
-}
-
-.reviews__sort > span {
-  font-weight: 600;
-  margin-right: 20px;
-}
-
-.reviews__link {
-  color: #455056;
-}
-
-.reviews__link + .reviews__link {
-  margin-left: 30px;
-}
-
-.reviews__link:not([href]) {
-  font-weight: 600;
-}
-
 /* Review
    ========================================================================== */
 .review {

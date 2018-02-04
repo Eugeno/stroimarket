@@ -543,9 +543,26 @@
   </template>
 
   <script src="/js/lib/dropkick.js"></script>
+  <script src="/js/lib/imask.min.js"></script>
   <script src="/js/main.min.js"></script>
   <script>
     var buildingSelect = new Dropkick('#building', { });
+
+    var operatingTimeModal = document.getElementById('operating-time');
+    var timeInputs = Array.prototype.slice.call(operatingTimeModal.querySelectorAll('input[data-id]'));
+
+    var timeMaskOptions = {
+      mask: 'HH:TT',
+      groups: {
+        HH: new IMask.MaskedPattern.Group.Range([0, 23]),
+        TT: new IMask.MaskedPattern.Group.Range([0, 59]),
+      }
+    }
+
+    var maskedInputs = {}
+    timeInputs.forEach(function (timeInput, i) {
+      maskedInputs[i] = new IMask(timeInput, timeMaskOptions)
+    })
   </script>
 </body>
 </html>

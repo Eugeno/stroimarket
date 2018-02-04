@@ -1,0 +1,121 @@
+.select,
+.select * {
+  box-sizing: border-box;
+}
+
+.select {
+  position: relative;
+  display: block;
+  padding: 15px 36px 16px 20px;
+  cursor: pointer;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: inset 0 0 0 1px #eaeeef;
+}
+
+.select .dk-selected {
+  font: 400 14px / 19px "Open Sans", Helvetica, Arial, sans-serif;
+  position: relative;
+  z-index: 102;
+  overflow: visible;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  color: #455056;
+  outline: none;
+}
+
+.select .dk-selected::after {
+  position: absolute;
+  top: 0;
+  right: -16px;
+  bottom: 0;
+  width: 13px;
+  content: "";
+  background: url(../img/form_select.svg) no-repeat right center / 13px 8px;
+}
+
+.select .dk-select-options {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  display: none;
+  min-width: calc(100% + 10px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: inset 0 0 0 1px #eaeeef, 0 0 20px rgba(0,0,0,.1);
+}
+
+.select.dk-select-open-up .dk-select-options {
+  bottom: 100%;
+  transform: translateY(1px);
+  border-bottom-left-radius: 0;
+}
+
+.select.dk-select-open-down .dk-select-options {
+  top: 100%;
+  transform: translateY(-1px);
+  border-top-left-radius: 0;
+}
+
+.select.dk-select-open-down {
+  position: relative;
+}
+
+.select.dk-select-open-down::before {
+  position: absolute;
+  z-index: 101;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #fff;
+  box-shadow: inset 0 0 0 1px #eaeeef;
+}
+
+.select .dk-option-selected {
+  opacity: .6;
+}
+
+.select .dk-option {
+  font-size: 14px;
+  line-height: 19px;
+  position: relative;
+  padding: 15px 20px 16px;
+  text-align: center;
+  color: #455056;
+}
+
+.select .dk-option:not(:last-child) {
+  border-bottom: solid 1px #eaeeef;
+}
+
+.select .dk-select-options .dk-option-hidden {
+  display: none;
+}
+
+.select.dk-select-open-up .dk-selected::after,
+.select.dk-select-open-down .dk-selected::after {
+  transform: rotate(180deg);
+}
+
+.select.dk-select-open-up .dk-select-options,
+.select.dk-select-open-down .dk-select-options {
+  display: block;
+}
+
+select[data-dkcacheid] {
+  display: none;
+}
+
+.select.dk-select-disabled {
+  opacity: .6;
+}

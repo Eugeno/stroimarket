@@ -50,16 +50,21 @@
       <div class="grid">
         <div class="grid__column_side-panel">
           <ul class="side-panel">
-            <li class="side-panel__item side-panel__item_company _is-open" data-accordion>
+            <li class="side-panel__item side-panel__item_company" data-accordion>
               <span class="accordion-title">Моя компания</span>
-              <ul class="accordion-content">
+              <ul class="accordion-content" hidden>
                 <li><a href="javascript:void(0)">Рабочий стол</a></li>
-                <li><a>Ассортимент</a></li>
+                <li><a href="javascript:void(0)">Ассортимент</a></li>
                 <li><a href="javascript:void(0)">Претензии</a></li>
               </ul>
             </li>
-            <li class="side-panel__item side-panel__item_catalog" data-accordion>
+            <li class="side-panel__item side-panel__item_catalog _is-open" data-accordion>
               <span class="accordion-title">Каталог</span>
+              <ul class="accordion-content">
+                <li><a>Товары</a></li>
+                <li><a href="javascript:void(0)">Поставщики</a></li>
+                <li><a href="javascript:void(0)">Магазины</a></li>
+              </ul>
             </li>
             <li class="side-panel__item side-panel__item_purchases" data-accordion>
               <span class="accordion-title">Закупки</span>
@@ -72,14 +77,9 @@
 
         <div class="grid__column">
           <div class="dashboard">
-            <h2 class="h2 dashboard__h2">Моя компания</h2>
+            <h2 class="h2 dashboard__h2">Каталог</h2>
             <h3 class="h3 h3-selector">
-              <span>Ассортимент</span>
-              <select class="text-select" id="place">
-                <option value="" selected>Поставщик</option>
-                <option value="">...</option>
-                <option value="">...</option>
-              </select>
+              Товары
               <span class="breadcrumbs">
                 <span>Стройматериалы</span>
                 <span>Сухие смеси, грунтовки</span>
@@ -87,18 +87,14 @@
             </h3>
 
             <div class="assortment">
-              <p class="assortment__update-date">
-                Обновлен 24.12.17
-              </p>
-
               <div class="grid">
                 <div class="grid__column_7-9">
                   <section class="assortment__interactions">
-                    <select class="select assortment__select" id="mode">
-                      <option value="" selected>Режим "Каталог"</option>
-                      <option value="">...</option>
-                    </select>
                     <input class="input" type="search" placeholder="Поиск">
+                    <button class="button button_action assortment__place-chooser" type="button"
+                            onclick="">
+                      <span>Местоположение</span>
+                    </button>
                   </section>
 
                   <div class="layout-view">
@@ -106,10 +102,12 @@
                     <a class="layout-view__sort-link" href="javascript:void(0)">по названию</a>
                     <a class="layout-view__sort-link">по количеству поставщиков</a>
                     <div class="layout-view__layout">
-                      <a class="layout-view__layout-type layout-view__layout-type_list">
+                      <a class="layout-view__layout-type layout-view__layout-type_list _is-active"
+                         onclick="layoutView.toggle()">
                         список
                       </a>
-                      <a class="layout-view__layout-type layout-view__layout-type_grid" href="javascript:void(0)">
+                      <a class="layout-view__layout-type layout-view__layout-type_grid"
+                         onclick="layoutView.toggle()">
                         плитка
                       </a>
                     </div>
@@ -117,6 +115,7 @@
 
                   <ul class="assortment__products">
                     <li class="category-item">
+                      <div class="category-item__badge">Акции</div>
                       <div class="category-item__img">
                         <img src="http://placehold.it/160x160" alt="">
                       </div>
@@ -124,24 +123,28 @@
                         <p class="category-item__name">
                           KNAUF Ротбанд, 30 кг
                         </p>
+                        <p class="category-item__type">
+                          Штукатурка
+                        </p>
                         <p class="category-item__vendor-code">
                           АРТИКУЛ СМ: 754973
                         </p>
-                        <p class="category-item__breadcrumbs">
-                          Стройматериалы / Сухие смеси, грунтовки / Штукатурки
+                        <p class="category-item__description">
+                          Выравнивающая, гипсовая основа
                         </p>
                       </div>
                       <div class="category-item__aside">
-                        <p class="category-item__data">
-                          Ваш артикул: 24585745<br>
-                          Кратность: 50 шт.
-                        </p>
-                        <p class="category-item__promo">
-                          Акция: 1000 руб/шт
+                        <a class="button button_action_secondary">
+                          Открыть
+                        </a>
+                        <p class="category-item__counts">
+                          Поставщики: <span>2</span><br>
+                          Магазины: <span>7</span>
                         </p>
                       </div>
                     </li>
                     <li class="category-item">
+                      <div class="category-item__badge">Акции</div>
                       <div class="category-item__img">
                         <img src="http://placehold.it/160x160" alt="">
                       </div>
@@ -149,20 +152,23 @@
                         <p class="category-item__name">
                           ilmax 6800, 25 кг
                         </p>
+                        <p class="category-item__type">
+                          Штукатурка
+                        </p>
                         <p class="category-item__vendor-code">
                           АРТИКУЛ СМ: 754973
                         </p>
-                        <p class="category-item__breadcrumbs">
-                          Стройматериалы / Сухие смеси, грунтовки / Штукатурки
+                        <p class="category-item__description">
+                          Выравнивающая, цементная основа
                         </p>
                       </div>
                       <div class="category-item__aside">
-                        <p class="category-item__data">
-                          Ваш артикул: 24585745<br>
-                          Кратность: 50 шт.
-                        </p>
-                        <p class="category-item__promo">
-                          Акция: 1000 руб/шт
+                        <a class="button button_action_secondary">
+                          Открыть
+                        </a>
+                        <p class="category-item__counts">
+                          Поставщики: <span>2</span><br>
+                          Магазины: <span>7</span>
                         </p>
                       </div>
                     </li>
@@ -174,20 +180,23 @@
                         <p class="category-item__name">
                           KNAUF Ротбанд, 30 кг
                         </p>
+                        <p class="category-item__type">
+                          Штукатурка
+                        </p>
                         <p class="category-item__vendor-code">
                           АРТИКУЛ СМ: 754973
                         </p>
-                        <p class="category-item__breadcrumbs">
-                          Стройматериалы / Сухие смеси, грунтовки / Штукатурки
+                        <p class="category-item__description">
+                          Выравнивающая, гипсовая основа
                         </p>
                       </div>
                       <div class="category-item__aside">
-                        <p class="category-item__data">
-                          Ваш артикул: 24585745<br>
-                          Кратность: 50 шт.
-                        </p>
-                        <p class="category-item__promo">
-                          Акция: 1000 руб/шт
+                        <a class="button button_action_secondary">
+                          Открыть
+                        </a>
+                        <p class="category-item__counts">
+                          Поставщики: <span>2</span><br>
+                          Магазины: <span>7</span>
                         </p>
                       </div>
                     </li>
@@ -223,11 +232,6 @@
     </div>
   </main>
 
-  <script src="/js/lib/dropkick.js"></script>
   <script src="/js/main.min.js"></script>
-  <script>
-    var placeSelect = new Dropkick('#place', { });
-    var modeSelect = new Dropkick('#mode', { });
-  </script>
 </body>
 </html>

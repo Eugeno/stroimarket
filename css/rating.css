@@ -1,0 +1,10 @@
+.rating,
+.rating > span {
+  display: inline-flex;
+  height: 14px;
+  background: url(../img/rating-star.svg) repeat-x left center;
+}
+
+.rating > span {
+  background-image: url(../img/rating-star_fill.svg);
+}

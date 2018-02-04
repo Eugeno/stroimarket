@@ -1,0 +1,147 @@
+/* Interactions
+   ========================================================================== */
+.catalog__interactions {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.catalog__interactions > *:not(:first-child) {
+  margin-left: 20px;
+}
+
+.catalog__place-chooser {
+  width: 44.1%;
+}
+
+/* Catalog items
+   ========================================================================== */
+.catalog__panel {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -20px;
+  margin-bottom: 0;
+  margin-left: -40px;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Company cards
+   ========================================================================== */
+.company-item {
+  box-sizing: border-box;
+  width: calc(33.333% - 40px);
+  margin-top: 20px;
+  margin-left: 40px;
+  padding: 15px 20px 20px;
+  border: solid 1px #eaeeef;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.company-item__type {
+  font-size: 12px;
+  line-height: 17px;
+  display: block;
+  margin-bottom: 5px;
+  color: #7e8890;
+}
+
+.company-item__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 160px;
+  height: 160px;
+  margin: 28px auto;
+  padding: 8px;
+  border: solid 1px #f3f3f3;
+  border-radius: 10px;
+}
+
+.company-item__logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.company-item__name {
+  font-size: 20px;
+  line-height: 27px;
+  margin-top: 0;
+  margin-bottom: 1px;
+  color: #4a4a4a;
+}
+
+.company-item__address {
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: #868d95;
+}
+
+.company-item__button {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 20px;
+  color: #455056;
+  box-shadow: inset 0 0 0 1px #b1b6bb;
+}
+
+.catalog__panel._list-view {
+  display: block;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+._list-view .company-item {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 0;
+  padding-top: 20px;
+}
+
+._list-view .company-item__info {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  min-height: 160px;
+  padding-left: 180px;
+}
+
+._list-view .company-item__type {
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+._list-view .company-item__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+._list-view .company-item__name {
+  margin-bottom: 5px;
+}
+
+._list-view .company-item__address {
+  margin-bottom: 20px;
+}
+
+._list-view .company-item__button {
+  width: auto;
+  margin-top: 0;
+  margin-left: auto;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+

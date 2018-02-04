@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Строймаркет</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="container page-header__container">
+      <div class="grid page-header__grid">
+        <div class="grid__column_side-panel menu-btn-wrapper">
+          <a class="logo logo_panel" href="/">Строймаркет</a>
+          <a class="logo logo_panel logo_small" href="/">СМ</a>
+          <button class="menu-btn" type="button" onclick="sidePanel.toggle()"></button>
+        </div>
+
+        <div class="grid__column">
+          <ul class="user-actions">
+            <li class="user-actions__item user-actions__item_notifications">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Уведомления
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_messages">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Сообщения
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_profile">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Пластик Сибири
+                <span class="user-actions__avatar"
+                      style="background-image: url('//placehold.it/124x44');"></span>
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_logout">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Выйти
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__column_side-panel">
+          <ul class="side-panel">
+            <li class="side-panel__item side-panel__item_company" data-accordion>
+              <span class="accordion-title">Моя компания</span>
+              <ul class="accordion-content" hidden>
+                <li><a>Рабочий стол</a></li>
+                <li><a href="javascript:void(0)">Ассортимент</a></li>
+                <li><a href="javascript:void(0)">Претензии</a></li>
+              </ul>
+            </li>
+            <li class="side-panel__item side-panel__item_company _is-open" data-accordion>
+              <span class="accordion-title">Каталог</span>
+              <ul class="accordion-content">
+                <li><a href="javascript:void(0)">Товары</a></li>
+                <li><a>Поставщики</a></li>
+                <li><a href="javascript:void(0)">Магазины</a></li>
+              </ul>
+            </li>
+            <li class="side-panel__item side-panel__item_purchases" data-accordion>
+              <span class="accordion-title">Закупки</span>
+            </li>
+            <li class="side-panel__item side-panel__item_settings" data-accordion>
+              <span class="accordion-title">Настройки</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid__column">
+          <div class="dashboard">
+            <header class="dashboard__header">
+              <h2 class="h2 dashboard__h2">Каталог</h2>
+              <h3 class="h3 dashboard__divided-h3">
+                <span>Поставщики</span>
+                <span>ООО "Пластик Сибири"</span>
+              </h3>
+              <ul class="dashboard__tabs-titles" data-tabs-title="company">
+                <li class="_is-active" data-tab="info">Общая информация</li>
+                <li data-tab="passport">Паспорт</li>
+                <li data-tab="requisites">Реквизиты</li>
+                <li data-tab="send-message">Отправить сообщение</li>
+              </ul>
+            </header>
+
+            <div data-tabs-content="company">
+              <div data-tab="info">
+                <article class="company-card">
+                  <section class="company-card__info">
+                    <div class="company-card__logo">
+                      <img src="http://placehold.it/124x44" alt="" width="124">
+                    </div>
+                    <div data-accordion>
+                      <div class="company-card__chooser accordion-title">
+                        <b>Пластик Сибири</b>
+                        <span class="rating" data-value="5" data-max="5"><span></span></span>
+                        <p>Оптовая компания, производитель</p>
+                        <ul class="company-card__places accordion-content" hidden>
+                          <li>
+                            <p>Магазин</p>
+                            <span>Санкт–Петербург, Менделеевская, 76</span>
+                          </li>
+                          <li>
+                            <p>Магазин</p>
+                            <span>Новосибирск, Сибиряков–Гвардейцев, 49а</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <p class="company-card__data">
+                        Название юр. лица:  ООО «Пластик Сибири»<br>
+                        Адрес: 630052, г. Москва, ул. Морской проспект, д. 10<br>
+                        Телефон: 8-800-555-35-35<br>
+                        Веб–сайт: —<br>
+                        Электронная почта: sales@plasticsibiri.ru
+                      </p>
+                    </div>
+                  </section>
+                  <section class="company-card__description">
+                    <p>
+                      Новосибирская компания-производитель, специализирующаяся на продаже товаров для строительства,
+                      отделки и обустройства. Помогаем людям Новосибирска благоустроить жилье и улучшить качество жизни.
+                    </p>
+                  </section>
+                  <section class="company-card__map">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2c5ac9e0a669919c51a1dba27790bf0331882f0a5ceb808a3420d1eef6abfa01&amp;source=constructor" width="100%" height="240" frameborder="0"></iframe>
+                  </section>
+                </article>
+
+                <article class="products">
+                  <div class="products__heading">
+                    <h2>Ассортимент</h2>
+                    <a class="link" href="javascript:void(0)">Показать всё</a>
+                  </div>
+                  <div class="grid">
+                    <div class="grid__column_1-3">
+                      <div class="product-card">
+                        <img src="http://placehold.it/120x120" alt="" width="120" height="120">
+                        <h3 class="product-card__name">KNAUF Ротбанд, 30 кг</h3>
+                        <p class="product-card__category">Штукатурка</p>
+                      </div>
+                    </div>
+                    <div class="grid__column_1-3">
+                      <div class="product-card">
+                        <img src="http://placehold.it/120x120" alt="" width="120" height="120">
+                        <h3 class="product-card__name">ilmax 6800, 25 кг</h3>
+                        <p class="product-card__category">Штукатурка</p>
+                      </div>
+                    </div>
+                    <div class="grid__column_1-3">
+                      <div class="product-card">
+                        <img src="http://placehold.it/120x120" alt="" width="120" height="120">
+                        <h3 class="product-card__name">KNAUF Ротбанд, 30 кг</h3>
+                        <p class="product-card__category">Штукатурка</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div data-tab="passport" hidden>
+                <article class="company-card">
+                  <section class="company-card__info">
+                    <div class="company-card__logo">
+                      <img src="http://placehold.it/124x44" alt="" width="124">
+                    </div>
+                    <div>
+                      <div class="company-card__name">
+                        <b>Пластик Сибири</b>
+                        <p>Оптовая компания, производитель</p>
+                      </div>
+                      <hr class="hr company-card__hr">
+                      <div class="company-card__assessment">
+                        <div class="company-card__points">
+                          <b>Итоговый балл</b>
+                          <span class="rating" data-value="5" data-max="5"><span></span></span>
+                        </div>
+                        <div class="company-card__claims">
+                          <b>Сумма претензий к компании</b>
+                          <p>0 рублей</p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </article>
+
+                <article class="points">
+                  <h3 class="points__heading">Баллы</h3>
+                  <table class="points__table">
+                    <thead>
+                    <tr>
+                      <th>Начисленные баллы</th>
+                      <th>Критерий начисления</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>
+                        <span>1 балл</span>
+                      </td>
+                      <td>
+                        <b>Данные фирмы в «Строймаркете» совпадают с настоящими данными фирмы</b>
+                        <p>Определяется по платёжным банковским документам (при оплате с р/с организации,
+                          зарегистрированной в «Строймаркете»).<br>
+                          Для физических лиц и ИП, не имеющих р/с, балл начисляется по нотариально заверенному Согласию
+                          на обработку персональных данных.<br>
+                          Максимальный балл по этому критерию: 1</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>0.5 Балла</span>
+                        <p>Дата регистрации на «Строймаркете» 29.06.2012</p>
+                      </td>
+                      <td>
+                        <b>За давность регистрации в «Строймаркете»</b>
+                        <p>Балл начисляется только при наличии балла за "Данные фирмы". Начисляется по 0.1 балла за
+                          каждые 180 дней с момента регистрации Участника в «Строймаркете».<br>
+                          Максимальный балл по этому критерию: 0.5</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>1 Балл</span>
+                        <p>Дата регистрации юридического лица 13.01.2015</p>
+                      </td>
+                      <td>
+                        <b>За время существования юридического лица или индивидуального предпринимателя</b>
+                        <p>Рассчитывается только для юридических лиц и ИП резидентов РФ. Балл начисляется только при
+                          наличии балла за "Данные фирмы". Начисляется по 0.1 балла за каждые 120 дней с момента
+                          регистрации юридического лица (по данным ЕГРЮЛ, ЕГРИП). Максимальный балл по этому критерию:
+                          1.0</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>0.5 Балла</span>
+                        <p>Последняя дата платежа 22.08.2017</p>
+                      </td>
+                      <td>
+                        <b>Свидетельство ведения фирмой текущей хозяйственной деятельности</b>
+                        <p>Определяется по давности последней оплаты «Строймаркета» с р/с организации,
+                          зарегистрированной в системе. Балл начисляется только при наличии балла за "Данные фирмы...".
+                          Для ИП минимальный: 0.25.<br>
+                          Максимальный балл по этому критерию: 0,5<br>
+                          Правила расчёта: давность платежа не позже 190 дней от текущей даты - 0.5 балла, не позже 380
+                          дней - 0.25 балла.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>2 Балла</span>
+                        <p>Сумма претензий: 0 руб.</p>
+                      </td>
+                      <td>
+                        <b>За профессиональную деятельность на рынке</b>
+                        <p>Вычисляется на основе длительности хозяйственной деятельности и наличия Претензий.<br>
+                          Максимальный балл по этому критерию: 2</p>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </article>
+              </div>
+
+              <div data-tab="requisites" hidden>
+                <table class="requisites">
+                  <tbody>
+                  <tr>
+                    <td>Название юр. лица</td>
+                    <td>ООО «Шкет»</td>
+                  </tr>
+                  <tr>
+                    <td>ИНН</td>
+                    <td>5403003213</td>
+                  </tr>
+                  <tr>
+                    <td>ОГРН</td>
+                    <td>115547600108</td>
+                  </tr>
+                  <tr>
+                    <td>КПП</td>
+                    <td>540301542</td>
+                  </tr>
+                  <tr>
+                    <td>ОКПО</td>
+                    <td>49732758</td>
+                  </tr>
+                  <tr>
+                    <td>Расчетный счет</td>
+                    <td>756845674385694639</td>
+                  </tr>
+                  <tr>
+                    <td>БИК</td>
+                    <td>789546987</td>
+                  </tr>
+                  <tr>
+                    <td>Банк</td>
+                    <td>Сбербанк</td>
+                  </tr>
+                  <tr>
+                    <td>Корр. счет</td>
+                    <td>565656775474577456</td>
+                  </tr>
+                  <tr>
+                    <td>Юр. адрес</td>
+                    <td>121248, Россия, г. Москва, Кутузовский просп., 12с2</td>
+                  </tr>
+                  <tr>
+                    <td>Почтовый адрес</td>
+                    <td>121248, Россия, г. Москва, Кутузовский просп., 12с2</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div data-tab="send-message" hidden>
+                <section class="chat">
+                  <!--<div class="chat__history chat__history_empty">
+                    <p class="chat__no-messages">
+                      Переписка с этой компанией пуста. Напишите сообщение чтобы начать диалог.
+                    </p>
+                  </div>-->
+                  <div class="chat__history">
+                    <div class="chat__message _is-minimized" data-message>
+                      <p class="chat__message-sender">
+                        Отправитель сообщения
+                      </p>
+                      <time class="chat__message-time" datetime="2017-10-03 20:32">
+                        3 окт.
+                      </time>
+                      <div class="chat__message-text">
+                        Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения
+                        Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения
+                        Текст сообщения
+                      </div>
+                    </div>
+                    <div class="chat__message _is-minimized" data-message>
+                      <p class="chat__message-sender">
+                        Отправитель сообщения
+                      </p>
+                      <time class="chat__message-time" datetime="2017-10-04 21:33">
+                        4 окт.
+                      </time>
+                      <div class="chat__message-text">
+                        Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения
+                        Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения
+                        Текст сообщения
+                      </div>
+                    </div>
+                    <div class="chat__message" data-message>
+                      <p class="chat__message-sender">
+                        Отправитель сообщения
+                      </p>
+                      <time class="chat__message-time" datetime="2017-10-04 22:34">
+                        среда, 4 ноября, 22:34
+                      </time>
+                      <div class="chat__message-text">
+                        Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения
+                        Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения
+                        Текст сообщения
+                      </div>
+                    </div>
+                  </div>
+                  <form class="form">
+                    <textarea class="input chat__input" rows="4" placeholder="Текст сообщения"></textarea>
+                    <button class="button chat__send-btn" type="submit">
+                      Отправить сообщение
+                    </button>
+                  </form>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/main.min.js"></script>
+</body>
+</html>
