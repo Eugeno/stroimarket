@@ -16,7 +16,7 @@
         </div>
 
         <div class="grid__column">
-          <ul class="user-actions">
+          <ul class="list-reset user-actions">
             <li class="user-actions__item user-actions__item_notifications">
               <a class="link user-actions__link" href="javascript:void(0)">
                 Уведомления
@@ -109,19 +109,17 @@
                   <div class="grid">
                     <div class="grid__column_1-3">
                       <div class="categories assortment__categories">
-                        <div class="categories__img" style="background-image: url(http://placehold.it/180x120);"></div>
+                        <div class="categories__img" style="background-image: url(http://placehold.it/180x120)"></div>
                         <h4 class="categories__heading">Стройматериалы</h4>
                         <ul class="categories__list" id="cg-1">
                           <li data-accordion>
                             <span class="accordion-title">Сухие смеси, грунтовки</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c1s1-1" checked disabled>
-                                <label for="c1s1-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c1s1-2" checked disabled>
-                                <label for="c1s1-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -129,12 +127,10 @@
                             <span class="accordion-title">Строительство стен и перегородок</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c1s2-1" checked disabled>
-                                <label for="c1s2-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c1s2-2" checked disabled>
-                                <label for="c1s2-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -142,12 +138,10 @@
                             <span class="accordion-title">Изоляционные материалы</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c1s3-1" checked disabled>
-                                <label for="c1s3-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c1s3-2" checked disabled>
-                                <label for="c1s3-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -155,12 +149,10 @@
                             <span class="accordion-title">Гидроизоляция</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c1s4-1" checked disabled>
-                                <label for="c1s4-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c1s4-2" checked disabled>
-                                <label for="c1s4-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -168,12 +160,10 @@
                             <span class="accordion-title">Кровля и водосток</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c1s5-1" checked disabled>
-                                <label for="c1s5-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c1s5-2" checked disabled>
-                                <label for="c1s5-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -181,18 +171,17 @@
                             <span class="accordion-title">Категория</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c1s6-1" checked disabled>
-                                <label for="c1s6-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c1s6-2" checked disabled>
-                                <label for="c1s6-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
                         </ul>
                         <button class="categories__show-more" type="button"
-                                onclick="categories.open('#cg-1')">
+                                data-show="Показать ещё" data-hide="Скрыть"
+                                onclick="categories.toggle('#cg-1')">
                           Показать ещё
                         </button>
                       </div>
@@ -206,12 +195,10 @@
                             <span class="accordion-title">Двери</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c2s1-1" checked disabled>
-                                <label for="c2s1-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c2s1-2" checked disabled>
-                                <label for="c2s1-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -219,12 +206,10 @@
                             <span class="accordion-title">Окна и подоконники</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c2s2-1" checked disabled>
-                                <label for="c2s2-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c2s2-2" checked disabled>
-                                <label for="c2s2-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -232,24 +217,21 @@
                             <span class="accordion-title">Лестницы</span>
                             <ul class="accordion-content">
                               <li>
-                                <input type="checkbox" id="c2s3-1" checked disabled>
-                                <label for="c2s3-1" data-count="14">Межэтажные лестницы</label>
+                                <a class="link" href="javascript:void(0)" data-count="14">Межэтажные лестницы</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c2s3-2" checked disabled>
-                                <label for="c2s3-2" data-count="10">Чердачные лестницы</label>
+                                <a class="link" href="javascript:void(0)" data-count="10">Чердачные лестницы</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c2s3-3" checked disabled>
-                                <label for="c2s3-3" data-count="338">Лестничные элементы</label>
+                                <a class="link" href="javascript:void(0)" data-count="338">Лестничные элементы</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c2s3-4" checked disabled>
-                                <label for="c2s3-4" data-count="25">Элементы для модульной лестницы</label>
+                                <a class="link" href="javascript:void(0)" data-count="25">
+                                  Элементы для модульной лестницы
+                                </a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c2s3-5" checked disabled>
-                                <label for="c2s3-5" data-count="49">Лестничные элементы</label>
+                                <a class="link" href="javascript:void(0)" data-count="49">Лестничные элементы</a>
                               </li>
                             </ul>
                           </li>
@@ -257,12 +239,10 @@
                             <span class="accordion-title">Отделка декоративными панелями</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c2s4-1" checked disabled>
-                                <label for="c2s4-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c2s4-2" checked disabled>
-                                <label for="c2s4-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -270,12 +250,10 @@
                             <span class="accordion-title">Отделка стен и потолка деревом</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c2s5-1" checked disabled>
-                                <label for="c2s5-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c2s5-2" checked disabled>
-                                <label for="c2s5-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -283,12 +261,10 @@
                             <span class="accordion-title">Сухие смеси, грунтовки</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c2s6-1" checked disabled>
-                                <label for="c2s6-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c2s6-2" checked disabled>
-                                <label for="c2s6-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -296,12 +272,10 @@
                             <span class="accordion-title">Строительство стен и перегородок</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c2s7-1" checked disabled>
-                                <label for="c2s7-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c2s7-2" checked disabled>
-                                <label for="c2s7-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -309,12 +283,10 @@
                             <span class="accordion-title">Изоляционные материалы</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c2s8-1" checked disabled>
-                                <label for="c2s8-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c2s8-2" checked disabled>
-                                <label for="c2s8-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -322,18 +294,17 @@
                             <span class="accordion-title">Гидроизоляция</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c2s9-1" checked disabled>
-                                <label for="c2s9-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c2s9-2" checked disabled>
-                                <label for="c2s9-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
                         </ul>
                         <button class="categories__show-more" type="button"
-                                onclick="categories.open('#cg-2')">
+                                data-show="Показать ещё" data-hide="Скрыть"
+                                onclick="categories.toggle('#cg-2')">
                           Показать ещё
                         </button>
                       </div>
@@ -347,12 +318,10 @@
                             <span class="accordion-title">Розетки и выключатели</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c3s1-1" checked disabled>
-                                <label for="c3s1-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c3s1-2" checked disabled>
-                                <label for="c3s1-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -360,12 +329,10 @@
                             <span class="accordion-title">Кабель и монтаж</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c3s2-1" checked disabled>
-                                <label for="c3s2-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c3s2-2" checked disabled>
-                                <label for="c3s2-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -373,12 +340,10 @@
                             <span class="accordion-title">Электрические щиты</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c3s3-1" checked disabled>
-                                <label for="c3s3-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c3s3-2" checked disabled>
-                                <label for="c3s3-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -386,12 +351,10 @@
                             <span class="accordion-title">Климатические системы</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c3s4-1" checked disabled>
-                                <label for="c3s4-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c3s4-2" checked disabled>
-                                <label for="c3s4-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -399,12 +362,10 @@
                             <span class="accordion-title">Звонки и домофоны</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c3s5-1" checked disabled>
-                                <label for="c3s5-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c3s5-2" checked disabled>
-                                <label for="c3s5-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -412,18 +373,17 @@
                             <span class="accordion-title">Категория</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c3s6-1" checked disabled>
-                                <label for="c3s6-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c3s6-2" checked disabled>
-                                <label for="c3s6-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
                         </ul>
                         <button class="categories__show-more" type="button"
-                                onclick="categories.open('#cg-3')">
+                                data-show="Показать ещё" data-hide="Скрыть"
+                                onclick="categories.toggle('#cg-3')">
                           Показать ещё
                         </button>
                       </div>
@@ -451,12 +411,10 @@
                             <span class="accordion-title">Сухие смеси, грунтовки</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c4s1-1" checked disabled>
-                                <label for="c4s1-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c4s1-2" checked disabled>
-                                <label for="c4s1-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -464,12 +422,10 @@
                             <span class="accordion-title">Строительство стен и перегородок</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c4s2-1" checked disabled>
-                                <label for="c4s2-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c4s2-2" checked disabled>
-                                <label for="c4s2-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -477,12 +433,10 @@
                             <span class="accordion-title">Изоляционные материалы</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c4s3-1" checked disabled>
-                                <label for="c4s3-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c4s3-2" checked disabled>
-                                <label for="c4s3-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -490,12 +444,10 @@
                             <span class="accordion-title">Гидроизоляция</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c4s4-1" checked disabled>
-                                <label for="c4s4-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c4s4-2" checked disabled>
-                                <label for="c4s4-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -503,12 +455,10 @@
                             <span class="accordion-title">Кровля и водосток</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c4s5-1" checked disabled>
-                                <label for="c4s5-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c4s5-2" checked disabled>
-                                <label for="c4s5-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -516,18 +466,17 @@
                             <span class="accordion-title">Категория</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c4s6-1" checked disabled>
-                                <label for="c4s6-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c4s6-2" checked disabled>
-                                <label for="c4s6-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
                         </ul>
                         <button class="categories__show-more" type="button"
-                                onclick="categories.open('#cg-4')">
+                                data-show="Показать ещё" data-hide="Скрыть"
+                                onclick="categories.toggle('#cg-4')">
                           Показать ещё
                         </button>
                       </div>
@@ -541,12 +490,10 @@
                             <span class="accordion-title">Розетки и выключатели</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c5s1-1" checked disabled>
-                                <label for="c5s1-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c5s1-2" checked disabled>
-                                <label for="c5s1-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -554,12 +501,10 @@
                             <span class="accordion-title">Кабель и монтаж</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c5s2-1" checked disabled>
-                                <label for="c5s2-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c5s2-2" checked disabled>
-                                <label for="c5s2-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -567,12 +512,10 @@
                             <span class="accordion-title">Электрические щиты</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c5s3-1" checked disabled>
-                                <label for="c5s3-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c5s3-2" checked disabled>
-                                <label for="c5s3-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -580,12 +523,10 @@
                             <span class="accordion-title">Климатические системы</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c5s4-1" checked disabled>
-                                <label for="c5s4-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c5s4-2" checked disabled>
-                                <label for="c5s4-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -593,12 +534,10 @@
                             <span class="accordion-title">Звонки и домофоны</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c5s5-1" checked disabled>
-                                <label for="c5s5-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c5s5-2" checked disabled>
-                                <label for="c5s5-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
@@ -606,18 +545,17 @@
                             <span class="accordion-title">Категория</span>
                             <ul class="accordion-content" hidden>
                               <li>
-                                <input type="checkbox" id="c5s6-1" checked disabled>
-                                <label for="c5s6-1" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                               <li>
-                                <input type="checkbox" id="c5s6-2" checked disabled>
-                                <label for="c5s6-2" data-count="123">Подкатегория</label>
+                                <a class="link" href="javascript:void(0)" data-count="123">Подкатегория</a>
                               </li>
                             </ul>
                           </li>
                         </ul>
                         <button class="categories__show-more" type="button"
-                                onclick="categories.open('#cg-5')">
+                                data-show="Показать ещё" data-hide="Скрыть"
+                                onclick="categories.toggle('#cg-5')">
                           Показать ещё
                         </button>
                       </div>

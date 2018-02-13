@@ -17,48 +17,11 @@
   height: 100%;
 }
 
-.logo {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24px;
-  margin-top: 0;
-  margin-right: auto;
-  margin-bottom: 0;
-  padding: 5px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #f89e01;
-}
-
-.logo_panel {
-  display: block;
-  padding: 18px;
-  text-align: center;
-  color: #fff;
-  background-color: #f89e01;
-}
-
-.logo_small {
-  display: none;
-}
-
-._is-minimized .logo_panel {
-  display: none;
-}
-
-._is-minimized .logo_small {
-  display: block;
-}
-
 .user-actions {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-top: 0;
-  margin-bottom: 0;
   margin-left: -30px;
-  padding-left: 0;
-  list-style: none;
 }
 
 .user-actions__link {
@@ -76,7 +39,27 @@
   display: block;
   width: 20px;
   height: 20px;
-  background: url(../img/user-actions_notifications.svg) no-repeat center / contain;
+  background: url(../../img/user-actions_notifications.svg) no-repeat center / contain;
+}
+
+.user-actions__item_notifications[data-accordion] {
+  position: relative;
+}
+
+.user-actions__item_notifications[data-accordion] .user-actions__link {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-actions__item_notifications[data-accordion] .user-actions__link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 9px;
+  height: 9px;
+  content: "";
+  border-radius: 50%;
+  background-color: #f89e01;
 }
 
 .user-actions__item_messages .user-actions__link {
@@ -84,7 +67,7 @@
   display: block;
   width: 24px;
   height: 18px;
-  background: url(../img/user-actions_messages.svg) no-repeat center / contain;
+  background: url(../../img/user-actions_messages.svg) no-repeat center / contain;
 }
 
 .user-actions__item_profile .link {

@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Строймаркет</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="container page-header__container">
+      <div class="grid page-header__grid">
+        <div class="grid__column_side-panel menu-btn-wrapper">
+          <a class="logo logo_panel" href="/">Строймаркет</a>
+          <a class="logo logo_panel logo_small" href="/">СМ</a>
+          <button class="menu-btn" type="button" onclick="sidePanel.toggle()"></button>
+        </div>
+
+        <div class="grid__column">
+          <ul class="list-reset user-actions">
+            <li class="user-actions__item user-actions__item_notifications">
+              <a class="accordion-title link user-actions__link">
+                Уведомления
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_messages">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Сообщения
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_profile">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Пластик Сибири
+                <span class="user-actions__avatar"
+                      style="background-image: url('//placehold.it/124x44');"></span>
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_logout">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Выйти
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__column_side-panel">
+          <ul class="side-panel">
+            <li class="side-panel__item side-panel__item_company _is-open"
+                data-accordion="side-menu">
+              <span class="accordion-title">Моя компания</span>
+              <ul class="accordion-content">
+                <li><a>Рабочий стол</a></li>
+                <li><a href="javascript:void(0)">Ассортимент</a></li>
+                <li class="_develop" data-develop="в разработке">
+                  <a>Претензии</a>
+                </li>
+              </ul>
+            </li>
+            <li class="side-panel__item side-panel__item_catalog"
+                data-accordion="side-menu">
+              <span class="accordion-title">Каталог</span>
+              <ul class="accordion-content" hidden>
+                <li><a href="javascript:void(0)">Товары</a></li>
+                <li><a href="javascript:void(0)">Поставщики</a></li>
+                <li><a href="javascript:void(0)">Магазины</a></li>
+              </ul>
+            </li>
+            <li class="side-panel__item side-panel__item_purchases side-panel__item_developing"
+                data-accordion="side-menu">
+              <span class="accordion-title" data-develop="в разработке">Закупки</span>
+              <ul class="accordion-content" hidden>
+                <li><a href="javascript:void(0)">Список закупок</a></li>
+                <li><a href="javascript:void(0)">Мои закупки</a></li>
+              </ul>
+            </li>
+            <li class="side-panel__item side-panel__item_settings"
+                data-accordion="side-menu">
+              <span class="accordion-title">Настройки</span>
+              <ul class="accordion-content" hidden>
+                <li><a href="javascript:void(0)">Аккаунт</a></li>
+                <li><a href="javascript:void(0)">Профиль</a></li>
+                <li><a href="javascript:void(0)">Уведомления</a></li>
+                <li><a href="javascript:void(0)">Оплата</a></li>
+                <li><a href="javascript:void(0)">Реквизиты</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid__column">
+          <div class="dashboard">
+            <header class="dashboard__header">
+              <h2 class="h2 dashboard__h2">Уведомления</h2>
+              <ul class="list-reset dashboard__tabs-titles" data-tabs-title="notifications">
+                <li class="_is-active" data-tab="offers">Предложения</li>
+                <li data-tab="claims">Претензии</li>
+                <li data-tab="orders">Заказы</li>
+              </ul>
+            </header>
+
+            <div data-tabs-content="notifications">
+              <div data-tab="offers">
+                <div class="notifications">
+                  <time class="notifications__date" datetime="2017-10-30">
+                    Сегодня
+                  </time>
+                  <ul class="list-reset">
+                    <li class="notifications__item">
+                      <div class="notifications__photo">
+                        <img src="//placehold.it/80x80" alt="">
+                      </div>
+                      <div class="notifications__data">
+                        <p>Заявка: <span>№ 2456987899</span></p>
+                        <p>Создана: <span>20.07.17, 17:37</span></p>
+                        <p>Товар: <span>KNAUF Ротбанд, 30 кг</span></p>
+                      </div>
+                      <div class="notifications__info">
+                        <p>
+                          Поставщик:
+                          <span>ООО "Леруа Мерлен Восток", г. Москва</span>
+                        </p>
+                      </div>
+                      <div class="notifications__info">
+                        <p>
+                          Предложение:
+                          <span>146,00 р. за шт.</span>
+                        </p>
+                      </div>
+                      <button class="button notifications__button" type="button">
+                        Открыть
+                      </button>
+                    </li>
+                    <li class="notifications__item">
+                      <div class="notifications__photo">
+                        <img src="//placehold.it/80x80" alt="">
+                      </div>
+                      <div class="notifications__data">
+                        <p>Заявка: <span>№ 2456987899</span></p>
+                        <p>Создана: <span>20.07.17, 17:37</span></p>
+                        <p>Товар: <span>KNAUF Ротбанд, 30 кг</span></p>
+                      </div>
+                      <div class="notifications__info">
+                        <p>
+                          Поставщик:
+                          <span>ООО "Леруа Мерлен Восток", г. Москва</span>
+                        </p>
+                      </div>
+                      <div class="notifications__info">
+                        <p>
+                          Предложение:
+                          <span>146,00 р. за шт.</span>
+                        </p>
+                      </div>
+                      <button class="button notifications__button" type="button">
+                        Открыть
+                      </button>
+                    </li>
+                  </ul>
+
+                  <time class="notifications__date" datetime="2017-10-19">
+                    19 октября
+                  </time>
+                  <ul class="list-reset">
+                    <li class="notifications__item">
+                      <div class="notifications__photo">
+                        <img src="//placehold.it/80x80" alt="">
+                      </div>
+                      <div class="notifications__data">
+                        <p>Заявка: <span>№ 2456987899</span></p>
+                        <p>Создана: <span>20.07.17, 17:37</span></p>
+                        <p>Товар: <span>KNAUF Ротбанд, 30 кг</span></p>
+                      </div>
+                      <div class="notifications__info">
+                        <p>
+                          Поставщик:
+                          <span>ООО "Леруа Мерлен Восток", г. Москва</span>
+                        </p>
+                      </div>
+                      <div class="notifications__info">
+                        <p>
+                          Предложение:
+                          <span>146,00 р. за шт.</span>
+                        </p>
+                      </div>
+                      <button class="button notifications__button" type="button">
+                        Открыть
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div data-tab="claims" hidden>
+
+              </div>
+
+              <div data-tab="orders" hidden>
+                <div class="notifications">
+                  <time class="notifications__date" datetime="2017-10-30">
+                    Сегодня
+                  </time>
+                  <ul class="list-reset">
+                    <li class="notifications__item">
+                      <div class="notifications__photo">
+                        <img src="//placehold.it/80x80" alt="">
+                      </div>
+                      <div class="notifications__data">
+                        <p>Заявка: <span>№ 2456987899</span></p>
+                        <p>Создана: <span>20.07.17, 17:37</span></p>
+                      </div>
+                      <div class="notifications__data">
+                        <p>Товар: <span>KNAUF Ротбанд, 30 кг</span></p>
+                        <p>Количество: <span>2 000 000</span></p>
+                      </div>
+                      <div class="notifications__info">
+                        <p>
+                          Сумма:
+                          <span>99 999 540 рублей</span>
+                        </p>
+                      </div>
+                      <button class="button notifications__button" type="button">
+                        Открыть
+                      </button>
+                    </li>
+                    <li class="notifications__item">
+                      <div class="notifications__photo">
+                        <img src="//placehold.it/80x80" alt="">
+                      </div>
+                      <div class="notifications__data">
+                        <p>Заявка: <span>№ 2456987899</span></p>
+                        <p>Создана: <span>20.07.17, 17:37</span></p>
+                      </div>
+                      <div class="notifications__data">
+                        <p>Товар: <span>KNAUF Ротбанд, 30 кг</span></p>
+                        <p>Количество: <span>2 000 000</span></p>
+                      </div>
+                      <div class="notifications__info">
+                        <p>
+                          Сумма:
+                          <span>99 999 540 рублей</span>
+                        </p>
+                      </div>
+                      <button class="button notifications__button" type="button">
+                        Открыть
+                      </button>
+                    </li>
+                    <li class="notifications__item">
+                      <div class="notifications__photo">
+                        <img src="//placehold.it/80x80" alt="">
+                      </div>
+                      <div class="notifications__data">
+                        <p>Заявка: <span>№ 2456987899</span></p>
+                        <p>Создана: <span>20.07.17, 17:37</span></p>
+                      </div>
+                      <div class="notifications__data">
+                        <p>Товар: <span>KNAUF Ротбанд, 30 кг</span></p>
+                        <p>Количество: <span>2 000 000</span></p>
+                      </div>
+                      <div class="notifications__info">
+                        <p>
+                          Сумма:
+                          <span>99 999 540 рублей</span>
+                        </p>
+                      </div>
+                      <button class="button notifications__button" type="button">
+                        Открыть
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/main.min.js"></script>
+</body>
+</html>

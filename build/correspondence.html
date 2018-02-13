@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Строймаркет</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="container page-header__container">
+      <div class="grid page-header__grid">
+        <div class="grid__column_side-panel menu-btn-wrapper">
+          <a class="logo logo_panel" href="/">Строймаркет</a>
+          <a class="logo logo_panel logo_small" href="/">СМ</a>
+          <button class="menu-btn" type="button" onclick="sidePanel.toggle()"></button>
+        </div>
+
+        <div class="grid__column">
+          <ul class="list-reset user-actions">
+            <li class="user-actions__item user-actions__item_notifications">
+              <a class="accordion-title link user-actions__link">
+                Уведомления
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_messages">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Сообщения
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_profile">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Пластик Сибири
+                <span class="user-actions__avatar"
+                      style="background-image: url('//placehold.it/124x44');"></span>
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_logout">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Выйти
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__column_side-panel">
+          <ul class="side-panel">
+            <li class="side-panel__item side-panel__item_company"
+                data-accordion="side-menu">
+              <span class="accordion-title">Моя компания</span>
+              <ul class="accordion-content" hidden>
+                <li><a href="javascript:void(0)">Рабочий стол</a></li>
+                <li><a href="javascript:void(0)">Ассортимент</a></li>
+                <li class="_develop" data-develop="в разработке">
+                  <a>Претензии</a>
+                </li>
+              </ul>
+            </li>
+            <li class="side-panel__item side-panel__item_catalog"
+                data-accordion="side-menu">
+              <span class="accordion-title">Каталог</span>
+              <ul class="accordion-content" hidden>
+                <li><a href="javascript:void(0)">Товары</a></li>
+                <li><a href="javascript:void(0)">Поставщики</a></li>
+                <li><a href="javascript:void(0)">Магазины</a></li>
+              </ul>
+            </li>
+            <li class="side-panel__item side-panel__item_purchases side-panel__item_developing"
+                data-accordion="side-menu">
+              <span class="accordion-title" data-develop="в разработке">Закупки</span>
+              <ul class="accordion-content" hidden>
+                <li><a href="javascript:void(0)">Список закупок</a></li>
+                <li><a href="javascript:void(0)">Мои закупки</a></li>
+              </ul>
+            </li>
+            <li class="side-panel__item side-panel__item_settings"
+                data-accordion="side-menu">
+              <span class="accordion-title">Настройки</span>
+              <ul class="accordion-content" hidden>
+                <li><a href="javascript:void(0)">Аккаунт</a></li>
+                <li><a href="javascript:void(0)">Профиль</a></li>
+                <li><a href="javascript:void(0)">Уведомления</a></li>
+                <li><a href="javascript:void(0)">Оплата</a></li>
+                <li><a href="javascript:void(0)">Реквизиты</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid__column">
+          <div class="correspondence">
+            <h2 class="h2 correspondence__h2">Переписка</h2>
+            <div class="correspondence__panel">
+              <section class="correspondence__chats">
+                <input class="input correspondence__search" type="search" placeholder="Поиск">
+                <ul class="list-reset" data-tabs-title="chats">
+                  <li class="_is-active" data-tab="chat-1">
+                    <img class="correspondence__chat-image" src="//placehold.it/40x40" alt="">
+                    <p class="correspondence__sender-name">Пластик Сибири</p>
+                    <p class="correspondence__chat-info correspondence__chat-info_got-new">Новое сообщение!</p>
+                  </li>
+                  <li data-tab="chat-2">
+                    <img class="correspondence__chat-image" src="//placehold.it/40x40" alt="">
+                    <p class="correspondence__sender-name">Пластик Сибири</p>
+                    <p class="correspondence__chat-info">Нет новых сообщений</p>
+                  </li>
+                  <li data-tab="chat-3">
+                    <img class="correspondence__chat-image" src="//placehold.it/40x40" alt="">
+                    <p class="correspondence__sender-name">Пластик Сибири</p>
+                    <p class="correspondence__chat-info">Нет новых сообщений</p>
+                  </li>
+                  <li data-tab="chat-4">
+                    <img class="correspondence__chat-image" src="//placehold.it/40x40" alt="">
+                    <p class="correspondence__sender-name">Пластик Сибири</p>
+                    <p class="correspondence__chat-info">Нет новых сообщений</p>
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/main.min.js"></script>
+</body>
+</html>

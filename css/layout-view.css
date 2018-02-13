@@ -8,6 +8,11 @@
   color: #455056;
 }
 
+.layout-view_no-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .layout-view__title {
   font-weight: 600;
 }

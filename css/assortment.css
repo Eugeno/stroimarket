@@ -12,6 +12,7 @@
 .assortment__interactions {
   display: flex;
   align-items: flex-start;
+  justify-content: flex-end;
   margin-top: 20px;
 }
 
@@ -151,7 +152,8 @@
   display: none;
 }
 
-.categories__list input[type="checkbox"] + label {
+.categories__list input[type="checkbox"] + label,
+.categories__list .link[data-count] {
   position: relative;
   display: block;
   margin-right: 60px;
@@ -165,20 +167,23 @@
 }
 
 .categories__list input[type="checkbox"] + label::before,
+.categories__list .link[data-count]::before,
 .categories__list input[type="checkbox"]:not(:disabled) + label::after {
   position: absolute;
   content: "";
   background-color: #f89e01;
 }
 
-.categories__list input[type="checkbox"] + label::before {
+.categories__list input[type="checkbox"] + label::before,
+.categories__list .link[data-count]::before {
   top: calc(50% - 5px);
   right: -41px;
   width: 2px;
   height: 10px;
 }
 
-.categories__list input[type="checkbox"]:checked + label::before {
+.categories__list input[type="checkbox"]:checked + label::before,
+.categories__list .link[data-count]::before {
   top: 1px;
   right: auto;
   bottom: 2px;
@@ -191,12 +196,14 @@
   cursor: pointer;
 }
 
-.categories__list input[type="checkbox"]:checked:disabled + label::before {
+.categories__list input[type="checkbox"]:checked:disabled + label::before,
+.categories__list .link[data-count]::before {
   top: 0;
   bottom: 0;
 }
 
-.categories__list input[type="checkbox"] + label::after {
+.categories__list input[type="checkbox"] + label::after,
+.categories__list .link[data-count]::after {
   top: calc(50% - 1px);
   right: -45px;
   width: 10px;
@@ -204,6 +211,7 @@
 }
 
 .categories__list input[type="checkbox"] + label[data-count]::after,
+.categories__list .link[data-count]::after,
 .categories__list .accordion-title[data-count]::after {
   font-size: 10px;
   line-height: 11px;
@@ -350,16 +358,36 @@
   list-style: none;
 }
 
+.assortment__products._grid-view {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -20px;
+  margin-left: -40px;
+}
+
 .category-item {
   position: relative;
   display: flex;
   overflow: hidden;
+  box-sizing: border-box;
   margin-top: 10px;
   padding: 20px;
   border: solid 1px #eaeeef;
   border-radius: 5px;
   background-color: #fff;
 }
+
+._grid-view .category-item {
+  display: block;
+  /*width: calc(42.857% - 40px);*/
+  width: 260px;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+/*._is-minimized + .grid__column ._grid-view .category-item {
+  width: calc(33.333% - 40px);
+}*/
 
 .category-item__badge {
   font-size: 14px;
@@ -379,6 +407,12 @@
   width: 160px;
   height: 160px;
   margin-right: 20px;
+}
+
+._grid-view .category-item__img {
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
 }
 
 .category-item__img img {
@@ -442,9 +476,22 @@
   text-align: right;
 }
 
+._grid-view .category-item__aside {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: left;
+}
+
 .category-item__aside .button {
+  font-size: 18px;
+  font-weight: 400;
   display: inline-block;
   width: auto;
+  color: #455056;
+}
+
+._grid-view .category-item__aside .button {
+  margin-top: 10px;
 }
 
 .category-item__data {
@@ -498,21 +545,24 @@
   color: #455056;
 }
 
-.aside-filter__list {
+.aside-filter__list,
+.producers-list {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
 }
 
-.aside-filter__list li {
+.aside-filter__list li,
+.producers-list li {
   font-size: 14px;
   line-height: 19px;
   margin-top: 5px;
   color: #b1b6bb;
 }
 
-.aside-filter__list li span {
+.aside-filter__list li span,
+.producers-list li span {
   font-weight: 600;
   padding-right: 16px;
   background: url(../img/aside-filter_list-item.svg) no-repeat right 4px / 8px 13px;

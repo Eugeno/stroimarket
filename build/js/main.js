@@ -35,6 +35,13 @@ var accordion = {
     });
   },
   toggle: function toggle(item) {
+    if (item.dataset.accordion && !item.classList.contains('_is-open')) {
+      var boundAccordions = [].concat(_toConsumableArray(document.querySelectorAll('[data-accordion="' + item.dataset.accordion + '"]')));
+      boundAccordions.forEach(function (accordionItem) {
+        return accordion.close(accordionItem);
+      });
+    }
+
     item.classList.toggle('_is-open');
     var content = item.querySelector('.accordion-content');
     content.hidden = !content.hidden;
@@ -274,6 +281,15 @@ var categories = {
   open: function open(selector) {
     event.currentTarget.disabled = true;
     document.querySelector(selector).classList.add('categories__list_full');
+  },
+  toggle: function toggle(selector) {
+    var item = document.querySelector(selector);
+    item.classList.toggle('categories__list_full');
+
+    var button = event.currentTarget;
+    if (button.dataset.show) {
+      button.innerHTML = item.classList.contains('categories__list_full') ? button.dataset.hide : button.dataset.show;
+    }
   }
 };
 
@@ -292,6 +308,7 @@ var layoutView = {
       document.querySelector('.layout-view__layout-type_list').classList.toggle('_is-active');
       document.querySelector('.layout-view__layout-type_grid').classList.toggle('_is-active');
       document.querySelector(selector).classList.toggle('_list-view');
+      document.querySelector(selector).classList.toggle('_grid-view');
     }
   }
 };

@@ -79,11 +79,8 @@
 .edit-assortment__table td {
   font-size: 14px;
   line-height: 16px;
-  vertical-align: middle;
-}
-
-.edit-assortment__table tr:not(:last-child) td {
   position: relative;
+  vertical-align: middle;
 }
 
 .edit-assortment__table tr:not(:last-child) td::after {

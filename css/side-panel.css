@@ -1,0 +1,207 @@
+.grid__column_side-panel {
+  width: 25%;
+  transform: translateX(-60px);
+}
+
+.grid__column_side-panel + .grid__column {
+  width: 75%;
+}
+
+.grid__column_side-panel._is-minimized {
+  z-index: 2;
+  width: 100px;
+}
+
+.grid__column_side-panel._is-minimized + .grid__column {
+  width: calc(100% - 100px);
+}
+
+.side-panel {
+  position: relative;
+  height: 100%;
+  min-height: calc(100vh - 60px);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  background-color: #3b4458;
+}
+
+.side-panel__item {
+  font-size: 16px;
+  line-height: 22px;
+  position: relative;
+  color: #f8f8fb;
+}
+
+._is-minimized .side-panel__item {
+  display: table;
+  height: 50px;
+}
+
+.side-panel__item_developing {
+  color: #7e8890;
+}
+
+._is-minimized .side-panel__item:not(._is-open) {
+  font-size: 0;
+}
+
+._is-minimized .side-panel__item._is-open {
+  border-top-right-radius: 10px;
+  background-color: #3b4458;
+}
+
+.side-panel__item .accordion-title {
+  padding: 15px 58px 13px;
+  cursor: pointer;
+}
+
+.side-panel__item._is-open .accordion-title {
+  background: rgba(0,0,0,.1);
+}
+
+._is-minimized .side-panel__item._is-open .accordion-title {
+  min-width: 100px;
+  padding-right: 70px;
+  padding-left: 90px;
+  white-space: nowrap;
+  border-top-right-radius: 10px;
+}
+
+.side-panel__item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 50px;
+  content: "";
+}
+
+.side-panel__item_company::before {
+  background: url(../img/side-panel_company.svg) no-repeat 29px 16px / 20px 18px;
+}
+
+.side-panel__item_catalog::before {
+  background: url(../img/side-panel_catalog.svg) no-repeat 31px 15px / 16px 20px;
+}
+
+.side-panel__item_purchases::before {
+  background: url(../img/side-panel_purchases.svg) no-repeat 29px 15px / 20px 20px;
+}
+
+.side-panel__item_settings::before {
+  background: url(../img/side-panel_settings.svg) no-repeat 29px 17px / 20px 20px;
+}
+
+._is-minimized .side-panel__item::before {
+  /*z-index: 2;*/
+  background-position-x: center;
+}
+
+.side-panel__item_developing::before {
+  opacity: .37;
+}
+
+.side-panel .accordion-title {
+  position: relative;
+  display: block;
+}
+
+.side-panel .accordion-title::after {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: 18px;
+  height: 10px;
+  content: "";
+  transform: translateY(-50%);
+  background: url(../img/side-panel_arrow.svg) no-repeat center / contain;
+}
+
+.side-panel__item_developing .accordion-title::after {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+  top: 17px;
+  width: auto;
+  height: auto;
+  content: attr(data-develop);
+  transform: none;
+  text-transform: uppercase;
+  color: #7e8890;
+  background: none;
+}
+
+._is-minimized .side-panel__item_developing .accordion-title::after {
+  display: none;
+}
+
+.side-panel__item[data-accordion]:not(.side-panel__item_developing)._is-open > .accordion-title::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+._is-minimized .side-panel__item:not(._is-open) .accordion-title::after {
+  display: none;
+}
+
+.side-panel__item > ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  background-color: rgba(255,255,255,.05);
+}
+
+._is-minimized .side-panel__item > ul {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: 60px;
+  border-bottom-right-radius: 10px;
+  background-color: #3b4458;
+}
+
+.side-panel__item > ul > li {
+  padding: 15px 30px 16px;
+}
+
+._is-minimized .side-panel__item._is-open > ul > li {
+  background-color: rgba(255,255,255,.05);
+}
+
+.side-panel__item > ul > li._develop {
+  position: relative;
+}
+
+.side-panel__item > ul > li._develop::after {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+  position: absolute;
+  top: 17px;
+  right: 30px;
+  content: attr(data-develop);
+  text-transform: uppercase;
+  color: #7e8890;
+}
+
+._is-minimized .side-panel__item > ul > li._develop::after {
+  display: none;
+}
+
+.side-panel__item > ul > li a {
+  font-size: 14px;
+  line-height: 19px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #b1b6bb;
+}
+
+.side-panel__item > ul > li a:not([href]) {
+  color: #f3f3f3;
+}
+
+.side-panel__item > ul > li._develop a {
+  color: #7e8890;
+}

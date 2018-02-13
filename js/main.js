@@ -28,6 +28,11 @@ const accordion = {
   },
 
   toggle (item) {
+    if (item.dataset.accordion && !item.classList.contains(`_is-open`)) {
+      const boundAccordions = [...document.querySelectorAll(`[data-accordion="${item.dataset.accordion}"]`)]
+      boundAccordions.forEach(accordionItem => accordion.close(accordionItem))
+    }
+
     item.classList.toggle(`_is-open`)
     const content = item.querySelector(`.accordion-content`)
     content.hidden = !content.hidden
@@ -270,6 +275,18 @@ const categories = {
   open (selector) {
     event.currentTarget.disabled = true
     document.querySelector(selector).classList.add(`categories__list_full`)
+  },
+
+  toggle (selector) {
+    const item = document.querySelector(selector)
+    item.classList.toggle(`categories__list_full`)
+
+    const button = event.currentTarget
+    if (button.dataset.show) {
+      button.innerHTML = item.classList.contains(`categories__list_full`) ?
+        button.dataset.hide :
+        button.dataset.show
+    }
   }
 }
 
@@ -290,6 +307,9 @@ const layoutView = {
       document.querySelector(`.layout-view__layout-type_list`).classList.toggle(`_is-active`)
       document.querySelector(`.layout-view__layout-type_grid`).classList.toggle(`_is-active`)
       document.querySelector(selector).classList.toggle(`_list-view`)
+      document.querySelector(selector).classList.toggle(`_grid-view`)
     }
   }
 }
+
+

@@ -16,11 +16,45 @@
         </div>
 
         <div class="grid__column">
-          <ul class="user-actions">
-            <li class="user-actions__item user-actions__item_notifications">
-              <a class="link user-actions__link" href="javascript:void(0)">
+          <ul class="list-reset user-actions">
+            <li class="user-actions__item user-actions__item_notifications" data-accordion>
+              <a class="accordion-title link user-actions__link">
                 Уведомления
               </a>
+              <div class="accordion-content notification-popup" hidden>
+                <header class="notification-popup__header">
+                  Уведомления
+                </header>
+                <ul class="notification-popup__list">
+                  <li>
+                    <a class="link notification-popup__link" href="javascript:void(0)">
+                      <div class="notification-popup__data">
+                        <p class="notification-popup__caption">Закупка №111</p>
+                        <p class="notification-popup__text">Новое предложение по закупке</p>
+                      </div>
+                      <time class="notification-popup__date" datetime="2017-10-20 12:36">
+                        сегодня<br>
+                        12:36
+                      </time>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="link notification-popup__link" href="javascript:void(0)">
+                      <div class="notification-popup__data">
+                        <p class="notification-popup__caption">Претензия №123</p>
+                        <p class="notification-popup__text">Новое предложение по закупке</p>
+                      </div>
+                      <time class="notification-popup__date" datetime="2017-10-15 15:10">
+                        15.10.17<br>
+                        15:10
+                      </time>
+                    </a>
+                  </li>
+                </ul>
+                <a class="link notification-popup__show-more" href="javascript:void(0)">
+                  Показать все
+                </a>
+              </div>
             </li>
             <li class="user-actions__item user-actions__item_messages">
               <a class="link user-actions__link" href="javascript:void(0)">
@@ -50,22 +84,44 @@
       <div class="grid">
         <div class="grid__column_side-panel">
           <ul class="side-panel">
-            <li class="side-panel__item side-panel__item_company _is-open" data-accordion>
+            <li class="side-panel__item side-panel__item_company _is-open"
+                data-accordion="side-menu">
               <span class="accordion-title">Моя компания</span>
               <ul class="accordion-content">
                 <li><a>Рабочий стол</a></li>
                 <li><a href="javascript:void(0)">Ассортимент</a></li>
-                <li><a href="javascript:void(0)">Претензии</a></li>
+                <li class="_develop" data-develop="в разработке">
+                  <a>Претензии</a>
+                </li>
               </ul>
             </li>
-            <li class="side-panel__item side-panel__item_catalog" data-accordion>
+            <li class="side-panel__item side-panel__item_catalog"
+                data-accordion="side-menu">
               <span class="accordion-title">Каталог</span>
+              <ul class="accordion-content" hidden>
+                <li><a href="javascript:void(0)">Товары</a></li>
+                <li><a href="javascript:void(0)">Поставщики</a></li>
+                <li><a href="javascript:void(0)">Магазины</a></li>
+              </ul>
             </li>
-            <li class="side-panel__item side-panel__item_purchases" data-accordion>
-              <span class="accordion-title">Закупки</span>
+            <li class="side-panel__item side-panel__item_purchases side-panel__item_developing"
+                data-accordion="side-menu">
+              <span class="accordion-title" data-develop="в разработке">Закупки</span>
+              <ul class="accordion-content" hidden>
+                <li><a href="javascript:void(0)">Список закупок</a></li>
+                <li><a href="javascript:void(0)">Мои закупки</a></li>
+              </ul>
             </li>
-            <li class="side-panel__item side-panel__item_settings" data-accordion>
+            <li class="side-panel__item side-panel__item_settings"
+                data-accordion="side-menu">
               <span class="accordion-title">Настройки</span>
+              <ul class="accordion-content" hidden>
+                <li><a href="javascript:void(0)">Аккаунт</a></li>
+                <li><a href="javascript:void(0)">Профиль</a></li>
+                <li><a href="javascript:void(0)">Уведомления</a></li>
+                <li><a href="javascript:void(0)">Оплата</a></li>
+                <li><a href="javascript:void(0)">Реквизиты</a></li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -75,7 +131,7 @@
             <header class="dashboard__header">
               <h2 class="h2 dashboard__h2">Моя компания</h2>
               <h3 class="h3">Рабочий стол</h3>
-              <ul class="dashboard__tabs-titles" data-tabs-title="company">
+              <ul class="list-reset dashboard__tabs-titles" data-tabs-title="company">
                 <li class="_is-active" data-tab="info">Общая информация</li>
                 <li data-tab="passport">Паспорт</li>
                 <li data-tab="requisites">Реквизиты</li>
@@ -94,7 +150,7 @@
                         <b>Пластик Сибири</b>
                         <span class="rating" data-value="5" data-max="5"><span></span></span>
                         <p>Оптовая компания, производитель</p>
-                        <ul class="company-card__places accordion-content" hidden>
+                        <ul class="list-reset company-card__places accordion-content" hidden>
                           <li>
                             <p>Магазин</p>
                             <span>Санкт–Петербург, Менделеевская, 76</span>

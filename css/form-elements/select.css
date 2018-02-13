@@ -34,7 +34,7 @@
   bottom: 0;
   width: 13px;
   content: "";
-  background: url(../img/form_select.svg) no-repeat right center / 13px 8px;
+  background: url(../../img/form_select.svg) no-repeat right center / 13px 8px;
 }
 
 .select .dk-select-options {

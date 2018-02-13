@@ -1,0 +1,90 @@
+.notification-popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-sizing: border-box;
+  width: 460px;
+  transform: translate(-158px,16px);
+  border: solid 1px #eaeeef;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.notification-popup__header {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 17px;
+  position: relative;
+  padding: 11px 20px;
+  text-transform: uppercase;
+  color: #7e8890;
+  background-color: #eaeeef;
+}
+
+.notification-popup__header::before {
+  position: absolute;
+  top: -4px;
+  left: 156px;
+  width: 22px;
+  height: 22px;
+  content: "";
+  transform: rotate(45deg);
+  background-color: #eaeeef;
+}
+
+.notification-popup__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.notification-popup__list li {
+  border-bottom: 1px solid #eaeeef;
+}
+
+.notification-popup__link {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 11px;
+}
+
+.notification-popup__data {
+  font-size: 16px;
+  line-height: 22px;
+  margin-right: 20px;
+}
+
+.notification-popup__caption {
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.notification-popup__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #7e8890;
+}
+
+.notification-popup__date {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  flex-shrink: 0;
+  width: 65px;
+  margin-left: auto;
+  text-align: right;
+  color: #7e8890;
+}
+
+.notification-popup__show-more {
+  font-size: 16px;
+  line-height: 22px;
+  display: block;
+  padding: 10px 20px 12px;
+  text-align: center;
+}
+
+

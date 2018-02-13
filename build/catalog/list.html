@@ -16,7 +16,7 @@
         </div>
 
         <div class="grid__column">
-          <ul class="user-actions">
+          <ul class="list-reset user-actions">
             <li class="user-actions__item user-actions__item_notifications">
               <a class="link user-actions__link" href="javascript:void(0)">
                 Уведомления
@@ -104,17 +104,17 @@
                     <a class="layout-view__sort-link">по количеству поставщиков</a>
                     <div class="layout-view__layout">
                       <a class="layout-view__layout-type layout-view__layout-type_list _is-active"
-                         onclick="layoutView.toggle()">
+                         onclick="layoutView.toggle('#product-list')">
                         список
                       </a>
                       <a class="layout-view__layout-type layout-view__layout-type_grid"
-                         onclick="layoutView.toggle()">
+                         onclick="layoutView.toggle('#product-list')">
                         плитка
                       </a>
                     </div>
                   </div>
 
-                  <ul class="assortment__products">
+                  <ul class="assortment__products _list-view" id="product-list">
                     <li class="category-item">
                       <div class="category-item__badge">Акции</div>
                       <div class="category-item__img">
@@ -230,18 +230,10 @@
                         <label for="producer_volma">ВОЛМА</label>
                       </li>
                     </ul>
-                    <div class="" data-accordion>
-                      <ul class="aside-filter__list accordion-content" hidden>
-                        <li>
-                          <input class="checkbox" id="producer_6" type="checkbox">
-                          <label for="producer_6">producer-6</label>
-                        </li>
-                      </ul>
-                      <span class="accordion-title aside-filter__show-all"
-                            data-show="Показать всё" data-hide="Показать не всё">
-                        Показать всё
-                      </span>
-                    </div>
+                    <span class="aside-filter__show-all"
+                          onclick="modal.open('#producers')">
+                      Показать всё
+                    </span>
 
                     <p class="aside-filter__caption">
                       Назначение
@@ -273,6 +265,229 @@
       </div>
     </div>
   </main>
+
+  <div class="modal modal_middle" id="producers">
+    <div class="container modal__container">
+      <div class="grid">
+        <div class="grid__column_1-2 grid__column_center">
+          <div class="modal__overlay"></div>
+          <header class="modal__header modal__header_compact">
+            <button class="modal__close" type="button">Закрыть</button>
+            <h3 class="modal__heading">
+              Производитель
+            </h3>
+          </header>
+          <div class="modal__body modal__body_compact">
+            <form class="form">
+              <div class="grid">
+                <div class="grid__column_1-3">
+                  <ul class="producers-list">
+                    <li>
+                      <input class="checkbox" id="p-1" type="checkbox">
+                      <label for="p-1">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-2" type="checkbox">
+                      <label for="p-2">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-3" type="checkbox">
+                      <label for="p-3">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-4" type="checkbox">
+                      <label for="p-4">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-5" type="checkbox">
+                      <label for="p-5">ВОЛМА</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-6" type="checkbox">
+                      <label for="p-6">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-7" type="checkbox">
+                      <label for="p-7">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-8" type="checkbox">
+                      <label for="p-8">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-9" type="checkbox">
+                      <label for="p-9">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-10" type="checkbox">
+                      <label for="p-10">ВОЛМА</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-11" type="checkbox">
+                      <label for="p-11">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-12" type="checkbox">
+                      <label for="p-12">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-13" type="checkbox">
+                      <label for="p-13">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-14" type="checkbox">
+                      <label for="p-14">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-15" type="checkbox">
+                      <label for="p-15">ВОЛМА</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="grid__column_1-3">
+                  <ul class="producers-list">
+                    <li>
+                      <input class="checkbox" id="p-16" type="checkbox">
+                      <label for="p-16">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-17" type="checkbox">
+                      <label for="p-17">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-18" type="checkbox">
+                      <label for="p-18">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-19" type="checkbox">
+                      <label for="p-19">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-20" type="checkbox">
+                      <label for="p-20">ВОЛМА</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-21" type="checkbox">
+                      <label for="p-21">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-22" type="checkbox">
+                      <label for="p-22">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-23" type="checkbox">
+                      <label for="p-23">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-24" type="checkbox">
+                      <label for="p-24">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-25" type="checkbox">
+                      <label for="p-25">ВОЛМА</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-26" type="checkbox">
+                      <label for="p-26">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-27" type="checkbox">
+                      <label for="p-27">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-28" type="checkbox">
+                      <label for="p-28">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-29" type="checkbox">
+                      <label for="p-29">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-30" type="checkbox">
+                      <label for="p-30">ВОЛМА</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="grid__column_1-3">
+                  <ul class="producers-list">
+                    <li>
+                      <input class="checkbox" id="p-31" type="checkbox">
+                      <label for="p-31">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-32" type="checkbox">
+                      <label for="p-32">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-33" type="checkbox">
+                      <label for="p-33">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-34" type="checkbox">
+                      <label for="p-34">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-35" type="checkbox">
+                      <label for="p-35">ВОЛМА</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-36" type="checkbox">
+                      <label for="p-36">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-37" type="checkbox">
+                      <label for="p-37">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-38" type="checkbox">
+                      <label for="p-38">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-39" type="checkbox">
+                      <label for="p-39">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-40" type="checkbox">
+                      <label for="p-40">ВОЛМА</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-41" type="checkbox">
+                      <label for="p-41">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-42" type="checkbox">
+                      <label for="p-42">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-43" type="checkbox">
+                      <label for="p-43">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-44" type="checkbox">
+                      <label for="p-44">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-45" type="checkbox">
+                      <label for="p-45">ВОЛМА</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="grid">
+                <div class="grid__column_5-9 grid__column_center">
+                  <button class="button form__button" type="submit"
+                          onclick="">
+                    Применить фильтры
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="/js/main.min.js"></script>
 </body>
