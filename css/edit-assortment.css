@@ -94,7 +94,6 @@
 }
 
 .edit-assortment__table .at-conformity {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   cursor: pointer;
   border: 0;
   outline: none;
@@ -434,7 +433,7 @@
   margin-top: 2px;
 }
 
-.add-product .form__button {
+.add-product__button {
   margin-top: 20px;
 }
 

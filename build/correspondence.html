@@ -121,12 +121,131 @@
                   </li>
                 </ul>
               </section>
+
+              <section class="correspondence__main">
+                <div data-tabs-content="chats">
+                  <div data-tab="chat-1">
+                    <div class="correspondence__header">
+                      <div class="correspondence__caption-name">
+                        ООО «Пластик Сибири»
+                      </div>
+                      <button class="button button_action correspondence__write-message" type="button"
+                              onclick="modal.open('#write-message')">
+                        Написать сообщение
+                      </button>
+                    </div>
+                    <div class="chat correspondence__body">
+                      <div class="chat__history">
+                        <div class="chat__message _is-minimized" data-message>
+                          <p class="chat__message-sender">
+                            Отправитель сообщения
+                          </p>
+                          <time class="chat__message-time" datetime="2017-10-03 20:32">
+                            3 окт.
+                          </time>
+                          <div class="chat__message-text">
+                            Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения
+                            Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения
+                            Текст сообщения
+                          </div>
+                        </div>
+                        <div class="chat__message _is-minimized" data-message>
+                          <p class="chat__message-sender">
+                            Отправитель сообщения
+                          </p>
+                          <time class="chat__message-time" datetime="2017-10-04 21:33">
+                            4 окт.
+                          </time>
+                          <div class="chat__message-text">
+                            Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения
+                            Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения
+                            Текст сообщения
+                          </div>
+                        </div>
+                        <div class="chat__message" data-message>
+                          <p class="chat__message-sender">
+                            Отправитель сообщения
+                          </p>
+                          <time class="chat__message-time" datetime="2017-10-04 22:34">
+                            среда, 4 ноября, 22:34
+                          </time>
+                          <div class="chat__message-text">
+                            Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения
+                            Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения
+                            Текст сообщения
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div data-tab="chat-2" hidden>
+                    <div class="correspondence__header">
+                      <div class="correspondence__caption-name">
+                        ООО «Пластик Сибири»
+                      </div>
+                      <button class="button button_action correspondence__write-message" type="button">
+                        Написать сообщение
+                      </button>
+                    </div>
+                    <div class="chat correspondence__body"></div>
+                  </div>
+
+                  <div data-tab="chat-3" hidden>
+                    <div class="correspondence__header">
+                      <div class="correspondence__caption-name">
+                        ООО «Пластик Сибири»
+                      </div>
+                      <button class="button button_action correspondence__write-message" type="button">
+                        Написать сообщение
+                      </button>
+                    </div>
+                    <div class="chat correspondence__body"></div>
+                  </div>
+
+                  <div data-tab="chat-4" hidden>
+                    <div class="correspondence__header">
+                      <div class="correspondence__caption-name">
+                        ООО «Пластик Сибири»
+                      </div>
+                      <button class="button button_action correspondence__write-message" type="button">
+                        Написать сообщение
+                      </button>
+                    </div>
+                    <div class="chat correspondence__body"></div>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
       </div>
     </div>
   </main>
+
+  <div class="modal modal_middle" id="write-message">
+    <div class="container modal__container">
+      <div class="grid">
+        <div class="grid__column_3-7 grid__column_center">
+          <div class="modal__overlay"></div>
+          <header class="modal__header">
+            <button class="modal__close" type="button">Закрыть</button>
+            <h3 class="modal__heading">
+              Написать сообщение
+            </h3>
+          </header>
+          <div class="modal__body">
+            <form class="form chat chat_modal">
+              <textarea class="input chat__input" rows="5" placeholder="Текст сообщения"></textarea>
+              <button class="button chat__send-btn" type="submit">
+                Отправить
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="/js/main.min.js"></script>
 </body>

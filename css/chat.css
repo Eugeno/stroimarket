@@ -1,3 +1,8 @@
+.chat_modal {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
 .chat__history {
   display: flex;
   flex-direction: column;
@@ -25,10 +30,14 @@
   resize: none;
 }
 
-.chat__send-btn {
+.chat:not(.chat_modal) .chat__send-btn {
   width: auto;
   margin-top: 20px;
   margin-left: auto;
+}
+
+.chat_modal .chat__send-btn {
+  margin-top: 30px;
 }
 
 /* Message

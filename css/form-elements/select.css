@@ -16,7 +16,8 @@
 }
 
 .select .dk-selected {
-  font: 400 14px / 19px "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 19px;
   position: relative;
   z-index: 102;
   overflow: visible;

@@ -4,6 +4,10 @@ const ready = () => {
   }
   paintRating()
 
+  if (document.querySelector(`[data-expander]`)) {
+    expander.init()
+  }
+
   if (document.querySelector(`[data-accordion]`)) {
     accordion.init()
   }
@@ -50,6 +54,26 @@ const accordion = {
     const button = item.querySelector(`.accordion-title`)
     if (button.dataset.show) {
       button.innerHTML = button.dataset.hide
+    }
+  }
+}
+
+const expander = {
+  init () {
+    const expanderElements = [...document.querySelectorAll(`[data-expander]`)]
+    expanderElements.forEach(expanderElement => {
+      const expanderItems = [...expanderElement.querySelectorAll(`[data-expander-item]`)]
+      expanderItems.forEach(expanderItem => {
+        expanderItem.addEventListener('click',
+          () => expander.toggle(expanderItem, expanderElement))
+      })
+    })
+  },
+
+  toggle (expanderItem, expanderElement) {
+    if (!expanderItem.classList.contains(`_is-active`) && event.target.tagName.toLowerCase() !== 'a') {
+      expanderElement.querySelector(`._is-active[data-expander-item]`).classList.remove(`_is-active`)
+      expanderItem.classList.add(`_is-active`)
     }
   }
 }
@@ -311,5 +335,3 @@ const layoutView = {
     }
   }
 }
-
-

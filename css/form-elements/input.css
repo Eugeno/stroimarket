@@ -1,5 +1,6 @@
 .input {
-  font: 400 14px / 19px "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 19px;
   display: block;
   box-sizing: border-box;
   width: 100%;

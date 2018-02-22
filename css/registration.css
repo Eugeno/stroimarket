@@ -249,10 +249,7 @@
 }
 
 .registration__time-input {
-  margin-top: 0;
   margin-bottom: 20px;
-  padding-left: 0;
-  list-style: none;
 }
 
 .registration__time-input li:not(:first-child) {
