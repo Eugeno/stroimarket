@@ -1,0 +1,25 @@
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.pagination__item {
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #7e8890;
+}
+
+.pagination__item:first-child {
+  margin-left: 0;
+}
+
+.pagination__item:not([href]) {
+  color: #d9e2e7;
+}
+
+.pagination__item._is-current {
+  color: #f89e01;
+}

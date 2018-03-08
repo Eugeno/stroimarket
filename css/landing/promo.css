@@ -7,7 +7,7 @@
   text-align: center;
   color: #fff;
   background: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),
-              #455056 url(//placehold.it/1280x715) no-repeat center / cover;
+  #455056 url(//placehold.it/1280x715) no-repeat center / cover;
 }
 
 .landing-promo_full-screen .landing-promo__container {
@@ -15,21 +15,20 @@
   min-height: 600px;
   padding-top: 46px;
   background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
-              #455056 url(//placehold.it/1280x715) no-repeat center / cover;
+  #455056 url(//placehold.it/1280x715) no-repeat center / cover;
 }
 
 .landing-promo__heading {
   font-size: 40px;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 50px;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #fcfcfc;
 }
 
 .landing-promo__lead {
   font-size: 20px;
-  font-weight: 300;
   line-height: 27px;
   margin-top: 0;
   margin-bottom: 0;
@@ -37,7 +36,16 @@
 }
 
 .landing-promo__button {
-  margin-top: 40px;
+  margin-top: 50px;
+}
+
+.landing-promo__input-row {
+  margin-top: 50px;
+}
+
+.landing-promo__input-row .button {
+  width: 200px;
+  flex-shrink: 0;
 }
 
 .landing-promo__more-info {

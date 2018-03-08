@@ -1,10 +1,10 @@
 .landing-header {
   position: fixed;
+  z-index: 9;
   top: 0;
   right: 0;
   left: 0;
   background-color: rgba(0,0,0,.5);
-  z-index: 9;
 }
 
 .landing-header__container {
@@ -13,17 +13,12 @@
   height: 60px;
 }
 
-.landing-header__link {
-  font-size: 16px;
-  line-height: 22px;
-  position: relative;
-  bottom: 1px;
-  text-decoration: none;
+.landing-header__user-actions .user-actions__link {
   color: #f8f9fb;
 }
 
-.landing-header__link_phone {
+.landing-header__phone-link {
   margin-right: 100px;
   white-space: nowrap;
+  color: #f8f9fb;
 }
-

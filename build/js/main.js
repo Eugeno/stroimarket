@@ -24,14 +24,23 @@ var ready = function ready() {
   tabs.forEach(function (tab) {
     return tabControl.init(tab);
   });
+
+  if (document.querySelector('[data-minimizable]')) {
+    minimizeTexts([].concat(_toConsumableArray(document.querySelectorAll('[data-minimizable]'))));
+  }
+
+  if (document.querySelector('.button-counter')) {
+    buttonCounter.init();
+  }
 };
 
 document.addEventListener('DOMContentLoaded', ready);
 
 var accordion = {
   init: function init() {
-    var items = [].concat(_toConsumableArray(document.querySelectorAll('[data-accordion]')));
-    items.forEach(function (item) {
+    var items = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelectorAll('[data-accordion]');
+
+    [].concat(_toConsumableArray(items)).forEach(function (item) {
       var title = item.querySelector('.accordion-title');
       title.addEventListener('click', function () {
         return accordion.toggle(item);
@@ -52,6 +61,13 @@ var accordion = {
     var button = item.querySelector('.accordion-title');
     if (button.dataset.show) {
       button.innerHTML = item.classList.contains('_is-open') ? button.dataset.hide : button.dataset.show;
+    }
+
+    var nestedAccordions = [].concat(_toConsumableArray(item.querySelectorAll('[data-accordion]')));
+    if (nestedAccordions) {
+      nestedAccordions.forEach(function (nestedAccordion) {
+        return accordion.close(nestedAccordion);
+      });
     }
   },
   close: function close(item) {
@@ -148,6 +164,10 @@ var tabControl = {
       tabSwitcher.classList.add(activeClass);
       tabsContent.querySelector('[data-tab="' + activeTabSwitcher.dataset.tab + '"]').hidden = true;
       tabsContent.querySelector('[data-tab="' + tabSwitcher.dataset.tab + '"]').hidden = false;
+
+      if (tabsContent.querySelector('._is-minimized[data-minimizable]')) {
+        minimizeTexts([].concat(_toConsumableArray(tabsContent.querySelectorAll('._is-minimized[data-minimizable]'))));
+      }
     }
   }
 };
@@ -164,12 +184,10 @@ var filePreview = {
     reader.readAsDataURL(file);
   },
   remove: function remove(id) {
-    $.post('/profile/remove-logo', {}, function () {
-      var input = document.getElementById(id);
-      input.value = '';
-      input.classList.remove('_is-chosen');
-      input.nextElementSibling.style.backgroundImage = 'none';
-    });
+    var input = document.getElementById(id);
+    input.value = '';
+    input.classList.remove('_is-chosen');
+    input.nextElementSibling.style.backgroundImage = 'none';
   }
 };
 
@@ -335,6 +353,78 @@ var layoutView = {
       document.querySelector('.layout-view__layout-type_grid').classList.toggle('_is-active');
       document.querySelector(selector).classList.toggle('_list-view');
       document.querySelector(selector).classList.toggle('_grid-view');
+    }
+  }
+};
+
+var minimizeTexts = function minimizeTexts(texts) {
+  texts.forEach(function (text) {
+    var button = text.querySelector('.product-sheet__expand-caption');
+    if (text.scrollHeight) {
+      if (text.scrollHeight > text.clientHeight) {
+        text.classList.add('_is-minimized');
+        button.addEventListener('click', function () {
+          text.classList.remove('_is-minimized');
+          button.remove();
+        });
+      } else {
+        text.classList.remove('_is-minimized');
+        if (button) button.remove();
+      }
+    }
+  });
+};
+
+var buttonCounter = {
+  init: function init() {
+    var items = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelectorAll('.button-counter');
+
+    [].concat(_toConsumableArray(items)).forEach(function (item) {
+      var count = item.querySelector('.button-counter__count');
+      var increment = item.querySelector('.button-counter__control_increment');
+      var decrement = item.querySelector('.button-counter__control_decrement');
+      var options = {
+        item: item,
+        count: count,
+        increment: increment,
+        decrement: decrement,
+        min: 1,
+        max: 99
+      };
+      increment.addEventListener('click', function () {
+        return buttonCounter.increase(options);
+      });
+      decrement.addEventListener('click', function () {
+        return buttonCounter.decrease(options);
+      });
+    });
+  },
+  increase: function increase(options) {
+    if (!options.increment.disabled) {
+      options.count.value++;
+      this.checkEdges(options);
+    }
+  },
+  decrease: function decrease(options) {
+    if (!options.decrement.disabled) {
+      options.count.value--;
+      this.checkEdges(options);
+    }
+  },
+  checkEdges: function checkEdges(options) {
+    if (+options.count.value === options.max) {
+      options.increment.disabled = true;
+    } else {
+      if (options.increment.disabled) {
+        options.increment.disabled = false;
+      }
+    }
+    if (+options.count.value === options.min) {
+      options.decrement.disabled = true;
+    } else {
+      if (options.decrement.disabled) {
+        options.decrement.disabled = false;
+      }
     }
   }
 };

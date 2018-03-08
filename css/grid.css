@@ -1,6 +1,7 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
+  width: calc(100% + 40px);
   margin-left: -40px;
 }
 

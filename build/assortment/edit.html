@@ -50,24 +50,44 @@
       <div class="grid">
         <div class="grid__column_side-panel _is-minimized">
           <ul class="side-panel">
-            <li class="side-panel__item side-panel__item_company" data-accordion>
+            <li class="side-panel__item side-panel__item_company"
+                data-accordion="side-menu">
               <span class="accordion-title">Моя компания</span>
               <ul class="accordion-content" hidden>
-                <li><a href="javascript:void(0)">Рабочий стол</a></li>
-                <li><a>Ассортимент</a></li>
-                <li><a href="javascript:void(0)">Претензии</a></li>
-                <li><a href="javascript:void(0)">Полученные заказы</a></li>
-                <li><a href="javascript:void(0)">Полученные отзывы</a></li>
+                <li><a>Рабочий стол</a></li>
+                <li><a href="javascript:void(0)">Ассортимент</a></li>
+                <li class="_develop" data-develop="в разработке">
+                  <a>Претензии</a>
+                </li>
               </ul>
             </li>
-            <li class="side-panel__item side-panel__item_catalog" data-accordion>
+            <li class="side-panel__item side-panel__item_catalog"
+                data-accordion="side-menu">
               <span class="accordion-title">Каталог</span>
+              <ul class="accordion-content" hidden>
+                <li><a href="javascript:void(0)">Товары</a></li>
+                <li><a href="javascript:void(0)">Поставщики</a></li>
+                <li><a href="javascript:void(0)">Магазины</a></li>
+              </ul>
             </li>
-            <li class="side-panel__item side-panel__item_purchases" data-accordion>
-              <span class="accordion-title">Закупки</span>
+            <li class="side-panel__item side-panel__item_purchases side-panel__item_developing"
+                data-accordion="side-menu">
+              <span class="accordion-title" data-develop="в разработке">Закупки</span>
+              <ul class="accordion-content" hidden>
+                <li><a href="javascript:void(0)">Список закупок</a></li>
+                <li><a href="javascript:void(0)">Мои закупки</a></li>
+              </ul>
             </li>
-            <li class="side-panel__item side-panel__item_settings" data-accordion>
+            <li class="side-panel__item side-panel__item_settings"
+                data-accordion="side-menu">
               <span class="accordion-title">Настройки</span>
+              <ul class="accordion-content" hidden>
+                <li><a href="javascript:void(0)">Аккаунт</a></li>
+                <li><a href="javascript:void(0)">Профиль</a></li>
+                <li><a href="javascript:void(0)">Уведомления</a></li>
+                <li><a href="javascript:void(0)">Оплата</a></li>
+                <li><a href="javascript:void(0)">Реквизиты</a></li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -116,13 +136,13 @@
                 <thead>
                 <tr>
                   <th>Соответствие</th>
-                  <th>Артикул</th>
-                  <th>Артикул СМ</th>
-                  <th>Товар</th>
-                  <th>Категория</th>
-                  <th>Наличие</th>
-                  <th>Обновлен</th>
-                  <th>Цена</th>
+                  <th class="_is-active"><a class="link">Артикул</a></th>
+                  <th><a class="link">Артикул СМ</a></th>
+                  <th><a class="link">Товар</a></th>
+                  <th><a class="link">Категория</a></th>
+                  <th><a class="link">Наличие</a></th>
+                  <th><a class="link">Обновлен</a></th>
+                  <th><a class="link">Цена</a></th>
                   <th>Действие</th>
                 </tr>
                 </thead>
@@ -379,14 +399,14 @@
                 </tr>
                 </tbody>
               </table>
-              <section class="edit-assortment__pagination">
-                <a>Предыдущая</a>
-                <a class="_is-current">1</a>
-                <a href="javascript:void(0)">2</a>
-                <a href="javascript:void(0)">…</a>
-                <a href="javascript:void(0)">24</a>
-                <a href="javascript:void(0)">25</a>
-                <a href="javascript:void(0)">Следующая</a>
+              <section class="pagination">
+                <a class="pagination__item">Предыдущая</a>
+                <a class="pagination__item _is-current">1</a>
+                <a class="pagination__item" href="javascript:void(0)">2</a>
+                <a class="pagination__item" href="javascript:void(0)">…</a>
+                <a class="pagination__item" href="javascript:void(0)">24</a>
+                <a class="pagination__item" href="javascript:void(0)">25</a>
+                <a class="pagination__item" href="javascript:void(0)">Следующая</a>
               </section>
             </div>
           </div>

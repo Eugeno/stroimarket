@@ -75,6 +75,27 @@
   background-color: #f89e01;
 }
 
+.dashboard__back-wrapper {
+  position: relative;
+}
+
+.dashboard__back-wrapper::before {
+  position: absolute;
+  top: -2px;
+  left: 10px;
+  width: 2px;
+  height: 28px;
+  content: "";
+  background-color: #f89e01;
+}
+
+.dashboard__back-link {
+  font-size: 16px;
+  line-height: 22px;
+  margin-left: 22px;
+  color: #7e8890;
+}
+
 .dashboard__p-h3 {
   margin-top: 20px;
   margin-bottom: 15px;
@@ -606,9 +627,9 @@
 }
 
 .text-select .dk-selected {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 27px;
+  line-height: 22px;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -619,7 +640,7 @@
 
 .text-select .dk-select-options {
   position: absolute;
-  z-index: 100;
+  z-index: 13;
   left: 50%;
   display: none;
   width: 290px;

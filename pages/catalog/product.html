@@ -78,14 +78,14 @@
         <div class="grid__column">
           <div class="dashboard">
             <h2 class="h2 dashboard__h2">Каталог</h2>
-            <h3 class="h3 h3-selector">
-              Товары
-              <span class="breadcrumbs">
-                <span>Стройматериалы</span>
-                <span>Сухие смеси, грунтовки</span>
-                <span>Штукатурки (86)</span>
-              </span>
-            </h3>
+            <div class="flex">
+              <h3 class="h3">
+                Товары
+              </h3>
+              <div class="dashboard__back-wrapper">
+                <a class="link dashboard__back-link" href="javascript:void(0)">Назад к списку товаров</a>
+              </div>
+            </div>
 
             <div class="assortment">
               <div class="product-sheet">
@@ -106,10 +106,9 @@
                     Выравнивающая, гипсовая основа
                   </p>
                 </div>
-                <div class="product-sheet__description">
-                  <b>
-                    Описание
-                  </b>
+
+                <h3 class="product-sheet__title">Описание</h3>
+                <div class="product-sheet__description product-sheet__description_minimized" data-minimizable>
                   <p>
                     Предназначена для высококачественного оштукатуривания потолков и стен с обычным твердым основанием,
                     например, таких как, бетон, кирпич, цементная штукатурка, а так же поверхностей из пенополистирола,
@@ -121,6 +120,18 @@
                   <p>
                     Можно использовать для отделки помещений с нормальной влажностью, а также в кухнях и ванных.
                   </p>
+                  <p>
+                    Предназначена для высококачественного оштукатуривания потолков и стен с обычным твердым основанием,
+                    например, таких как, бетон, кирпич, цементная штукатурка, а так же поверхностей из пенополистирола,
+                    ЦСП.
+                  </p>
+                  <p>
+                    Особенно рекомендуется для гладких бетонных потолочных и стеновых поверхностей.
+                  </p>
+                  <p>
+                    Можно использовать для отделки помещений с нормальной влажностью, а также в кухнях и ванных.
+                  </p>
+                  <button class="button product-sheet__expand-caption" type="button">Показать полностью</button>
                 </div>
               </div>
 
@@ -248,26 +259,33 @@
               <input class="input choose-city__search" type="search" placeholder="Поиск">
               <ul class="choose-city__list">
                 <li>
-                  <input type="radio" id="city-1" name="city">
+                  <input type="checkbox" id="city-1" name="city">
                   <label for="city-1">Название города</label>
                 </li>
                 <li>
-                  <input type="radio" id="city-2" name="city">
+                  <input type="checkbox" id="city-2" name="city">
                   <label for="city-2">Название города</label>
                 </li>
                 <li>
-                  <input type="radio" id="city-3" name="city">
+                  <input type="checkbox" id="city-3" name="city">
                   <label for="city-3">Название города</label>
                 </li>
                 <li>
-                  <input type="radio" id="city-4" name="city">
+                  <input type="checkbox" id="city-4" name="city">
                   <label for="city-4">Название города</label>
                 </li>
                 <li>
-                  <input type="radio" id="city-5" name="city">
+                  <input type="checkbox" id="city-5" name="city">
                   <label for="city-5">Название города</label>
                 </li>
               </ul>
+              <div class="grid grid_small">
+                <div class="grid__column_3-5 grid__column_center">
+                  <button class="button form__button" type="button" onclick="modal.close('#choose-city')">
+                    Подтвердить
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

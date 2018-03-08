@@ -6,6 +6,7 @@
   font-size: 14px;
   line-height: 19px;
   position: relative;
+  display: block;
   padding-left: 25px;
   color: #455056;
 }

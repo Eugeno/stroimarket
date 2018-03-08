@@ -517,7 +517,7 @@
                                placeholder="От" value="10:00">
                       </div>
                       <div class="grid__column_1-2">
-                        <input class="form__input" type="text" data-id="work-end-2"
+                        <input class="input" type="text" data-id="work-end-2"
                                placeholder="До" value="22:00">
                       </div>
                     </div>
@@ -820,11 +820,28 @@
   </template>
 
   <script src="/js/lib/dropkick.js"></script>
+  <script src="/js/lib/imask.min.js"></script>
   <script src="/js/main.min.js"></script>
   <script>
     var placeSelect = new Dropkick('#place', { });
     var buildingSelect = new Dropkick('#building', { });
     var deliverySelect = new Dropkick('#delivery', { });
+
+    var operatingTimeModal = document.getElementById('operating-time');
+    var timeInputs = Array.prototype.slice.call(operatingTimeModal.querySelectorAll('input[data-id]'));
+
+    var timeMaskOptions = {
+      mask: 'HH:TT',
+      groups: {
+        HH: new IMask.MaskedPattern.Group.Range([0, 23]),
+        TT: new IMask.MaskedPattern.Group.Range([0, 59]),
+      }
+    }
+
+    var maskedInputs = {}
+    timeInputs.forEach(function (timeInput, i) {
+      maskedInputs[i] = new IMask(timeInput, timeMaskOptions)
+    })
   </script>
 </body>
 </html>

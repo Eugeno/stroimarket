@@ -50,10 +50,32 @@
   margin-left: 25px;
 }
 
+.layout-view__count {
+  display: flex;
+  margin-left: auto;
+}
+
+.layout-view__count-link {
+  margin-left: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #455056;
+}
+
+.layout-view__count-link_active {
+  font-weight: 600;
+  cursor: auto;
+}
+
 .layout-view__layout {
   font-size: 0;
   display: flex;
   margin-left: auto;
+}
+
+.layout-view__count + .layout-view__layout {
+  margin-left: 10px;
 }
 
 .layout-view__layout-type {
@@ -79,4 +101,9 @@
 .layout-view__layout-type._is-active {
   cursor: auto;
   opacity: 1;
+}
+
+.layout-view__right-side {
+  margin-left: auto;
+  display: flex;
 }

@@ -14,7 +14,9 @@ gulp.task('style', function () {
   return gulp.src([
     'css/normalize.css',
     'css/fonts.css',
+    'css/lib/*.css',
     'css/main.css',
+    'css/grid.css',
     'css/form-elements/*.css',
     'css/form.css',
     'css/**/*.css'
@@ -58,7 +60,7 @@ gulp.task('copy-html', function () {
 gulp.task('copy', ['copy-html', 'scripts', 'style'], function () {
   return gulp.src([
     'fonts/**/*.{woff,woff2}',
-    'img/*.*',
+    'img/**/*.*',
     'js/lib/*.*'
   ], {base: '.'})
   .pipe(gulp.dest('build'));
@@ -80,7 +82,7 @@ gulp.task('css-watch', ['style'], function (done) {
 
 gulp.task('serve', ['assemble'], function () {
   server.init({
-    server: './build',
+    server: buildPath,
     notify: false,
     open: true,
     port: 3502,

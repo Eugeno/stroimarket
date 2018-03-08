@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Строймаркет</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="super-header">
+      <div class="container super-header__container">
+        <ul class="list-reset super-header__menu">
+          <li data-accordion>
+            <a class="link accordion-title" href="javascript:void(0)">
+              Каталог
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 8" width="13" height="8">
+                <path d="M6.5,7.3L6,7,0.5,1.5A0.7,0.7,0,0,1,1.5.5l5,5,5-5a0.7,0.7,0,0,1,1.1,1.1L7,7Z"/>
+              </svg>
+            </a>
+            <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+              <li data-accordion="level-1">
+                <span class="accordion-title">Строительные материалы</span>
+                <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                  <li>
+                    <a href="javascript:void(0)">Ссылка</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">Ссылка</a>
+                  </li>
+                </ul>
+              </li>
+              <li data-accordion="level-1">
+                <span class="accordion-title">Название раздела</span>
+                <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                  <li>
+                    <a href="javascript:void(0)">Ссылка</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">Ссылка</a>
+                  </li>
+                </ul>
+              </li>
+              <li data-accordion="level-1">
+                <span class="accordion-title">Отделочные материалы</span>
+                <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                  <li data-accordion="level-2">
+                    <span class="accordion-title">Инструменты</span>
+                    <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-accordion="level-2">
+                    <span class="accordion-title">Наполньные покрытия</span>
+                    <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-accordion="level-2">
+                    <span class="accordion-title">Плитка</span>
+                    <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                      <li>
+                        <a href="javascript:void(0)">Плитка, камень, мозайка</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Затирки и добавки</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Клеи для укладки</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Подготовка основания</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Аксессуары</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-accordion="level-2">
+                    <span class="accordion-title">Плитка</span>
+                    <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a class="link" href="javascript:void(0)">Строительные центры</a></li>
+          <li><a class="link" href="javascript:void(0)">Доставка и подъём</a></li>
+          <li><a class="link" href="javascript:void(0)">Возврат</a></li>
+          <li><a class="link" href="javascript:void(0)">Все услуги</a></li>
+        </ul>
+        <a class="link super-header__geo" href="javascript:void(0)">
+          Местоположение
+        </a>
+      </div>
+    </div>
+    <div class="container page-header__container">
+      <a class="logo" href="/">Строймаркет</a>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="registration">
+        <div class="grid">
+          <div class="grid__column_2-5 grid__column_center">
+            <div class="registration__step">
+              <h2 class="h2">
+                Регистрация в качестве покупателя
+              </h2>
+              <p class="registration__caption">
+                По адресу info@shtukaturkin.ru отправлено письмо с паролем для входа в личный кабинет.
+              </p>
+              <form class="form registration__form">
+                <div class="grid form__row">
+                  <div class="grid__column_2-5">
+                    <label class="form__label" for="registration_name">Пароль:</label>
+                  </div>
+                  <div class="grid__column_3-5">
+                    <input class="input" id="registration_name"
+                           type="password" placeholder="Введите полученный пароль">
+                  </div>
+                </div>
+                <input class="form__switcher" id="registration_is-producer" type="checkbox" checked>
+                <label for="registration_is-producer" data-checked="да" data-not-checked="нет">
+                  Запомнить пароль?
+                </label>
+                <button class="button form__button" type="submit">
+                  Войти в личный кабинет
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

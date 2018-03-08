@@ -106,12 +106,14 @@
 }
 
 .registration__phone-code {
-  width: 30.4%;
+  width: calc(30.4% + 1px);
+  margin-left: -1px;
   text-align: center;
 }
 
 .registration__phone-number {
-  width: 46.5%;
+  width: calc(46.5% + 1px);
+  margin-left: -1px;
   text-align: center;
 }
 

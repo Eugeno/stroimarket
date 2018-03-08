@@ -9,18 +9,18 @@
   <header class="landing-header">
     <div class="container landing-header__container">
       <a class="logo">Строймаркет</a>
-      <a class="landing-header__link landing-header__link_phone"
+      <a class="link user-actions__link landing-header__phone-link"
          href="tel:88009690000">
         8 800 969 00 00
       </a>
       <ul class="list-reset user-actions landing-header__user-actions">
         <li class="user-actions__item">
-          <a class="landing-header__link" href="/registration/">
+          <a class="link user-actions__link" href="/registration/">
             Регистрация
           </a>
         </li>
         <li class="user-actions__item user-actions__item_login">
-          <a class="landing-header__link" href="/login/">
+          <a class="link user-actions__link" href="/login/">
             Войти
           </a>
         </li>
@@ -34,7 +34,7 @@
           Крупнейшая торговая площадка по строительным и отделочным материалам в России
         </h2>
         <div class="grid">
-          <div class="grid__column_2-3 grid__column_center">
+          <div class="grid__column_5-6 grid__column_center">
             <p class="landing-promo__lead">
               Находитесь в единой базе продавцов, расширяйте сбыт, снижайте затраты, совершайте закупки по самым
               выгодным ценам и получайте скидки от поставщиков со всей России
@@ -57,7 +57,7 @@
     <section class="landing-block" id="moreinfo">
       <div class="container">
         <div class="grid">
-          <div class="grid__column_1-2">
+          <div class="grid__column_1-2" data-scroll="left">
             <h3 class="landing-block__title">
               Единый для покупателей каталог всех строительных и отделочных материалов в России
             </h3>
@@ -82,7 +82,7 @@
           </div>
           <div class="grid__column_1-2">
             <div class="landing-block__img landing-block__img_right">
-              <img src="//placehold.it/1280x800" alt="">
+              <img src="/img/assets/l-1@1x.png" srcset="/img/assets/l-1@2x.png 2x" alt="">
             </div>
           </div>
         </div>
@@ -94,10 +94,10 @@
         <div class="grid">
           <div class="grid__column_1-2">
             <div class="landing-block__img landing-block__img_left">
-              <img src="//placehold.it/1280x800" alt="">
+              <img src="/img/assets/l-2@1x.png" srcset="/img/assets/l-2@2x.png 2x" alt="">
             </div>
           </div>
-          <div class="grid__column_1-2">
+          <div class="grid__column_1-2" data-scroll="right">
             <h3 class="landing-block__title">
               Постоянные скидки для участников «Строймаркета» от поставщиков по всей России
             </h3>
@@ -122,7 +122,7 @@
     <section class="landing-block">
       <div class="container">
         <div class="grid">
-          <div class="grid__column_1-2">
+          <div class="grid__column_1-2" data-scroll="left">
             <h3 class="landing-block__title">
               Единая база оптовых компаний и производителей строительных и отделочных материалов
             </h3>
@@ -142,7 +142,7 @@
           </div>
           <div class="grid__column_1-2">
             <div class="landing-block__img landing-block__img_right">
-              <img src="//placehold.it/1280x800" alt="">
+              <img src="/img/assets/l-3@1x.png" srcset="/img/assets/l-3@2x.png 2x" alt="">
             </div>
           </div>
         </div>
@@ -155,7 +155,7 @@
           Совершайте закупки по самым выгодным ценам
         </h2>
         <div class="grid">
-          <div class="grid__column_2-3 grid__column_center">
+          <div class="grid__column_5-6 grid__column_center">
             <p class="landing-promo__lead">
               Внутренняя торговая площадка, представляющая собой список закупок, проводимых магазинами и
               комплектовщиками. Объявите закупку, а поставщики и производители отправят вам свои предложения о ценах и
@@ -217,97 +217,85 @@
       </div>
     </section>
   </main>
+
   <footer class="landing-footer">
     <div class="container">
       <div class="grid">
-        <div class="grid__column_1-4">
+        <div class="grid__column_1-3">
           <div class="landing-footer__logo-wrapper">
-            <a class="logo landing-footer__logo">Строймаркет</a>
+            <a class="logo">Строймаркет</a>
           </div>
           <p class="landing-footer__contacts">
-            999999, г. Город, ул. Улица, д. 99<br>
-            email@mail.com<br>
-            +7 999 999-9999
+            Бесплатная горячая линия
+            <span>8 (800) 777–77–86</span>
+          </p>
+          <p class="landing-footer__contacts">
+            Служба поддержки
+            <span>@email</span>
+          </p>
+          <p class="landing-footer__contacts">
+            © Строймаркет
+          </p>
+          <p class="landing-footer__contacts">
+            999999, г. Город, ул. Улица, д. 99, строение 99, офис 999
+          </p>
+          <p class="landing-footer__contacts">
+            Почтовый адрес: 999999, г. Город, ул. Улица, д. 99, строение 99, офис 999
+          </p>
+          <p class="landing-footer__contacts">
+            ИНН: 1234567890, ОГРН: 12345678901234
           </p>
         </div>
-        <div class="grid__column_1-6">
-          <b class="landing-footer__category-name">
-            Категория
-          </b>
+
+        <div class="grid__column_1-3">
           <ul class="list-reset landing-footer__list">
             <li>
-              <a href="javascript:void(0)">Пункт номер 1</a>
+              <a href="javascript:void(0)">Вопросы и ответы</a>
             </li>
             <li>
-              <a href="javascript:void(0)">Пункт номер 2</a>
+              <a href="javascript:void(0)">Политика конфиденциальности</a>
             </li>
             <li>
-              <a href="javascript:void(0)">Пункт номер 3</a>
-            </li>
-            <li>
-              <a href="javascript:void(0)">Пункт номер 4</a>
+              <a href="javascript:void(0)">Найти стройматериалы</a>
             </li>
           </ul>
         </div>
-        <div class="grid__column_1-6">
-          <b class="landing-footer__category-name">
-            Категория
-          </b>
+
+        <div class="grid__column_1-3">
           <ul class="list-reset landing-footer__list">
             <li>
-              <a href="javascript:void(0)">Пункт номер 1</a>
+              <a href="javascript:void(0)">Для поставщиков</a>
             </li>
             <li>
-              <a href="javascript:void(0)">Пункт номер 2</a>
+              <a href="javascript:void(0)">Для магазинов</a>
             </li>
             <li>
-              <a href="javascript:void(0)">Пункт номер 3</a>
-            </li>
-            <li>
-              <a href="javascript:void(0)">Пункт номер 4</a>
-            </li>
-          </ul>
-        </div>
-        <div class="grid__column_1-6">
-          <b class="landing-footer__category-name">
-            Категория
-          </b>
-          <ul class="list-reset landing-footer__list">
-            <li>
-              <a href="javascript:void(0)">Пункт номер 1</a>
-            </li>
-            <li>
-              <a href="javascript:void(0)">Пункт номер 2</a>
-            </li>
-            <li>
-              <a href="javascript:void(0)">Пункт номер 3</a>
-            </li>
-            <li>
-              <a href="javascript:void(0)">Пункт номер 4</a>
+              <a href="javascript:void(0)">Для застройщиков и комплектовщиков</a>
             </li>
           </ul>
         </div>
       </div>
-      <section class="landing-footer__privacy">
-        <div class="grid">
-          <div class="grid__column_1-4">
-            <p>© Строймаркет</p>
-          </div>
-          <div class="grid__column_3-4">
-            <ul class="list-reset landing-footer__documents">
-              <li>
-                <a href="javascript:void(0)">Политика конфиденциальности</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">Правила использования</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
     </div>
   </footer>
 
   <script src="/js/main.min.js"></script>
+  <script src="/js/lib/scrollreveal.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      window.sr = ScrollReveal();
+      sr.reveal('[data-scroll="left"]', {
+        origin: 'left',
+        distance: '200px',
+        duration: 1000,
+        scale: 1
+      });
+      sr.reveal('[data-scroll="right"]', {
+        origin: 'right',
+        distance: '200px',
+        duration: 1000,
+        scale: 1
+      });
+    });
+  </script>
 </body>
 </html>

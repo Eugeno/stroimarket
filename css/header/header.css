@@ -27,11 +27,27 @@
 .user-actions__link {
   font-size: 16px;
   line-height: 22px;
+  position: relative;
+  bottom: 1px;
   color: #7e8890;
+}
+
+.user-actions__link_active {
+  color: #f89e01;
+}
+
+.user-actions__link svg {
+  fill: currentColor;
 }
 
 .user-actions__item {
   margin-left: 30px;
+}
+
+.user-actions__item_icon .user-actions__link {
+  font-size: 0;
+  line-height: 0;
+  display: block;
 }
 
 .user-actions__item_notifications .user-actions__link {

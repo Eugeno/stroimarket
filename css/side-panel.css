@@ -8,7 +8,7 @@
 }
 
 .grid__column_side-panel._is-minimized {
-  z-index: 2;
+  z-index: 20;
   width: 100px;
 }
 
@@ -55,6 +55,11 @@
 .side-panel__item .accordion-title {
   padding: 15px 58px 13px;
   cursor: pointer;
+}
+
+._is-minimized .side-panel__item .accordion-title {
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .side-panel__item._is-open .accordion-title {

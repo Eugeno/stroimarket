@@ -19,7 +19,7 @@
   font-size: 14px;
   line-height: 19px;
   position: relative;
-  z-index: 102;
+  z-index: 12;
   overflow: visible;
   width: 100%;
   text-align: center;
@@ -40,7 +40,7 @@
 
 .select .dk-select-options {
   position: absolute;
-  z-index: 100;
+  z-index: 10;
   left: 0;
   display: none;
   min-width: calc(100% + 10px);
@@ -70,7 +70,7 @@
 
 .select.dk-select-open-down::before {
   position: absolute;
-  z-index: 101;
+  z-index: 11;
   top: 0;
   right: 0;
   bottom: 0;

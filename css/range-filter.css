@@ -1,0 +1,55 @@
+
+
+.range-filter__inputs-wrapper {
+  display: flex;
+}
+
+.range-filter__input:not(:first-child) {
+  margin-left: 10px;
+}
+
+.range-filter__input {
+  padding: 5px 10px 6px;
+  border-radius: 5px;
+}
+
+.range-filter__slider {
+  margin-top: 16px;
+  margin-bottom: 26px;
+}
+
+.noUi-target {
+  border: 0;
+  border-radius: 1px;
+  background: #eaeeef;
+  box-shadow: none;
+}
+
+.noUi-horizontal {
+  height: 2px;
+}
+
+.noUi-connect {
+  background: #f89e01;
+}
+
+.noUi-handle {
+  box-sizing: border-box;
+  border: 1px solid #b1b6bb;
+  border-radius: 50%;
+  box-shadow: none;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+  display: none;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 14px;
+  height: 14px;
+}
+
+html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
+  right: -7px;
+}

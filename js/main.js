@@ -18,14 +18,21 @@ const ready = () => {
 
   const tabs = [...document.querySelectorAll(`[data-tabs-title]`)]
   tabs.forEach(tab => tabControl.init(tab))
+
+  if (document.querySelector(`[data-minimizable]`)) {
+    minimizeTexts([...document.querySelectorAll(`[data-minimizable]`)])
+  }
+
+  if (document.querySelector(`.button-counter`)) {
+    buttonCounter.init()
+  }
 }
 
 document.addEventListener('DOMContentLoaded', ready)
 
 const accordion = {
-  init () {
-    const items = [...document.querySelectorAll(`[data-accordion]`)]
-    items.forEach(item => {
+  init (items = document.querySelectorAll(`[data-accordion]`)) {
+    [...items].forEach(item => {
       const title = item.querySelector(`.accordion-title`)
       title.addEventListener('click', () => accordion.toggle(item))
     })
@@ -45,6 +52,11 @@ const accordion = {
       button.innerHTML = item.classList.contains(`_is-open`) ?
         button.dataset.hide :
         button.dataset.show
+    }
+
+    const nestedAccordions = [...item.querySelectorAll(`[data-accordion]`)]
+    if (nestedAccordions) {
+      nestedAccordions.forEach(nestedAccordion => accordion.close(nestedAccordion))
     }
   },
 
@@ -138,6 +150,10 @@ const tabControl = {
       tabSwitcher.classList.add(activeClass)
       tabsContent.querySelector(`[data-tab="${activeTabSwitcher.dataset.tab}"]`).hidden = true
       tabsContent.querySelector(`[data-tab="${tabSwitcher.dataset.tab}"]`).hidden = false
+
+      if (tabsContent.querySelector(`._is-minimized[data-minimizable]`)) {
+        minimizeTexts([...tabsContent.querySelectorAll(`._is-minimized[data-minimizable]`)])
+      }
     }
   }
 }
@@ -332,6 +348,75 @@ const layoutView = {
       document.querySelector(`.layout-view__layout-type_grid`).classList.toggle(`_is-active`)
       document.querySelector(selector).classList.toggle(`_list-view`)
       document.querySelector(selector).classList.toggle(`_grid-view`)
+    }
+  }
+}
+
+const minimizeTexts = texts => {
+  texts.forEach(text => {
+    const button = text.querySelector(`.product-sheet__expand-caption`)
+    if (text.scrollHeight) {
+      if (text.scrollHeight > text.clientHeight) {
+        text.classList.add(`_is-minimized`)
+        button.addEventListener('click', () => {
+          text.classList.remove(`_is-minimized`)
+          button.remove()
+        })
+      } else {
+        text.classList.remove(`_is-minimized`)
+        if (button) button.remove()
+      }
+    }
+  })
+}
+
+const buttonCounter = {
+  init (items = document.querySelectorAll(`.button-counter`)) {
+    [...items].forEach(item => {
+      const count = item.querySelector(`.button-counter__count`)
+      const increment = item.querySelector(`.button-counter__control_increment`)
+      const decrement = item.querySelector(`.button-counter__control_decrement`)
+      const options = {
+        item,
+        count,
+        increment,
+        decrement,
+        min: 1,
+        max: 99
+      }
+      increment.addEventListener('click', () => buttonCounter.increase(options))
+      decrement.addEventListener('click', () => buttonCounter.decrease(options))
+    })
+  },
+
+  increase (options) {
+    if (!options.increment.disabled) {
+      options.count.value++
+      this.checkEdges(options)
+    }
+  },
+
+  decrease (options) {
+    if (!options.decrement.disabled) {
+      options.count.value--
+      this.checkEdges(options)
+    }
+  },
+
+  checkEdges (options) {
+    if (+options.count.value === options.max) {
+      options.increment.disabled = true
+    } else {
+      if (options.increment.disabled) {
+        options.increment.disabled = false
+      }
+    }
+    if (+options.count.value === options.min) {
+      options.decrement.disabled = true
+    } else {
+      if (options.decrement.disabled) {
+        options.decrement.disabled = false
+      }
     }
   }
 }

@@ -8,3 +8,15 @@
 .rating > span {
   background-image: url(../img/rating-star_fill.svg);
 }
+
+.rating-reviews {
+  display: flex;
+}
+
+.rating-reviews__reviews {
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: -3px;
+  margin-left: 3px;
+  color: #b1b6bb;
+}

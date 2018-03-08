@@ -2,7 +2,7 @@
   font-size: 10px;
   line-height: 14px;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 15px;
   color: #7e8890;
 }
 
@@ -42,8 +42,8 @@
   color: #7e8890;
 }
 
-.choose-city__list input + label::before,
-.choose-city__list input + label::after {
+.choose-city__list input[type="checkbox"] + label::before,
+.choose-city__list input[type="checkbox"] + label::after {
   position: absolute;
   top: 25px;
   right: 20px;

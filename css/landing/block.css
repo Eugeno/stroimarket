@@ -9,8 +9,17 @@
   text-align: center;
 }
 
+.landing-block_assortment {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
 .landing-block + .landing-block {
   border-top: 1px solid #d9e2e7;
+}
+
+.landing-block__h2 {
+  margin-bottom: 20px;
 }
 
 .landing-block__title {
@@ -165,6 +174,32 @@
 }
 
 .landing-block__feature_discounts::before {
-  background-image: url(../../img/landing-block_discounts.svg);
+  background-image: url(../../img/landing-block_feature_discounts.svg);
   background-size: 82px 70px;
+}
+
+.landing-block__feature_time::before {
+  background-image: url(../../img/landing-block_feature_time.svg);
+  background-size: 70px 70px;
+}
+
+.landing-block__feature_money::before {
+  background-image: url(../../img/landing-block_feature_money.svg);
+  background-size: 70px 70px;
+}
+
+.landing-block__feature_guarantees::before {
+  background-image: url(../../img/landing-block_feature_guarantees.svg);
+  background-size: 70px 70px;
+}
+
+.landing-block__feature b {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.landing-block__feature p {
+  margin-top: 0;
+  margin-bottom: 0;
 }

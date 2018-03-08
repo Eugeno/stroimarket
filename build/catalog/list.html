@@ -17,10 +17,44 @@
 
         <div class="grid__column">
           <ul class="list-reset user-actions">
-            <li class="user-actions__item user-actions__item_notifications">
-              <a class="link user-actions__link" href="javascript:void(0)">
+            <li class="user-actions__item user-actions__item_notifications" data-accordion>
+              <a class="accordion-title link user-actions__link">
                 Уведомления
               </a>
+              <div class="accordion-content notification-popup" hidden>
+                <header class="notification-popup__header">
+                  Уведомления
+                </header>
+                <ul class="notification-popup__list">
+                  <li>
+                    <a class="link notification-popup__link" href="javascript:void(0)">
+                      <div class="notification-popup__data">
+                        <p class="notification-popup__caption">Закупка №111</p>
+                        <p class="notification-popup__text">Новое предложение по закупке</p>
+                      </div>
+                      <time class="notification-popup__date" datetime="2017-10-20 12:36">
+                        сегодня<br>
+                        12:36
+                      </time>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="link notification-popup__link" href="javascript:void(0)">
+                      <div class="notification-popup__data">
+                        <p class="notification-popup__caption">Претензия №123</p>
+                        <p class="notification-popup__text">Новое предложение по закупке</p>
+                      </div>
+                      <time class="notification-popup__date" datetime="2017-10-15 15:10">
+                        15.10.17<br>
+                        15:10
+                      </time>
+                    </a>
+                  </li>
+                </ul>
+                <a class="link notification-popup__show-more" href="javascript:void(0)">
+                  Показать все
+                </a>
+              </div>
             </li>
             <li class="user-actions__item user-actions__item_messages">
               <a class="link user-actions__link" href="javascript:void(0)">
@@ -78,14 +112,7 @@
         <div class="grid__column">
           <div class="dashboard">
             <h2 class="h2 dashboard__h2">Каталог</h2>
-            <h3 class="h3 h3-selector">
-              Товары
-              <span class="breadcrumbs">
-                <span>Стройматериалы</span>
-                <span>Сухие смеси, грунтовки</span>
-                <span>Штукатурки (86)</span>
-              </span>
-            </h3>
+            <h3 class="h3">Товары</h3>
 
             <div class="assortment">
               <div class="grid">
