@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>Строймаркет</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -123,7 +123,8 @@
                 <div class="grid__column_4-7">
                   <div class="grid grid_small">
                     <div class="grid__column_1-1">
-                      <button class="button button_action" type="button">
+                      <button class="button button_action" type="button"
+                              onclick="modal.open('#choose-city')">
                         Выберите город
                       </button>
                     </div>
@@ -212,6 +213,90 @@
       </div>
     </div>
   </main>
+
+  <div class="modal modal_middle" id="choose-city">
+    <div class="container modal__container">
+      <div class="grid">
+        <div class="grid__column_1-2 grid__column_center">
+          <div class="modal__overlay"></div>
+          <header class="modal__header modal__header_compact">
+            <button class="modal__close" type="button">Закрыть</button>
+            <h3 class="modal__heading">
+              Выберите город
+            </h3>
+          </header>
+          <div class="modal__body modal__body_compact">
+            <div class="choose-city">
+              <input class="input choose-city__search" type="search" placeholder="Поиск">
+
+              <div class="form choose-city__form">
+                <fieldset>
+                  <legend>Топ города</legend>
+                  <p>
+                    <input type="radio" id="city-1" name="city">
+                    <label for="city-1">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-2" name="city">
+                    <label for="city-2">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-3" name="city">
+                    <label for="city-3">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-4" name="city">
+                    <label for="city-4">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-5" name="city">
+                    <label for="city-5">Название города</label>
+                  </p>
+                </fieldset>
+                <fieldset>
+                  <legend>A</legend>
+                  <p>
+                    <input type="radio" id="city-6" name="city">
+                    <label for="city-6">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-7" name="city">
+                    <label for="city-7">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-8" name="city">
+                    <label for="city-8">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-9" name="city">
+                    <label for="city-9">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-10" name="city">
+                    <label for="city-10">Название города</label>
+                  </p>
+                </fieldset>
+              </div>
+
+              <div class="grid grid_small">
+                <div class="grid__column_1-3">
+                  <button class="button button_secondary form__button" type="button"
+                          onclick="modal.close('#choose-city')">
+                    Отменить
+                  </button>
+                </div>
+                <div class="grid__column_2-3">
+                  <button class="button form__button" type="button" onclick="modal.close('#choose-city')">
+                    Подтвердить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="modal" id="operating-time">
     <div class="container modal__container">
@@ -426,7 +511,7 @@
   </div>
 
   <template id="operating-time-template">
-    <table class="registration__operating-time">
+    <table class="operating-time">
       <thead>
       <tr>
         <th>пн</th>
@@ -532,7 +617,7 @@
   <template id="delivery-item-template">
     <div class="registration-delivery-item">
       <button class="button button_action" type="button"
-              onclick="">
+              onclick="modal.open('#choose-city')">
         Населенный пункт
       </button>
       <select class="select form__select">

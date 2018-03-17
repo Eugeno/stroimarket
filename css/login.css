@@ -24,4 +24,5 @@
   padding-left: 18px;
   cursor: pointer;
   color: #7e8890;
+  background: url(../img/prev-page.svg) no-repeat left center / auto auto;
 }

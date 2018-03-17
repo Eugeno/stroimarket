@@ -23,8 +23,16 @@ const ready = () => {
     minimizeTexts([...document.querySelectorAll(`[data-minimizable]`)])
   }
 
-  if (document.querySelector(`.button-counter`)) {
-    buttonCounter.init()
+  if (document.querySelector(`[data-cart-counter]`)) {
+    cartCounter.init()
+  }
+
+  if (document.querySelector(`[data-summary-counter]`)) {
+    summaryCounter.init()
+  }
+
+  if (document.querySelector(`[data-choose-cities]`)) {
+    citiesChooser.init()
   }
 }
 
@@ -180,7 +188,7 @@ const filePreview = {
 
 const modal = {
   open (selector) {
-    event.preventDefault()
+    if (event) event.preventDefault()
     const modalWindow = document.querySelector(selector)
     modalWindow.classList.add(`_is-active`)
     const modalOverlay = modalWindow.querySelector(`.modal__overlay`)
@@ -272,6 +280,7 @@ const registrationDelivery = {
     const deliveryItemTemplate = document.getElementById(`delivery-item-template`)
     const deliveryItemToClone = deliveryItemTemplate.content.querySelector(`div`)
     const deliveryItem = deliveryItemToClone.cloneNode(true)
+    // const dp = new Dropkick(deliveryItem.querySelector(`select`))
     const addButton = registrationDeliveryWrapper.querySelector(`.registration__add-delivery`)
     addButton.parentNode.insertBefore(deliveryItem, addButton)
   }
@@ -370,12 +379,22 @@ const minimizeTexts = texts => {
   })
 }
 
-const buttonCounter = {
-  init (items = document.querySelectorAll(`.button-counter`)) {
+const triggerInput = (element) => {
+  const event = new Event('input', {
+    'bubbles': true,
+    'cancelable': true
+  })
+
+  element.dispatchEvent(event)
+}
+
+const cartCounter = {
+  init (items = document.querySelectorAll(`[data-cart-counter]`)) {
     [...items].forEach(item => {
-      const count = item.querySelector(`.button-counter__count`)
-      const increment = item.querySelector(`.button-counter__control_increment`)
-      const decrement = item.querySelector(`.button-counter__control_decrement`)
+      const count = item.querySelector(`[data-cart-count]`)
+      const increment = item.querySelector(`[data-cart-increment]`)
+      const decrement = item.querySelector(`[data-cart-decrement]`)
+
       const options = {
         item,
         count,
@@ -384,22 +403,27 @@ const buttonCounter = {
         min: 1,
         max: 99
       }
-      increment.addEventListener('click', () => buttonCounter.increase(options))
-      decrement.addEventListener('click', () => buttonCounter.decrease(options))
+      increment.addEventListener('click', () => {
+        this.increase(options)
+        triggerInput(count)
+      })
+      decrement.addEventListener('click', () => {
+        this.decrease(options)
+        triggerInput(count)
+      })
+      count.addEventListener('input', () => this.checkEdges(options))
     })
   },
 
   increase (options) {
     if (!options.increment.disabled) {
       options.count.value++
-      this.checkEdges(options)
     }
   },
 
   decrease (options) {
     if (!options.decrement.disabled) {
       options.count.value--
-      this.checkEdges(options)
     }
   },
 
@@ -417,6 +441,101 @@ const buttonCounter = {
       if (options.decrement.disabled) {
         options.decrement.disabled = false
       }
+    }
+  }
+}
+
+const summaryCounter = {
+  init (items = document.querySelectorAll(`[data-summary-counter]`)) {
+    [...items].forEach(item => {
+      const name = item.dataset.summaryCounter
+      const unit = item.querySelector(`[data-summary-unit="${name}"]`)
+      const increment = item.querySelector(`[data-summary-increment="${name}"]`)
+      const value = item.querySelector(`[data-summary-value="${name}"]`)
+      const summands = [...item.querySelectorAll(`[data-summary-summand="${name}"]`)]
+
+      const options = {
+        item,
+        unit,
+        increment,
+        value,
+        summands
+      }
+      if (increment) {
+        increment.addEventListener('input', () => this.calculate(options))
+      } else {
+        summands.forEach(summand => {
+          summand.addEventListener('input', () => this.calculate(options))
+        })
+      }
+    })
+  },
+
+  calculate (options) {
+    let value
+    if (options.increment) {
+      value = parseInt(options.increment.value, 10) * parseFloat(options.unit.innerHTML).toFixed(2)
+    } else {
+      value = options.summands.map(a => parseFloat(a.value)).reduce((a, b) => a + b, 0)
+    }
+    if (options.value.hasAttribute(`data-summary-bind`)) {
+      const name = options.value.dataset.summaryBind
+      const binded = options.item.querySelector(`[data-summary-binded="${name}"]`)
+      binded.value = value
+      triggerInput(binded)
+    }
+    options.value.innerHTML = value.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    })
+  }
+}
+
+const citiesChooser = {
+  init (items = document.querySelectorAll(`[data-choose-cities]`)) {
+    [...items].forEach(item => {
+      this.chooserForm = item.querySelector(`.choose-city__form`)
+      this.choosenContainer = this.chooserForm.querySelector(`fieldset`)
+      const cities = [...this.chooserForm.querySelectorAll(`input`)]
+      cities.forEach(city => city.addEventListener('change', () => this.action(city)))
+    })
+  },
+
+  action (city, isInit = false) {
+    const container = city.parentNode
+    if (city.checked) {
+      const clonedContainer = container.cloneNode(true)
+      this.choosenContainer.appendChild(clonedContainer)
+      this.choosenContainer.classList.remove(`_is-hidden`)
+
+      const clonedCity = clonedContainer.querySelector(`input`)
+      clonedCity.addEventListener('change', () => this.action(clonedCity))
+
+      city.dataset.id = city.getAttribute(`id`)
+      city.removeAttribute(`id`)
+      container.classList.add(`_is-chosen`)
+
+      const currentFieldset = container.parentNode
+      if (!currentFieldset.querySelector(`p:not(._is-chosen)`)) {
+        currentFieldset.classList.add(`_is-hidden`)
+      }
+    } else if (!isInit) {
+      const id = city.getAttribute(`id`)
+      container.remove()
+      const originalCity = this.chooserForm.querySelector(`[data-id="${id}"]`)
+      originalCity.setAttribute(`id`, originalCity.dataset.id)
+      originalCity.removeAttribute(`data-id`)
+      originalCity.checked = false
+
+      const originalContainer = originalCity.parentNode
+      originalContainer.classList.remove(`_is-chosen`)
+
+      if (!this.choosenContainer.querySelector(`p`)) {
+        this.choosenContainer.classList.add(`_is-hidden`)
+      }
+
+      const currentFieldset = originalContainer.parentNode
+      currentFieldset.classList.remove(`_is-hidden`)
     }
   }
 }

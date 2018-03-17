@@ -1,0 +1,52 @@
+.orders .order__products {
+  width: calc((100% - 200px) * .29729 + 140px);
+}
+
+.orders .order__seller {
+  width: calc((100% - 200px) * .35135);
+  margin-left: 20px;
+}
+
+.orders .order__seller-name {
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: #455056;
+}
+
+.orders .order__seller-type {
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #b1b6bb;
+}
+
+.orders .rating-reviews {
+  flex-direction: column;
+}
+
+.orders .rating-reviews__reviews {
+  margin-top: 3px;
+  margin-left: 0;
+}
+
+.orders .order__data {
+  width: calc((100% - 200px) * .35135);
+  margin-left: 40px;
+}
+
+.orders .order__summary {
+  margin-top: 5px;
+  margin-bottom: 0;
+  color: #455056;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+}
+
+.orders .order__actions {
+  padding-left: 26px;
+}

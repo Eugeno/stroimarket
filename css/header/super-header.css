@@ -93,14 +93,17 @@
   cursor: pointer;
 }
 
-
-
 .super-header__geo {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
   width: auto;
   margin-left: auto;
   padding: 0 0 0 15px;
+  cursor: pointer;
   color: #fcfcfc;
-  background: url(../../img/pin-icon_white.svg) no-repeat left 5px / 8px 12px;
+  border: 0;
+  background: url(../../img/pin-icon_white.svg) no-repeat left 4px / 8px 12px;
 }
 
 

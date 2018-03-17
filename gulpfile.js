@@ -19,6 +19,7 @@ gulp.task('style', function () {
     'css/grid.css',
     'css/form-elements/*.css',
     'css/form.css',
+    'css/header/*.css',
     'css/**/*.css'
   ])
   .pipe(concatCss('style.css'))
@@ -37,7 +38,7 @@ gulp.task('scripts', function () {
       presets: [
         ['env', {
           'targets': {
-            'browsers': ['last 2 versions', 'safari >= 9']
+            'browsers': ['last 2 versions']
           }
         }]
       ]
@@ -60,6 +61,12 @@ gulp.task('copy-html', function () {
 gulp.task('copy', ['copy-html', 'scripts', 'style'], function () {
   return gulp.src([
     'fonts/**/*.{woff,woff2}',
+    'manifest.json',
+    'favicon-16.png',
+    'favicon-32.png',
+    'apple-touch-icon.png',
+    'android-chrome-192.png',
+    'android-chrome-512.png',
     'img/**/*.*',
     'js/lib/*.*'
   ], {base: '.'})

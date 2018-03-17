@@ -305,14 +305,19 @@
   font-size: 14px;
   line-height: 19px;
   margin-top: 10px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   color: #7e8890;
 }
 
 .company-card__description {
   margin-top: 10px;
+  margin-bottom: 20px;
   padding-right: 60px;
   padding-left: 60px;
+}
+
+.company-card__description:last-child {
+  margin-bottom: 40px;
 }
 
 .company-card__description p {

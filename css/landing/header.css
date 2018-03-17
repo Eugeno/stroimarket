@@ -13,6 +13,11 @@
   height: 60px;
 }
 
+.landing-header__logo {
+  margin-right: auto;
+  background-image: url(../../img/logo_contrast.svg);
+}
+
 .landing-header__user-actions .user-actions__link {
   color: #f8f9fb;
 }

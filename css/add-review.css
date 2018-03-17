@@ -1,0 +1,45 @@
+
+
+.add-review__rating {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.add-review__rating-caption {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #4a4a4a;
+}
+
+.add-review__rating-count {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+.add-review__rating-count input {
+  display: none;
+}
+
+.add-review__rating-count input + label {
+  font-size: 0;
+  display: block;
+  width: 22px;
+  height: 21px;
+  cursor: pointer;
+  background: url(../img/rating-star.svg) no-repeat center / contain, url(../img/rating-star_fill.svg) no-repeat center / 0 0;
+}
+
+.add-review__rating-count input + label:hover,
+.add-review__rating-count input + label:hover ~ label,
+.add-review__rating-count:not(:hover) input:checked + label,
+.add-review__rating-count:not(:hover) input:checked + label ~ label {
+  background-image: url(../img/rating-star_fill.svg);
+}
+
+.add-review__button {
+  margin-top: 20px;
+}

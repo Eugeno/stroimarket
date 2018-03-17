@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Строймаркет</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="super-header">
+      <div class="container super-header__container">
+        <ul class="list-reset super-header__menu">
+          <li data-accordion>
+            <a class="link accordion-title" href="javascript:void(0)">
+              Каталог
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 8" width="13" height="8">
+                <path d="M6.5,7.3L6,7,0.5,1.5A0.7,0.7,0,0,1,1.5.5l5,5,5-5a0.7,0.7,0,0,1,1.1,1.1L7,7Z"/>
+              </svg>
+            </a>
+            <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+              <li data-accordion="level-1">
+                <span class="accordion-title">Строительные материалы</span>
+                <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                  <li>
+                    <a href="javascript:void(0)">Ссылка</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">Ссылка</a>
+                  </li>
+                </ul>
+              </li>
+              <li data-accordion="level-1">
+                <span class="accordion-title">Название раздела</span>
+                <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                  <li>
+                    <a href="javascript:void(0)">Ссылка</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">Ссылка</a>
+                  </li>
+                </ul>
+              </li>
+              <li data-accordion="level-1">
+                <span class="accordion-title">Отделочные материалы</span>
+                <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                  <li data-accordion="level-2">
+                    <span class="accordion-title">Инструменты</span>
+                    <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-accordion="level-2">
+                    <span class="accordion-title">Наполньные покрытия</span>
+                    <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-accordion="level-2">
+                    <span class="accordion-title">Плитка</span>
+                    <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                      <li>
+                        <a href="javascript:void(0)">Плитка, камень, мозайка</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Затирки и добавки</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Клеи для укладки</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Подготовка основания</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Аксессуары</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-accordion="level-2">
+                    <span class="accordion-title">Плитка</span>
+                    <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a class="link" href="javascript:void(0)">Для опта и бизнеса</a></li>
+          <li><a class="link" href="tel:88003332254">8 (800) 333–22–54</a></li>
+        </ul>
+        <button class="button super-header__geo" onclick="modal.open('#choose-city')">
+          Местоположение
+        </button>
+      </div>
+    </div>
+    <div class="container page-header__container">
+      <div class="grid page-header__grid">
+        <div class="grid__column_1-4">
+          <a class="logo" href="/">Строймаркет</a>
+        </div>
+
+        <div class="grid__column_3-4">
+          <ul class="list-reset user-actions">
+            <li class="user-actions__item user-actions__item_icon">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     viewBox="0 0 20 20" width="20" height="20">
+                  <use xlink:href="/img/header-icons.svg#feedback"></use>
+                </svg>
+                Отзывы
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_icon">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     viewBox="0 0 20 20" width="20" height="20">
+                  <use xlink:href="/img/header-icons.svg#orders"></use>
+                </svg>
+                Заказы
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_icon">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     viewBox="0 0 20 20" width="20" height="20">
+                  <use xlink:href="/img/header-icons.svg#cart"></use>
+                </svg>
+                Корзина
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_profile">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Сергей Александрович
+                <span class="user-actions__avatar"
+                      style="background-image: url('//placehold.it/44x44');"></span>
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_logout">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Выйти
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="customers checkout">
+        <h2 class="h2 customers__h2">Оформление заказа</h2>
+        <section class="checkout__section">
+          <h3 class="h3 checkout__h3">Магазин</h3>
+          <div class="grid">
+            <div class="grid__column_5-12">
+              <div class="checkout__seller">
+                <div class="checkout__seller-img">
+                  <img src="http://placehold.it/100x100" alt="">
+                </div>
+                <div class="checkout__seller-info">
+                  <p class="checkout__seller-name">
+                    Пластик Сибири
+                  </p>
+                  <p class="checkout__seller-type">
+                    Оптовая компания, производитель
+                  </p>
+                  <div class="rating-reviews">
+                    <span class="rating" data-value="5" data-max="5"><span></span></span>
+                    <span class="rating-reviews__reviews">Отзывы 99999</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid__column_1-4">
+              <p class="checkout__seller-contacts">
+                <span>Адрес:</span>
+                630052, Россия, г. Новосибирск, ул. Морской проспект, д. 10
+              </p>
+              <p class="checkout__seller-contacts">
+                <span>Телефон:</span>
+                8-800-555-35-35
+              </p>
+            </div>
+
+            <div class="grid__column_1-3">
+              <div class="operating-time-wrapper">
+                <table class="operating-time">
+                  <thead>
+                  <tr>
+                    <th>пн</th>
+                    <th>вт</th>
+                    <th>ср</th>
+                    <th>чт</th>
+                    <th class="_is-current">пт</th>
+                    <th>сб</th>
+                    <th class="day-off">вс</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>
+                      <span data-id="work-start-1">10:00</span>
+                      <span data-id="work-end-1">22:00</span>
+                    </td>
+                    <td>
+                      <span data-id="work-start-2">10:00</span>
+                      <span data-id="work-end-2">22:00</span>
+                    </td>
+                    <td>
+                      <span data-id="work-start-3">10:00</span>
+                      <span data-id="work-end-3">22:00</span>
+                    </td>
+                    <td>
+                      <span data-id="work-start-4">10:00</span>
+                      <span data-id="work-end-4">22:00</span>
+                    </td>
+                    <td class="_is-current">
+                      <span data-id="work-start-5">10:00</span>
+                      <span data-id="work-end-5">22:00</span>
+                    </td>
+                    <td>
+                      <span data-id="work-start-6">10:00</span>
+                      <span data-id="work-end-6">18:00</span>
+                    </td>
+                    <td class="_is-empty">
+                      <span data-id="work-start-7"></span>
+                      <span data-id="work-end-7"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="4">
+                      <span></span>
+                    </td>
+                    <td class="_is-current" colspan="1">
+                      <span>обед</span>
+                    </td>
+                    <td colspan="2">
+                      <span></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span data-id="lunch-start-1">14:00</span>
+                      <span data-id="lunch-end-1">15:00</span>
+                    </td>
+                    <td>
+                      <span data-id="lunch-start-2">14:00</span>
+                      <span data-id="lunch-end-2">15:00</span>
+                    </td>
+                    <td>
+                      <span data-id="lunch-start-3">14:00</span>
+                      <span data-id="lunch-end-3">15:00</span>
+                    </td>
+                    <td>
+                      <span data-id="lunch-start-4">14:00</span>
+                      <span data-id="lunch-end-4">15:00</span>
+                    </td>
+                    <td class="_is-current">
+                      <span data-id="lunch-start-5">14:00</span>
+                      <span data-id="lunch-end-5">15:00</span>
+                    </td>
+                    <td class="_is-empty">
+                      <span data-id="lunch-start-6"></span>
+                      <span data-id="lunch-end-6"></span>
+                    </td>
+                    <td class="_is-empty">
+                      <span data-id="lunch-start-7"></span>
+                      <span data-id="lunch-end-7"></span>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="checkout__section">
+          <h3 class="h3 checkout__h3">Заказ</h3>
+          <div class="grid">
+            <div class="grid__column_1-3">
+              <div class="checkout__product">
+                <div class="checkout__product-img">
+                  <img src="http://placehold.it/100x100" alt="">
+                </div>
+                <div class="checkout__product-info">
+                  <p class="checkout__product-name">
+                    KNAUF Ротбанд, 30 кг
+                  </p>
+                  <p class="checkout__product-type">
+                    Выравнивающая, гипсовая основа
+                  </p>
+                  <p class="checkout__product-data">
+                    Цена: <span>270,00 р.</span>
+                  </p>
+                  <p class="checkout__product-data">
+                    Количество: <span>2</span>
+                  </p>
+                </div>
+              </div>
+              <div class="checkout__product">
+                <div class="checkout__product-img">
+                  <img src="http://placehold.it/100x100" alt="">
+                </div>
+                <div class="checkout__product-info">
+                  <p class="checkout__product-name">
+                    KNAUF Ротбанд, 30 кг
+                  </p>
+                  <p class="checkout__product-type">
+                    Выравнивающая, гипсовая основа
+                  </p>
+                  <p class="checkout__product-data">
+                    Цена: <span>270,00 р.</span>
+                  </p>
+                  <p class="checkout__product-data">
+                    Количество: <span>2</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid__column_1-3">
+              <div class="checkout__product">
+                <div class="checkout__product-img">
+                  <img src="http://placehold.it/100x100" alt="">
+                </div>
+                <div class="checkout__product-info">
+                  <p class="checkout__product-name">
+                    KNAUF Ротбанд, 30 кг
+                  </p>
+                  <p class="checkout__product-type">
+                    Выравнивающая, гипсовая основа
+                  </p>
+                  <p class="checkout__product-data">
+                    Цена: <span>270,00 р.</span>
+                  </p>
+                  <p class="checkout__product-data">
+                    Количество: <span>2</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid__column_1-3">
+              <div class="checkout__product">
+                <div class="checkout__product-img">
+                  <img src="http://placehold.it/100x100" alt="">
+                </div>
+                <div class="checkout__product-info">
+                  <p class="checkout__product-name">
+                    KNAUF Ротбанд, 30 кг
+                  </p>
+                  <p class="checkout__product-type">
+                    Выравнивающая, гипсовая основа
+                  </p>
+                  <p class="checkout__product-data">
+                    Цена: <span>270,00 р.</span>
+                  </p>
+                  <p class="checkout__product-data">
+                    Количество: <span>2</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="checkout__section">
+          <p class="checkout__summary">
+            Итого в общем: 2160,00 р.
+          </p>
+        </section>
+
+        <section class="checkout__section">
+          <h3 class="h3 checkout__h3">Параметры заказа</h3>
+          <form class="form">
+            <div class="grid form__row">
+              <div class="grid__column_1-4">
+                <p class="form__label">
+                  Способы получения:
+                </p>
+              </div>
+              <div class="grid__column_1-4">
+                <select class="select form__select" id="delivery">
+                  <option selected>Доставка</option>
+                  <option>Самовывоз</option>
+                </select>
+                <input class="input form__input" type="text" placeholder="Квартира / Офис" required>
+              </div>
+              <div class="grid__column_1-2">
+                <input class="input" type="text" placeholder="Адрес" required>
+                <div class="grid">
+                  <div class="grid__column_1-2">
+                    <input class="input form__input" type="text" placeholder="Дата и время доставки" required>
+                  </div>
+                  <div class="grid__column_1-2">
+                    <input class="input form__input" type="text" placeholder="Комментарий">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid form__row">
+              <div class="grid__column_1-4">
+                <p class="form__label">
+                  Данные покупателя:
+                </p>
+              </div>
+              <div class="grid__column_1-4">
+                <input class="input form__input" type="text" placeholder="Имя и Фамилия" required>
+              </div>
+              <div class="grid__column_1-4">
+                <input class="input form__input" type="email" placeholder="Электронная почта" required>
+              </div>
+              <div class="grid__column_1-4">
+                <input class="input form__input" type="tel" placeholder="Телефон" required>
+              </div>
+            </div>
+
+            <div class="grid form__row">
+              <div class="grid__column_1-4">
+                <p class="form__label">
+                  Данные покупателя:
+                </p>
+              </div>
+              <div class="grid__column_1-4">
+                <select class="select form__select" id="payment">
+                  <option selected>При получении</option>
+                  <option>Предоплата</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid">
+              <div class="grid__column_1-4">
+                <p class="registration__register-conditions registration__register-conditions_left">
+                  Нажимая «Отправить заказ», вы подтверждаете, что ознакомлены и полностью согласны с
+                  <a class="link">условиями пользования сайта</a>.
+                </p>
+              </div>
+              <div class="grid__column_3-4">
+                <button class="button form__button" type="submit">
+                  Отправить заказ
+                </button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal modal_middle" id="choose-city">
+    <div class="container modal__container">
+      <div class="grid">
+        <div class="grid__column_1-2 grid__column_center">
+          <div class="modal__overlay"></div>
+          <header class="modal__header modal__header_compact">
+            <button class="modal__close" type="button">Закрыть</button>
+            <h3 class="modal__heading">
+              Выберите город
+            </h3>
+          </header>
+          <div class="modal__body modal__body_compact">
+            <div class="choose-city">
+              <input class="input choose-city__search" type="search" placeholder="Поиск">
+
+              <div class="form choose-city__form">
+                <fieldset>
+                  <legend>Топ города</legend>
+                  <p>
+                    <input type="radio" id="city-1" name="city">
+                    <label for="city-1">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-2" name="city">
+                    <label for="city-2">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-3" name="city">
+                    <label for="city-3">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-4" name="city">
+                    <label for="city-4">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-5" name="city">
+                    <label for="city-5">Название города</label>
+                  </p>
+                </fieldset>
+                <fieldset>
+                  <legend>A</legend>
+                  <p>
+                    <input type="radio" id="city-6" name="city">
+                    <label for="city-6">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-7" name="city">
+                    <label for="city-7">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-8" name="city">
+                    <label for="city-8">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-9" name="city">
+                    <label for="city-9">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-10" name="city">
+                    <label for="city-10">Название города</label>
+                  </p>
+                </fieldset>
+              </div>
+
+              <div class="grid grid_small">
+                <div class="grid__column_1-3">
+                  <button class="button button_secondary form__button" type="button"
+                          onclick="modal.close('#choose-city')">
+                    Отменить
+                  </button>
+                </div>
+                <div class="grid__column_2-3">
+                  <button class="button form__button" type="button" onclick="modal.close('#choose-city')">
+                    Подтвердить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal_middle" id="producers">
+    <div class="container modal__container">
+      <div class="grid">
+        <div class="grid__column_1-2 grid__column_center">
+          <div class="modal__overlay"></div>
+          <header class="modal__header modal__header_compact">
+            <button class="modal__close" type="button">Закрыть</button>
+            <h3 class="modal__heading">
+              Производитель
+            </h3>
+          </header>
+          <div class="modal__body modal__body_compact">
+            <form class="form">
+              <div class="grid">
+                <div class="grid__column_1-3">
+                  <ul class="producers-list">
+                    <li>
+                      <input class="checkbox" id="p-1" type="checkbox">
+                      <label for="p-1">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-2" type="checkbox">
+                      <label for="p-2">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-3" type="checkbox">
+                      <label for="p-3">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-4" type="checkbox">
+                      <label for="p-4">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-5" type="checkbox">
+                      <label for="p-5">ВОЛМА</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-6" type="checkbox">
+                      <label for="p-6">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-7" type="checkbox">
+                      <label for="p-7">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-8" type="checkbox">
+                      <label for="p-8">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-9" type="checkbox">
+                      <label for="p-9">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-10" type="checkbox">
+                      <label for="p-10">ВОЛМА</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-11" type="checkbox">
+                      <label for="p-11">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-12" type="checkbox">
+                      <label for="p-12">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-13" type="checkbox">
+                      <label for="p-13">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-14" type="checkbox">
+                      <label for="p-14">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-15" type="checkbox">
+                      <label for="p-15">ВОЛМА</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="grid__column_1-3">
+                  <ul class="producers-list">
+                    <li>
+                      <input class="checkbox" id="p-16" type="checkbox">
+                      <label for="p-16">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-17" type="checkbox">
+                      <label for="p-17">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-18" type="checkbox">
+                      <label for="p-18">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-19" type="checkbox">
+                      <label for="p-19">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-20" type="checkbox">
+                      <label for="p-20">ВОЛМА</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-21" type="checkbox">
+                      <label for="p-21">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-22" type="checkbox">
+                      <label for="p-22">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-23" type="checkbox">
+                      <label for="p-23">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-24" type="checkbox">
+                      <label for="p-24">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-25" type="checkbox">
+                      <label for="p-25">ВОЛМА</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-26" type="checkbox">
+                      <label for="p-26">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-27" type="checkbox">
+                      <label for="p-27">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-28" type="checkbox">
+                      <label for="p-28">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-29" type="checkbox">
+                      <label for="p-29">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-30" type="checkbox">
+                      <label for="p-30">ВОЛМА</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="grid__column_1-3">
+                  <ul class="producers-list">
+                    <li>
+                      <input class="checkbox" id="p-31" type="checkbox">
+                      <label for="p-31">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-32" type="checkbox">
+                      <label for="p-32">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-33" type="checkbox">
+                      <label for="p-33">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-34" type="checkbox">
+                      <label for="p-34">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-35" type="checkbox">
+                      <label for="p-35">ВОЛМА</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-36" type="checkbox">
+                      <label for="p-36">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-37" type="checkbox">
+                      <label for="p-37">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-38" type="checkbox">
+                      <label for="p-38">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-39" type="checkbox">
+                      <label for="p-39">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-40" type="checkbox">
+                      <label for="p-40">ВОЛМА</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-41" type="checkbox">
+                      <label for="p-41">ilmax</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-42" type="checkbox">
+                      <label for="p-42">KNAUF</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-43" type="checkbox">
+                      <label for="p-43">Ceresit</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-44" type="checkbox">
+                      <label for="p-44">Тайфун</label>
+                    </li>
+                    <li>
+                      <input class="checkbox" id="p-45" type="checkbox">
+                      <label for="p-45">ВОЛМА</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="grid">
+                <div class="grid__column_5-9 grid__column_center">
+                  <button class="button form__button" type="submit"
+                          onclick="">
+                    Применить фильтры
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/lib/dropkick.js"></script>
+  <script src="/js/main.min.js"></script>
+  <script>
+    var deliverySelect = new Dropkick('#delivery', { });
+    var paymentSelect = new Dropkick('#payment', { });
+  </script>
+</body>
+</html>

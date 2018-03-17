@@ -100,10 +100,8 @@
               </li>
             </ul>
           </li>
-          <li><a class="link" href="javascript:void(0)">Строительные центры</a></li>
-          <li><a class="link" href="javascript:void(0)">Доставка и подъём</a></li>
-          <li><a class="link" href="javascript:void(0)">Возврат</a></li>
-          <li><a class="link" href="javascript:void(0)">Все услуги</a></li>
+          <li><a class="link" href="javascript:void(0)">Для опта и бизнеса</a></li>
+          <li><a class="link" href="tel:88003332254">8 (800) 333–22–54</a></li>
         </ul>
         <button class="button super-header__geo" onclick="modal.open('#choose-city')">
           Местоположение
@@ -122,7 +120,7 @@
               <a class="link user-actions__link" href="javascript:void(0)">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                      viewBox="0 0 20 20" width="20" height="20">
-                  <use xlink:href="/img/header-icons.svg#reviews"></use>
+                  <use xlink:href="/img/header-icons.svg#feedback"></use>
                 </svg>
                 Отзывы
               </a>
@@ -147,7 +145,7 @@
             </li>
             <li class="user-actions__item user-actions__item_profile">
               <a class="link user-actions__link" href="javascript:void(0)">
-                Роман Аркадьевич
+                Сергей Александрович
                 <span class="user-actions__avatar"
                       style="background-image: url('//placehold.it/44x44');"></span>
               </a>
@@ -165,9 +163,209 @@
 
   <main>
     <div class="container">
-      <div class="cart">
-        <h2 class="h2 cart__h2">Корзина</h2>
+      <div class="customers cart" data-summary-counter="total">
+        <h2 class="h2 customers__h2">Корзина</h2>
+        <section class="cart__section" data-summary-counter="section-1">
+          <div class="grid">
+            <div class="grid__column_1-2">
+              <ul class="list-reset cart__products">
+                <li class="cart__product">
+                  <div class="cart__product-img">
+                    <img src="http://placehold.it/120x120" alt="">
+                  </div>
+                  <div class="cart__product-info" data-summary-counter="product-1">
+                    <p class="cart__product-name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="cart__product-description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="cart__product-price">
+                      Цена: <span><span data-summary-unit="product-1">270,00</span> р.</span>
+                    </p>
+                    <div class="cart__product-counter">
+                      <div class="cart__counter" data-cart-counter>
+                        <button class="cart__counter-control cart__counter-control_decrement"
+                                type="button" data-cart-decrement disabled>
+                          Уменьшить количество
+                        </button>
+                        <input class="cart__counter-input" type="number"
+                               value="1" min="1" max="99"
+                               data-cart-count data-summary-increment="product-1">
+                        <button class="cart__counter-control cart__counter-control_increment"
+                                type="button" data-cart-increment>
+                          Увеличить количество
+                        </button>
+                      </div>
+                      <p class="cart__product-summary">
+                        Итого: <span data-summary-value="product-1" data-summary-bind="product-1">270,00</span> р.
+                        <input value="270,00" type="hidden"
+                               data-summary-binded="product-1" data-summary-summand="section-1">
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="cart__product">
+                  <div class="cart__product-img">
+                    <img src="http://placehold.it/120x120" alt="">
+                  </div>
+                  <div class="cart__product-info" data-summary-counter="product-2">
+                    <p class="cart__product-name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="cart__product-description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="cart__product-price">
+                      Цена: <span><span data-summary-unit="product-2">270,00</span> р.</span>
+                    </p>
+                    <div class="cart__product-counter">
+                      <div class="cart__counter" data-cart-counter>
+                        <button class="cart__counter-control cart__counter-control_decrement"
+                                type="button" data-cart-decrement disabled>
+                          Уменьшить количество
+                        </button>
+                        <input class="cart__counter-input" type="number"
+                               value="1" min="1" max="99"
+                               data-cart-count data-summary-increment="product-2">
+                        <button class="cart__counter-control cart__counter-control_increment"
+                                type="button" data-cart-increment>
+                          Увеличить количество
+                        </button>
+                      </div>
+                      <p class="cart__product-summary">
+                        Итого: <span data-summary-value="product-2" data-summary-bind="product-2">270,00</span> р.
+                        <input value="270,00" type="hidden"
+                               data-summary-binded="product-2" data-summary-summand="section-1">
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="grid__column_1-2">
+              <div class="cart__seller">
+                <div class="cart__seller-img">
+                  <img src="http://placehold.it/200x200" alt="">
+                </div>
+                <div class="cart__seller-info">
+                  <p class="cart__seller-name">
+                    Пластик Сибири
+                  </p>
+                  <p class="cart__seller-type">
+                    Оптовая компания, производитель
+                  </p>
+                  <p class="cart__seller-contacts">
+                    630052, Россия, г. Новосибирск, ул. Морской проспект, д. 10<br>
+                    8-800-555-35-35
+                  </p>
+                  <div class="rating-reviews">
+                    <span class="rating" data-value="5" data-max="5"><span></span></span>
+                    <span class="rating-reviews__reviews">Отзывы 99999</span>
+                  </div>
+                </div>
+                <div class="cart__seller-actions">
+                  <button class="button" type="button">
+                    Оформить заказ
+                  </button>
+                  <button class="button button_action_secondary" type="button">
+                    Удалить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart__section-summary">
+            Сумма: <span data-summary-value="section-1" data-summary-bind="section-1">540,00</span> р.
+            <input value="540,00" type="hidden"
+                   data-summary-binded="section-1" data-summary-summand="total">
+          </div>
+        </section>
 
+        <section class="cart__section" data-summary-counter="section-2">
+          <div class="grid">
+            <div class="grid__column_1-2">
+              <ul class="list-reset cart__products">
+                <li class="cart__product">
+                  <div class="cart__product-img">
+                    <img src="http://placehold.it/120x120" alt="">
+                  </div>
+                  <div class="cart__product-info" data-summary-counter="product-3">
+                    <p class="cart__product-name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="cart__product-description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="cart__product-price">
+                      Цена: <span><span data-summary-unit="product-3">270,00</span> р.</span>
+                    </p>
+                    <div class="cart__product-counter">
+                      <div class="cart__counter" data-cart-counter>
+                        <button class="cart__counter-control cart__counter-control_decrement"
+                                type="button" data-cart-decrement>
+                          Уменьшить количество
+                        </button>
+                        <input class="cart__counter-input" type="number"
+                               value="3" min="1" max="99"
+                               data-cart-count data-summary-increment="product-3">
+                        <button class="cart__counter-control cart__counter-control_increment"
+                                type="button" data-cart-increment>
+                          Увеличить количество
+                        </button>
+                      </div>
+                      <p class="cart__product-summary">
+                        Итого: <span data-summary-value="product-3" data-summary-bind="product-3">810,00</span> р.
+                        <input value="810,00" type="hidden"
+                               data-summary-binded="product-3" data-summary-summand="section-2">
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="grid__column_1-2">
+              <div class="cart__seller">
+                <div class="cart__seller-img">
+                  <img src="http://placehold.it/200x200" alt="">
+                </div>
+                <div class="cart__seller-info">
+                  <p class="cart__seller-name">
+                    Пластик Сибири
+                  </p>
+                  <p class="cart__seller-type">
+                    Оптовая компания, производитель
+                  </p>
+                  <p class="cart__seller-contacts">
+                    630052, Россия, г. Новосибирск, ул. Морской проспект, д. 10<br>
+                    8-800-555-35-35
+                  </p>
+                  <div class="rating-reviews">
+                    <span class="rating" data-value="5" data-max="5"><span></span></span>
+                    <span class="rating-reviews__reviews">Отзывы 99999</span>
+                  </div>
+                </div>
+                <div class="cart__seller-actions">
+                  <button class="button" type="button">
+                    Оформить заказ
+                  </button>
+                  <button class="button button_action_secondary" type="button">
+                    Удалить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart__section-summary">
+            Сумма: <span data-summary-value="section-2" data-summary-bind="section-2">810,00</span> р.
+            <input value="810,00" type="hidden"
+                   data-summary-binded="section-2" data-summary-summand="total">
+          </div>
+        </section>
+
+        <div class="cart__total-summary">
+          Итого в общем: <span data-summary-value="total">1 350,00</span> р.
+        </div>
       </div>
     </div>
   </main>
@@ -175,7 +373,7 @@
   <div class="modal modal_middle" id="choose-city">
     <div class="container modal__container">
       <div class="grid">
-        <div class="grid__column_3-7 grid__column_center">
+        <div class="grid__column_1-2 grid__column_center">
           <div class="modal__overlay"></div>
           <header class="modal__header modal__header_compact">
             <button class="modal__close" type="button">Закрыть</button>
@@ -185,265 +383,71 @@
           </header>
           <div class="modal__body modal__body_compact">
             <div class="choose-city">
-              <p class="choose-city__clarification">
-                Ваш город определён верно? Если нет – выберите другой.
-              </p>
-              <form class="form">
-                <input class="input choose-city__search" type="search" placeholder="Поиск">
-                <ul class="choose-city__list">
-                  <li>
-                    <input type="radio" id="city-1" name="city" checked>
+              <input class="input choose-city__search" type="search" placeholder="Поиск">
+
+              <div class="form choose-city__form">
+                <fieldset>
+                  <legend>Топ города</legend>
+                  <p>
+                    <input type="radio" id="city-1" name="city">
                     <label for="city-1">Название города</label>
-                  </li>
-                  <li>
+                  </p>
+                  <p>
                     <input type="radio" id="city-2" name="city">
                     <label for="city-2">Название города</label>
-                  </li>
-                  <li>
+                  </p>
+                  <p>
                     <input type="radio" id="city-3" name="city">
                     <label for="city-3">Название города</label>
-                  </li>
-                  <li>
+                  </p>
+                  <p>
                     <input type="radio" id="city-4" name="city">
                     <label for="city-4">Название города</label>
-                  </li>
-                  <li>
+                  </p>
+                  <p>
                     <input type="radio" id="city-5" name="city">
                     <label for="city-5">Название города</label>
-                  </li>
-                </ul>
-                <div class="grid grid_small">
-                  <div class="grid__column_3-5 grid__column_center">
-                    <button class="button form__button" type="button" onclick="modal.close('#choose-city')">
-                      Подтвердить
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal modal_middle" id="producers">
-    <div class="container modal__container">
-      <div class="grid">
-        <div class="grid__column_1-2 grid__column_center">
-          <div class="modal__overlay"></div>
-          <header class="modal__header modal__header_compact">
-            <button class="modal__close" type="button">Закрыть</button>
-            <h3 class="modal__heading">
-              Производитель
-            </h3>
-          </header>
-          <div class="modal__body modal__body_compact">
-            <form class="form">
-              <div class="grid">
-                <div class="grid__column_1-3">
-                  <ul class="producers-list">
-                    <li>
-                      <input class="checkbox" id="p-1" type="checkbox">
-                      <label for="p-1">ilmax</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-2" type="checkbox">
-                      <label for="p-2">KNAUF</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-3" type="checkbox">
-                      <label for="p-3">Ceresit</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-4" type="checkbox">
-                      <label for="p-4">Тайфун</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-5" type="checkbox">
-                      <label for="p-5">ВОЛМА</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-6" type="checkbox">
-                      <label for="p-6">ilmax</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-7" type="checkbox">
-                      <label for="p-7">KNAUF</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-8" type="checkbox">
-                      <label for="p-8">Ceresit</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-9" type="checkbox">
-                      <label for="p-9">Тайфун</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-10" type="checkbox">
-                      <label for="p-10">ВОЛМА</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-11" type="checkbox">
-                      <label for="p-11">ilmax</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-12" type="checkbox">
-                      <label for="p-12">KNAUF</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-13" type="checkbox">
-                      <label for="p-13">Ceresit</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-14" type="checkbox">
-                      <label for="p-14">Тайфун</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-15" type="checkbox">
-                      <label for="p-15">ВОЛМА</label>
-                    </li>
-                  </ul>
-                </div>
-                <div class="grid__column_1-3">
-                  <ul class="producers-list">
-                    <li>
-                      <input class="checkbox" id="p-16" type="checkbox">
-                      <label for="p-16">ilmax</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-17" type="checkbox">
-                      <label for="p-17">KNAUF</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-18" type="checkbox">
-                      <label for="p-18">Ceresit</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-19" type="checkbox">
-                      <label for="p-19">Тайфун</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-20" type="checkbox">
-                      <label for="p-20">ВОЛМА</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-21" type="checkbox">
-                      <label for="p-21">ilmax</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-22" type="checkbox">
-                      <label for="p-22">KNAUF</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-23" type="checkbox">
-                      <label for="p-23">Ceresit</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-24" type="checkbox">
-                      <label for="p-24">Тайфун</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-25" type="checkbox">
-                      <label for="p-25">ВОЛМА</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-26" type="checkbox">
-                      <label for="p-26">ilmax</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-27" type="checkbox">
-                      <label for="p-27">KNAUF</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-28" type="checkbox">
-                      <label for="p-28">Ceresit</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-29" type="checkbox">
-                      <label for="p-29">Тайфун</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-30" type="checkbox">
-                      <label for="p-30">ВОЛМА</label>
-                    </li>
-                  </ul>
-                </div>
-                <div class="grid__column_1-3">
-                  <ul class="producers-list">
-                    <li>
-                      <input class="checkbox" id="p-31" type="checkbox">
-                      <label for="p-31">ilmax</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-32" type="checkbox">
-                      <label for="p-32">KNAUF</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-33" type="checkbox">
-                      <label for="p-33">Ceresit</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-34" type="checkbox">
-                      <label for="p-34">Тайфун</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-35" type="checkbox">
-                      <label for="p-35">ВОЛМА</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-36" type="checkbox">
-                      <label for="p-36">ilmax</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-37" type="checkbox">
-                      <label for="p-37">KNAUF</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-38" type="checkbox">
-                      <label for="p-38">Ceresit</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-39" type="checkbox">
-                      <label for="p-39">Тайфун</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-40" type="checkbox">
-                      <label for="p-40">ВОЛМА</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-41" type="checkbox">
-                      <label for="p-41">ilmax</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-42" type="checkbox">
-                      <label for="p-42">KNAUF</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-43" type="checkbox">
-                      <label for="p-43">Ceresit</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-44" type="checkbox">
-                      <label for="p-44">Тайфун</label>
-                    </li>
-                    <li>
-                      <input class="checkbox" id="p-45" type="checkbox">
-                      <label for="p-45">ВОЛМА</label>
-                    </li>
-                  </ul>
-                </div>
+                  </p>
+                </fieldset>
+                <fieldset>
+                  <legend>A</legend>
+                  <p>
+                    <input type="radio" id="city-6" name="city">
+                    <label for="city-6">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-7" name="city">
+                    <label for="city-7">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-8" name="city">
+                    <label for="city-8">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-9" name="city">
+                    <label for="city-9">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-10" name="city">
+                    <label for="city-10">Название города</label>
+                  </p>
+                </fieldset>
               </div>
 
-              <div class="grid">
-                <div class="grid__column_5-9 grid__column_center">
-                  <button class="button form__button" type="submit"
-                          onclick="">
-                    Применить фильтры
+              <div class="grid grid_small">
+                <div class="grid__column_1-3">
+                  <button class="button button_secondary form__button" type="button"
+                          onclick="modal.close('#choose-city')">
+                    Отменить
+                  </button>
+                </div>
+                <div class="grid__column_2-3">
+                  <button class="button form__button" type="button" onclick="modal.close('#choose-city')">
+                    Подтвердить
                   </button>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>

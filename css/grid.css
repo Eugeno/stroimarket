@@ -6,14 +6,17 @@
 }
 
 .grid_large {
+  width: calc(100% + 60px);
   margin-left: -60px;
 }
 
 .grid_medium {
+  width: calc(100% + 20px);
   margin-left: -20px;
 }
 
 .grid_small {
+  width: calc(100% + 10px);
   margin-left: -10px;
 }
 

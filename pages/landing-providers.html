@@ -8,20 +8,20 @@
 <body>
   <header class="landing-header">
     <div class="container landing-header__container">
-      <a class="logo">Строймаркет</a>
+      <a class="logo landing-header__logo">Строймаркет</a>
       <a class="link user-actions__link landing-header__phone-link"
          href="tel:88009690000">
         8 800 969 00 00
       </a>
       <ul class="list-reset user-actions landing-header__user-actions">
         <li class="user-actions__item">
-          <a class="link user-actions__link" href="/registration/">
-            Регистрация
+          <a class="link user-actions__link" href="javascript:void(0)">
+            Войти
           </a>
         </li>
-        <li class="user-actions__item user-actions__item_login">
-          <a class="link user-actions__link" href="/login/">
-            Войти
+        <li class="user-actions__item">
+          <a class="button" href="javascript:void(0)">
+            Регистрация
           </a>
         </li>
       </ul>
@@ -48,7 +48,7 @@
             </a>
           </div>
         </div>
-        <a class="link landing-promo__more-info" href="#moreinfo">
+        <a class="link landing-promo__more-info" data-scroll href="#moreinfo">
           Подробнее
         </a>
       </div>
@@ -192,11 +192,9 @@
 
   <footer class="landing-footer">
     <div class="container">
+      <a class="logo landing-footer__logo">Строймаркет</a>
       <div class="grid">
         <div class="grid__column_1-3">
-          <div class="landing-footer__logo-wrapper">
-            <a class="logo">Строймаркет</a>
-          </div>
           <p class="landing-footer__contacts">
             Бесплатная горячая линия
             <span>8 (800) 777–77–86</span>
@@ -250,9 +248,14 @@
     </div>
   </footer>
 
+  <script src="/js/lib/smooth-scroll.min.js"></script>
   <script src="/js/main.min.js"></script>
   <script src="/js/lib/scrollreveal.min.js"></script>
   <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      offset: 60,
+    });
+
     document.addEventListener('DOMContentLoaded', function(){
       window.sr = ScrollReveal();
       sr.reveal('[data-scroll="left"]', {

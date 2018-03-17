@@ -388,7 +388,7 @@
   margin-left: 5px;
 }
 
-.add-product__parameters > .grid__column_1-2 {
+.add-product__parameters > [class*=grid__column] {
   display: flex;
   align-items: baseline;
 }
@@ -412,8 +412,10 @@
   font-size: 14px;
   line-height: 19px;
   flex-shrink: 0;
-  width: 45px;
+  min-width: 45px;
+  margin-left: 10px;
   text-align: center;
+  white-space: nowrap;
   opacity: .6;
   color: #455056;
 }

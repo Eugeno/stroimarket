@@ -29,8 +29,16 @@ var ready = function ready() {
     minimizeTexts([].concat(_toConsumableArray(document.querySelectorAll('[data-minimizable]'))));
   }
 
-  if (document.querySelector('.button-counter')) {
-    buttonCounter.init();
+  if (document.querySelector('[data-cart-counter]')) {
+    cartCounter.init();
+  }
+
+  if (document.querySelector('[data-summary-counter]')) {
+    summaryCounter.init();
+  }
+
+  if (document.querySelector('[data-choose-cities]')) {
+    citiesChooser.init();
   }
 };
 
@@ -193,7 +201,7 @@ var filePreview = {
 
 var modal = {
   open: function open(selector) {
-    event.preventDefault();
+    if (event) event.preventDefault();
     var modalWindow = document.querySelector(selector);
     modalWindow.classList.add('_is-active');
     var modalOverlay = modalWindow.querySelector('.modal__overlay');
@@ -283,6 +291,7 @@ var registrationDelivery = {
     var deliveryItemTemplate = document.getElementById('delivery-item-template');
     var deliveryItemToClone = deliveryItemTemplate.content.querySelector('div');
     var deliveryItem = deliveryItemToClone.cloneNode(true);
+    // const dp = new Dropkick(deliveryItem.querySelector(`select`))
     var addButton = registrationDeliveryWrapper.querySelector('.registration__add-delivery');
     addButton.parentNode.insertBefore(deliveryItem, addButton);
   }
@@ -375,14 +384,26 @@ var minimizeTexts = function minimizeTexts(texts) {
   });
 };
 
-var buttonCounter = {
+var triggerInput = function triggerInput(element) {
+  var event = new Event('input', {
+    'bubbles': true,
+    'cancelable': true
+  });
+
+  element.dispatchEvent(event);
+};
+
+var cartCounter = {
   init: function init() {
-    var items = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelectorAll('.button-counter');
+    var _this = this;
+
+    var items = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelectorAll('[data-cart-counter]');
 
     [].concat(_toConsumableArray(items)).forEach(function (item) {
-      var count = item.querySelector('.button-counter__count');
-      var increment = item.querySelector('.button-counter__control_increment');
-      var decrement = item.querySelector('.button-counter__control_decrement');
+      var count = item.querySelector('[data-cart-count]');
+      var increment = item.querySelector('[data-cart-increment]');
+      var decrement = item.querySelector('[data-cart-decrement]');
+
       var options = {
         item: item,
         count: count,
@@ -392,23 +413,26 @@ var buttonCounter = {
         max: 99
       };
       increment.addEventListener('click', function () {
-        return buttonCounter.increase(options);
+        _this.increase(options);
+        triggerInput(count);
       });
       decrement.addEventListener('click', function () {
-        return buttonCounter.decrease(options);
+        _this.decrease(options);
+        triggerInput(count);
+      });
+      count.addEventListener('input', function () {
+        return _this.checkEdges(options);
       });
     });
   },
   increase: function increase(options) {
     if (!options.increment.disabled) {
       options.count.value++;
-      this.checkEdges(options);
     }
   },
   decrease: function decrease(options) {
     if (!options.decrement.disabled) {
       options.count.value--;
-      this.checkEdges(options);
     }
   },
   checkEdges: function checkEdges(options) {
@@ -425,6 +449,125 @@ var buttonCounter = {
       if (options.decrement.disabled) {
         options.decrement.disabled = false;
       }
+    }
+  }
+};
+
+var summaryCounter = {
+  init: function init() {
+    var _this2 = this;
+
+    var items = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelectorAll('[data-summary-counter]');
+
+    [].concat(_toConsumableArray(items)).forEach(function (item) {
+      var name = item.dataset.summaryCounter;
+      var unit = item.querySelector('[data-summary-unit="' + name + '"]');
+      var increment = item.querySelector('[data-summary-increment="' + name + '"]');
+      var value = item.querySelector('[data-summary-value="' + name + '"]');
+      var summands = [].concat(_toConsumableArray(item.querySelectorAll('[data-summary-summand="' + name + '"]')));
+
+      var options = {
+        item: item,
+        unit: unit,
+        increment: increment,
+        value: value,
+        summands: summands
+      };
+      if (increment) {
+        increment.addEventListener('input', function () {
+          return _this2.calculate(options);
+        });
+      } else {
+        summands.forEach(function (summand) {
+          summand.addEventListener('input', function () {
+            return _this2.calculate(options);
+          });
+        });
+      }
+    });
+  },
+  calculate: function calculate(options) {
+    var value = void 0;
+    if (options.increment) {
+      value = parseInt(options.increment.value, 10) * parseFloat(options.unit.innerHTML).toFixed(2);
+    } else {
+      value = options.summands.map(function (a) {
+        return parseFloat(a.value);
+      }).reduce(function (a, b) {
+        return a + b;
+      }, 0);
+    }
+    if (options.value.hasAttribute('data-summary-bind')) {
+      var name = options.value.dataset.summaryBind;
+      var binded = options.item.querySelector('[data-summary-binded="' + name + '"]');
+      binded.value = value;
+      triggerInput(binded);
+    }
+    options.value.innerHTML = value.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+  }
+};
+
+var citiesChooser = {
+  init: function init() {
+    var _this3 = this;
+
+    var items = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelectorAll('[data-choose-cities]');
+
+    [].concat(_toConsumableArray(items)).forEach(function (item) {
+      _this3.chooserForm = item.querySelector('.choose-city__form');
+      _this3.choosenContainer = _this3.chooserForm.querySelector('fieldset');
+      var cities = [].concat(_toConsumableArray(_this3.chooserForm.querySelectorAll('input')));
+      cities.forEach(function (city) {
+        return city.addEventListener('change', function () {
+          return _this3.action(city);
+        });
+      });
+    });
+  },
+  action: function action(city) {
+    var _this4 = this;
+
+    var isInit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+    var container = city.parentNode;
+    if (city.checked) {
+      var clonedContainer = container.cloneNode(true);
+      this.choosenContainer.appendChild(clonedContainer);
+      this.choosenContainer.classList.remove('_is-hidden');
+
+      var clonedCity = clonedContainer.querySelector('input');
+      clonedCity.addEventListener('change', function () {
+        return _this4.action(clonedCity);
+      });
+
+      city.dataset.id = city.getAttribute('id');
+      city.removeAttribute('id');
+      container.classList.add('_is-chosen');
+
+      var currentFieldset = container.parentNode;
+      if (!currentFieldset.querySelector('p:not(._is-chosen)')) {
+        currentFieldset.classList.add('_is-hidden');
+      }
+    } else if (!isInit) {
+      var id = city.getAttribute('id');
+      container.remove();
+      var originalCity = this.chooserForm.querySelector('[data-id="' + id + '"]');
+      originalCity.setAttribute('id', originalCity.dataset.id);
+      originalCity.removeAttribute('data-id');
+      originalCity.checked = false;
+
+      var originalContainer = originalCity.parentNode;
+      originalContainer.classList.remove('_is-chosen');
+
+      if (!this.choosenContainer.querySelector('p')) {
+        this.choosenContainer.classList.add('_is-hidden');
+      }
+
+      var _currentFieldset = originalContainer.parentNode;
+      _currentFieldset.classList.remove('_is-hidden');
     }
   }
 };

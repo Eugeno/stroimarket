@@ -8,6 +8,10 @@ body._is-fixed {
   /*overflow-y: hidden;*/
 }
 
+.body_fullscreen {
+  overflow-y: hidden;
+}
+
 .container {
   position: relative;
   box-sizing: border-box;

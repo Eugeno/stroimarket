@@ -1,13 +1,14 @@
 .landing-footer {
-  padding-top: 29px;
-  padding-bottom: 40px;
+  padding-top: 23px;
+  padding-bottom: 30px;
   color: #fff;
   border-top: 1px solid #ddd;
   background-color: #000;
 }
 
-.landing-footer__logo-wrapper {
-  margin-bottom: 20px;
+.landing-footer__logo {
+  margin-bottom: 24px;
+  background-image: url(../../img/logo_contrast.svg);
 }
 
 .landing-footer__contacts {
@@ -16,6 +17,10 @@
   margin-top: 10px;
   margin-bottom: 0;
   color: #d5d5d5;
+}
+
+.landing-footer__contacts:first-child {
+  margin-top: 0;
 }
 
 .landing-footer__contacts span {
@@ -27,7 +32,7 @@
 }
 
 .landing-footer__list {
-  margin-top: 29px;
+  margin-top: -10px;
 }
 
 .landing-footer__list li {

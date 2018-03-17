@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Строймаркет</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="super-header">
+      <div class="container super-header__container">
+        <ul class="list-reset super-header__menu">
+          <li data-accordion>
+            <a class="link accordion-title" href="javascript:void(0)">
+              Каталог
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 8" width="13" height="8">
+                <path d="M6.5,7.3L6,7,0.5,1.5A0.7,0.7,0,0,1,1.5.5l5,5,5-5a0.7,0.7,0,0,1,1.1,1.1L7,7Z"/>
+              </svg>
+            </a>
+            <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+              <li data-accordion="level-1">
+                <span class="accordion-title">Строительные материалы</span>
+                <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                  <li>
+                    <a href="javascript:void(0)">Ссылка</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">Ссылка</a>
+                  </li>
+                </ul>
+              </li>
+              <li data-accordion="level-1">
+                <span class="accordion-title">Название раздела</span>
+                <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                  <li>
+                    <a href="javascript:void(0)">Ссылка</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">Ссылка</a>
+                  </li>
+                </ul>
+              </li>
+              <li data-accordion="level-1">
+                <span class="accordion-title">Отделочные материалы</span>
+                <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                  <li data-accordion="level-2">
+                    <span class="accordion-title">Инструменты</span>
+                    <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-accordion="level-2">
+                    <span class="accordion-title">Наполньные покрытия</span>
+                    <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-accordion="level-2">
+                    <span class="accordion-title">Плитка</span>
+                    <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                      <li>
+                        <a href="javascript:void(0)">Плитка, камень, мозайка</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Затирки и добавки</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Клеи для укладки</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Подготовка основания</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Аксессуары</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-accordion="level-2">
+                    <span class="accordion-title">Плитка</span>
+                    <ul class="accordion-content list-reset super-header__popup-menu" hidden>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">Ссылка</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a class="link" href="javascript:void(0)">Для опта и бизнеса</a></li>
+          <li><a class="link" href="tel:88003332254">8 (800) 333–22–54</a></li>
+        </ul>
+        <button class="button super-header__geo" onclick="modal.open('#choose-city')">
+          Местоположение
+        </button>
+      </div>
+    </div>
+    <div class="container page-header__container">
+      <div class="grid page-header__grid">
+        <div class="grid__column_1-4">
+          <a class="logo" href="/">Строймаркет</a>
+        </div>
+
+        <div class="grid__column_3-4">
+          <ul class="list-reset user-actions">
+            <li class="user-actions__item user-actions__item_icon">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     viewBox="0 0 20 20" width="20" height="20">
+                  <use xlink:href="/img/header-icons.svg#feedback"></use>
+                </svg>
+                Отзывы
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_icon">
+              <a class="link user-actions__link user-actions__link_active">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     viewBox="0 0 20 20" width="20" height="20">
+                  <use xlink:href="/img/header-icons.svg#orders"></use>
+                </svg>
+                Заказы
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_icon">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     viewBox="0 0 20 20" width="20" height="20">
+                  <use xlink:href="/img/header-icons.svg#cart"></use>
+                </svg>
+                Корзина
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_profile">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Сергей Александрович
+                <span class="user-actions__avatar"
+                      style="background-image: url('//placehold.it/44x44');"></span>
+              </a>
+            </li>
+            <li class="user-actions__item user-actions__item_logout">
+              <a class="link user-actions__link" href="javascript:void(0)">
+                Выйти
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="customers orders">
+        <h2 class="h2 customers__h2">Мои заказы</h2>
+
+        <ul class="list-reset orders__list">
+          <li class="order">
+            <div class="order__main">
+              <ul class="order__products" id="o2456987898">
+                <li class="product">
+                  <div class="product__img">
+                    <img src="http://placehold.it/80x120" alt="">
+                  </div>
+                  <div class="product__info">
+                    <p class="product__name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="product__description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="product__characteristics">
+                      Цена: <span>270,00 р.</span><br>
+                      Количество: <span>2</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="product">
+                  <div class="product__img">
+                    <img src="http://placehold.it/80x120" alt="">
+                  </div>
+                  <div class="product__info">
+                    <p class="product__name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="product__description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="product__characteristics">
+                      Цена: <span>270,00 р.</span><br>
+                      Количество: <span>2</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="product">
+                  <div class="product__img">
+                    <img src="http://placehold.it/80x120" alt="">
+                  </div>
+                  <div class="product__info">
+                    <p class="product__name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="product__description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="product__characteristics">
+                      Цена: <span>270,00 р.</span><br>
+                      Количество: <span>2</span>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="order__seller">
+                <p class="order__seller-name">Пластик Сибири</p>
+                <p class="order__seller-type">Оптовая компания, производитель</p>
+                <div class="rating-reviews">
+                  <span class="rating" data-value="5" data-max="5"><span></span></span>
+                  <span class="rating-reviews__reviews">Отзывы 99999</span>
+                </div>
+              </div>
+              <div class="order__data">
+                <p>
+                  Способ получения: <span>Самовывоз</span><br>
+                  Способ оплаты: <span>При получении</span><br>
+                  Дата заказа: <span>20.07.17, 17:37</span><br>
+                  Номер заказа: <span>2456987898</span><br>
+                  Статус: <span>Новый</span>
+                </p>
+                <p class="order__summary">
+                  Итого: 540,00 р.
+                </p>
+              </div>
+            </div>
+            <section class="order__actions">
+              <button class="button button_secondary order__button order__button_secondary" type="button">
+                Отменить
+              </button>
+            </section>
+            <button class="order__show-more" type="button"
+                    data-show-more="Показать ещё 2 товара" data-show-less="Свернуть"
+                    onclick="showMore.toggle('#o2456987898')">
+              Показать ещё 2 товара
+            </button>
+          </li>
+
+          <li class="order">
+            <div class="order__main">
+              <ul class="order__products" id="o2456987899">
+                <li class="product">
+                  <div class="product__img">
+                    <img src="http://placehold.it/80x120" alt="">
+                  </div>
+                  <div class="product__info">
+                    <p class="product__name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="product__description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="product__characteristics">
+                      Цена: <span>270,00 р.</span><br>
+                      Количество: <span>2</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="product">
+                  <div class="product__img">
+                    <img src="http://placehold.it/80x120" alt="">
+                  </div>
+                  <div class="product__info">
+                    <p class="product__name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="product__description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="product__characteristics">
+                      Цена: <span>270,00 р.</span><br>
+                      Количество: <span>2</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="product">
+                  <div class="product__img">
+                    <img src="http://placehold.it/80x120" alt="">
+                  </div>
+                  <div class="product__info">
+                    <p class="product__name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="product__description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="product__characteristics">
+                      Цена: <span>270,00 р.</span><br>
+                      Количество: <span>2</span>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="order__seller">
+                <p class="order__seller-name">Пластик Сибири</p>
+                <p class="order__seller-type">Оптовая компания, производитель</p>
+                <div class="rating-reviews">
+                  <span class="rating" data-value="5" data-max="5"><span></span></span>
+                  <span class="rating-reviews__reviews">Отзывы 99999</span>
+                </div>
+              </div>
+              <div class="order__data">
+                <p>
+                  Способ получения: <span>Самовывоз</span><br>
+                  Способ оплаты: <span>При получении</span><br>
+                  Дата заказа: <span>20.07.17, 17:37</span><br>
+                  Номер заказа: <span>2456987899</span><br>
+                  Статус: <span>Принят 21.07.17</span>
+                </p>
+                <p class="order__summary">
+                  Итого: 540,00 р.
+                </p>
+              </div>
+            </div>
+            <section class="order__actions">
+              <button class="button button_secondary order__button order__button_secondary" type="button">
+                Отменить
+              </button>
+            </section>
+            <button class="order__show-more" type="button"
+                    data-show-more="Показать ещё 2 товара" data-show-less="Свернуть"
+                    onclick="showMore.toggle('#o2456987899')">
+              Показать ещё 2 товара
+            </button>
+          </li>
+
+          <li class="order">
+            <div class="order__main">
+              <ul class="order__products" id="o2456987900">
+                <li class="product">
+                  <div class="product__img">
+                    <img src="http://placehold.it/80x120" alt="">
+                  </div>
+                  <div class="product__info">
+                    <p class="product__name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="product__description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="product__characteristics">
+                      Цена: <span>270,00 р.</span><br>
+                      Количество: <span>2</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="product">
+                  <div class="product__img">
+                    <img src="http://placehold.it/80x120" alt="">
+                  </div>
+                  <div class="product__info">
+                    <p class="product__name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="product__description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="product__characteristics">
+                      Цена: <span>270,00 р.</span><br>
+                      Количество: <span>2</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="product">
+                  <div class="product__img">
+                    <img src="http://placehold.it/80x120" alt="">
+                  </div>
+                  <div class="product__info">
+                    <p class="product__name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="product__description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="product__characteristics">
+                      Цена: <span>270,00 р.</span><br>
+                      Количество: <span>2</span>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="order__seller">
+                <p class="order__seller-name">Пластик Сибири</p>
+                <p class="order__seller-type">Оптовая компания, производитель</p>
+                <div class="rating-reviews">
+                  <span class="rating" data-value="5" data-max="5"><span></span></span>
+                  <span class="rating-reviews__reviews">Отзывы 99999</span>
+                </div>
+              </div>
+              <div class="order__data">
+                <p>
+                  Способ получения: <span>Самовывоз</span><br>
+                  Способ оплаты: <span>При получении</span><br>
+                  Дата заказа: <span>20.07.17, 17:37</span><br>
+                  Номер заказа: <span>2456987900</span><br>
+                  Статус: <span>Завершен 21.07.17</span>
+                </p>
+                <p class="order__summary">
+                  Итого: 540,00 р.
+                </p>
+              </div>
+            </div>
+            <section class="order__actions">
+              <button class="button order__button" type="button" onclick="modal.open('#add-review')">
+                Оставить отзыв
+              </button>
+            </section>
+            <button class="order__show-more" type="button"
+                    data-show-more="Показать ещё 2 товара" data-show-less="Свернуть"
+                    onclick="showMore.toggle('#o2456987900')">
+              Показать ещё 2 товара
+            </button>
+          </li>
+
+          <li class="order">
+            <div class="order__main">
+              <ul class="order__products" id="o2456987901">
+                <li class="product">
+                  <div class="product__img">
+                    <img src="http://placehold.it/80x120" alt="">
+                  </div>
+                  <div class="product__info">
+                    <p class="product__name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="product__description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="product__characteristics">
+                      Цена: <span>270,00 р.</span><br>
+                      Количество: <span>2</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="product">
+                  <div class="product__img">
+                    <img src="http://placehold.it/80x120" alt="">
+                  </div>
+                  <div class="product__info">
+                    <p class="product__name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="product__description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="product__characteristics">
+                      Цена: <span>270,00 р.</span><br>
+                      Количество: <span>2</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="product">
+                  <div class="product__img">
+                    <img src="http://placehold.it/80x120" alt="">
+                  </div>
+                  <div class="product__info">
+                    <p class="product__name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="product__description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="product__characteristics">
+                      Цена: <span>270,00 р.</span><br>
+                      Количество: <span>2</span>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="order__seller">
+                <p class="order__seller-name">Пластик Сибири</p>
+                <p class="order__seller-type">Оптовая компания, производитель</p>
+                <div class="rating-reviews">
+                  <span class="rating" data-value="5" data-max="5"><span></span></span>
+                  <span class="rating-reviews__reviews">Отзывы 99999</span>
+                </div>
+              </div>
+              <div class="order__data">
+                <p>
+                  Способ получения: <span>Самовывоз</span><br>
+                  Способ оплаты: <span>При получении</span><br>
+                  Дата заказа: <span>20.07.17, 17:37</span><br>
+                  Номер заказа: <span>2456987901</span><br>
+                  Статус: <span>Отменен вами</span>
+                </p>
+                <p class="order__summary">
+                  Итого: 540,00 р.
+                </p>
+              </div>
+            </div>
+            <section class="order__actions">
+              <button class="button order__button" type="button" onclick="modal.open('#add-review')">
+                Оставить отзыв
+              </button>
+            </section>
+            <button class="order__show-more" type="button"
+                    data-show-more="Показать ещё 2 товара" data-show-less="Свернуть"
+                    onclick="showMore.toggle('#o2456987901')">
+              Показать ещё 2 товара
+            </button>
+          </li>
+
+          <li class="order">
+            <div class="order__main">
+              <ul class="order__products _is-expanded" id="o2456987902">
+                <li class="product">
+                  <div class="product__img">
+                    <img src="http://placehold.it/80x120" alt="">
+                  </div>
+                  <div class="product__info">
+                    <p class="product__name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="product__description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="product__characteristics">
+                      Цена: <span>270,00 р.</span><br>
+                      Количество: <span>2</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="product">
+                  <div class="product__img">
+                    <img src="http://placehold.it/80x120" alt="">
+                  </div>
+                  <div class="product__info">
+                    <p class="product__name">
+                      KNAUF Ротбанд, 30 кг
+                    </p>
+                    <p class="product__description">
+                      Выравнивающая, гипсовая основа
+                    </p>
+                    <p class="product__characteristics">
+                      Цена: <span>270,00 р.</span><br>
+                      Количество: <span>2</span>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="order__seller">
+                <p class="order__seller-name">Пластик Сибири</p>
+                <p class="order__seller-type">Оптовая компания, производитель</p>
+                <div class="rating-reviews">
+                  <span class="rating" data-value="5" data-max="5"><span></span></span>
+                  <span class="rating-reviews__reviews">Отзывы 99999</span>
+                </div>
+              </div>
+              <div class="order__data">
+                <p>
+                  Способ получения: <span>Самовывоз</span><br>
+                  Способ оплаты: <span>При получении</span><br>
+                  Дата заказа: <span>20.07.17, 17:37</span><br>
+                  Номер заказа: <span>2456987902</span><br>
+                  Статус: <span>Удален магазином</span>
+                </p>
+                <p class="order__summary">
+                  Итого: 1080,00 р.
+                </p>
+              </div>
+            </div>
+            <section class="order__actions">
+              <button class="button order__button" type="button" onclick="modal.open('#add-review')">
+                Оставить отзыв
+              </button>
+            </section>
+            <button class="order__show-more" type="button"
+                    data-show-more="Показать ещё 1 товар" data-show-less="Свернуть"
+                    onclick="showMore.toggle('#o2456987902')">
+              Свернуть
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal modal_middle" id="choose-city">
+    <div class="container modal__container">
+      <div class="grid">
+        <div class="grid__column_1-2 grid__column_center">
+          <div class="modal__overlay"></div>
+          <header class="modal__header modal__header_compact">
+            <button class="modal__close" type="button">Закрыть</button>
+            <h3 class="modal__heading">
+              Выберите город
+            </h3>
+          </header>
+          <div class="modal__body modal__body_compact">
+            <div class="choose-city">
+              <input class="input choose-city__search" type="search" placeholder="Поиск">
+
+              <div class="form choose-city__form">
+                <fieldset>
+                  <legend>Топ города</legend>
+                  <p>
+                    <input type="radio" id="city-1" name="city">
+                    <label for="city-1">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-2" name="city">
+                    <label for="city-2">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-3" name="city">
+                    <label for="city-3">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-4" name="city">
+                    <label for="city-4">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-5" name="city">
+                    <label for="city-5">Название города</label>
+                  </p>
+                </fieldset>
+                <fieldset>
+                  <legend>A</legend>
+                  <p>
+                    <input type="radio" id="city-6" name="city">
+                    <label for="city-6">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-7" name="city">
+                    <label for="city-7">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-8" name="city">
+                    <label for="city-8">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-9" name="city">
+                    <label for="city-9">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-10" name="city">
+                    <label for="city-10">Название города</label>
+                  </p>
+                </fieldset>
+              </div>
+
+              <div class="grid grid_small">
+                <div class="grid__column_1-3">
+                  <button class="button button_secondary form__button" type="button"
+                          onclick="modal.close('#choose-city')">
+                    Отменить
+                  </button>
+                </div>
+                <div class="grid__column_2-3">
+                  <button class="button form__button" type="button" onclick="modal.close('#choose-city')">
+                    Подтвердить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal_middle" id="add-review">
+    <div class="container modal__container">
+      <div class="grid">
+        <div class="grid__column_1-2 grid__column_center">
+          <div class="modal__overlay"></div>
+          <header class="modal__header">
+            <button class="modal__close" type="button">Закрыть</button>
+            <h3 class="modal__heading">
+              Добавить отзыв  на компанию Пластик Сибири
+            </h3>
+          </header>
+          <div class="modal__body">
+            <form class="form add-review">
+              <div class="add-review__rating">
+                <span class="add-review__rating-caption">Общая оценка</span>
+                <div class="add-review__rating-count">
+                  <input id="c5" type="radio" name="rating" value="5" required>
+                  <label for="c5">5</label>
+                  <input id="c4" type="radio" name="rating" value="4">
+                  <label for="c4">4</label>
+                  <input id="c3" type="radio" name="rating" value="3">
+                  <label for="c3">3</label>
+                  <input id="c2" type="radio" name="rating" value="2">
+                  <label for="c2">2</label>
+                  <input id="c1" type="radio" name="rating" value="1">
+                  <label for="c1">1</label>
+                </div>
+              </div>
+              <input type="hidden" value="2456987899">
+              <input class="input form__input" type="text" placeholder="Номер заказа: 2456987899" readonly>
+              <input class="input form__input" type="text" placeholder="Достоинства">
+              <input class="input form__input" type="text" placeholder="Недостатки">
+              <input class="input form__input" type="text" placeholder="Комментарий">
+              <button class="button form__button add-review__button" type="submit">Добавить отзыв</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/main.min.js"></script>
+</body>
+</html>

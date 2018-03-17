@@ -1,0 +1,41 @@
+.profile__prev-page {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 27px;
+  display: inline-flex;
+  margin-bottom: 30px;
+  padding-left: 28px;
+  color: #4a4a4a;
+}
+
+.profile__sidebar {
+  text-align: right;
+}
+
+.profile__places {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+  display: inline-flex;
+  margin-bottom: 30px;
+  color: #b1b6bb;
+}
+
+.profile__operating-time {
+  margin-left: auto;
+}
+
+.profile__map {
+  margin-top: 15px;
+}
+
+.profile__map a {
+  font-size: 0;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  border: 1px solid #eaeeef;
+  border-radius: 10px;
+}

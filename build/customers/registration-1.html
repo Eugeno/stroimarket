@@ -100,14 +100,12 @@
               </li>
             </ul>
           </li>
-          <li><a class="link" href="javascript:void(0)">Строительные центры</a></li>
-          <li><a class="link" href="javascript:void(0)">Доставка и подъём</a></li>
-          <li><a class="link" href="javascript:void(0)">Возврат</a></li>
-          <li><a class="link" href="javascript:void(0)">Все услуги</a></li>
+          <li><a class="link" href="javascript:void(0)">Для опта и бизнеса</a></li>
+          <li><a class="link" href="tel:88003332254">8 (800) 333–22–54</a></li>
         </ul>
-        <a class="link super-header__geo" href="javascript:void(0)">
+        <button class="super-header__geo" type="button" onclick="modal.open('#choose-city')">
           Местоположение
-        </a>
+        </button>
       </div>
     </div>
     <div class="container page-header__container">
@@ -182,6 +180,90 @@
       </div>
     </div>
   </main>
+
+  <div class="modal modal_middle" id="choose-city">
+    <div class="container modal__container">
+      <div class="grid">
+        <div class="grid__column_1-2 grid__column_center">
+          <div class="modal__overlay"></div>
+          <header class="modal__header modal__header_compact">
+            <button class="modal__close" type="button">Закрыть</button>
+            <h3 class="modal__heading">
+              Выберите город
+            </h3>
+          </header>
+          <div class="modal__body modal__body_compact">
+            <div class="choose-city">
+              <input class="input choose-city__search" type="search" placeholder="Поиск">
+
+              <div class="form choose-city__form">
+                <fieldset>
+                  <legend>Топ города</legend>
+                  <p>
+                    <input type="radio" id="city-1" name="city">
+                    <label for="city-1">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-2" name="city">
+                    <label for="city-2">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-3" name="city">
+                    <label for="city-3">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-4" name="city">
+                    <label for="city-4">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-5" name="city">
+                    <label for="city-5">Название города</label>
+                  </p>
+                </fieldset>
+                <fieldset>
+                  <legend>A</legend>
+                  <p>
+                    <input type="radio" id="city-6" name="city">
+                    <label for="city-6">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-7" name="city">
+                    <label for="city-7">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-8" name="city">
+                    <label for="city-8">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-9" name="city">
+                    <label for="city-9">Название города</label>
+                  </p>
+                  <p>
+                    <input type="radio" id="city-10" name="city">
+                    <label for="city-10">Название города</label>
+                  </p>
+                </fieldset>
+              </div>
+
+              <div class="grid grid_small">
+                <div class="grid__column_1-3">
+                  <button class="button button_secondary form__button" type="button"
+                          onclick="modal.close('#choose-city')">
+                    Отменить
+                  </button>
+                </div>
+                <div class="grid__column_2-3">
+                  <button class="button form__button" type="button" onclick="modal.close('#choose-city')">
+                    Подтвердить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="/js/main.js"></script>
 </body>

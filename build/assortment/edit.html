@@ -11,7 +11,6 @@
       <div class="grid page-header__grid">
         <div class="grid__column_side-panel menu-btn-wrapper _is-minimized">
           <a class="logo logo_panel" href="/">Строймаркет</a>
-          <a class="logo logo_panel logo_small" href="/">СМ</a>
           <button class="menu-btn" type="button" onclick=""></button>
         </div>
 
@@ -127,7 +126,7 @@
                   <option value="" disabled>Загрузить мой ассортимент в Строймаркет</option>
                   <option value="test" disabled>Скачать мой ассортимент</option>
                 </select>
-                <button class="button button_action" type="button" disabled>
+                <button class="button" type="button" onclick="modal.open('#fail')">
                   Сохранить изменения
                 </button>
               </section>
@@ -462,13 +461,9 @@
               <div class="grid grid_collapse add-product__parameters">
                 <input class="switcher add-product__switcher" id="promotion" type="checkbox">
                 <label for="promotion" data-checked="акция" data-not-checked="акция"></label>
-                <div class="grid__column_1-2">
+                <div class="grid__column_1-1">
                   <input class="input" type="text" placeholder="Цена в рублях">
-                  <span>за</span>
-                </div>
-                <div class="grid__column_1-2">
-                  <input class="input" type="text" placeholder="Количество">
-                  <span>шт</span>
+                  <span>за 1 шт</span>
                 </div>
               </div>
               <p class="add-product__footnote">
@@ -1181,6 +1176,61 @@
               <div class="assortment__search">
                 Идет поиск…
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal_middle" id="success">
+    <div class="container modal__container">
+      <div class="grid">
+        <div class="grid__column_1-3 grid__column_center">
+          <div class="modal__overlay"></div>
+          <div class="modal__body modal__body_contrast modal__body_compact">
+            <button class="modal__close" type="button">Закрыть</button>
+            <div class="modal__alert modal__alert_success">
+              <b class="modal__alert-title">Успешно!</b>
+              <p class="modal__alert-text">Ассортимент обновлен</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal_middle" id="fail">
+    <div class="container modal__container">
+      <div class="grid">
+        <div class="grid__column_1-3 grid__column_center">
+          <div class="modal__overlay"></div>
+          <div class="modal__body modal__body_contrast modal__body_compact">
+            <button class="modal__close" type="button">Закрыть</button>
+            <div class="modal__alert modal__alert_fail">
+              <b class="modal__alert-title">Ошибка!</b>
+              <p class="modal__alert-text">Ошибка при обновлении ассортимента</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal_middle" id="info">
+    <div class="container modal__container">
+      <div class="grid">
+        <div class="grid__column_1-3 grid__column_center">
+          <div class="modal__overlay"></div>
+          <div class="modal__body modal__body_contrast modal__body_compact">
+            <button class="modal__close" type="button">Закрыть</button>
+            <div class="modal__alert modal__alert_info">
+              <b class="modal__alert-title">Информация</b>
+              <p class="modal__alert-text">
+                Для того чтобы добавить ваш ассортимент и появиться в общем каталоге — вам необходимо подтвердить, что
+                вы реальная фирма. Сделать это можно в разделе «Настройки / Аккаунт» или обратившись в администрацию
+                Строймаркета по телефону или электронной почте.
+              </p>
             </div>
           </div>
         </div>

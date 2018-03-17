@@ -1,0 +1,22 @@
+.page-404 {
+  background: #eaeeef url(../img/page-404.svg) no-repeat center / 588px auto;
+}
+
+.page-404__container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  box-sizing: border-box;
+}
+
+.page-404__not-found {
+  margin-top: auto;
+  color: #3b4458;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: right;
+  margin-bottom: 20px;
+}
