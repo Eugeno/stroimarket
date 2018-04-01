@@ -64,6 +64,20 @@
   border-top-left-radius: 0;
 }
 
+.select_right.dk-select-open-up .dk-select-options {
+  right: 0;
+  left: auto;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 10px;
+}
+
+.select_right.dk-select-open-down .dk-select-options {
+  right: 0;
+  left: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 0;
+}
+
 .select.dk-select-open-down {
   position: relative;
 }

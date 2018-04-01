@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Строймаркет</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="page-header">
+  <div class="container page-header__container">
+    <div class="grid page-header__grid">
+      <div class="grid__column_side-panel menu-btn-wrapper">
+        <a class="logo logo_panel" href="/">Строймаркет</a>
+        <button class="menu-btn" type="button" onclick="sidePanel.toggle()"></button>
+      </div>
+
+      <div class="grid__column">
+        <ul class="list-reset user-actions">
+          <li class="user-actions__item user-actions__item_notifications">
+            <a class="link user-actions__link" href="javascript:void(0)">
+              Уведомления
+            </a>
+          </li>
+          <li class="user-actions__item user-actions__item_messages">
+            <a class="link user-actions__link" href="javascript:void(0)">
+              Сообщения
+            </a>
+          </li>
+          <li class="user-actions__item user-actions__item_profile">
+            <a class="link user-actions__link" href="javascript:void(0)">
+              Пластик Сибири
+              <span class="user-actions__avatar"
+                    style="background-image: url('//placehold.it/124x44');"></span>
+            </a>
+          </li>
+          <li class="user-actions__item user-actions__item_logout">
+            <a class="link user-actions__link" href="javascript:void(0)">
+              Выйти
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="grid">
+      <div class="grid__column_side-panel">
+        <ul class="side-panel">
+          <li class="side-panel__item side-panel__item_company"
+              data-accordion="side-menu">
+            <span class="accordion-title">Моя компания</span>
+            <ul class="accordion-content" hidden>
+              <li><a>Рабочий стол</a></li>
+              <li><a href="javascript:void(0)">Ассортимент</a></li>
+              <li class="_develop" data-develop="в разработке">
+                <a>Претензии</a>
+              </li>
+            </ul>
+          </li>
+          <li class="side-panel__item side-panel__item_catalog"
+              data-accordion="side-menu">
+            <span class="accordion-title">Каталог</span>
+            <ul class="accordion-content" hidden>
+              <li><a href="javascript:void(0)">Товары</a></li>
+              <li><a href="javascript:void(0)">Поставщики</a></li>
+              <li><a href="javascript:void(0)">Магазины</a></li>
+            </ul>
+          </li>
+          <li class="side-panel__item side-panel__item_purchases _is-open"
+              data-accordion="side-menu">
+            <span class="accordion-title">Закупки</span>
+            <ul class="accordion-content">
+              <li><a>Список закупок</a></li>
+              <li><a href="javascript:void(0)">Мои закупки</a></li>
+            </ul>
+          </li>
+          <li class="side-panel__item side-panel__item_settings"
+              data-accordion="side-menu">
+            <span class="accordion-title">Настройки</span>
+            <ul class="accordion-content" hidden>
+              <li><a href="javascript:void(0)">Аккаунт</a></li>
+              <li><a href="javascript:void(0)">Профиль</a></li>
+              <li><a href="javascript:void(0)">Уведомления</a></li>
+              <li><a href="javascript:void(0)">Оплата</a></li>
+              <li><a href="javascript:void(0)">Реквизиты</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="grid__column">
+        <div class="dashboard">
+          <h2 class="h2 dashboard__h2">Закупки</h2>
+
+          <div class="flex">
+            <h3 class="h3">
+              Список закупок
+            </h3>
+            <div class="dashboard__back-wrapper">
+              <a class="link dashboard__back-link" href="javascript:void(0)">Назад к списку категорий</a>
+            </div>
+          </div>
+
+          <div class="assortment">
+            <section class="assortment__interactions">
+              <button class="button button_action assortment__place-chooser" type="button" onclick="">
+                <span>Местоположение</span>
+              </button>
+              <input class="input" type="search" placeholder="Поиск">
+              <button class="button assortment__interaction-btn" type="button">Разместить закупку</button>
+            </section>
+
+            <div class="layout-view">
+              <span class="layout-view__title">Сортировать:</span>
+              <a class="layout-view__sort-link">по названию</a>
+              <a class="layout-view__sort-link layout-view__sort-link_down">по дате</a>
+              <a class="layout-view__sort-link">по категории</a>
+              <a class="layout-view__sort-link">по типу</a>
+            </div>
+
+            <ul class="list-reset">
+              <li class="procurement">
+                <header class="procurement__header">
+                  <span class="procurement__type">
+                    Актуальная
+                  </span>
+                  <span class="procurement__number">
+                    № 2456987899
+                  </span>
+                  <span class="procurement__date">
+                    Создана: <span>20.07.17, 17:37</span>
+                  </span>
+                  <span class="procurement__date">
+                    Актуальна до: <span>29.07.17, 12:00</span>
+                  </span>
+                </header>
+                <div class="procurement__body">
+                  <div class="grid">
+                    <div class="grid__column_1-2">
+                      <ul class="list-reset procurement__products">
+                        <li>
+                          <div class="procurement__product-img">
+                            <img src="//placehold.it/60x60" alt="">
+                          </div>
+                          <div>
+                            <p class="procurement__product-name">
+                              KNAUF Ротбанд, 30 кг
+                            </p>
+                            <p class="procurement__product-size">
+                              Объём: <span>150 шт.</span>
+                            </p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="procurement__product-img">
+                            <img src="//placehold.it/60x60" alt="">
+                          </div>
+                          <div>
+                            <p class="procurement__product-name">
+                              KNAUF Ротбанд, 30 кг
+                            </p>
+                            <p class="procurement__product-size">
+                              Объём: <span>150 шт.</span>
+                            </p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="grid__column_1-2">
+                      <div class="procurement__info">
+                        <p>
+                          Долгострочная закупка<br>
+                          Поставки с 30.07.17 по 30.08.27<br>
+                          Раз в неделю
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="grid__column_1-1">
+                      <div class="procurement__comment">
+                        Комментарий: <span>Отсутствует</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <footer class="procurement__footer">
+                  <div class="flex flex_start">
+                    <div class="procurement__purchaser">
+                      Закупщик:
+                      <span>Магазин "Шкет", ООО "Шкет"<br>
+                        Россия, г. Новосибирск</span>
+                      <span class="rating procurement__rating" data-value="5" data-max="5"><span></span></span>
+                    </div>
+                    <div class="procurement__contact">
+                      Лицо для связи:
+                      <span>Гурченко мария Петровна<br>
+                      +7 (999) 246-35-35<br>
+                      roman@mail.com</span>
+                    </div>
+                    <button class="button procurement__button">Открыть</button>
+                  </div>
+                </footer>
+              </li>
+
+              <li class="procurement">
+                <header class="procurement__header">
+                  <span class="procurement__type">
+                    Актуальная
+                  </span>
+                  <span class="procurement__number">
+                    № 2456987899
+                  </span>
+                  <span class="procurement__date">
+                    Создана: <span>20.07.17, 17:37</span>
+                  </span>
+                  <span class="procurement__date">
+                    Актуальна до: <span>29.07.17, 12:00</span>
+                  </span>
+                </header>
+                <div class="procurement__body">
+                  <div class="grid">
+                    <div class="grid__column_1-2">
+                      <ul class="list-reset procurement__products" id="o2456987899">
+                        <li>
+                          <div class="procurement__product-img">
+                            <img src="//placehold.it/60x60" alt="">
+                          </div>
+                          <div>
+                            <p class="procurement__product-name">
+                              KNAUF Ротбанд, 30 кг
+                            </p>
+                            <p class="procurement__product-size">
+                              Объём: <span>150 шт.</span>
+                            </p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="procurement__product-img">
+                            <img src="//placehold.it/60x60" alt="">
+                          </div>
+                          <div>
+                            <p class="procurement__product-name">
+                              KNAUF Ротбанд, 30 кг
+                            </p>
+                            <p class="procurement__product-size">
+                              Объём: <span>150 шт.</span>
+                            </p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="procurement__product-img">
+                            <img src="//placehold.it/60x60" alt="">
+                          </div>
+                          <div>
+                            <p class="procurement__product-name">
+                              KNAUF Ротбанд, 30 кг
+                            </p>
+                            <p class="procurement__product-size">
+                              Объём: <span>150 шт.</span>
+                            </p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="procurement__product-img">
+                            <img src="//placehold.it/60x60" alt="">
+                          </div>
+                          <div>
+                            <p class="procurement__product-name">
+                              KNAUF Ротбанд, 30 кг
+                            </p>
+                            <p class="procurement__product-size">
+                              Объём: <span>150 шт.</span>
+                            </p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="procurement__product-img">
+                            <img src="//placehold.it/60x60" alt="">
+                          </div>
+                          <div>
+                            <p class="procurement__product-name">
+                              KNAUF Ротбанд, 30 кг
+                            </p>
+                            <p class="procurement__product-size">
+                              Объём: <span>150 шт.</span>
+                            </p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="grid__column_1-2">
+                      <div class="procurement__info">
+                        <p>
+                          Долгострочная закупка<br>
+                          Поставки с 30.07.17 по 30.08.27<br>
+                          Раз в неделю
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="grid__column_1-1">
+                      <button class="procurement__show-all" type="button"
+                              data-show-more="Показать все товары закупки (5)" data-show-less="Свернуть"
+                              onclick="showMore.toggle('#o2456987899')">
+                        Показать все товары закупки (5)
+                      </button>
+                      <div class="procurement__comment">
+                        Комментарий: <span>Отсутствует</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <footer class="procurement__footer">
+                  <div class="flex flex_start">
+                    <div class="procurement__purchaser">
+                      Закупщик:
+                      <span>Магазин "Шкет", ООО "Шкет"<br>
+                        Россия, г. Новосибирск</span>
+                      <span class="rating procurement__rating" data-value="5" data-max="5"><span></span></span>
+                    </div>
+                    <div class="procurement__contact">
+                      Лицо для связи:
+                      <span>Гурченко мария Петровна<br>
+                      +7 (999) 246-35-35<br>
+                      roman@mail.com</span>
+                    </div>
+                    <button class="button procurement__button">Открыть</button>
+                  </div>
+                </footer>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="/js/main.min.js"></script>
+</body>
+</html>

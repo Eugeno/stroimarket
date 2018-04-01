@@ -2,6 +2,16 @@
   margin-top: 20px;
 }
 
+.reviews__heading {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #455056;
+}
+
 /* Review
    ========================================================================== */
 .review {
@@ -13,14 +23,18 @@
   background-color: #fff;
 }
 
+.review:first-child {
+  margin-top: 0;
+}
+
 /* Header
    ========================================================================== */
 .review__header {
   font-size: 14px;
   line-height: 19px;
   display: flex;
-  margin-bottom: 10px;
   align-items: baseline;
+  margin-bottom: 10px;
 }
 
 .review__rating {
@@ -187,3 +201,8 @@
   background: #eaeeef;
 }
 
+/* Pagination
+   ========================================================================== */
+.reviews__pagination .pagination__item {
+  text-transform: uppercase;
+}

@@ -1,0 +1,45 @@
+.rating-stats li {
+  display: flex;
+  align-items: center;
+}
+
+.rating-stats li:not(:first-child) {
+  margin-top: 5px;
+}
+
+/* Progress
+   ========================================================================== */
+.rating-stats progress {
+  width: 120px;
+  height: 8px;
+  margin-right: 10px;
+  margin-left: 10px;
+  -webkit-appearance: none;
+}
+
+.rating-stats progress::-webkit-progress-bar {
+  border-radius: 3px;
+  background-color: #eaeeef;
+}
+
+.rating-stats progress::-webkit-progress-value {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #f89e01;
+}
+
+/* Count
+   ========================================================================== */
+.rating-stats__count {
+  font-size: 12px;
+  line-height: 17px;
+  color: #7e8890;
+}
+
+.rating-stats__count::before {
+  content: "(";
+}
+
+.rating-stats__count::after {
+  content: ")";
+}

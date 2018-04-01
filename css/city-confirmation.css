@@ -1,0 +1,36 @@
+.city-confirmation {
+  position: absolute;
+  top: 33px;
+  right: 0;
+  box-sizing: border-box;
+  width: 260px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.city-confirmation p {
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #455056;
+}
+
+.city-confirmation b {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  color: #455056;
+}
+
+.city-confirmation .button {
+  font-size: 12px;
+  line-height: 17px;
+  padding: 6px 10px 7px;
+  border-radius: 5px;
+}

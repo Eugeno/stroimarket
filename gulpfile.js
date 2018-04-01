@@ -9,6 +9,7 @@ const minify = require('gulp-csso');
 const rename = require('gulp-rename');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
+const buildPath = 'build';
 
 gulp.task('style', function () {
   return gulp.src([
@@ -24,11 +25,11 @@ gulp.task('style', function () {
   ])
   .pipe(concatCss('style.css'))
   .pipe(plumber())
-  .pipe(gulp.dest('build/css'))
+  .pipe(gulp.dest(`${buildPath}/css`))
   .pipe(server.stream())
   .pipe(minify())
   .pipe(rename('style.min.css'))
-  .pipe(gulp.dest('build/css'));
+  .pipe(gulp.dest(`${buildPath}/css`));
 });
 
 gulp.task('scripts', function () {
@@ -43,10 +44,10 @@ gulp.task('scripts', function () {
         }]
       ]
     }))
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest(`${buildPath}/js`))
     .pipe(uglify())
     .pipe(rename('main.min.js'))
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest(`${buildPath}/js`));
 });
 
 gulp.task('copy-html', function () {
@@ -54,7 +55,7 @@ gulp.task('copy-html', function () {
     '*.html',
     'pages/**/*.html'
   ])
-  .pipe(gulp.dest('build'))
+  .pipe(gulp.dest(buildPath))
   .pipe(server.stream());
 });
 
@@ -70,11 +71,11 @@ gulp.task('copy', ['copy-html', 'scripts', 'style'], function () {
     'img/**/*.*',
     'js/lib/*.*'
   ], {base: '.'})
-  .pipe(gulp.dest('build'));
+  .pipe(gulp.dest(buildPath));
 });
 
 gulp.task('clean', function () {
-  return del('build');
+  return del(buildPath, {force: true});
 });
 
 gulp.task('js-watch', ['scripts'], function (done) {

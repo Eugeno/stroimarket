@@ -1,6 +1,8 @@
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   overflow-y: scroll;
+  width: 100%;
+  min-width: 1280px;
   background-color: #f8f9fb;
 }
 
@@ -39,6 +41,7 @@ body._is-fixed {
 .main_white {
   background-color: #fff;
 }
+
 
 /* ==========================================================================
    Headings
@@ -79,4 +82,8 @@ body._is-fixed {
 .flex {
   display: flex;
   align-items: baseline;
+}
+
+.flex_start {
+  align-items: flex-start;
 }

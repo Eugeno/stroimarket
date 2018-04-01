@@ -408,7 +408,7 @@
     </div>
   </main>
 
-  <div class="modal modal_middle" id="choose-city">
+  <div class="modal modal_middle" id="choose-city" data-choose-cities>
     <div class="container modal__container">
       <div class="grid">
         <div class="grid__column_1-2 grid__column_center">
@@ -421,53 +421,68 @@
           </header>
           <div class="modal__body modal__body_compact">
             <div class="choose-city">
+              <p class="choose-city__clarification">
+                Ваш город определён верно? Если нет – выберите другой.
+              </p>
+
               <input class="input choose-city__search" type="search" placeholder="Поиск">
 
               <div class="form choose-city__form">
                 <fieldset>
+                  <legend>Выбранный город</legend>
+                  <p>
+                    <input type="radio" id="city-0" name="city" checked>
+                    <label for="city-0">Название города 0</label>
+                  </p>
+                </fieldset>
+                <fieldset>
                   <legend>Топ города</legend>
+                  <p class="_is-chosen">
+                    <input type="radio" name="city" data-id="city-0">
+                    <label for="city-0">Название города 0</label>
+                  </p>
                   <p>
                     <input type="radio" id="city-1" name="city">
-                    <label for="city-1">Название города</label>
+                    <label for="city-1">Название города 1</label>
                   </p>
                   <p>
                     <input type="radio" id="city-2" name="city">
-                    <label for="city-2">Название города</label>
+                    <label for="city-2">Название города 2</label>
                   </p>
                   <p>
                     <input type="radio" id="city-3" name="city">
-                    <label for="city-3">Название города</label>
+                    <label for="city-3">Название города 3</label>
                   </p>
                   <p>
                     <input type="radio" id="city-4" name="city">
-                    <label for="city-4">Название города</label>
+                    <label for="city-4">Название города 4</label>
                   </p>
                   <p>
                     <input type="radio" id="city-5" name="city">
-                    <label for="city-5">Название города</label>
+                    <label for="city-5">Название города 5</label>
                   </p>
                 </fieldset>
                 <fieldset>
                   <legend>A</legend>
                   <p>
                     <input type="radio" id="city-6" name="city">
-                    <label for="city-6">Название города</label>
+                    <label for="city-6">Название города 6</label>
                   </p>
                   <p>
                     <input type="radio" id="city-7" name="city">
-                    <label for="city-7">Название города</label>
+                    <label for="city-7">Название города 7</label>
                   </p>
                   <p>
                     <input type="radio" id="city-8" name="city">
-                    <label for="city-8">Название города</label>
+                    <label for="city-8">Название города 8</label>
                   </p>
                   <p>
                     <input type="radio" id="city-9" name="city">
-                    <label for="city-9">Название города</label>
+                    <label for="city-9">Название города 9</label>
                   </p>
                   <p>
                     <input type="radio" id="city-10" name="city">
-                    <label for="city-10">Название города</label>
+                    <label for="city-10">Название города 10</label>
                   </p>
                 </fieldset>
               </div>

@@ -34,6 +34,10 @@ const ready = () => {
   if (document.querySelector(`[data-choose-cities]`)) {
     citiesChooser.init()
   }
+
+  if (document.querySelector(`.lang-switcher`)) {
+    langSwitcher.init()
+  }
 }
 
 document.addEventListener('DOMContentLoaded', ready)
@@ -519,23 +523,62 @@ const citiesChooser = {
       if (!currentFieldset.querySelector(`p:not(._is-chosen)`)) {
         currentFieldset.classList.add(`_is-hidden`)
       }
-    } else if (!isInit) {
-      const id = city.getAttribute(`id`)
-      container.remove()
-      const originalCity = this.chooserForm.querySelector(`[data-id="${id}"]`)
-      originalCity.setAttribute(`id`, originalCity.dataset.id)
-      originalCity.removeAttribute(`data-id`)
-      originalCity.checked = false
 
-      const originalContainer = originalCity.parentNode
-      originalContainer.classList.remove(`_is-chosen`)
-
-      if (!this.choosenContainer.querySelector(`p`)) {
-        this.choosenContainer.classList.add(`_is-hidden`)
+      if (city.getAttribute('type') === 'radio') {
+        this.deselect(clonedContainer.previousElementSibling.querySelector('input'))
       }
-
-      const currentFieldset = originalContainer.parentNode
-      currentFieldset.classList.remove(`_is-hidden`)
+    } else if (!isInit) {
+      this.deselect(city)
     }
+  },
+
+  deselect (city) {
+    const container = city.parentNode
+    const id = city.getAttribute(`id`)
+    container.remove()
+    const originalCity = this.chooserForm.querySelector(`[data-id="${id}"]`)
+    originalCity.setAttribute(`id`, originalCity.dataset.id)
+    originalCity.removeAttribute(`data-id`)
+    originalCity.checked = false
+
+    const originalContainer = originalCity.parentNode
+    originalContainer.classList.remove(`_is-chosen`)
+
+    if (!this.choosenContainer.querySelector(`p`)) {
+      this.choosenContainer.classList.add(`_is-hidden`)
+    }
+
+    const currentFieldset = originalContainer.parentNode
+    currentFieldset.classList.remove(`_is-hidden`)
+  }
+}
+
+const deleteElement = (selector) => {
+  const el = document.querySelector(selector)
+  if (el) el.remove()
+}
+
+const langSwitcher = {
+  init () {
+    const switcherContainer = document.querySelector(`.lang-switcher`)
+    const button = switcherContainer.querySelector(`.lang-switcher__button`)
+    button.addEventListener('click', () => this.toggle(switcherContainer))
+  },
+
+  toggle (sc) {
+    sc.classList.toggle(`_is-active`)
+    const bodyHandler = (event) => {
+      if (event.target.parentNode !== sc) {
+        this.close(sc)
+        document.body.removeEventListener('click', bodyHandler)
+      }
+    }
+    if (sc.classList.contains(`_is-active`)) {
+      document.body.addEventListener('click', bodyHandler)
+    }
+  },
+
+  close (sc) {
+    sc.classList.remove(`_is-active`)
   }
 }

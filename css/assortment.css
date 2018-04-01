@@ -23,14 +23,12 @@
 .assortment__select {
   flex-shrink: 0;
   width: 230px;
-  /*margin-right: 20px;*/
 }
 
 .assortment__switcher + label {
   flex-shrink: 0;
   width: 92px;
   margin-top: 10px;
-  /*margin-left: 20px;*/
 }
 
 .assortment__switcher + label::before {
@@ -51,6 +49,11 @@
 .assortment__place-chooser span {
   padding-left: 15px;
   background: url(../img/pin-icon.svg) no-repeat left 5px / 8px 12px;
+}
+
+.assortment__interaction-btn {
+  width: auto;
+  white-space: nowrap;
 }
 
 

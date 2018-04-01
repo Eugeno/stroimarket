@@ -93,6 +93,12 @@
   cursor: pointer;
 }
 
+.super-header__geo-container {
+  position: relative;
+  margin-left: auto;
+  z-index: 2;
+}
+
 .super-header__geo {
   font-size: 14px;
   font-weight: 600;
@@ -105,5 +111,3 @@
   border: 0;
   background: url(../../img/pin-icon_white.svg) no-repeat left 4px / 8px 12px;
 }
-
-

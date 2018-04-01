@@ -168,7 +168,7 @@
 
         <div class="grid">
           <div class="grid__column_2-3">
-            <a class="link prev-page- profile__prev-page" href="javascript:history.back()">
+            <a class="link profile__prev-page" href="javascript:history.back()">
               Назад
             </a>
             <article class="company-card">
@@ -202,7 +202,12 @@
           </div>
           <div class="grid__column_1-3">
             <div class="profile__sidebar">
-              <a class="link profile__places" href="javascript:void(0)">Другие магазины сети</a>
+              <select class="text-select text-select_right profile__places" id="place">
+                <option value="" selected hidden>Другие магазины сети</option>
+                <option value="">Пластик Сибири, Москва, Морской проспект, 10</option>
+                <option value="">Пластик Сибири, Санкт–Петербург, Менделеевская, 76</option>
+                <option value="">Пластик Сибири, Новосибирск, Сибиряков–Гвардейцев, 49а</option>
+              </select>
 
               <div class="operating-time-wrapper profile__operating-time">
                 <table class="operating-time">
@@ -299,11 +304,276 @@
             </div>
           </div>
         </div>
+
+        <article class="products">
+          <div class="products__heading">
+            <h2>Ассортимент</h2>
+            <a class="link" href="javascript:void(0)">Показать всё</a>
+          </div>
+          <p class="products__update-date">
+            Обновлен 24.12.17
+          </p>
+          <div class="grid">
+            <div class="grid__column_1-4">
+              <div class="product-card">
+                <img src="http://placehold.it/120x120" alt="" width="120" height="120">
+                <h3 class="product-card__name">KNAUF Ротбанд, 30 кг</h3>
+                <p class="product-card__category">Штукатурка</p>
+              </div>
+            </div>
+            <div class="grid__column_1-4">
+              <div class="product-card">
+                <img src="http://placehold.it/120x120" alt="" width="120" height="120">
+                <h3 class="product-card__name">ilmax 6800, 25 кг</h3>
+                <p class="product-card__category">Штукатурка</p>
+              </div>
+            </div>
+            <div class="grid__column_1-4">
+              <div class="product-card">
+                <img src="http://placehold.it/120x120" alt="" width="120" height="120">
+                <h3 class="product-card__name">KNAUF Ротбанд, 30 кг</h3>
+                <p class="product-card__category">Штукатурка</p>
+              </div>
+            </div>
+            <div class="grid__column_1-4">
+              <div class="product-card">
+                <img src="http://placehold.it/120x120" alt="" width="120" height="120">
+                <h3 class="product-card__name">KNAUF Ротбанд, 30 кг</h3>
+                <p class="product-card__category">Штукатурка</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <section class="delivery">
+          <h2 class="delivery__heading">Доставка</h2>
+          <div class="delivery__container">
+            <div class="delivery__count-info">
+              Осуществляется в 15 населённых пунктов
+            </div>
+            <div class="delivery__main" id="cities">
+              <div class="delivery__column">
+                <div class="delivery__block">
+                  <span class="delivery__letter">А</span>
+                  <p class="delivery__item">
+                    Александровск-Сахалинский
+                    <span class="delivery__legend">Д</span>
+                    <span class="delivery__legend">П</span>
+                  </p>
+                  <p class="delivery__item">
+                    Александровск-Сахалинский
+                    <span class="delivery__legend">Д</span>
+                    <span class="delivery__legend">П</span>
+                  </p>
+                  <p class="delivery__item">
+                    Александровск-Сахалинский
+                    <span class="delivery__legend">Д</span>
+                    <span class="delivery__legend">П</span>
+                  </p>
+                </div>
+                <div class="delivery__block">
+                  <span class="delivery__letter">Б</span>
+                  <p class="delivery__item">
+                    Благовещенск
+                    <span class="delivery__legend">Д</span>
+                    <span class="delivery__legend">П</span>
+                  </p>
+                  <p class="delivery__item">
+                    Благовещенск
+                    <span class="delivery__legend">П</span>
+                  </p>
+                  <p class="delivery__item">
+                    Благовещенск
+                    <span class="delivery__legend">Д</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="delivery__column">
+                <div class="delivery__block">
+                  <span class="delivery__letter">В</span>
+                  <p class="delivery__item">
+                    Воскресенск
+                    <span class="delivery__legend">Д</span>
+                    <span class="delivery__legend">П</span>
+                  </p>
+                  <p class="delivery__item">
+                    Воскресенск
+                    <span class="delivery__legend">Д</span>
+                    <span class="delivery__legend">П</span>
+                  </p>
+                </div>
+                <div class="delivery__block">
+                  <span class="delivery__letter">Г</span>
+                  <p class="delivery__item">
+                    Городище
+                    <span class="delivery__legend">Д</span>
+                    <span class="delivery__legend">П</span>
+                  </p>
+                  <p class="delivery__item">
+                    Городище
+                    <span class="delivery__legend">Д</span>
+                    <span class="delivery__legend">П</span>
+                  </p>
+                  <p class="delivery__item">
+                    Городище
+                    <span class="delivery__legend">Д</span>
+                    <span class="delivery__legend">П</span>
+                  </p>
+                  <p class="delivery__item">
+                    Городище
+                    <span class="delivery__legend">Д</span>
+                    <span class="delivery__legend">П</span>
+                  </p>
+                  <p class="delivery__item">
+                    Городище
+                    <span class="delivery__legend">Д</span>
+                    <span class="delivery__legend">П</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="delivery__column">
+                <div class="delivery__block">
+                  <span class="delivery__letter">Н</span>
+                  <p class="delivery__item">
+                    Николаевск-на-Амуре
+                    <span class="delivery__legend">Д</span>
+                    <span class="delivery__legend">П</span>
+                  </p>
+                  <p class="delivery__item">
+                    Николаевск-на-Амуре
+                    <span class="delivery__legend">Д</span>
+                    <span class="delivery__legend">П</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="delivery__column delivery__column_legend">
+                <div class="delivery__block">
+                  <p class="delivery__item">
+                    <span class="delivery__legend">Д</span> — до города
+                  </p>
+                  <p class="delivery__item">
+                    <span class="delivery__legend">П</span> — по городу
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <button class="delivery__show-btn" type="button"
+                    data-show-more="Показать" data-show-less="Свернуть"
+                    onclick="showMore.toggle('#cities')">
+              Показать
+            </button>
+          </div>
+        </section>
+
+        <section class="reviews">
+          <h2 class="reviews__heading">Отзывы</h2>
+
+          <div class="layout-view">
+            <span class="layout-view__title">Сортировать:</span>
+            <a class="layout-view__sort-link">по дате</a>
+            <a class="layout-view__sort-link layout-view__sort-link_down">по оценке</a>
+          </div>
+
+          <div class="grid">
+            <div class="grid__column-3-4">
+              <div class="review">
+                <header class="review__header">
+                  <div class="review__rating">
+                    <span class="rating" data-value="5" data-max="5"><span></span></span>
+                  </div>
+                  <p class="review__order-number">Номер заказа: 999999999999</p>
+                  <time class="review__date" datetime="2017-10-30">30 октября 2017</time>
+                </header>
+
+                <p class="review__author">Роман Аркадьевич</p>
+
+                <div class="review__block">
+                  <b>Достоинства:</b>
+                  <p>Быстрота обработки. Утром заказал, вечером этого же дня забрал.</p>
+                </div>
+                <div class="review__block">
+                  <b>Недостатки:</b>
+                  <p>Оплата только наличными.</p>
+                </div>
+                <div class="review__block">
+                  <b>Комментарий:</b>
+                  <p>Уже второй раз заказываю в этом магазине. Все в норме. Цена ниж чем в других магазинах, качество
+                    товара тоже самое.</p>
+                </div>
+              </div>
+
+              <div class="review">
+                <header class="review__header">
+                  <div class="review__rating">
+                    <span class="rating" data-value="5" data-max="5"><span></span></span>
+                  </div>
+                  <p class="review__order-number">Номер заказа: 999999999999</p>
+                  <time class="review__date" datetime="2017-10-30">30 октября 2017</time>
+                </header>
+
+                <p class="review__author">Роман Аркадьевич</p>
+
+                <div class="review__block">
+                  <b>Достоинства:</b>
+                  <p>Быстрота обработки. Утром заказал, вечером этого же дня забрал.</p>
+                </div>
+                <div class="review__block">
+                  <b>Недостатки:</b>
+                  <p>Оплата только наличными.</p>
+                </div>
+                <div class="review__block">
+                  <b>Комментарий:</b>
+                  <p>Уже второй раз заказываю в этом магазине. Все в норме. Цена ниж чем в других магазинах, качество
+                    товара тоже самое.</p>
+                </div>
+              </div>
+
+              <section class="pagination reviews__pagination">
+                <a class="pagination__item">Предыдущие</a>
+                <a class="pagination__item" href="javascript:void(0)">Следующие</a>
+              </section>
+            </div>
+
+            <div class="grid__column_1-4">
+              <ul class="list-reset rating-stats">
+                <li>
+                  <span class="rating" data-value="5" data-max="5"><span></span></span>
+                  <progress max="4951" value="3951"></progress>
+                  <span class="rating-stats__count">3951</span>
+                </li>
+                <li>
+                  <span class="rating" data-value="4" data-max="5"><span></span></span>
+                  <progress max="4951" value="997"></progress>
+                  <span class="rating-stats__count">997</span>
+                </li>
+                <li>
+                  <span class="rating" data-value="3" data-max="5"><span></span></span>
+                  <progress max="4951" value="3"></progress>
+                  <span class="rating-stats__count">3</span>
+                </li>
+                <li>
+                  <span class="rating" data-value="2" data-max="5"><span></span></span>
+                  <progress max="4951" value="0"></progress>
+                  <span class="rating-stats__count">0</span>
+                </li>
+                <li>
+                  <span class="rating" data-value="1" data-max="5"><span></span></span>
+                  <progress max="4951" value="0"></progress>
+                  <span class="rating-stats__count">0</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </main>
 
-  <div class="modal modal_middle" id="choose-city">
+  <div class="modal modal_middle" id="choose-city" data-choose-cities>
     <div class="container modal__container">
       <div class="grid">
         <div class="grid__column_1-2 grid__column_center">
@@ -316,53 +586,68 @@
           </header>
           <div class="modal__body modal__body_compact">
             <div class="choose-city">
+              <p class="choose-city__clarification">
+                Ваш город определён верно? Если нет – выберите другой.
+              </p>
+
               <input class="input choose-city__search" type="search" placeholder="Поиск">
 
               <div class="form choose-city__form">
                 <fieldset>
+                  <legend>Выбранный город</legend>
+                  <p>
+                    <input type="radio" id="city-0" name="city" checked>
+                    <label for="city-0">Название города 0</label>
+                  </p>
+                </fieldset>
+                <fieldset>
                   <legend>Топ города</legend>
+                  <p class="_is-chosen">
+                    <input type="radio" name="city" data-id="city-0">
+                    <label for="city-0">Название города 0</label>
+                  </p>
                   <p>
                     <input type="radio" id="city-1" name="city">
-                    <label for="city-1">Название города</label>
+                    <label for="city-1">Название города 1</label>
                   </p>
                   <p>
                     <input type="radio" id="city-2" name="city">
-                    <label for="city-2">Название города</label>
+                    <label for="city-2">Название города 2</label>
                   </p>
                   <p>
                     <input type="radio" id="city-3" name="city">
-                    <label for="city-3">Название города</label>
+                    <label for="city-3">Название города 3</label>
                   </p>
                   <p>
                     <input type="radio" id="city-4" name="city">
-                    <label for="city-4">Название города</label>
+                    <label for="city-4">Название города 4</label>
                   </p>
                   <p>
                     <input type="radio" id="city-5" name="city">
-                    <label for="city-5">Название города</label>
+                    <label for="city-5">Название города 5</label>
                   </p>
                 </fieldset>
                 <fieldset>
                   <legend>A</legend>
                   <p>
                     <input type="radio" id="city-6" name="city">
-                    <label for="city-6">Название города</label>
+                    <label for="city-6">Название города 6</label>
                   </p>
                   <p>
                     <input type="radio" id="city-7" name="city">
-                    <label for="city-7">Название города</label>
+                    <label for="city-7">Название города 7</label>
                   </p>
                   <p>
                     <input type="radio" id="city-8" name="city">
-                    <label for="city-8">Название города</label>
+                    <label for="city-8">Название города 8</label>
                   </p>
                   <p>
                     <input type="radio" id="city-9" name="city">
-                    <label for="city-9">Название города</label>
+                    <label for="city-9">Название города 9</label>
                   </p>
                   <p>
                     <input type="radio" id="city-10" name="city">
-                    <label for="city-10">Название города</label>
+                    <label for="city-10">Название города 10</label>
                   </p>
                 </fieldset>
               </div>
@@ -387,6 +672,10 @@
     </div>
   </div>
 
+  <script src="/js/lib/dropkick.js"></script>
   <script src="/js/main.min.js"></script>
+  <script>
+    var placeSelect = new Dropkick('#place', { });
+  </script>
 </body>
 </html>

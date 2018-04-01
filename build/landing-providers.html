@@ -9,6 +9,11 @@
   <header class="landing-header">
     <div class="container landing-header__container">
       <a class="logo landing-header__logo">Строймаркет</a>
+      <select class="text-select landing-header__select" id="for-whom">
+        <option value="" selected>Для поставщиков</option>
+        <option value="">Для магазинов</option>
+        <option value="">Для комплектовщиков</option>
+      </select>
       <a class="link user-actions__link landing-header__phone-link"
          href="tel:88009690000">
         8 800 969 00 00
@@ -16,13 +21,22 @@
       <ul class="list-reset user-actions landing-header__user-actions">
         <li class="user-actions__item">
           <a class="link user-actions__link" href="javascript:void(0)">
+            Регистрация
+          </a>
+        </li>
+        <li class="user-actions__item user-actions__item_login">
+          <a class="link user-actions__link" href="javascript:void(0)">
             Войти
           </a>
         </li>
-        <li class="user-actions__item">
-          <a class="button" href="javascript:void(0)">
-            Регистрация
-          </a>
+        <li class="user-actions__item lang-switcher lang-switcher_en">
+          <button class="button lang-switcher__button" type="button">
+            EN
+          </button>
+          <ul class="list-reset lang-switcher__list">
+            <li><a href="javascript:void(0)">РУ</a></li>
+            <li><a>EN</a></li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -248,6 +262,11 @@
     </div>
   </footer>
 
+  <script src="/js/lib/dropkick.js"></script>
+  <script>
+    var select = new Dropkick('#for-whom', { });
+  </script>
+
   <script src="/js/lib/smooth-scroll.min.js"></script>
   <script src="/js/main.min.js"></script>
   <script src="/js/lib/scrollreveal.min.js"></script>
@@ -272,5 +291,6 @@
       });
     });
   </script>
+
 </body>
 </html>
